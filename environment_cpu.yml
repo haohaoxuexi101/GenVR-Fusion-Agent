@@ -1,0 +1,13 @@
+name: openmc-env
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.13
+  - numpy=2.2.6
+  - scipy=1.15.3
+  - matplotlib=3.10.3
+  - numba=0.61.2
+  - pytorch=2.7.1
+  - cpuonly
+  - pytest=8.4.1

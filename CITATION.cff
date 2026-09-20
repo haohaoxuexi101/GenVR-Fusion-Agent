@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use GenVR-Fusion, please cite this software and the retained run manifest."
+title: "GenVR-Fusion: a generative rare-event transport exploration environment for deep-penetration fusion shielding"
+type: software
+authors:
+  - family-names: "Contributors"
+    given-names: "Shaoning"
+    family-names: "Shen"
+    affiliation: "Tsinghua University"
+version: 0.1.0
+date-released: 2026-09-03
+license: MIT

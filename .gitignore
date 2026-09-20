@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+secrets/
+tmp/
+outputs/
+official_outputs/
+submission/
+output/

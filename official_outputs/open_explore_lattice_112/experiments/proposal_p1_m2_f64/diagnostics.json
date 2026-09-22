@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 32,
+  "cfm_build_s": 0.04133059992454946,
+  "cfm_solve_s": 1.9281266001053154,
+  "cfm_residual": 4.8182713479456835e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9971378863852448,
+    "normalized_rel_l1": 0.09916458435530724,
+    "log10_rmse": 0.3411317743589842
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.010761908550845519,
+    "directional_concentration": 0.4083202797741079,
+    "directional_peak_to_mean": 4.155382217725235,
+    "ray_index": 0.004394305510384606
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9986846636471189,
+    "normalized_rel_l1": 0.07696464410887498,
+    "log10_rmse": 0.3520022786166647
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.007818884538316457,
+    "directional_concentration": 0.37591019559477473,
+    "directional_peak_to_mean": 6.774534475121732,
+    "ray_index": 0.0029391984161314996
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.99786873613769,
+    "normalized_rel_l1": 0.07548778606191019,
+    "log10_rmse": 0.12222933408385853
+  },
+  "wall_s": 1.969457200029865,
+  "experiment_id": "proposal_p1_m2_f64",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p1_m2_f64",
+    "hypothesis": "Increasing phi resolution reduces ray artifacts and rel_l1 most for a given budget, with n_phi=64 cost-effective.",
+    "n_pos": 1,
+    "n_mu": 2,
+    "n_phi": 64,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 10.286315199919045,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p1_m2_f64\\metrics.json",
+    "fluxes": "experiments\\proposal_p1_m2_f64\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p1_m2_f64\\lattice_stage8_ultra.png"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-09-19T13:40:24.084509+00:00",
+  "python": "3.11.5 | packaged by conda-forge | (main, Aug 27 2023, 03:34:09) [GCC 12.3.0]",
+  "executable": "/home/ssn/miniconda3/envs/openmc-env/bin/python",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "torch": "2.14.0+cu126",
+  "cuda_available": true,
+  "cuda_version": "12.6",
+  "gpu": "NVIDIA GeForce GTX 1050",
+  "policy": "scientific",
+  "human_intervention": "None after launch; action pool and stopping rule were predeclared in the config.",
+  "selection_rule": "The scientific policy closes missing one-factor contrasts before certification; all completed trials are reported and recommendations require declared gates.",
+  "files": {
+    "configs/ray_artifact_agent.json": {
+      "bytes": 9590,
+      "sha256": "90cf2cce6012f347c7ecd4381242a7d7b8497677a25cf03ffd5a3edf72db318c"
+    },
+    "scripts/run_ray_agent.py": {
+      "bytes": 205,
+      "sha256": "5a5527cecb1fa53e4ef0a8e88e085e3ae4f4d23ff9314823eb6be74d193283c4"
+    },
+    "scripts/30_stage8_ultra_benchmark.py": {
+      "bytes": 23900,
+      "sha256": "2e5c4fe3e7bff104771e10cc20640dba92e260452a2dd3350a45abf5ed2d62ae"
+    },
+    "ray_agent/cli.py": {
+      "bytes": 6421,
+      "sha256": "cad6ff5a3f1765184a79d9b8f5f332466b5f320556e2e7b591660700c4ac9377"
+    },
+    "ray_agent/environment.py": {
+      "bytes": 10715,
+      "sha256": "72b5ebfd0d5c0b7f354de8e978d90ff61480d378e998da8676e0780fe2dac0f4"
+    },
+    "ray_agent/metrics.py": {
+      "bytes": 10603,
+      "sha256": "1a0b86e72cef0b6075d3332bf1038a6c7f029609ae9a21eb1658401142ebab1f"
+    },
+    "ray_agent/policies.py": {
+      "bytes": 18198,
+      "sha256": "4628c9e9a837e961842ac8336013d032a7e8bb8e2eead53ef6231eac15994aa5"
+    },
+    "ray_agent/reporting.py": {
+      "bytes": 16130,
+      "sha256": "73e518601a806f4487e91d849e7e01189159cf754c0b4f0f48aacc029a9e1515"
+    },
+    "ray_agent/scientific.py": {
+      "bytes": 15623,
+      "sha256": "dbfbd9eb0bd76479f68ee867695445428bc954313f2f700f92a0b6f81c4770d0"
+    },
+    "ray_agent/schema.py": {
+      "bytes": 5905,
+      "sha256": "69f40c61a6828224c393c327f235f987ee7f7ff6b14679b1b4046b7cd4cb80b5"
+    },
+    "gmc/checkpoints.py": {
+      "bytes": 2928,
+      "sha256": "9921225306e9e253ff292013b6012469b626fde96ce74c9afd4441bf0c4ff846"
+    },
+    "gmc/method_taxonomy.py": {
+      "bytes": 6066,
+      "sha256": "5a06625cb66674cb7f8ca50dbffa3eaa06f3adb8a89e60aefeb96bafbbfb1043"
+    },
+    "gmc/response_matrix2d.py": {
+      "bytes": 15782,
+      "sha256": "6557c7e0284c7190b386355f5edd688ff2dce3b425aac33ccb33b6b46939cab5"
+    },
+    "gmc/response_operator_ultra.py": {
+      "bytes": 61056,
+      "sha256": "82baf9ebe699d939eaa781d939d8a4e3c0563c909dd78476218f598355455d55"
+    },
+    "outputs/hpc_v2_models/boundary_900k_100ep/best.pt": {
+      "bytes": 27151694,
+      "sha256": "922df7942ae428510832d3c63ebe14ab33d0f9a29fc976b685c5d399a37cb5cd"
+    },
+    "outputs/hpc_v2_models/internal_900k_100ep/best.pt": {
+      "bytes": 27157518,
+      "sha256": "ccc49213231dcdad55165d4e4dd484d9ba9c6d2fda75129e5095d556a706fdc8"
+    }
+  }
+}

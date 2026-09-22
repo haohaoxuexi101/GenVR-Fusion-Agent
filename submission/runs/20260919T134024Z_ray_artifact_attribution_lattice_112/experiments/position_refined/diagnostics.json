@@ -1,0 +1,198 @@
+{
+  "n_state": 128,
+  "n_angle": 8,
+  "interface_phi_offset_fraction": 0.0,
+  "dense_n_mu": 4,
+  "dense_n_phi": 32,
+  "dense_phi_offset_fraction": 0.0,
+  "cfm_build_s": 11.73237099500011,
+  "cfm_solve_s": 6.131411335999928,
+  "cfm_residual": 6.282713974531782e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9985498361683057,
+    "normalized_rel_l1": 0.061951221755483524,
+    "log10_rmse": 0.1402978371010177
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.0076073684350448385,
+    "directional_concentration": 0.4391275995986212,
+    "directional_peak_to_mean": 4.308057268425738,
+    "ray_index": 0.003340605440143559
+  },
+  "cfm_level_vs_dense_sn": {
+    "relative_l1": 0.07855454472922933,
+    "integral_ratio": 0.9444293951950492,
+    "peak_ratio": 0.9576695845441338
+  },
+  "cfm_directional_disagreement_vs_dense_sn": {
+    "residual_rms": 0.0076073684350448385,
+    "directional_concentration": 0.4391275995986212,
+    "directional_peak_to_mean": 4.308057268425738,
+    "ray_index": 0.003340605440143559
+  },
+  "genvr_cfm_vs_dense_sn": {
+    "corr": 0.9985498361683057,
+    "normalized_rel_l1": 0.061951221755483524,
+    "log10_rmse": 0.1402978371010177
+  },
+  "genvr_cfm_ray_vs_dense_sn": {
+    "residual_rms": 0.0076073684350448385,
+    "directional_concentration": 0.4391275995986212,
+    "directional_peak_to_mean": 4.308057268425738,
+    "ray_index": 0.003340605440143559
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9994157179898188,
+    "normalized_rel_l1": 0.04757494336601791,
+    "log10_rmse": 0.13229069175075509
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.004893658860869113,
+    "directional_concentration": 0.4313147924830609,
+    "directional_peak_to_mean": 6.034050406142477,
+    "ray_index": 0.002110707456058654
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9976365263759839,
+    "normalized_rel_l1": 0.0822427070302098,
+    "log10_rmse": 0.1258623578277107
+  },
+  "cfm_learning_error": {
+    "shape": {
+      "corr": 0.9976365263759839,
+      "normalized_rel_l1": 0.0822427070302098,
+      "log10_rmse": 0.1258623578277107
+    },
+    "level": {
+      "relative_l1": 0.08973986655688303,
+      "integral_ratio": 1.0419237968493573,
+      "peak_ratio": 1.0375410462046724
+    },
+    "directional_residual": {
+      "residual_rms": 0.009593030740481373,
+      "directional_concentration": 0.4945219795188545,
+      "directional_peak_to_mean": 5.278821923923419,
+      "ray_index": 0.004743964551368072
+    }
+  },
+  "projected_local_mc_level_vs_dense_sn": {
+    "relative_l1": 0.10361461602084156,
+    "integral_ratio": 0.9064284720733717,
+    "peak_ratio": 0.9230185042291016
+  },
+  "projected_directional_disagreement_vs_dense_sn": {
+    "residual_rms": 0.004893658860869113,
+    "directional_concentration": 0.4313147924830609,
+    "directional_peak_to_mean": 6.034050406142477,
+    "ray_index": 0.002110707456058654
+  },
+  "projected_local_mc_vs_dense_sn": {
+    "corr": 0.9994157179898188,
+    "normalized_rel_l1": 0.04757494336601791,
+    "log10_rmse": 0.13229069175075509
+  },
+  "projected_local_mc_ray_vs_dense_sn": {
+    "residual_rms": 0.004893658860869113,
+    "directional_concentration": 0.4313147924830609,
+    "directional_peak_to_mean": 6.034050406142477,
+    "ray_index": 0.002110707456058654
+  },
+  "genvr_cfm_vs_projected_local_mc": {
+    "corr": 0.9976365263759839,
+    "normalized_rel_l1": 0.0822427070302098,
+    "log10_rmse": 0.1258623578277107
+  },
+  "wall_s": 17.86378233100004,
+  "experiment_id": "position_refined",
+  "role": "causal_agent",
+  "action": {
+    "experiment_id": "position_refined",
+    "hypothesis": "Increasing only face-position resolution tests whether midpoint compression creates artifacts.",
+    "n_pos": 4,
+    "n_mu": 2,
+    "n_phi": 16,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct",
+    "interface_phi_offset_fraction": 0.0,
+    "dense_n_mu": null,
+    "dense_n_phi": null,
+    "dense_phi_offset_fraction": 0.0,
+    "mc_histories": null
+  },
+  "process_elapsed_s": 32.459193310000046,
+  "artifacts": {
+    "metrics": "experiments/position_refined/metrics.json",
+    "fluxes": "experiments/position_refined/lattice_stage8_ultra.npz",
+    "figure": "experiments/position_refined/lattice_stage8_ultra.png"
+  },
+  "controlled_comparisons": [
+    {
+      "comparison_type": "interface_position_refinement",
+      "controlled_factor": "n_pos",
+      "baseline_experiment": "coarse_baseline",
+      "intervention_experiment": "position_refined",
+      "baseline_value": 1,
+      "intervention_value": 4,
+      "method_sensitivity": {
+        "cfm": {
+          "shape": {
+            "corr": 0.9995224069967573,
+            "normalized_rel_l1": 0.04000011614122169,
+            "log10_rmse": 0.1862215170768292
+          },
+          "level": {
+            "relative_l1": 0.09700755997089014,
+            "integral_ratio": 0.9154912416662498,
+            "peak_ratio": 0.9213718764867083
+          },
+          "directional_residual": {
+            "residual_rms": 0.00432257045900176,
+            "directional_concentration": 0.7199163304392168,
+            "directional_peak_to_mean": 10.613767029292752,
+            "ray_index": 0.003111889062909508
+          }
+        },
+        "projected_local_mc": {
+          "shape": {
+            "corr": 0.999231362860286,
+            "normalized_rel_l1": 0.05755569414435254,
+            "log10_rmse": 0.29745218238621385
+          },
+          "level": {
+            "relative_l1": 0.1283643477106685,
+            "integral_ratio": 0.8972136043192294,
+            "peak_ratio": 0.8938884371229321
+          },
+          "directional_residual": {
+            "residual_rms": 0.005478999223975666,
+            "directional_concentration": 0.7208731616837154,
+            "directional_peak_to_mean": 10.74383349829039,
+            "ray_index": 0.003949663493449961
+          }
+        },
+        "dense_sn": {
+          "shape": {
+            "corr": 1.0,
+            "normalized_rel_l1": 0.0,
+            "log10_rmse": 0.0
+          },
+          "level": {
+            "relative_l1": 0.0,
+            "integral_ratio": 1.0,
+            "peak_ratio": 1.0
+          },
+          "directional_residual": {
+            "residual_rms": 0.0,
+            "directional_concentration": 0.0,
+            "directional_peak_to_mean": 0.0,
+            "ray_index": 0.0
+          }
+        }
+      }
+    }
+  ]
+}

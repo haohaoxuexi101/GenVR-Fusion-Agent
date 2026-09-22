@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "candidate_signature": "d7d960548ee7",
+  "discretization": {
+    "n_pos": 2,
+    "n_mu": 4,
+    "n_phi": 32,
+    "n_angle": 32,
+    "n_state": 256
+  },
+  "genvr_method": "GenVR/CFM projected response",
+  "diagnostic_method": "Projected local-MC response",
+  "diagnostic_scope": "Both fields use the same finite interface projection; the local-MC field is a kernel diagnostic, not an exact continuum truth."
+}

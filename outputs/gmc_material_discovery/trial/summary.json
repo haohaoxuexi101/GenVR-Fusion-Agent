@@ -1,0 +1,4609 @@
+{
+  "schema_version": "1.0",
+  "architecture": "LLM observation-hypothesis-tool-evidence loop with an independent threshold-locked verifier",
+  "policy_class": "DeepSeekShieldToolAgent",
+  "deterministic_policy_fallback": false,
+  "final_claim": "verified_improvement",
+  "candidate_signature": "d7d960548ee7",
+  "final_design": {
+    "signature": "d7d960548ee7",
+    "grid_size": 7,
+    "source_cell": [
+      3,
+      3
+    ],
+    "absorber_count": 11,
+    "absorbers": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        1
+      ]
+    ]
+  },
+  "termination": "verifier_accepted_finish",
+  "steps_completed": 7,
+  "response_failures": 1,
+  "verifier_decision": {
+    "accepted": true,
+    "terminal": true,
+    "requested_claim": "verified_improvement",
+    "final_claim": "verified_improvement",
+    "candidate_signature": "d7d960548ee7",
+    "checks": {
+      "non_baseline_candidate": {
+        "passed": true,
+        "observed": "d7d960548ee7",
+        "required": "signature different from baseline ded6840cea70"
+      },
+      "genvr_cfm_gate": {
+        "passed": true,
+        "observed": 0.07107464124854711,
+        "required": "risk < 1"
+      },
+      "minimum_gmc_discovery_batch": {
+        "passed": true,
+        "observed": 4,
+        "required": ">= 2"
+      },
+      "gmc_guided_regeneration": {
+        "passed": true,
+        "observed": 2,
+        "required": ">= 1"
+      },
+      "projected_local_mc_audit": {
+        "passed": true,
+        "observed": null,
+        "required": "optional diagnostic"
+      },
+      "unbiased_mc_present": {
+        "passed": true,
+        "observed": 1,
+        "required": "exactly one completed certification"
+      },
+      "mc_design_identity": {
+        "passed": true,
+        "observed": {
+          "baseline": "ded6840cea70",
+          "candidate": "d7d960548ee7"
+        },
+        "required": {
+          "baseline": "ded6840cea70",
+          "candidate": "d7d960548ee7"
+        }
+      },
+      "mc_histories": {
+        "passed": true,
+        "observed": {
+          "baseline.analog": 2000,
+          "baseline.variance_reduced": 2000,
+          "candidate.analog": 2000,
+          "candidate.variance_reduced": 2000
+        },
+        "required": "each >= 1000"
+      },
+      "mc_replicates": {
+        "passed": true,
+        "observed": 2,
+        "required": ">= 2"
+      },
+      "analog_weight_window_consistency": {
+        "passed": true,
+        "observed": {
+          "baseline_far_field_z": 0.7824489800577266,
+          "candidate_far_field_z": 1.3507052837562068
+        },
+        "required": "both absolute z-scores <= 2"
+      },
+      "mc_improvement_threshold": {
+        "passed": true,
+        "observed": 0.27056401026830945,
+        "required": "candidate/baseline < 1"
+      },
+      "mc_far_field_difference_z": {
+        "passed": true,
+        "observed": -3.276248506989492,
+        "required": "<= -1.96"
+      },
+      "mc_far_field_ci_separation": {
+        "passed": true,
+        "observed": true,
+        "required": true
+      },
+      "deep_far_field_diagnostic": {
+        "candidate_over_baseline": 0.6746205397963481,
+        "estimated_reduction_fraction": 0.32537946020365194,
+        "difference": -0.00012970568634975565,
+        "difference_z": -0.5546074814250956,
+        "candidate_upper_below_baseline_lower": false
+      },
+      "fom_is_not_acceptance_criterion": {
+        "passed": true,
+        "observed": {
+          "baseline": 1.3467202242060614,
+          "candidate": 4.319479715538355
+        },
+        "required": "reported for efficiency only"
+      }
+    },
+    "reasons": [],
+    "hard_stop_reason": null
+  },
+  "budget_usage": {
+    "diffusion_evaluations": {
+      "used": 21,
+      "limit": 40,
+      "remaining": 19
+    },
+    "genvr_candidates": {
+      "used": 4,
+      "limit": 4,
+      "remaining": 0
+    },
+    "exact_candidates": {
+      "used": 0,
+      "limit": 2,
+      "remaining": 2
+    },
+    "mc_root_histories": {
+      "used": 8000,
+      "limit": 8000,
+      "remaining": 0
+    }
+  },
+  "operator_memory": {
+    "counts": {
+      "adjoint_sensitivity": 16,
+      "channel_block": 0,
+      "inner_barrier": 0,
+      "hotspot_cap": 0,
+      "symmetry_repair": 0,
+      "redistribute": 0,
+      "random_explore": 4
+    },
+    "mean_improvement": {
+      "adjoint_sensitivity": -0.007626005282820605,
+      "channel_block": 0.0,
+      "inner_barrier": 0.0,
+      "hotspot_cap": 0.0,
+      "symmetry_repair": 0.0,
+      "redistribute": 0.0,
+      "random_explore": -0.6282244227596971
+    }
+  },
+  "gmc_operator_memory": {
+    "counts": {
+      "adjoint_sensitivity": 4,
+      "channel_block": 0,
+      "inner_barrier": 0,
+      "hotspot_cap": 0,
+      "symmetry_repair": 0,
+      "redistribute": 0,
+      "random_explore": 0
+    },
+    "mean_improvement": {
+      "adjoint_sensitivity": 0.4602434956896402,
+      "channel_block": 0.0,
+      "inner_barrier": 0.0,
+      "hotspot_cap": 0.0,
+      "symmetry_repair": 0.0,
+      "redistribute": 0.0,
+      "random_explore": 0.0
+    }
+  },
+  "discovery_progress": {
+    "structure_generation_rounds": 2,
+    "gmc_screened_structures": 4,
+    "minimum_gmc_screened_required": 2,
+    "minimum_gmc_batch_passed": true,
+    "gmc_guided_structures": 12,
+    "gmc_guided_and_screened": 2,
+    "minimum_gmc_guided_screened_required": 1,
+    "gmc_guided_cycle_passed": true,
+    "mc_discovery_gate_passed": true
+  },
+  "candidate_archive": [
+    {
+      "signature": "d7d960548ee7",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "fed6d69cffdf",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            3,
+            5
+          ],
+          "add": [
+            3,
+            4
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "unbiased-mc",
+      "diffusion": {
+        "risk": 0.073553245838148,
+        "metrics": {
+          "far_mean": 3.5193704378895475e-05,
+          "far_p90": 0.00012424184287568183,
+          "far_cvar90": 0.0001548545264874329,
+          "far_max": 0.0002106475260658268,
+          "worst_sector_mean": 7.16774246909397e-05,
+          "hotspot_ratio": 5.985375219328867,
+          "angular_imbalance": 2.034969868678536
+        },
+        "runtime_s": 0.11208800500025973,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": {
+        "risk": 0.07107464124854711,
+        "metrics": {
+          "far_mean": 0.00017205101517129624,
+          "far_p90": 0.0005075314026634849,
+          "far_cvar90": 0.0006093067679194631,
+          "far_max": 0.0008774816475752887,
+          "worst_sector_mean": 0.0003382490690934348,
+          "hotspot_ratio": 5.100124789741325,
+          "angular_imbalance": 1.9655833944201537
+        },
+        "runtime_s": 12.89123750699946,
+        "fidelity": "genvr-cfm-response"
+      },
+      "gmc": {
+        "risk": 0.07107464124854711,
+        "metrics": {
+          "far_mean": 0.00017205101517129624,
+          "far_p90": 0.0005075314026634849,
+          "far_cvar90": 0.0006093067679194631,
+          "far_max": 0.0008774816475752887,
+          "worst_sector_mean": 0.0003382490690934348,
+          "hotspot_ratio": 5.100124789741325,
+          "angular_imbalance": 1.9655833944201537
+        },
+        "runtime_s": 12.89123750699946,
+        "fidelity": "genvr-cfm-response"
+      },
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": {
+        "design_comparison": {
+          "far_field": {
+            "candidate_over_baseline": 0.27056401026830945,
+            "estimated_reduction_fraction": 0.7294359897316905,
+            "difference": -0.000869144600737379,
+            "difference_z": -3.276248506989492,
+            "candidate_upper_below_baseline_lower": true
+          },
+          "deep_far_field": {
+            "candidate_over_baseline": 0.6746205397963481,
+            "estimated_reduction_fraction": 0.32537946020365194,
+            "difference": -0.00012970568634975565,
+            "difference_z": -0.5546074814250956,
+            "candidate_upper_below_baseline_lower": false
+          }
+        },
+        "artifact": {
+          "summary": "/home/ssn/GenVR/outputs/gmc_material_discovery/trial/mc/01_d7d960548ee7/certification.json",
+          "fields": "/home/ssn/GenVR/outputs/gmc_material_discovery/trial/mc/01_d7d960548ee7/fields.npz"
+        }
+      }
+    },
+    {
+      "signature": "fe3b2d515bfa",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "20d0b63a8068",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            5,
+            5
+          ],
+          "add": [
+            3,
+            4
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "genvr-cfm-response",
+      "diffusion": {
+        "risk": 0.10033176610917437,
+        "metrics": {
+          "far_mean": 5.2116729774774004e-05,
+          "far_p90": 0.0001543492928161687,
+          "far_cvar90": 0.0002045371276366172,
+          "far_max": 0.0003372278744926309,
+          "worst_sector_mean": 0.00012640310932907105,
+          "hotspot_ratio": 6.470626149222795,
+          "angular_imbalance": 2.4239237607910478
+        },
+        "runtime_s": 0.09498070399968128,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": {
+        "risk": 0.08795137599289195,
+        "metrics": {
+          "far_mean": 0.00023447121300435231,
+          "far_p90": 0.000576206892201233,
+          "far_cvar90": 0.0007090608152976401,
+          "far_max": 0.0011264507549852915,
+          "worst_sector_mean": 0.0005509298875767475,
+          "hotspot_ratio": 4.804217714199235,
+          "angular_imbalance": 2.348866335190375
+        },
+        "runtime_s": 16.263273945000037,
+        "fidelity": "genvr-cfm-response"
+      },
+      "gmc": {
+        "risk": 0.08795137599289195,
+        "metrics": {
+          "far_mean": 0.00023447121300435231,
+          "far_p90": 0.000576206892201233,
+          "far_cvar90": 0.0007090608152976401,
+          "far_max": 0.0011264507549852915,
+          "worst_sector_mean": 0.0005509298875767475,
+          "hotspot_ratio": 4.804217714199235,
+          "angular_imbalance": 2.348866335190375
+        },
+        "runtime_s": 16.263273945000037,
+        "fidelity": "genvr-cfm-response"
+      },
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "20d0b63a8068",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "ded6840cea70",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            5,
+            1
+          ],
+          "add": [
+            4,
+            3
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 1,
+        "generation_guidance_fidelity": "diffusion-ensemble",
+        "gmc_guided_generation": false
+      },
+      "removed_from_baseline": [
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "genvr-cfm-response",
+      "diffusion": {
+        "risk": 0.09792337495250229,
+        "metrics": {
+          "far_mean": 6.842251975137737e-05,
+          "far_p90": 0.00016136959463745193,
+          "far_cvar90": 0.000205301850893432,
+          "far_max": 0.00033229430311060943,
+          "worst_sector_mean": 0.00012456366346028566,
+          "hotspot_ratio": 4.856504909758461,
+          "angular_imbalance": 1.8193016271509084
+        },
+        "runtime_s": 0.11272650199862255,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": {
+        "risk": 0.09274446963494523,
+        "metrics": {
+          "far_mean": 0.00036051546591068574,
+          "far_p90": 0.0007085309867654947,
+          "far_cvar90": 0.0008335617786959705,
+          "far_max": 0.0011865824373642067,
+          "worst_sector_mean": 0.0005809260853513944,
+          "hotspot_ratio": 3.291349607892193,
+          "angular_imbalance": 1.610389705781276
+        },
+        "runtime_s": 12.295329086000493,
+        "fidelity": "genvr-cfm-response"
+      },
+      "gmc": {
+        "risk": 0.09274446963494523,
+        "metrics": {
+          "far_mean": 0.00036051546591068574,
+          "far_p90": 0.0007085309867654947,
+          "far_cvar90": 0.0008335617786959705,
+          "far_max": 0.0011865824373642067,
+          "worst_sector_mean": 0.0005809260853513944,
+          "hotspot_ratio": 3.291349607892193,
+          "angular_imbalance": 1.610389705781276
+        },
+        "runtime_s": 12.295329086000493,
+        "fidelity": "genvr-cfm-response"
+      },
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "f53d1987aeea",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "20d0b63a8068",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            3,
+            5
+          ],
+          "add": [
+            3,
+            4
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.10037394744177637,
+        "metrics": {
+          "far_mean": 5.1943221242919785e-05,
+          "far_p90": 0.00015434923954753903,
+          "far_cvar90": 0.00020453470420666962,
+          "far_max": 0.00033722418768685755,
+          "worst_sector_mean": 0.00012640148473895804,
+          "hotspot_ratio": 6.492169326768957,
+          "angular_imbalance": 2.4319787583371384
+        },
+        "runtime_s": 0.1036707050006953,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "10ef494af8d1",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "fed6d69cffdf",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            1,
+            5
+          ],
+          "add": [
+            3,
+            4
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.10096445425955965,
+        "metrics": {
+          "far_mean": 5.160737077357465e-05,
+          "far_p90": 0.0001543437503486131,
+          "far_cvar90": 0.0002041935090831143,
+          "far_max": 0.0003367912193682042,
+          "worst_sector_mean": 0.00012855541870633185,
+          "hotspot_ratio": 6.526029408587053,
+          "angular_imbalance": 2.4904432298280397
+        },
+        "runtime_s": 0.09427190499991411,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "42d5caa21c0d",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "20d0b63a8068",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            1,
+            5
+          ],
+          "add": [
+            3,
+            4
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.10350946011588387,
+        "metrics": {
+          "far_mean": 6.835180223974817e-05,
+          "far_p90": 0.00017803945789990997,
+          "far_cvar90": 0.00023825606781116082,
+          "far_max": 0.0003372241757784142,
+          "worst_sector_mean": 0.00012855534818159665,
+          "hotspot_ratio": 4.9336544864695675,
+          "angular_imbalance": 1.880389638727642
+        },
+        "runtime_s": 0.10373810500095715,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "44e1c86cd934",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "20d0b63a8068",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            4,
+            4
+          ],
+          "add": [
+            3,
+            4
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.10645830954163282,
+        "metrics": {
+          "far_mean": 7.64143223025369e-05,
+          "far_p90": 0.00017504788602695987,
+          "far_cvar90": 0.00023198804898822686,
+          "far_max": 0.0003640458880709096,
+          "worst_sector_mean": 0.00013810911742515234,
+          "hotspot_ratio": 4.764105433397575,
+          "angular_imbalance": 1.8056605210598387
+        },
+        "runtime_s": 0.10299410500010708,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "fed6d69cffdf",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "ded6840cea70",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            5,
+            5
+          ],
+          "add": [
+            4,
+            3
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 1,
+        "generation_guidance_fidelity": "diffusion-ensemble",
+        "gmc_guided_generation": false
+      },
+      "removed_from_baseline": [
+        [
+          5,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "genvr-cfm-response",
+      "diffusion": {
+        "risk": 0.09846431722599037,
+        "metrics": {
+          "far_mean": 6.842251975137741e-05,
+          "far_p90": 0.0001613695946374523,
+          "far_cvar90": 0.00020530185089343212,
+          "far_max": 0.0003322943031106093,
+          "worst_sector_mean": 0.00012687488665834035,
+          "hotspot_ratio": 4.856504909758456,
+          "angular_imbalance": 1.8534978316082433
+        },
+        "runtime_s": 0.1025834029987891,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": {
+        "risk": 0.10929048423614242,
+        "metrics": {
+          "far_mean": 0.000375123105609876,
+          "far_p90": 0.0007366553635229972,
+          "far_cvar90": 0.0009335549122437733,
+          "far_max": 0.0015187030639742354,
+          "worst_sector_mean": 0.0007730363350875585,
+          "hotspot_ratio": 4.048545774073619,
+          "angular_imbalance": 2.0593924830942054
+        },
+        "runtime_s": 12.63152420699953,
+        "fidelity": "genvr-cfm-response"
+      },
+      "gmc": {
+        "risk": 0.10929048423614242,
+        "metrics": {
+          "far_mean": 0.000375123105609876,
+          "far_p90": 0.0007366553635229972,
+          "far_cvar90": 0.0009335549122437733,
+          "far_max": 0.0015187030639742354,
+          "worst_sector_mean": 0.0007730363350875585,
+          "hotspot_ratio": 4.048545774073619,
+          "angular_imbalance": 2.0593924830942054
+        },
+        "runtime_s": 12.63152420699953,
+        "fidelity": "genvr-cfm-response"
+      },
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "8821dd9e4523",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "fed6d69cffdf",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            4,
+            4
+          ],
+          "add": [
+            3,
+            4
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.1939809549921652,
+        "metrics": {
+          "far_mean": 0.00010674723675160618,
+          "far_p90": 0.00026863536252158115,
+          "far_cvar90": 0.0004840105394660456,
+          "far_max": 0.0008313650781903788,
+          "worst_sector_mean": 0.00027667041662865385,
+          "hotspot_ratio": 7.788164860181916,
+          "angular_imbalance": 2.5903369344601197
+        },
+        "runtime_s": 0.09657320400037861,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "bb5b76abf813",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "fed6d69cffdf",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            2,
+            4
+          ],
+          "add": [
+            3,
+            4
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.6723170071521252,
+        "metrics": {
+          "far_mean": 0.00030918663549451707,
+          "far_p90": 0.0010842035398802806,
+          "far_cvar90": 0.0018938726384611776,
+          "far_max": 0.003908031227574184,
+          "worst_sector_mean": 0.0012329191743591854,
+          "hotspot_ratio": 12.639715883332501,
+          "angular_imbalance": 3.9708106725599084
+        },
+        "runtime_s": 0.1330105069991987,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "fd13c81db677",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "ded6840cea70",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            4,
+            2
+          ],
+          "add": [
+            4,
+            3
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 1,
+        "generation_guidance_fidelity": "diffusion-ensemble",
+        "gmc_guided_generation": false
+      },
+      "removed_from_baseline": [
+        [
+          4,
+          2
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.6912977717538151,
+        "metrics": {
+          "far_mean": 0.00037570815584829926,
+          "far_p90": 0.001237194129710665,
+          "far_cvar90": 0.0020427819995101687,
+          "far_max": 0.0038388865923161867,
+          "worst_sector_mean": 0.0011679627763183924,
+          "hotspot_ratio": 10.217735581620499,
+          "angular_imbalance": 3.1173566393719834
+        },
+        "runtime_s": 0.10317300200040336,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "32584f4d9bef",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "ded6840cea70",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            4,
+            4
+          ],
+          "add": [
+            4,
+            3
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 1,
+        "generation_guidance_fidelity": "diffusion-ensemble",
+        "gmc_guided_generation": false
+      },
+      "removed_from_baseline": [
+        [
+          4,
+          4
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.698218176679814,
+        "metrics": {
+          "far_mean": 0.0003757081558482995,
+          "far_p90": 0.0012371941297106667,
+          "far_cvar90": 0.00204278199951017,
+          "far_max": 0.003838886592316181,
+          "worst_sector_mean": 0.00121774686431286,
+          "hotspot_ratio": 10.217735581620477,
+          "angular_imbalance": 3.226735752440759
+        },
+        "runtime_s": 0.16115880300094432,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "ded6840cea70",
+      "is_baseline": true,
+      "lineage": {
+        "parent_signature": null,
+        "mutation": null,
+        "generation_round": 0,
+        "generation_guidance_fidelity": null,
+        "gmc_guided_generation": false
+      },
+      "removed_from_baseline": [],
+      "added_to_baseline": [],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.0,
+        "metrics": {
+          "far_mean": 0.00047552158919180105,
+          "far_p90": 0.0014805706106198334,
+          "far_cvar90": 0.003056338483974904,
+          "far_max": 0.0064540363650324355,
+          "worst_sector_mean": 0.0016277996384404532,
+          "hotspot_ratio": 13.572541208910723,
+          "angular_imbalance": 3.419828432477314
+        },
+        "runtime_s": 0.11533099599910202,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "08006873b4de",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "ded6840cea70",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            3,
+            5
+          ],
+          "add": [
+            4,
+            3
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 1,
+        "generation_guidance_fidelity": "diffusion-ensemble",
+        "gmc_guided_generation": false
+      },
+      "removed_from_baseline": [
+        [
+          3,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.0097623428910179,
+        "metrics": {
+          "far_mean": 0.0004652952324081121,
+          "far_p90": 0.0014998134587786373,
+          "far_cvar90": 0.0030973715107288787,
+          "far_max": 0.006544465611077256,
+          "worst_sector_mean": 0.001644419547146258,
+          "hotspot_ratio": 14.065189486697946,
+          "angular_imbalance": 3.5306381276421486
+        },
+        "runtime_s": 0.10207200200056832,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "6f46ac0ff9cf",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "ded6840cea70",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            3,
+            1
+          ],
+          "add": [
+            4,
+            3
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 1,
+        "generation_guidance_fidelity": "diffusion-ensemble",
+        "gmc_guided_generation": false
+      },
+      "removed_from_baseline": [
+        [
+          3,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.0106124505419387,
+        "metrics": {
+          "far_mean": 0.0004652952324081076,
+          "far_p90": 0.001499813458778623,
+          "far_cvar90": 0.003097371510728847,
+          "far_max": 0.006544465611077186,
+          "worst_sector_mean": 0.0016506993674662085,
+          "hotspot_ratio": 14.065189486697934,
+          "angular_imbalance": 3.5441523765379435
+        },
+        "runtime_s": 0.10354720200120937,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "b2f656e6c56c",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "fed6d69cffdf",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            1,
+            3
+          ],
+          "add": [
+            3,
+            4
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          1,
+          3
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.0214353547813273,
+        "metrics": {
+          "far_mean": 0.00045464209593359966,
+          "far_p90": 0.0015226983649382136,
+          "far_cvar90": 0.0031446284552534786,
+          "far_max": 0.006644329166406547,
+          "worst_sector_mean": 0.0016694763743774993,
+          "hotspot_ratio": 14.614416979497978,
+          "angular_imbalance": 3.668421476014842
+        },
+        "runtime_s": 0.09694280499934393,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "42c53ac7ee75",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "20d0b63a8068",
+        "mutation": {
+          "operator": "adjoint_sensitivity",
+          "remove": [
+            1,
+            3
+          ],
+          "add": [
+            3,
+            4
+          ],
+          "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          1,
+          3
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.0247516111407222,
+        "metrics": {
+          "far_mean": 0.000471352366637753,
+          "far_p90": 0.0015226992361363411,
+          "far_cvar90": 0.003144629507899939,
+          "far_max": 0.006644328936853805,
+          "worst_sector_mean": 0.0016694762805661012,
+          "hotspot_ratio": 14.096309697666483,
+          "angular_imbalance": 3.5384757782317466
+        },
+        "runtime_s": 0.09538840399909532,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "4914fc725c5d",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "ded6840cea70",
+        "mutation": {
+          "operator": "random_explore",
+          "remove": [
+            2,
+            2
+          ],
+          "add": [
+            4,
+            3
+          ],
+          "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+        },
+        "generation_round": 1,
+        "generation_guidance_fidelity": "diffusion-ensemble",
+        "gmc_guided_generation": false
+      },
+      "removed_from_baseline": [
+        [
+          2,
+          2
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.1439802766000389,
+        "metrics": {
+          "far_mean": 0.0005689689651156603,
+          "far_p90": 0.002109438507841813,
+          "far_cvar90": 0.0035611575129682396,
+          "far_max": 0.006381207432722065,
+          "worst_sector_mean": 0.002048627032928104,
+          "hotspot_ratio": 11.215387523684862,
+          "angular_imbalance": 3.597688538303427
+        },
+        "runtime_s": 0.10926620200007164,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "accc3018bfb8",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "20d0b63a8068",
+        "mutation": {
+          "operator": "random_explore",
+          "remove": [
+            2,
+            4
+          ],
+          "add": [
+            4,
+            6
+          ],
+          "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.1444243723337206,
+        "metrics": {
+          "far_mean": 0.0005712246678381955,
+          "far_p90": 0.0021094857634051225,
+          "far_cvar90": 0.0035614363201957066,
+          "far_max": 0.0063815135501022755,
+          "worst_sector_mean": 0.0020477664661965444,
+          "hotspot_ratio": 11.171635101567245,
+          "angular_imbalance": 3.585241603280953
+        },
+        "runtime_s": 0.15566520799984573,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "81f0c78dd0fa",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "fed6d69cffdf",
+        "mutation": {
+          "operator": "random_explore",
+          "remove": [
+            2,
+            2
+          ],
+          "add": [
+            4,
+            6
+          ],
+          "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+        },
+        "generation_round": 2,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "gmc_guided_generation": true
+      },
+      "removed_from_baseline": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.1460785562240827,
+        "metrics": {
+          "far_mean": 0.0005780132786042471,
+          "far_p90": 0.0021094386885217808,
+          "far_cvar90": 0.0035611578831435302,
+          "far_max": 0.006381208245165672,
+          "worst_sector_mean": 0.0020486275129535203,
+          "hotspot_ratio": 11.039899049680384,
+          "angular_imbalance": 3.5428477069418873
+        },
+        "runtime_s": 0.0998881049999909,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "cb8d1f93cc56",
+      "is_baseline": false,
+      "lineage": {
+        "parent_signature": "ded6840cea70",
+        "mutation": {
+          "operator": "random_explore",
+          "remove": [
+            3,
+            5
+          ],
+          "add": [
+            1,
+            4
+          ],
+          "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+        },
+        "generation_round": 1,
+        "generation_guidance_fidelity": "diffusion-ensemble",
+        "gmc_guided_generation": false
+      },
+      "removed_from_baseline": [
+        [
+          3,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          1,
+          4
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.274802178059439,
+        "metrics": {
+          "far_mean": 0.0008712709153639089,
+          "far_p90": 0.002477526444931394,
+          "far_cvar90": 0.00426809329767888,
+          "far_max": 0.006445972058628373,
+          "worst_sector_mean": 0.0017364331351515368,
+          "hotspot_ratio": 7.398355603246604,
+          "angular_imbalance": 1.9916137611667721
+        },
+        "runtime_s": 0.11642360299993015,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "gmc": null,
+      "exact": null,
+      "projected_mc_audit": null,
+      "latest_mc": null
+    }
+  ],
+  "search_records": [
+    {
+      "parent_signature": "ded6840cea70",
+      "parent_guidance_fidelity": "diffusion-ensemble",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "operator_memory_source": "proposal_prefilter",
+      "design_signature": "fd13c81db677",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          4,
+          2
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.06184371662745541,
+      "diffusion_risk": 0.6912977717538151,
+      "acquisition": 0.6715381635871301,
+      "improvement_over_parent": 0.3087022282461849
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "parent_guidance_fidelity": "diffusion-ensemble",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "operator_memory_source": "proposal_prefilter",
+      "design_signature": "32584f4d9bef",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          4,
+          4
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.06184371662745541,
+      "diffusion_risk": 0.698218176679814,
+      "acquisition": 0.6792107157140279,
+      "improvement_over_parent": 0.301781823320186
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "parent_guidance_fidelity": "diffusion-ensemble",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "operator_memory_source": "proposal_prefilter",
+      "design_signature": "20d0b63a8068",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          5,
+          1
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.05407496442132817,
+      "diffusion_risk": 0.09792337495250229,
+      "acquisition": 0.07141271805841978,
+      "improvement_over_parent": 0.9020766250474977
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "parent_guidance_fidelity": "diffusion-ensemble",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "operator_memory_source": "proposal_prefilter",
+      "design_signature": "fed6d69cffdf",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          5,
+          5
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.05407496442132817,
+      "diffusion_risk": 0.09846431722599037,
+      "acquisition": 0.06833710360521152,
+      "improvement_over_parent": 0.9015356827740096
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "parent_guidance_fidelity": "diffusion-ensemble",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "operator_memory_source": "proposal_prefilter",
+      "design_signature": "6f46ac0ff9cf",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          3,
+          1
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.053242775573896534,
+      "diffusion_risk": 1.0106124505419387,
+      "acquisition": 0.985689683677959,
+      "improvement_over_parent": -0.010612450541938712
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "parent_guidance_fidelity": "diffusion-ensemble",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "operator_memory_source": "proposal_prefilter",
+      "design_signature": "08006873b4de",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          3,
+          5
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.053242775573896534,
+      "diffusion_risk": 1.0097623428910179,
+      "acquisition": 0.9883538497953926,
+      "improvement_over_parent": -0.00976234289101785
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "parent_guidance_fidelity": "diffusion-ensemble",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "operator_memory_source": "proposal_prefilter",
+      "design_signature": "4914fc725c5d",
+      "mutation": {
+        "operator": "random_explore",
+        "remove": [
+          2,
+          2
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+      },
+      "heuristic_score": 0.049992314425702705,
+      "diffusion_risk": 1.1439802766000389,
+      "acquisition": 1.1334988058603568,
+      "improvement_over_parent": -0.14398027660003887
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "parent_guidance_fidelity": "diffusion-ensemble",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "operator_memory_source": "proposal_prefilter",
+      "design_signature": "cb8d1f93cc56",
+      "mutation": {
+        "operator": "random_explore",
+        "remove": [
+          3,
+          5
+        ],
+        "add": [
+          1,
+          4
+        ],
+        "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+      },
+      "heuristic_score": -0.01988830445208331,
+      "diffusion_risk": 1.274802178059439,
+      "acquisition": 1.2660413084431774,
+      "improvement_over_parent": -0.27480217805943896
+    },
+    {
+      "parent_signature": "20d0b63a8068",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "f53d1987aeea",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          3,
+          5
+        ],
+        "add": [
+          3,
+          4
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.32689993059818023,
+      "diffusion_risk": 0.10037394744177637,
+      "acquisition": 0.0576168665847394,
+      "improvement_over_parent": -0.0024505724892740777
+    },
+    {
+      "parent_signature": "20d0b63a8068",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "fe3b2d515bfa",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          5,
+          5
+        ],
+        "add": [
+          3,
+          4
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.32089733273791854,
+      "diffusion_risk": 0.10033176610917437,
+      "acquisition": 0.057574685252137395,
+      "improvement_over_parent": -0.002408391156672074
+    },
+    {
+      "parent_signature": "20d0b63a8068",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "42d5caa21c0d",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          1,
+          5
+        ],
+        "add": [
+          3,
+          4
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.32058206793699656,
+      "diffusion_risk": 0.10350946011588387,
+      "acquisition": 0.0607523792588469,
+      "improvement_over_parent": -0.005586085163381577
+    },
+    {
+      "parent_signature": "20d0b63a8068",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "42c53ac7ee75",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          1,
+          3
+        ],
+        "add": [
+          3,
+          4
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.3159608364660098,
+      "diffusion_risk": 1.0247516111407222,
+      "acquisition": 0.9819945302836852,
+      "improvement_over_parent": -0.92682823618822
+    },
+    {
+      "parent_signature": "20d0b63a8068",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "44e1c86cd934",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          4,
+          4
+        ],
+        "add": [
+          3,
+          4
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.31480393114885363,
+      "diffusion_risk": 0.10645830954163282,
+      "acquisition": 0.06370122868459585,
+      "improvement_over_parent": -0.00853493458913053
+    },
+    {
+      "parent_signature": "20d0b63a8068",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "accc3018bfb8",
+      "mutation": {
+        "operator": "random_explore",
+        "remove": [
+          2,
+          4
+        ],
+        "add": [
+          4,
+          6
+        ],
+        "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+      },
+      "heuristic_score": 0.1477024034903285,
+      "diffusion_risk": 1.1444243723337206,
+      "acquisition": 1.1326502721085658,
+      "improvement_over_parent": -1.0465009973812183
+    },
+    {
+      "parent_signature": "fed6d69cffdf",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "d7d960548ee7",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          3,
+          5
+        ],
+        "add": [
+          3,
+          4
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.3687495687161662,
+      "diffusion_risk": 0.073553245838148,
+      "acquisition": 0.030796164981111027,
+      "improvement_over_parent": 0.024911071387842376
+    },
+    {
+      "parent_signature": "fed6d69cffdf",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "10ef494af8d1",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          1,
+          5
+        ],
+        "add": [
+          3,
+          4
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.36471007676919454,
+      "diffusion_risk": 0.10096445425955965,
+      "acquisition": 0.058207373402522675,
+      "improvement_over_parent": -0.002500137033569272
+    },
+    {
+      "parent_signature": "fed6d69cffdf",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "b2f656e6c56c",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          1,
+          3
+        ],
+        "add": [
+          3,
+          4
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.36030561241107684,
+      "diffusion_risk": 1.0214353547813273,
+      "acquisition": 0.9786782739242903,
+      "improvement_over_parent": -0.9229710375553369
+    },
+    {
+      "parent_signature": "fed6d69cffdf",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "8821dd9e4523",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          4,
+          4
+        ],
+        "add": [
+          3,
+          4
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.3564890110737244,
+      "diffusion_risk": 0.1939809549921652,
+      "acquisition": 0.15122387413512822,
+      "improvement_over_parent": -0.09551663776617482
+    },
+    {
+      "parent_signature": "fed6d69cffdf",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "bb5b76abf813",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          2,
+          4
+        ],
+        "add": [
+          3,
+          4
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.35460850652764697,
+      "diffusion_risk": 0.6723170071521252,
+      "acquisition": 0.6295599262950882,
+      "improvement_over_parent": -0.5738526899261348
+    },
+    {
+      "parent_signature": "fed6d69cffdf",
+      "parent_guidance_fidelity": "genvr-cfm-response",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "operator_memory_source": "gmc_validated",
+      "design_signature": "81f0c78dd0fa",
+      "mutation": {
+        "operator": "random_explore",
+        "remove": [
+          2,
+          2
+        ],
+        "add": [
+          4,
+          6
+        ],
+        "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+      },
+      "heuristic_score": 0.15623998974738199,
+      "diffusion_risk": 1.1460785562240827,
+      "acquisition": 1.134304455998928,
+      "improvement_over_parent": -1.0476142389980923
+    }
+  ],
+  "agent_memory": [
+    {
+      "step": 1,
+      "action": {
+        "tool": "generate_structures",
+        "arguments": {
+          "operator_weights": {
+            "adjoint_sensitivity": 0.35,
+            "hotspot_cap": 0.25,
+            "channel_block": 0.15,
+            "symmetry_repair": 0.1,
+            "redistribute": 0.1,
+            "inner_barrier": 0.05
+          },
+          "focus_sector": 6,
+          "exploration_fraction": 0.2,
+          "proposals_per_parent": 8,
+          "beam_width": 4,
+          "parent_signatures": [
+            "ded6840cea70"
+          ]
+        },
+        "hypothesis": "Starting from the diffusion baseline and focusing on the hottest sector 6 with adjoint-informed swaps should yield legal fixed-inventory candidates that reduce far-field leakage and tail risk.",
+        "expected_observation": "A batch of compiler-generated diffusion-prefiltered structures with varied one-for-one material swaps, including candidates with lower far_cvar90, far_max, or worst_sector_mean than the baseline.",
+        "decision_reason": "Only generate_structures is executable now; the campaign requires candidate structures before GMC screening, guided regeneration, and eventual MC certification. Using the baseline as parent and sector 6 as focus targets the dominant observed leakage channel while maintaining exploration."
+      },
+      "tool_result": {
+        "tool": "generate_structures",
+        "stage": "structure_generation",
+        "evaluated_candidates": 8,
+        "strategy": {
+          "operator_weights": {
+            "adjoint_sensitivity": 0.35,
+            "channel_block": 0.15,
+            "inner_barrier": 0.05,
+            "hotspot_cap": 0.25,
+            "symmetry_repair": 0.1,
+            "redistribute": 0.1,
+            "random_explore": 0.0
+          },
+          "focus_sector": 6,
+          "exploration_fraction": 0.2
+        },
+        "new_beam_signatures": [
+          "20d0b63a8068",
+          "fed6d69cffdf",
+          "fd13c81db677",
+          "32584f4d9bef"
+        ],
+        "budget": {
+          "used": 9,
+          "limit": 40,
+          "remaining": 31
+        },
+        "best_new_candidates": [
+          {
+            "parent_signature": "ded6840cea70",
+            "design_signature": "20d0b63a8068",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                5,
+                1
+              ],
+              "add": [
+                4,
+                3
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "parent_guidance_fidelity": "diffusion-ensemble",
+            "diffusion_risk": 0.09792337495250229,
+            "improvement_over_parent": 0.9020766250474977
+          },
+          {
+            "parent_signature": "ded6840cea70",
+            "design_signature": "fed6d69cffdf",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                5,
+                5
+              ],
+              "add": [
+                4,
+                3
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "parent_guidance_fidelity": "diffusion-ensemble",
+            "diffusion_risk": 0.09846431722599037,
+            "improvement_over_parent": 0.9015356827740096
+          },
+          {
+            "parent_signature": "ded6840cea70",
+            "design_signature": "fd13c81db677",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                4,
+                2
+              ],
+              "add": [
+                4,
+                3
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "parent_guidance_fidelity": "diffusion-ensemble",
+            "diffusion_risk": 0.6912977717538151,
+            "improvement_over_parent": 0.3087022282461849
+          },
+          {
+            "parent_signature": "ded6840cea70",
+            "design_signature": "32584f4d9bef",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                4,
+                4
+              ],
+              "add": [
+                4,
+                3
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "parent_guidance_fidelity": "diffusion-ensemble",
+            "diffusion_risk": 0.698218176679814,
+            "improvement_over_parent": 0.301781823320186
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "action": {
+        "tool": "screen_gmc",
+        "arguments": {
+          "design_signatures": [
+            "20d0b63a8068",
+            "fed6d69cffdf",
+            "fd13c81db677",
+            "32584f4d9bef",
+            "08006873b4de",
+            "6f46ac0ff9cf"
+          ]
+        },
+        "hypothesis": "GMC screening of the diffusion-prefiltered batch will rank candidates by cached high-throughput leakage response and expose flux fields needed for GMC-guided regeneration.",
+        "expected_observation": "GMC risk, far-field, tail, and hot-sector metrics for the submitted signatures, with at least two screened candidates and reusable GMC flux-field guidance for the next generation round.",
+        "decision_reason": "The required discovery cycle is generate -> GMC screen -> regenerate from GMC field -> GMC rescreen, and Monte Carlo is locked until the GMC screening and GMC-guided cycle requirements are met. Screening the awaiting candidates is the necessary next step."
+      },
+      "tool_result": {
+        "type": "tool_call_rejected",
+        "step": 2,
+        "tool": "screen_gmc",
+        "error": "genvr candidate budget permits only 2 new evaluations in this call"
+      }
+    },
+    {
+      "step": 3,
+      "action": {
+        "tool": "screen_gmc",
+        "arguments": {
+          "design_signatures": [
+            "20d0b63a8068",
+            "fed6d69cffdf"
+          ]
+        },
+        "hypothesis": "The two lowest-diffusion-risk adjoint candidates (absorber moved to cell [4,3], removing low-sensitivity cells [5,1] and [5,5]) should also rank best under the cached GMC flux operator, and their GMC fields will guide the next generation round.",
+        "expected_observation": "GMC risk, far-field mean, CVaR90, max, and hot-sector metrics for both signatures, plus reusable cached flux fields; at least two GMC-screened candidates satisfying the minimum screening batch.",
+        "decision_reason": "The previous screen_gmc call was rejected because this call permits only 2 new GenVR/GMC evaluations, so I screen the two best diffusion-prefiltered candidates. This starts the required generate -> GMC screen -> regenerate-from-GMC-field -> rescreen cycle and keeps Monte Carlo locked until the GMC-guided gate is met."
+      },
+      "tool_result": {
+        "tool": "screen_gmc",
+        "stage": "gmc_screening",
+        "verification_threshold": 1.0,
+        "rank_correlation_with_previous": 0.9999999999999999,
+        "budget": {
+          "used": 2,
+          "limit": 4,
+          "remaining": 2
+        },
+        "baseline_metrics": {
+          "far_mean": 0.0022322678841645628,
+          "far_cvar90": 0.013269091875371843,
+          "far_max": 0.025699718590317402,
+          "worst_sector_mean": 0.007625740149108272
+        },
+        "results": [
+          {
+            "signature": "20d0b63a8068",
+            "risk": 0.09274446963494523,
+            "accepted": true,
+            "metrics": {
+              "far_mean": 0.00036051546591068574,
+              "far_cvar90": 0.0008335617786959705,
+              "far_max": 0.0011865824373642067,
+              "worst_sector_mean": 0.0005809260853513944
+            }
+          },
+          {
+            "signature": "fed6d69cffdf",
+            "risk": 0.10929048423614242,
+            "accepted": true,
+            "metrics": {
+              "far_mean": 0.000375123105609876,
+              "far_cvar90": 0.0009335549122437733,
+              "far_max": 0.0015187030639742354,
+              "worst_sector_mean": 0.0007730363350875585
+            }
+          }
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "action": {
+        "tool": "generate_structures",
+        "arguments": {
+          "operator_weights": {
+            "adjoint_sensitivity": 0.4,
+            "hotspot_cap": 0.3,
+            "channel_block": 0.1,
+            "inner_barrier": 0.1,
+            "symmetry_repair": 0.05,
+            "redistribute": 0.05
+          },
+          "focus_sector": 4,
+          "exploration_fraction": 0.2,
+          "proposals_per_parent": 6,
+          "beam_width": 3,
+          "parent_signatures": [
+            "20d0b63a8068",
+            "fed6d69cffdf"
+          ]
+        },
+        "hypothesis": "Regenerating from the two GMC-screened parents using their cached flux fields and focusing on the hottest sector 4 will produce at least one GMC-guided candidate that further reduces GMC risk, satisfying the GMC-guided discovery gate.",
+        "expected_observation": "New compiler-generated structures with diffusion-prefiltered risks, including at least one GMC-guided candidate ready for GMC rescreening.",
+        "decision_reason": "The required cycle is generate -> GMC screen -> regenerate from GMC field -> GMC rescreen. Two candidates are GMC-screened; next we regenerate from those parents to create GMC-guided structures, then rescreen them. This is necessary to unlock Monte Carlo certification."
+      },
+      "tool_result": {
+        "tool": "generate_structures",
+        "stage": "structure_generation",
+        "evaluated_candidates": 12,
+        "strategy": {
+          "operator_weights": {
+            "adjoint_sensitivity": 0.4,
+            "channel_block": 0.1,
+            "inner_barrier": 0.1,
+            "hotspot_cap": 0.3,
+            "symmetry_repair": 0.05,
+            "redistribute": 0.05,
+            "random_explore": 0.0
+          },
+          "focus_sector": 4,
+          "exploration_fraction": 0.2
+        },
+        "new_beam_signatures": [
+          "d7d960548ee7",
+          "fe3b2d515bfa",
+          "f53d1987aeea"
+        ],
+        "budget": {
+          "used": 21,
+          "limit": 40,
+          "remaining": 19
+        },
+        "best_new_candidates": [
+          {
+            "parent_signature": "fed6d69cffdf",
+            "design_signature": "d7d960548ee7",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                3,
+                5
+              ],
+              "add": [
+                3,
+                4
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "parent_guidance_fidelity": "genvr-cfm-response",
+            "diffusion_risk": 0.073553245838148,
+            "improvement_over_parent": 0.024911071387842376
+          },
+          {
+            "parent_signature": "20d0b63a8068",
+            "design_signature": "fe3b2d515bfa",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                5,
+                5
+              ],
+              "add": [
+                3,
+                4
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "parent_guidance_fidelity": "genvr-cfm-response",
+            "diffusion_risk": 0.10033176610917437,
+            "improvement_over_parent": -0.002408391156672074
+          },
+          {
+            "parent_signature": "20d0b63a8068",
+            "design_signature": "f53d1987aeea",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                3,
+                5
+              ],
+              "add": [
+                3,
+                4
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "parent_guidance_fidelity": "genvr-cfm-response",
+            "diffusion_risk": 0.10037394744177637,
+            "improvement_over_parent": -0.0024505724892740777
+          },
+          {
+            "parent_signature": "fed6d69cffdf",
+            "design_signature": "10ef494af8d1",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                1,
+                5
+              ],
+              "add": [
+                3,
+                4
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "parent_guidance_fidelity": "genvr-cfm-response",
+            "diffusion_risk": 0.10096445425955965,
+            "improvement_over_parent": -0.002500137033569272
+          }
+        ]
+      }
+    },
+    {
+      "step": 5,
+      "action": {
+        "tool": "screen_gmc",
+        "arguments": {
+          "design_signatures": [
+            "d7d960548ee7",
+            "fe3b2d515bfa"
+          ]
+        },
+        "hypothesis": "The two GMC-guided children of the screened parents, especially d7d960548ee7 (lowest diffusion risk, 0.0736), should improve on their parents' GMC risk (~0.09-0.11) and satisfy the GMC-guided screening gate.",
+        "expected_observation": "GMC risk, far-field mean, CVaR90, max, and worst-sector metrics for both guided candidates, with at least one guided-and-screened structure recorded and cached flux fields for further breeding.",
+        "decision_reason": "Discovery cycle requires generate -> GMC screen -> regenerate -> GMC rescreen. Two parents already screened and guided children generated, so rescreening the best guided children is the mandatory next step to unlock MC certification; budget permits only 2 GenVR evaluations."
+      },
+      "tool_result": {
+        "tool": "screen_gmc",
+        "stage": "gmc_screening",
+        "verification_threshold": 1.0,
+        "rank_correlation_with_previous": 0.9999999999999999,
+        "budget": {
+          "used": 4,
+          "limit": 4,
+          "remaining": 0
+        },
+        "baseline_metrics": {
+          "far_mean": 0.0022322678841645628,
+          "far_cvar90": 0.013269091875371843,
+          "far_max": 0.025699718590317402,
+          "worst_sector_mean": 0.007625740149108272
+        },
+        "results": [
+          {
+            "signature": "d7d960548ee7",
+            "risk": 0.07107464124854711,
+            "accepted": true,
+            "metrics": {
+              "far_mean": 0.00017205101517129624,
+              "far_cvar90": 0.0006093067679194631,
+              "far_max": 0.0008774816475752887,
+              "worst_sector_mean": 0.0003382490690934348
+            }
+          },
+          {
+            "signature": "fe3b2d515bfa",
+            "risk": 0.08795137599289195,
+            "accepted": true,
+            "metrics": {
+              "far_mean": 0.00023447121300435231,
+              "far_cvar90": 0.0007090608152976401,
+              "far_max": 0.0011264507549852915,
+              "worst_sector_mean": 0.0005509298875767475
+            }
+          }
+        ]
+      }
+    },
+    {
+      "step": 6,
+      "action": {
+        "tool": "certify_mc",
+        "arguments": {
+          "design_signature": "d7d960548ee7",
+          "histories": 1000,
+          "replicates": 2,
+          "nx": 7,
+          "ny": 7,
+          "n_levels": null,
+          "flux_exponent": 0.5
+        },
+        "hypothesis": "The GMC-screened candidate d7d960548ee7, which has the lowest GMC risk and best far-field tail metrics among screened designs, will show a statistically significant reduction in far-field neutron flux and tail hotspots compared with the baseline under unbiased Monte Carlo certification.",
+        "expected_observation": "Unbiased Monte Carlo far-field mean, CVaR90, max, and worst-sector metrics for d7d960548ee7 with 95% confidence intervals, plus consistency checks against the GMC-weighted window, sufficient to assess the verifier's improvement thresholds.",
+        "decision_reason": "The GMC-guided discovery gate and minimum screening requirements are satisfied, GMC budget is exhausted, and Monte Carlo certification is the required next fidelity stage. d7d960548ee7 is the best-ranked GMC-screened candidate, so it is the optimal first allocation of the limited exact-certification budget."
+      },
+      "tool_result": {
+        "tool": "certify_mc",
+        "stage": "unbiased_mc_certification",
+        "signature": "d7d960548ee7",
+        "budget": {
+          "used": 8000,
+          "limit": 8000,
+          "remaining": 0
+        },
+        "artifact": {
+          "summary": "/home/ssn/GenVR/outputs/gmc_material_discovery/trial/mc/01_d7d960548ee7/certification.json",
+          "fields": "/home/ssn/GenVR/outputs/gmc_material_discovery/trial/mc/01_d7d960548ee7/fields.npz"
+        },
+        "population_control": {
+          "baseline": {
+            "transported_particles_per_root": 2.055,
+            "split_children": 2110,
+            "split_cap_hits": 0,
+            "max_bank_size": 3
+          },
+          "candidate": {
+            "transported_particles_per_root": 2.2525,
+            "split_children": 2505,
+            "split_cap_hits": 0,
+            "max_bank_size": 4
+          }
+        },
+        "design_comparison": {
+          "far_field": {
+            "candidate_over_baseline": 0.27056401026830945,
+            "estimated_reduction_fraction": 0.7294359897316905,
+            "difference": -0.000869144600737379,
+            "difference_z": -3.276248506989492,
+            "candidate_upper_below_baseline_lower": true
+          },
+          "deep_far_field": {
+            "candidate_over_baseline": 0.6746205397963481,
+            "estimated_reduction_fraction": 0.32537946020365194,
+            "difference": -0.00012970568634975565,
+            "difference_z": -0.5546074814250956,
+            "candidate_upper_below_baseline_lower": false
+          }
+        },
+        "baseline_consistency": {
+          "far_field": {
+            "estimate_difference": 0.00025289422637625903,
+            "unpaired_consistency_z": 0.7824489800577266,
+            "fom_gain": 1.3467202242060614
+          },
+          "deep_far_field": {
+            "estimate_difference": 0.0001268434622679246,
+            "unpaired_consistency_z": 0.4771233627427511,
+            "fom_gain": 3.254730041714801
+          }
+        },
+        "candidate_consistency": {
+          "far_field": {
+            "estimate_difference": 0.0001785849916288863,
+            "unpaired_consistency_z": 1.3507052837562068,
+            "fom_gain": 4.319479715538355
+          },
+          "deep_far_field": {
+            "estimate_difference": 0.00015012390629167647,
+            "unpaired_consistency_z": 0.8047566966127966,
+            "fom_gain": 3.177871081199787
+          }
+        }
+      }
+    },
+    {
+      "step": 7,
+      "action": {
+        "tool": "finish",
+        "arguments": {
+          "candidate_signature": "d7d960548ee7",
+          "claim": "verified_improvement",
+          "summary": "Unbiased MC certification of GMC-guided candidate d7d960548ee7 gives far-field candidate/baseline=0.271 (72.9% reduction, difference_z=-3.28, 95% CI separated), satisfying the primary source-distant flux objective and the verifier's improvement threshold; GMC tail metrics (CVaR90, max, worst-sector) also improved. Deep-far-field was not separated (z=-0.55)."
+        },
+        "hypothesis": "The best GMC-screened, GMC-guided structure already provides a verifier-eligible far-field flux reduction, and with GMC (4/4) and MC (8000/8000) budgets exhausted no further fidelity stage can alter the conclusion.",
+        "expected_observation": "Independent verifier accepts the verified_improvement claim for d7d960548ee7 based on the genvr-cfm-response -> unbiased-mc fidelity chain and the separated far-field 95% interval.",
+        "decision_reason": "Both the GMC screening gate and the MC discovery gate are passed, all GMC and MC resources are spent, and the sole remaining optional tool (projected local-MC audit) is a non-certifying diagnostic that cannot upgrade evidence. Finishing with the single MC-certified improvement is the correct terminal action."
+      },
+      "tool_result": {
+        "finish_requested": true,
+        "arguments": {
+          "candidate_signature": "d7d960548ee7",
+          "claim": "verified_improvement",
+          "summary": "Unbiased MC certification of GMC-guided candidate d7d960548ee7 gives far-field candidate/baseline=0.271 (72.9% reduction, difference_z=-3.28, 95% CI separated), satisfying the primary source-distant flux objective and the verifier's improvement threshold; GMC tail metrics (CVaR90, max, worst-sector) also improved. Deep-far-field was not separated (z=-0.55)."
+        },
+        "verifier_decision": {
+          "accepted": true,
+          "terminal": true,
+          "requested_claim": "verified_improvement",
+          "final_claim": "verified_improvement",
+          "candidate_signature": "d7d960548ee7",
+          "checks": {
+            "non_baseline_candidate": {
+              "passed": true,
+              "observed": "d7d960548ee7",
+              "required": "signature different from baseline ded6840cea70"
+            },
+            "genvr_cfm_gate": {
+              "passed": true,
+              "observed": 0.07107464124854711,
+              "required": "risk < 1"
+            },
+            "minimum_gmc_discovery_batch": {
+              "passed": true,
+              "observed": 4,
+              "required": ">= 2"
+            },
+            "gmc_guided_regeneration": {
+              "passed": true,
+              "observed": 2,
+              "required": ">= 1"
+            },
+            "projected_local_mc_audit": {
+              "passed": true,
+              "observed": null,
+              "required": "optional diagnostic"
+            },
+            "unbiased_mc_present": {
+              "passed": true,
+              "observed": 1,
+              "required": "exactly one completed certification"
+            },
+            "mc_design_identity": {
+              "passed": true,
+              "observed": {
+                "baseline": "ded6840cea70",
+                "candidate": "d7d960548ee7"
+              },
+              "required": {
+                "baseline": "ded6840cea70",
+                "candidate": "d7d960548ee7"
+              }
+            },
+            "mc_histories": {
+              "passed": true,
+              "observed": {
+                "baseline.analog": 2000,
+                "baseline.variance_reduced": 2000,
+                "candidate.analog": 2000,
+                "candidate.variance_reduced": 2000
+              },
+              "required": "each >= 1000"
+            },
+            "mc_replicates": {
+              "passed": true,
+              "observed": 2,
+              "required": ">= 2"
+            },
+            "analog_weight_window_consistency": {
+              "passed": true,
+              "observed": {
+                "baseline_far_field_z": 0.7824489800577266,
+                "candidate_far_field_z": 1.3507052837562068
+              },
+              "required": "both absolute z-scores <= 2"
+            },
+            "mc_improvement_threshold": {
+              "passed": true,
+              "observed": 0.27056401026830945,
+              "required": "candidate/baseline < 1"
+            },
+            "mc_far_field_difference_z": {
+              "passed": true,
+              "observed": -3.276248506989492,
+              "required": "<= -1.96"
+            },
+            "mc_far_field_ci_separation": {
+              "passed": true,
+              "observed": true,
+              "required": true
+            },
+            "deep_far_field_diagnostic": {
+              "candidate_over_baseline": 0.6746205397963481,
+              "estimated_reduction_fraction": 0.32537946020365194,
+              "difference": -0.00012970568634975565,
+              "difference_z": -0.5546074814250956,
+              "candidate_upper_below_baseline_lower": false
+            },
+            "fom_is_not_acceptance_criterion": {
+              "passed": true,
+              "observed": {
+                "baseline": 1.3467202242060614,
+                "candidate": 4.319479715538355
+              },
+              "required": "reported for efficiency only"
+            }
+          },
+          "reasons": [],
+          "hard_stop_reason": null
+        }
+      }
+    }
+  ],
+  "final_observation": {
+    "objective": {
+      "primary": "discover material structures that reduce source-distant full-field neutron flux",
+      "tail": "reduce far-field CVaR90, maximum, and worst angular sector",
+      "gmc_role": "primary high-throughput structure evaluator and MC weight-window guide",
+      "mc_role": "unbiased physical certification for selected structures",
+      "fom_role": "verification efficiency only; never the shielding objective"
+    },
+    "protected_constraints": {
+      "grid": [
+        7,
+        7
+      ],
+      "source_cell": [
+        3,
+        3
+      ],
+      "absorber_count": 11,
+      "geometry_actions": "only compiler-generated one-for-one material swaps",
+      "verification_threshold": 1.0,
+      "projected_mc_audit_required": false,
+      "minimum_gmc_candidates_before_mc": 2,
+      "minimum_gmc_guided_candidates_before_mc": 1
+    },
+    "budgets": {
+      "diffusion_evaluations": {
+        "used": 21,
+        "limit": 40,
+        "remaining": 19
+      },
+      "genvr_candidates": {
+        "used": 4,
+        "limit": 4,
+        "remaining": 0
+      },
+      "exact_candidates": {
+        "used": 0,
+        "limit": 2,
+        "remaining": 2
+      },
+      "mc_root_histories": {
+        "used": 8000,
+        "limit": 8000,
+        "remaining": 0
+      }
+    },
+    "currently_executable_scientific_tools": [
+      "audit_projected_mc"
+    ],
+    "beam": [
+      {
+        "signature": "d7d960548ee7",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "fed6d69cffdf",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              3,
+              5
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "unbiased-mc",
+        "diffusion": {
+          "risk": 0.073553245838148,
+          "metrics": {
+            "far_mean": 3.5193704378895475e-05,
+            "far_p90": 0.00012424184287568183,
+            "far_cvar90": 0.0001548545264874329,
+            "far_max": 0.0002106475260658268,
+            "worst_sector_mean": 7.16774246909397e-05,
+            "hotspot_ratio": 5.985375219328867,
+            "angular_imbalance": 2.034969868678536
+          },
+          "runtime_s": 0.11208800500025973,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.07107464124854711,
+          "metrics": {
+            "far_mean": 0.00017205101517129624,
+            "far_p90": 0.0005075314026634849,
+            "far_cvar90": 0.0006093067679194631,
+            "far_max": 0.0008774816475752887,
+            "worst_sector_mean": 0.0003382490690934348,
+            "hotspot_ratio": 5.100124789741325,
+            "angular_imbalance": 1.9655833944201537
+          },
+          "runtime_s": 12.89123750699946,
+          "fidelity": "genvr-cfm-response"
+        },
+        "gmc": {
+          "risk": 0.07107464124854711,
+          "metrics": {
+            "far_mean": 0.00017205101517129624,
+            "far_p90": 0.0005075314026634849,
+            "far_cvar90": 0.0006093067679194631,
+            "far_max": 0.0008774816475752887,
+            "worst_sector_mean": 0.0003382490690934348,
+            "hotspot_ratio": 5.100124789741325,
+            "angular_imbalance": 1.9655833944201537
+          },
+          "runtime_s": 12.89123750699946,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": {
+          "design_comparison": {
+            "far_field": {
+              "candidate_over_baseline": 0.27056401026830945,
+              "estimated_reduction_fraction": 0.7294359897316905,
+              "difference": -0.000869144600737379,
+              "difference_z": -3.276248506989492,
+              "candidate_upper_below_baseline_lower": true
+            },
+            "deep_far_field": {
+              "candidate_over_baseline": 0.6746205397963481,
+              "estimated_reduction_fraction": 0.32537946020365194,
+              "difference": -0.00012970568634975565,
+              "difference_z": -0.5546074814250956,
+              "candidate_upper_below_baseline_lower": false
+            }
+          },
+          "artifact": {
+            "summary": "/home/ssn/GenVR/outputs/gmc_material_discovery/trial/mc/01_d7d960548ee7/certification.json",
+            "fields": "/home/ssn/GenVR/outputs/gmc_material_discovery/trial/mc/01_d7d960548ee7/fields.npz"
+          }
+        },
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "physics_diagnosis": {
+          "hottest_sector": 2,
+          "normalized_sector_leakage": [
+            0.9869346900899061,
+            0.09285797942345178,
+            1.0,
+            0.04148486277896987,
+            0.10095877172704787,
+            0.006342322690675816,
+            0.10090656816377874,
+            0.07296982213973659
+          ],
+          "highest_sensitivity_empty_cells": [
+            {
+              "cell": [
+                2,
+                3
+              ],
+              "normalized_forward_adjoint": 0.6193168360130553
+            },
+            {
+              "cell": [
+                3,
+                2
+              ],
+              "normalized_forward_adjoint": 0.6084093112723031
+            },
+            {
+              "cell": [
+                1,
+                4
+              ],
+              "normalized_forward_adjoint": 0.5023122770852098
+            },
+            {
+              "cell": [
+                4,
+                1
+              ],
+              "normalized_forward_adjoint": 0.5010767123716441
+            },
+            {
+              "cell": [
+                0,
+                4
+              ],
+              "normalized_forward_adjoint": 0.4284537734042969
+            },
+            {
+              "cell": [
+                4,
+                0
+              ],
+              "normalized_forward_adjoint": 0.4281684027866014
+            }
+          ],
+          "lowest_sensitivity_absorber_cells": [
+            {
+              "cell": [
+                4,
+                4
+              ],
+              "normalized_forward_adjoint": 7.968003049805646e-05
+            },
+            {
+              "cell": [
+                4,
+                3
+              ],
+              "normalized_forward_adjoint": 0.007634168958470124
+            },
+            {
+              "cell": [
+                3,
+                4
+              ],
+              "normalized_forward_adjoint": 0.0077018752970679305
+            },
+            {
+              "cell": [
+                5,
+                1
+              ],
+              "normalized_forward_adjoint": 0.008454401249433061
+            },
+            {
+              "cell": [
+                1,
+                5
+              ],
+              "normalized_forward_adjoint": 0.008464938091320933
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "normalized_forward_adjoint": 0.01135121941330564
+            }
+          ]
+        }
+      },
+      {
+        "signature": "fe3b2d515bfa",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "20d0b63a8068",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              5,
+              5
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "genvr-cfm-response",
+        "diffusion": {
+          "risk": 0.10033176610917437,
+          "metrics": {
+            "far_mean": 5.2116729774774004e-05,
+            "far_p90": 0.0001543492928161687,
+            "far_cvar90": 0.0002045371276366172,
+            "far_max": 0.0003372278744926309,
+            "worst_sector_mean": 0.00012640310932907105,
+            "hotspot_ratio": 6.470626149222795,
+            "angular_imbalance": 2.4239237607910478
+          },
+          "runtime_s": 0.09498070399968128,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.08795137599289195,
+          "metrics": {
+            "far_mean": 0.00023447121300435231,
+            "far_p90": 0.000576206892201233,
+            "far_cvar90": 0.0007090608152976401,
+            "far_max": 0.0011264507549852915,
+            "worst_sector_mean": 0.0005509298875767475,
+            "hotspot_ratio": 4.804217714199235,
+            "angular_imbalance": 2.348866335190375
+          },
+          "runtime_s": 16.263273945000037,
+          "fidelity": "genvr-cfm-response"
+        },
+        "gmc": {
+          "risk": 0.08795137599289195,
+          "metrics": {
+            "far_mean": 0.00023447121300435231,
+            "far_p90": 0.000576206892201233,
+            "far_cvar90": 0.0007090608152976401,
+            "far_max": 0.0011264507549852915,
+            "worst_sector_mean": 0.0005509298875767475,
+            "hotspot_ratio": 4.804217714199235,
+            "angular_imbalance": 2.348866335190375
+          },
+          "runtime_s": 16.263273945000037,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "physics_diagnosis": {
+          "hottest_sector": 2,
+          "normalized_sector_leakage": [
+            0.9874071393487491,
+            0.0928706719326835,
+            1.0,
+            0.041450345042678756,
+            0.10094845377454237,
+            0.007252672089378931,
+            0.1090072676064077,
+            0.08726258022410047
+          ],
+          "highest_sensitivity_empty_cells": [
+            {
+              "cell": [
+                4,
+                1
+              ],
+              "normalized_forward_adjoint": 1.0
+            },
+            {
+              "cell": [
+                5,
+                0
+              ],
+              "normalized_forward_adjoint": 0.7752309859073281
+            },
+            {
+              "cell": [
+                3,
+                2
+              ],
+              "normalized_forward_adjoint": 0.6989981824486685
+            },
+            {
+              "cell": [
+                5,
+                1
+              ],
+              "normalized_forward_adjoint": 0.649155407410141
+            },
+            {
+              "cell": [
+                4,
+                0
+              ],
+              "normalized_forward_adjoint": 0.46827421704280525
+            },
+            {
+              "cell": [
+                2,
+                3
+              ],
+              "normalized_forward_adjoint": 0.3453836383725341
+            }
+          ],
+          "lowest_sensitivity_absorber_cells": [
+            {
+              "cell": [
+                3,
+                5
+              ],
+              "normalized_forward_adjoint": 1.4619325024984086e-05
+            },
+            {
+              "cell": [
+                4,
+                4
+              ],
+              "normalized_forward_adjoint": 0.00010536719676121658
+            },
+            {
+              "cell": [
+                1,
+                5
+              ],
+              "normalized_forward_adjoint": 0.004262820847580352
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "normalized_forward_adjoint": 0.005420789106414812
+            },
+            {
+              "cell": [
+                3,
+                4
+              ],
+              "normalized_forward_adjoint": 0.005710254403432903
+            },
+            {
+              "cell": [
+                4,
+                3
+              ],
+              "normalized_forward_adjoint": 0.007647673412286457
+            }
+          ]
+        }
+      },
+      {
+        "signature": "20d0b63a8068",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "ded6840cea70",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              5,
+              1
+            ],
+            "add": [
+              4,
+              3
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 1,
+          "generation_guidance_fidelity": "diffusion-ensemble",
+          "gmc_guided_generation": false
+        },
+        "removed_from_baseline": [
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "genvr-cfm-response",
+        "diffusion": {
+          "risk": 0.09792337495250229,
+          "metrics": {
+            "far_mean": 6.842251975137737e-05,
+            "far_p90": 0.00016136959463745193,
+            "far_cvar90": 0.000205301850893432,
+            "far_max": 0.00033229430311060943,
+            "worst_sector_mean": 0.00012456366346028566,
+            "hotspot_ratio": 4.856504909758461,
+            "angular_imbalance": 1.8193016271509084
+          },
+          "runtime_s": 0.11272650199862255,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.09274446963494523,
+          "metrics": {
+            "far_mean": 0.00036051546591068574,
+            "far_p90": 0.0007085309867654947,
+            "far_cvar90": 0.0008335617786959705,
+            "far_max": 0.0011865824373642067,
+            "worst_sector_mean": 0.0005809260853513944,
+            "hotspot_ratio": 3.291349607892193,
+            "angular_imbalance": 1.610389705781276
+          },
+          "runtime_s": 12.295329086000493,
+          "fidelity": "genvr-cfm-response"
+        },
+        "gmc": {
+          "risk": 0.09274446963494523,
+          "metrics": {
+            "far_mean": 0.00036051546591068574,
+            "far_p90": 0.0007085309867654947,
+            "far_cvar90": 0.0008335617786959705,
+            "far_max": 0.0011865824373642067,
+            "worst_sector_mean": 0.0005809260853513944,
+            "hotspot_ratio": 3.291349607892193,
+            "angular_imbalance": 1.610389705781276
+          },
+          "runtime_s": 12.295329086000493,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "physics_diagnosis": {
+          "hottest_sector": 4,
+          "normalized_sector_leakage": [
+            0.8889741782537333,
+            0.08551291727837403,
+            0.9182370150276379,
+            0.09673156861002405,
+            1.0,
+            0.040682564984565274,
+            0.10079745789846453,
+            0.07855337385015539
+          ],
+          "highest_sensitivity_empty_cells": [
+            {
+              "cell": [
+                4,
+                1
+              ],
+              "normalized_forward_adjoint": 0.8492588869110549
+            },
+            {
+              "cell": [
+                5,
+                0
+              ],
+              "normalized_forward_adjoint": 0.6567756927428112
+            },
+            {
+              "cell": [
+                3,
+                2
+              ],
+              "normalized_forward_adjoint": 0.5980852930800957
+            },
+            {
+              "cell": [
+                5,
+                1
+              ],
+              "normalized_forward_adjoint": 0.5408347878729637
+            },
+            {
+              "cell": [
+                3,
+                4
+              ],
+              "normalized_forward_adjoint": 0.4288875502683886
+            },
+            {
+              "cell": [
+                4,
+                0
+              ],
+              "normalized_forward_adjoint": 0.40267072152682487
+            }
+          ],
+          "lowest_sensitivity_absorber_cells": [
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "normalized_forward_adjoint": 0.004555500652509246
+            },
+            {
+              "cell": [
+                5,
+                5
+              ],
+              "normalized_forward_adjoint": 0.005540879944627293
+            },
+            {
+              "cell": [
+                1,
+                5
+              ],
+              "normalized_forward_adjoint": 0.007365441362707388
+            },
+            {
+              "cell": [
+                4,
+                3
+              ],
+              "normalized_forward_adjoint": 0.009335131081010195
+            },
+            {
+              "cell": [
+                4,
+                4
+              ],
+              "normalized_forward_adjoint": 0.01063681785419503
+            },
+            {
+              "cell": [
+                2,
+                2
+              ],
+              "normalized_forward_adjoint": 0.012864204120902355
+            }
+          ]
+        }
+      },
+      {
+        "signature": "fed6d69cffdf",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "ded6840cea70",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              5,
+              5
+            ],
+            "add": [
+              4,
+              3
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 1,
+          "generation_guidance_fidelity": "diffusion-ensemble",
+          "gmc_guided_generation": false
+        },
+        "removed_from_baseline": [
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "genvr-cfm-response",
+        "diffusion": {
+          "risk": 0.09846431722599037,
+          "metrics": {
+            "far_mean": 6.842251975137741e-05,
+            "far_p90": 0.0001613695946374523,
+            "far_cvar90": 0.00020530185089343212,
+            "far_max": 0.0003322943031106093,
+            "worst_sector_mean": 0.00012687488665834035,
+            "hotspot_ratio": 4.856504909758456,
+            "angular_imbalance": 1.8534978316082433
+          },
+          "runtime_s": 0.1025834029987891,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.10929048423614242,
+          "metrics": {
+            "far_mean": 0.000375123105609876,
+            "far_p90": 0.0007366553635229972,
+            "far_cvar90": 0.0009335549122437733,
+            "far_max": 0.0015187030639742354,
+            "worst_sector_mean": 0.0007730363350875585,
+            "hotspot_ratio": 4.048545774073619,
+            "angular_imbalance": 2.0593924830942054
+          },
+          "runtime_s": 12.63152420699953,
+          "fidelity": "genvr-cfm-response"
+        },
+        "gmc": {
+          "risk": 0.10929048423614242,
+          "metrics": {
+            "far_mean": 0.000375123105609876,
+            "far_p90": 0.0007366553635229972,
+            "far_cvar90": 0.0009335549122437733,
+            "far_max": 0.0015187030639742354,
+            "worst_sector_mean": 0.0007730363350875585,
+            "hotspot_ratio": 4.048545774073619,
+            "angular_imbalance": 2.0593924830942054
+          },
+          "runtime_s": 12.63152420699953,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null,
+        "generation_guidance_fidelity": "genvr-cfm-response",
+        "physics_diagnosis": {
+          "hottest_sector": 4,
+          "normalized_sector_leakage": [
+            0.8824622147629643,
+            0.08491599857030947,
+            0.9119508266469741,
+            0.09620636389789688,
+            1.0,
+            0.054765967351078006,
+            0.09424603677677597,
+            0.06521989037489807
+          ],
+          "highest_sensitivity_empty_cells": [
+            {
+              "cell": [
+                4,
+                5
+              ],
+              "normalized_forward_adjoint": 1.0
+            },
+            {
+              "cell": [
+                5,
+                6
+              ],
+              "normalized_forward_adjoint": 0.8586157935475184
+            },
+            {
+              "cell": [
+                3,
+                4
+              ],
+              "normalized_forward_adjoint": 0.6913801874571718
+            },
+            {
+              "cell": [
+                5,
+                5
+              ],
+              "normalized_forward_adjoint": 0.6153649707530756
+            },
+            {
+              "cell": [
+                4,
+                6
+              ],
+              "normalized_forward_adjoint": 0.5190033097647798
+            },
+            {
+              "cell": [
+                2,
+                3
+              ],
+              "normalized_forward_adjoint": 0.25743437052164003
+            }
+          ],
+          "lowest_sensitivity_absorber_cells": [
+            {
+              "cell": [
+                5,
+                1
+              ],
+              "normalized_forward_adjoint": 0.002733775113874404
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "normalized_forward_adjoint": 0.003566762063091007
+            },
+            {
+              "cell": [
+                4,
+                2
+              ],
+              "normalized_forward_adjoint": 0.004961567746301098
+            },
+            {
+              "cell": [
+                1,
+                5
+              ],
+              "normalized_forward_adjoint": 0.005698958344097444
+            },
+            {
+              "cell": [
+                4,
+                3
+              ],
+              "normalized_forward_adjoint": 0.007848957499024745
+            },
+            {
+              "cell": [
+                2,
+                2
+              ],
+              "normalized_forward_adjoint": 0.008243110600231774
+            }
+          ]
+        }
+      },
+      {
+        "signature": "f53d1987aeea",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "20d0b63a8068",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              3,
+              5
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.10037394744177637,
+          "metrics": {
+            "far_mean": 5.1943221242919785e-05,
+            "far_p90": 0.00015434923954753903,
+            "far_cvar90": 0.00020453470420666962,
+            "far_max": 0.00033722418768685755,
+            "worst_sector_mean": 0.00012640148473895804,
+            "hotspot_ratio": 6.492169326768957,
+            "angular_imbalance": 2.4319787583371384
+          },
+          "runtime_s": 0.1036707050006953,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "gmc": null,
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null,
+        "generation_guidance_fidelity": "diffusion-ensemble",
+        "physics_diagnosis": {
+          "hottest_sector": 0,
+          "normalized_sector_leakage": [
+            1.0,
+            0.09063719837567671,
+            0.9997543379016877,
+            0.03960577079459724,
+            0.0732322097024467,
+            0.0033043881122108362,
+            0.07706134749040545,
+            0.06061951217162689
+          ],
+          "highest_sensitivity_empty_cells": [
+            {
+              "cell": [
+                3,
+                2
+              ],
+              "normalized_forward_adjoint": 1.0
+            },
+            {
+              "cell": [
+                4,
+                1
+              ],
+              "normalized_forward_adjoint": 0.7554196177675039
+            },
+            {
+              "cell": [
+                2,
+                3
+              ],
+              "normalized_forward_adjoint": 0.46897378248897537
+            },
+            {
+              "cell": [
+                5,
+                1
+              ],
+              "normalized_forward_adjoint": 0.46808391733359844
+            },
+            {
+              "cell": [
+                5,
+                0
+              ],
+              "normalized_forward_adjoint": 0.28051787531036826
+            },
+            {
+              "cell": [
+                4,
+                0
+              ],
+              "normalized_forward_adjoint": 0.20478022590002207
+            }
+          ],
+          "lowest_sensitivity_absorber_cells": [
+            {
+              "cell": [
+                5,
+                5
+              ],
+              "normalized_forward_adjoint": 2.116610989478457e-05
+            },
+            {
+              "cell": [
+                4,
+                4
+              ],
+              "normalized_forward_adjoint": 3.189119253768941e-05
+            },
+            {
+              "cell": [
+                1,
+                5
+              ],
+              "normalized_forward_adjoint": 0.001620822799943562
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "normalized_forward_adjoint": 0.0033821791507650653
+            },
+            {
+              "cell": [
+                3,
+                4
+              ],
+              "normalized_forward_adjoint": 0.004033673640365715
+            },
+            {
+              "cell": [
+                4,
+                3
+              ],
+              "normalized_forward_adjoint": 0.005331755517293664
+            }
+          ]
+        }
+      }
+    ],
+    "visible_candidates": [
+      {
+        "signature": "d7d960548ee7",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "fed6d69cffdf",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              3,
+              5
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "unbiased-mc",
+        "diffusion": {
+          "risk": 0.073553245838148,
+          "metrics": {
+            "far_mean": 3.5193704378895475e-05,
+            "far_p90": 0.00012424184287568183,
+            "far_cvar90": 0.0001548545264874329,
+            "far_max": 0.0002106475260658268,
+            "worst_sector_mean": 7.16774246909397e-05,
+            "hotspot_ratio": 5.985375219328867,
+            "angular_imbalance": 2.034969868678536
+          },
+          "runtime_s": 0.11208800500025973,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.07107464124854711,
+          "metrics": {
+            "far_mean": 0.00017205101517129624,
+            "far_p90": 0.0005075314026634849,
+            "far_cvar90": 0.0006093067679194631,
+            "far_max": 0.0008774816475752887,
+            "worst_sector_mean": 0.0003382490690934348,
+            "hotspot_ratio": 5.100124789741325,
+            "angular_imbalance": 1.9655833944201537
+          },
+          "runtime_s": 12.89123750699946,
+          "fidelity": "genvr-cfm-response"
+        },
+        "gmc": {
+          "risk": 0.07107464124854711,
+          "metrics": {
+            "far_mean": 0.00017205101517129624,
+            "far_p90": 0.0005075314026634849,
+            "far_cvar90": 0.0006093067679194631,
+            "far_max": 0.0008774816475752887,
+            "worst_sector_mean": 0.0003382490690934348,
+            "hotspot_ratio": 5.100124789741325,
+            "angular_imbalance": 1.9655833944201537
+          },
+          "runtime_s": 12.89123750699946,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": {
+          "design_comparison": {
+            "far_field": {
+              "candidate_over_baseline": 0.27056401026830945,
+              "estimated_reduction_fraction": 0.7294359897316905,
+              "difference": -0.000869144600737379,
+              "difference_z": -3.276248506989492,
+              "candidate_upper_below_baseline_lower": true
+            },
+            "deep_far_field": {
+              "candidate_over_baseline": 0.6746205397963481,
+              "estimated_reduction_fraction": 0.32537946020365194,
+              "difference": -0.00012970568634975565,
+              "difference_z": -0.5546074814250956,
+              "candidate_upper_below_baseline_lower": false
+            }
+          },
+          "artifact": {
+            "summary": "/home/ssn/GenVR/outputs/gmc_material_discovery/trial/mc/01_d7d960548ee7/certification.json",
+            "fields": "/home/ssn/GenVR/outputs/gmc_material_discovery/trial/mc/01_d7d960548ee7/fields.npz"
+          }
+        }
+      },
+      {
+        "signature": "fe3b2d515bfa",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "20d0b63a8068",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              5,
+              5
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "genvr-cfm-response",
+        "diffusion": {
+          "risk": 0.10033176610917437,
+          "metrics": {
+            "far_mean": 5.2116729774774004e-05,
+            "far_p90": 0.0001543492928161687,
+            "far_cvar90": 0.0002045371276366172,
+            "far_max": 0.0003372278744926309,
+            "worst_sector_mean": 0.00012640310932907105,
+            "hotspot_ratio": 6.470626149222795,
+            "angular_imbalance": 2.4239237607910478
+          },
+          "runtime_s": 0.09498070399968128,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.08795137599289195,
+          "metrics": {
+            "far_mean": 0.00023447121300435231,
+            "far_p90": 0.000576206892201233,
+            "far_cvar90": 0.0007090608152976401,
+            "far_max": 0.0011264507549852915,
+            "worst_sector_mean": 0.0005509298875767475,
+            "hotspot_ratio": 4.804217714199235,
+            "angular_imbalance": 2.348866335190375
+          },
+          "runtime_s": 16.263273945000037,
+          "fidelity": "genvr-cfm-response"
+        },
+        "gmc": {
+          "risk": 0.08795137599289195,
+          "metrics": {
+            "far_mean": 0.00023447121300435231,
+            "far_p90": 0.000576206892201233,
+            "far_cvar90": 0.0007090608152976401,
+            "far_max": 0.0011264507549852915,
+            "worst_sector_mean": 0.0005509298875767475,
+            "hotspot_ratio": 4.804217714199235,
+            "angular_imbalance": 2.348866335190375
+          },
+          "runtime_s": 16.263273945000037,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "20d0b63a8068",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "ded6840cea70",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              5,
+              1
+            ],
+            "add": [
+              4,
+              3
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 1,
+          "generation_guidance_fidelity": "diffusion-ensemble",
+          "gmc_guided_generation": false
+        },
+        "removed_from_baseline": [
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "genvr-cfm-response",
+        "diffusion": {
+          "risk": 0.09792337495250229,
+          "metrics": {
+            "far_mean": 6.842251975137737e-05,
+            "far_p90": 0.00016136959463745193,
+            "far_cvar90": 0.000205301850893432,
+            "far_max": 0.00033229430311060943,
+            "worst_sector_mean": 0.00012456366346028566,
+            "hotspot_ratio": 4.856504909758461,
+            "angular_imbalance": 1.8193016271509084
+          },
+          "runtime_s": 0.11272650199862255,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.09274446963494523,
+          "metrics": {
+            "far_mean": 0.00036051546591068574,
+            "far_p90": 0.0007085309867654947,
+            "far_cvar90": 0.0008335617786959705,
+            "far_max": 0.0011865824373642067,
+            "worst_sector_mean": 0.0005809260853513944,
+            "hotspot_ratio": 3.291349607892193,
+            "angular_imbalance": 1.610389705781276
+          },
+          "runtime_s": 12.295329086000493,
+          "fidelity": "genvr-cfm-response"
+        },
+        "gmc": {
+          "risk": 0.09274446963494523,
+          "metrics": {
+            "far_mean": 0.00036051546591068574,
+            "far_p90": 0.0007085309867654947,
+            "far_cvar90": 0.0008335617786959705,
+            "far_max": 0.0011865824373642067,
+            "worst_sector_mean": 0.0005809260853513944,
+            "hotspot_ratio": 3.291349607892193,
+            "angular_imbalance": 1.610389705781276
+          },
+          "runtime_s": 12.295329086000493,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "fed6d69cffdf",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "ded6840cea70",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              5,
+              5
+            ],
+            "add": [
+              4,
+              3
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 1,
+          "generation_guidance_fidelity": "diffusion-ensemble",
+          "gmc_guided_generation": false
+        },
+        "removed_from_baseline": [
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "genvr-cfm-response",
+        "diffusion": {
+          "risk": 0.09846431722599037,
+          "metrics": {
+            "far_mean": 6.842251975137741e-05,
+            "far_p90": 0.0001613695946374523,
+            "far_cvar90": 0.00020530185089343212,
+            "far_max": 0.0003322943031106093,
+            "worst_sector_mean": 0.00012687488665834035,
+            "hotspot_ratio": 4.856504909758456,
+            "angular_imbalance": 1.8534978316082433
+          },
+          "runtime_s": 0.1025834029987891,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.10929048423614242,
+          "metrics": {
+            "far_mean": 0.000375123105609876,
+            "far_p90": 0.0007366553635229972,
+            "far_cvar90": 0.0009335549122437733,
+            "far_max": 0.0015187030639742354,
+            "worst_sector_mean": 0.0007730363350875585,
+            "hotspot_ratio": 4.048545774073619,
+            "angular_imbalance": 2.0593924830942054
+          },
+          "runtime_s": 12.63152420699953,
+          "fidelity": "genvr-cfm-response"
+        },
+        "gmc": {
+          "risk": 0.10929048423614242,
+          "metrics": {
+            "far_mean": 0.000375123105609876,
+            "far_p90": 0.0007366553635229972,
+            "far_cvar90": 0.0009335549122437733,
+            "far_max": 0.0015187030639742354,
+            "worst_sector_mean": 0.0007730363350875585,
+            "hotspot_ratio": 4.048545774073619,
+            "angular_imbalance": 2.0593924830942054
+          },
+          "runtime_s": 12.63152420699953,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "f53d1987aeea",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "20d0b63a8068",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              3,
+              5
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.10037394744177637,
+          "metrics": {
+            "far_mean": 5.1943221242919785e-05,
+            "far_p90": 0.00015434923954753903,
+            "far_cvar90": 0.00020453470420666962,
+            "far_max": 0.00033722418768685755,
+            "worst_sector_mean": 0.00012640148473895804,
+            "hotspot_ratio": 6.492169326768957,
+            "angular_imbalance": 2.4319787583371384
+          },
+          "runtime_s": 0.1036707050006953,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "gmc": null,
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "10ef494af8d1",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "fed6d69cffdf",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              1,
+              5
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            1,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.10096445425955965,
+          "metrics": {
+            "far_mean": 5.160737077357465e-05,
+            "far_p90": 0.0001543437503486131,
+            "far_cvar90": 0.0002041935090831143,
+            "far_max": 0.0003367912193682042,
+            "worst_sector_mean": 0.00012855541870633185,
+            "hotspot_ratio": 6.526029408587053,
+            "angular_imbalance": 2.4904432298280397
+          },
+          "runtime_s": 0.09427190499991411,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "gmc": null,
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "42d5caa21c0d",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "20d0b63a8068",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              1,
+              5
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            1,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.10350946011588387,
+          "metrics": {
+            "far_mean": 6.835180223974817e-05,
+            "far_p90": 0.00017803945789990997,
+            "far_cvar90": 0.00023825606781116082,
+            "far_max": 0.0003372241757784142,
+            "worst_sector_mean": 0.00012855534818159665,
+            "hotspot_ratio": 4.9336544864695675,
+            "angular_imbalance": 1.880389638727642
+          },
+          "runtime_s": 0.10373810500095715,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "gmc": null,
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "44e1c86cd934",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "20d0b63a8068",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              4,
+              4
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.10645830954163282,
+          "metrics": {
+            "far_mean": 7.64143223025369e-05,
+            "far_p90": 0.00017504788602695987,
+            "far_cvar90": 0.00023198804898822686,
+            "far_max": 0.0003640458880709096,
+            "worst_sector_mean": 0.00013810911742515234,
+            "hotspot_ratio": 4.764105433397575,
+            "angular_imbalance": 1.8056605210598387
+          },
+          "runtime_s": 0.10299410500010708,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "gmc": null,
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "8821dd9e4523",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "fed6d69cffdf",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              4,
+              4
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.1939809549921652,
+          "metrics": {
+            "far_mean": 0.00010674723675160618,
+            "far_p90": 0.00026863536252158115,
+            "far_cvar90": 0.0004840105394660456,
+            "far_max": 0.0008313650781903788,
+            "worst_sector_mean": 0.00027667041662865385,
+            "hotspot_ratio": 7.788164860181916,
+            "angular_imbalance": 2.5903369344601197
+          },
+          "runtime_s": 0.09657320400037861,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "gmc": null,
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "bb5b76abf813",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "fed6d69cffdf",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              2,
+              4
+            ],
+            "add": [
+              3,
+              4
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 2,
+          "generation_guidance_fidelity": "genvr-cfm-response",
+          "gmc_guided_generation": true
+        },
+        "removed_from_baseline": [
+          [
+            2,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.6723170071521252,
+          "metrics": {
+            "far_mean": 0.00030918663549451707,
+            "far_p90": 0.0010842035398802806,
+            "far_cvar90": 0.0018938726384611776,
+            "far_max": 0.003908031227574184,
+            "worst_sector_mean": 0.0012329191743591854,
+            "hotspot_ratio": 12.639715883332501,
+            "angular_imbalance": 3.9708106725599084
+          },
+          "runtime_s": 0.1330105069991987,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "gmc": null,
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "fd13c81db677",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "ded6840cea70",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              4,
+              2
+            ],
+            "add": [
+              4,
+              3
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 1,
+          "generation_guidance_fidelity": "diffusion-ensemble",
+          "gmc_guided_generation": false
+        },
+        "removed_from_baseline": [
+          [
+            4,
+            2
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.6912977717538151,
+          "metrics": {
+            "far_mean": 0.00037570815584829926,
+            "far_p90": 0.001237194129710665,
+            "far_cvar90": 0.0020427819995101687,
+            "far_max": 0.0038388865923161867,
+            "worst_sector_mean": 0.0011679627763183924,
+            "hotspot_ratio": 10.217735581620499,
+            "angular_imbalance": 3.1173566393719834
+          },
+          "runtime_s": 0.10317300200040336,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "gmc": null,
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "32584f4d9bef",
+        "is_baseline": false,
+        "lineage": {
+          "parent_signature": "ded6840cea70",
+          "mutation": {
+            "operator": "adjoint_sensitivity",
+            "remove": [
+              4,
+              4
+            ],
+            "add": [
+              4,
+              3
+            ],
+            "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+          },
+          "generation_round": 1,
+          "generation_guidance_fidelity": "diffusion-ensemble",
+          "gmc_guided_generation": false
+        },
+        "removed_from_baseline": [
+          [
+            4,
+            4
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.698218176679814,
+          "metrics": {
+            "far_mean": 0.0003757081558482995,
+            "far_p90": 0.0012371941297106667,
+            "far_cvar90": 0.00204278199951017,
+            "far_max": 0.003838886592316181,
+            "worst_sector_mean": 0.00121774686431286,
+            "hotspot_ratio": 10.217735581620477,
+            "angular_imbalance": 3.226735752440759
+          },
+          "runtime_s": 0.16115880300094432,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "gmc": null,
+        "exact": null,
+        "projected_mc_audit": null,
+        "latest_mc": null
+      }
+    ],
+    "discovery_progress": {
+      "structure_generation_rounds": 2,
+      "gmc_screened_structures": 4,
+      "minimum_gmc_screened_required": 2,
+      "minimum_gmc_batch_passed": true,
+      "gmc_guided_structures": 12,
+      "gmc_guided_and_screened": 2,
+      "minimum_gmc_guided_screened_required": 1,
+      "gmc_guided_cycle_passed": true,
+      "mc_discovery_gate_passed": true
+    },
+    "evidence_counts": {
+      "candidate_designs": 20,
+      "gmc_screened": 4,
+      "genvr_evaluated": 4,
+      "exact_evaluated": 0,
+      "mc_certified": 1,
+      "gmc_guided_structures": 12,
+      "gmc_guided_and_screened": 2
+    },
+    "operator_memory": {
+      "proposal_prefilter": {
+        "counts": {
+          "adjoint_sensitivity": 16,
+          "channel_block": 0,
+          "inner_barrier": 0,
+          "hotspot_cap": 0,
+          "symmetry_repair": 0,
+          "redistribute": 0,
+          "random_explore": 4
+        },
+        "mean_improvement": {
+          "adjoint_sensitivity": -0.007626005282820605,
+          "channel_block": 0.0,
+          "inner_barrier": 0.0,
+          "hotspot_cap": 0.0,
+          "symmetry_repair": 0.0,
+          "redistribute": 0.0,
+          "random_explore": -0.6282244227596971
+        }
+      },
+      "gmc_validated": {
+        "counts": {
+          "adjoint_sensitivity": 4,
+          "channel_block": 0,
+          "inner_barrier": 0,
+          "hotspot_cap": 0,
+          "symmetry_repair": 0,
+          "redistribute": 0,
+          "random_explore": 0
+        },
+        "mean_improvement": {
+          "adjoint_sensitivity": 0.4602434956896402,
+          "channel_block": 0.0,
+          "inner_barrier": 0.0,
+          "hotspot_cap": 0.0,
+          "symmetry_repair": 0.0,
+          "redistribute": 0.0,
+          "random_explore": 0.0
+        }
+      }
+    }
+  },
+  "figures": {
+    "search_dashboard": "agent_search_dashboard.png",
+    "decision_timeline": "agent_decision_timeline.png",
+    "candidate_evidence": "candidate_evidence_chain.png",
+    "verified_design": "verified_design.png",
+    "mc_certification": "mc_certification.png",
+    "mc_population_control": "mc_population_control.png"
+  },
+  "report_error": null
+}

@@ -1,0 +1,63 @@
+{
+  "created_utc": "2026-09-04T13:26:23.381323+00:00",
+  "python": "3.11.5 | packaged by conda-forge | (main, Aug 27 2023, 03:34:09) [GCC 12.3.0]",
+  "executable": "/home/ssn/miniconda3/envs/openmc-env/bin/python",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "torch": "2.14.0+cu126",
+  "cuda_available": true,
+  "cuda_version": "12.6",
+  "gpu": "NVIDIA GeForce GTX 1050",
+  "policy": "causal",
+  "human_intervention": "None after launch; action pool and stopping rule were predeclared in the config.",
+  "selection_rule": "All completed causal-policy trials are reported; no best-of-N filtering.",
+  "files": {
+    "configs/ray_agent_smoke.json": {
+      "bytes": 1638,
+      "sha256": "b280b9ba4ef42ea5d2bc5e94ddbaf8969fe68fe608a9252468fa22b6f8052486"
+    },
+    "scripts/run_ray_agent.py": {
+      "bytes": 205,
+      "sha256": "5a5527cecb1fa53e4ef0a8e88e085e3ae4f4d23ff9314823eb6be74d193283c4"
+    },
+    "scripts/30_stage8_ultra_benchmark.py": {
+      "bytes": 15597,
+      "sha256": "05ffe45fce5577d4eda3251de218b29e18983b1cc3d44c10b141b05da9529dad"
+    },
+    "ray_agent/cli.py": {
+      "bytes": 4961,
+      "sha256": "79ff13e1fe5a9901c946eb404a0446472d6d96a712d65b4ebbe7325bcb580c1c"
+    },
+    "ray_agent/environment.py": {
+      "bytes": 9221,
+      "sha256": "ffcf007b0fb2c7b9ab6539dfeda2acf18ed993880c95239e69465a71723b4636"
+    },
+    "ray_agent/metrics.py": {
+      "bytes": 4448,
+      "sha256": "2eb086fa57dd58b11dbdb3665cfa91bf3de92b2ca1c2ee9d86cb8e53f1588e87"
+    },
+    "ray_agent/policies.py": {
+      "bytes": 6372,
+      "sha256": "0bdb2df9d157ebf392436eef8fac26675a03513b895ab86e3de824b0f2af9bfc"
+    },
+    "ray_agent/reporting.py": {
+      "bytes": 9207,
+      "sha256": "889a978b7f029d70625f7600d107d624ecbbba91fa16b587f6d7b4f5cbf4ff4e"
+    },
+    "ray_agent/schema.py": {
+      "bytes": 4260,
+      "sha256": "304523224e572efd0442cc61f3d151c870f430bd3f06dd01dc9fe64fbced1c78"
+    },
+    "gmc/response_operator_ultra.py": {
+      "bytes": 60438,
+      "sha256": "bcf13a0a25359d4e77168f9f212620db58e84157393b8c1c3aa8430a9f4d310f"
+    },
+    "outputs/hpc_v2_models/boundary_900k_100ep/best.pt": {
+      "bytes": 27151694,
+      "sha256": "922df7942ae428510832d3c63ebe14ab33d0f9a29fc976b685c5d399a37cb5cd"
+    },
+    "outputs/hpc_v2_models/internal_900k_100ep/best.pt": {
+      "bytes": 27157518,
+      "sha256": "ccc49213231dcdad55165d4e4dd484d9ba9c6d2fda75129e5095d556a706fdc8"
+    }
+  }
+}

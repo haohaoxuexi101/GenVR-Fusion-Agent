@@ -1,0 +1,133 @@
+{
+  "n_state": 32,
+  "n_angle": 8,
+  "interface_phi_offset_fraction": 0.0,
+  "dense_n_mu": 4,
+  "dense_n_phi": 32,
+  "dense_phi_offset_fraction": 0.0,
+  "cfm_build_s": 2.6926536559999477,
+  "cfm_solve_s": 1.6932937719998336,
+  "cfm_residual": 1.8155161178204505e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9978246433689221,
+    "normalized_rel_l1": 0.07657289404318361,
+    "log10_rmse": 0.26565546025897024
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.009260039885700556,
+    "directional_concentration": 0.4718582111272771,
+    "directional_peak_to_mean": 5.8629471169936185,
+    "ray_index": 0.0043694258554339
+  },
+  "cfm_level_vs_dense_sn": {
+    "relative_l1": 0.0854990723274872,
+    "integral_ratio": 1.0316094269521685,
+    "peak_ratio": 1.0393952854257205
+  },
+  "cfm_directional_disagreement_vs_dense_sn": {
+    "residual_rms": 0.009260039885700556,
+    "directional_concentration": 0.4718582111272771,
+    "directional_peak_to_mean": 5.8629471169936185,
+    "ray_index": 0.0043694258554339
+  },
+  "genvr_cfm_vs_dense_sn": {
+    "corr": 0.9978246433689221,
+    "normalized_rel_l1": 0.07657289404318361,
+    "log10_rmse": 0.26565546025897024
+  },
+  "genvr_cfm_ray_vs_dense_sn": {
+    "residual_rms": 0.009260039885700556,
+    "directional_concentration": 0.4718582111272771,
+    "directional_peak_to_mean": 5.8629471169936185,
+    "ray_index": 0.0043694258554339
+  },
+  "oracle_vs_dense": {
+    "corr": 0.999087881039835,
+    "normalized_rel_l1": 0.05852349867151421,
+    "log10_rmse": 0.2890710630084164
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.006079022495141331,
+    "directional_concentration": 0.5091385699953218,
+    "directional_peak_to_mean": 7.900485837721174,
+    "ray_index": 0.00309506482014565
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9973988254876169,
+    "normalized_rel_l1": 0.0848893831347888,
+    "log10_rmse": 0.13734615219959406
+  },
+  "cfm_learning_error": {
+    "shape": {
+      "corr": 0.9973988254876169,
+      "normalized_rel_l1": 0.0848893831347888,
+      "log10_rmse": 0.13734615219959406
+    },
+    "level": {
+      "relative_l1": 0.08531276774121958,
+      "integral_ratio": 1.0211219536035583,
+      "peak_ratio": 1.0065924171456582
+    },
+    "directional_residual": {
+      "residual_rms": 0.010091410807898533,
+      "directional_concentration": 0.4770854416648209,
+      "directional_peak_to_mean": 4.849101696443774,
+      "ray_index": 0.004814465182307419
+    }
+  },
+  "projected_local_mc_level_vs_dense_sn": {
+    "relative_l1": 0.066098003234383,
+    "integral_ratio": 1.0102705394900184,
+    "peak_ratio": 1.0325880343635807
+  },
+  "projected_directional_disagreement_vs_dense_sn": {
+    "residual_rms": 0.006079022495141331,
+    "directional_concentration": 0.5091385699953218,
+    "directional_peak_to_mean": 7.900485837721174,
+    "ray_index": 0.00309506482014565
+  },
+  "projected_local_mc_vs_dense_sn": {
+    "corr": 0.999087881039835,
+    "normalized_rel_l1": 0.05852349867151421,
+    "log10_rmse": 0.2890710630084164
+  },
+  "projected_local_mc_ray_vs_dense_sn": {
+    "residual_rms": 0.006079022495141331,
+    "directional_concentration": 0.5091385699953218,
+    "directional_peak_to_mean": 7.900485837721174,
+    "ray_index": 0.00309506482014565
+  },
+  "genvr_cfm_vs_projected_local_mc": {
+    "corr": 0.9973988254876169,
+    "normalized_rel_l1": 0.0848893831347888,
+    "log10_rmse": 0.13734615219959406
+  },
+  "wall_s": 4.385947427999781,
+  "experiment_id": "coarse_baseline",
+  "role": "causal_agent",
+  "action": {
+    "experiment_id": "coarse_baseline",
+    "hypothesis": "The coarse interface quadrature establishes the reference sensitivity before any mitigation.",
+    "n_pos": 1,
+    "n_mu": 2,
+    "n_phi": 16,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct",
+    "interface_phi_offset_fraction": 0.0,
+    "dense_n_mu": null,
+    "dense_n_phi": null,
+    "dense_phi_offset_fraction": 0.0,
+    "mc_histories": null
+  },
+  "process_elapsed_s": 12.311102937999749,
+  "artifacts": {
+    "metrics": "experiments/coarse_baseline/metrics.json",
+    "fluxes": "experiments/coarse_baseline/lattice_stage8_ultra.npz",
+    "figure": "experiments/coarse_baseline/lattice_stage8_ultra.png"
+  },
+  "controlled_comparisons": []
+}

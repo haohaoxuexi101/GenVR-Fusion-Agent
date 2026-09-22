@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "generated_utc": "2026-09-03T00:49:42.796948+00:00",
+  "operation": "Regenerated derived summary artifacts from retained experiment diagnostics; raw diagnostics and solver outputs were not changed.",
+  "source_files": {
+    "ray_agent\\reporting.py": {
+      "bytes": 9207,
+      "sha256": "889a978b7f029d70625f7600d107d624ecbbba91fa16b587f6d7b4f5cbf4ff4e"
+    },
+    "scripts\\refinalize_ray_run.py": {
+      "bytes": 3218,
+      "sha256": "cffd6fe7e1c6688b742ef83dd174f37abd5092152c1f88b59432d48ea78551e3"
+    }
+  },
+  "artifacts": {
+    "summary.json": {
+      "bytes": 22724,
+      "sha256": "8ec8c87e0221c9352ad581fd01e68795ca06577dfafaf8200c15b4cf05156461"
+    },
+    "summary.md": {
+      "bytes": 2021,
+      "sha256": "86424bd09f6c5db3b498049992cffa4d1e8000d41edbe2062157283212f0fbaf"
+    },
+    "ablation_summary.png": {
+      "bytes": 109591,
+      "sha256": "485c61cd631fb67159f84702fd9b8ead75bf4b9a2e818ac8aadf861adbf0f04a"
+    }
+  }
+}

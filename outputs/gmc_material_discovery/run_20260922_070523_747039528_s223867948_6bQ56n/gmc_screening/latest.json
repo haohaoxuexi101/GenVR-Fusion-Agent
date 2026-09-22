@@ -1,0 +1,13 @@
+{
+  "evaluation_index": 12,
+  "screening_round": 3,
+  "signature": "10ef494af8d1",
+  "generation_round": 2,
+  "gmc_guided_generation": true,
+  "risk": 0.09849488174004106,
+  "accepted": true,
+  "runtime_s": 5.049144765000165,
+  "geometry_and_gmc_field": "gmc_screening/candidate_012_g2_10ef494af8d1.png",
+  "gmc_field": "gmc_screening/candidate_012_g2_10ef494af8d1.npz",
+  "latest": "gmc_screening/latest.png"
+}

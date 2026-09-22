@@ -1,0 +1,56 @@
+{
+  "n_state": 256,
+  "n_angle": 32,
+  "cfm_build_s": 0.02884749975055456,
+  "cfm_solve_s": 5.591017399914563,
+  "cfm_residual": 3.19826588476197e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9990175016993107,
+    "normalized_rel_l1": 0.05328431664808938,
+    "log10_rmse": 0.18905062091847802
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.0062855839410772,
+    "directional_concentration": 0.4149704192649957,
+    "directional_peak_to_mean": 4.481436636390998,
+    "ray_index": 0.00260833140335413
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9996508832562858,
+    "normalized_rel_l1": 0.03546148509029783,
+    "log10_rmse": 0.17424252684295607
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.003767724387101274,
+    "directional_concentration": 0.3525926369575971,
+    "directional_peak_to_mean": 4.982889924145732,
+    "ray_index": 0.0013284718769774847
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9983825575461814,
+    "normalized_rel_l1": 0.06490435592483668,
+    "log10_rmse": 0.09503068474655013
+  },
+  "wall_s": 5.619864899665117,
+  "experiment_id": "proposal_p2_m4_f32",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p2_m4_f32",
+    "hypothesis": "Spatial and angular refinement reduces ray artifacts better than azimuthal alone, with angular discreteness dominating, but total states moderately limited.",
+    "n_pos": 2,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 16.52669409988448,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p2_m4_f32\\metrics.json",
+    "fluxes": "experiments\\proposal_p2_m4_f32\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p2_m4_f32\\lattice_stage8_ultra.png"
+  }
+}

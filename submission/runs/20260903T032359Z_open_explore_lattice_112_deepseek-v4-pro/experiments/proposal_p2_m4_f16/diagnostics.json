@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 16,
+  "cfm_build_s": 4.317146700108424,
+  "cfm_solve_s": 1.8689856000710279,
+  "cfm_residual": 8.975472595110452e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9986748425511345,
+    "normalized_rel_l1": 0.0593896842917449,
+    "log10_rmse": 0.22530245893154252
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.007499544621887873,
+    "directional_concentration": 0.4799322820748224,
+    "directional_peak_to_mean": 6.535226564056031,
+    "ray_index": 0.003599273564904608
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9995357917661835,
+    "normalized_rel_l1": 0.045374230288131145,
+    "log10_rmse": 0.23196213186107295
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.004510364872827967,
+    "directional_concentration": 0.40040680076348906,
+    "directional_peak_to_mean": 6.647655508853765,
+    "ray_index": 0.0018059807690050675
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9976419750537581,
+    "normalized_rel_l1": 0.08064305482165864,
+    "log10_rmse": 0.1205411805684007
+  },
+  "wall_s": 6.186132300179452,
+  "experiment_id": "proposal_p2_m4_f16",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p2_m4_f16",
+    "hypothesis": "Increasing n_pos and n_mu while keeping n_phi moderate will reduce ray artifacts by better sampling spatial and angular variations, as the current baseline with coarse spatial/angular resolution may insufficiently capture heterogeneity.",
+    "n_pos": 2,
+    "n_mu": 4,
+    "n_phi": 16,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 14.01415800000541,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p2_m4_f16\\metrics.json",
+    "fluxes": "experiments\\proposal_p2_m4_f16\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p2_m4_f16\\lattice_stage8_ultra.png"
+  }
+}

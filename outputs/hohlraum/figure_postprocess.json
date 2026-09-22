@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-09-19T10:52:58.678037+00:00",
+  "derived_without_transport_recalculation": true,
+  "source_metrics": "metrics.json",
+  "source_metrics_sha256": "4bd85b87f5c3817c1de72df6afab0d66cb9e0a74d1e4ab54e62a0332d20bf98e",
+  "source_fields": "hohlraum_stage8_ultra.npz",
+  "source_fields_sha256": "1961d8e8186c03fe1a6752bc50280e2c886120a5e455834a9142a32b9fb91b50",
+  "legacy_figure": "hohlraum_stage8_ultra.legacy.png",
+  "figure": "hohlraum_stage8_ultra.png",
+  "case": "hohlraum",
+  "phase_space": {
+    "n_pos": 4,
+    "n_mu": 4,
+    "n_phi": 32
+  },
+  "global_history_mc_histories": 10000,
+  "display_changes": [
+    "Uses canonical method names instead of Exact-MC/oracle display labels.",
+    "Uses one common absolute normalization for all flux panels.",
+    "Treats finite-history global MC as a qualitative statistical reference.",
+    "Uses dense diamond-difference S_N as the deterministic visual diagnostic for GenVR/CFM.",
+    "Shows a signed normalized shape ratio between GenVR/CFM and dense finite-angle S_N.",
+    "Adds a cellwise CFM-versus-dense shape-agreement panel.",
+    "Mutes zero-tally global-MC cells and below-scale ratio cells in light gray.",
+    "Uses a compact publication-style layout with shared color scales and comparison metrics."
+  ],
+  "dense_spatial_scheme": "diamond",
+  "dense_reference_audit": "reference_audit.json"
+}

@@ -1,0 +1,18 @@
+{
+  "source_summary": "summary.json",
+  "source_trajectory": "trajectory.jsonl",
+  "derived_without_new_llm_calls": true,
+  "derived_without_new_transport_calls": true,
+  "transport_solve_performed_in_this_redraw": false,
+  "response_fields_source": "saved_during_original_agent_run",
+  "response_fields_recomputed_from_cached_local_operators": false,
+  "figures": {
+    "search_dashboard": "agent_search_dashboard.png",
+    "decision_timeline": "agent_decision_timeline.png",
+    "candidate_evidence": "candidate_evidence_chain.png",
+    "gmc_screening_animation": "gmc_screening_reel.gif",
+    "verified_design": "verified_design.png",
+    "mc_certification": "mc_certification.png",
+    "mc_population_control": "mc_population_control.png"
+  }
+}

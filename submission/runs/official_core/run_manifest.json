@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-09-02T14:31:25.626400+00:00",
+  "python": "3.13.4 | packaged by Anaconda, Inc. | (main, Jun  4 2025, 15:26:43) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "G:\\ProgramData\\anaconda3\\envs\\ssn\\python.exe",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "torch": "2.7.1+cu128",
+  "cuda_available": true,
+  "cuda_version": "12.8",
+  "gpu": "NVIDIA GeForce GTX 1660 SUPER",
+  "policy": "causal",
+  "human_intervention": "None after launch; action pool and stopping rule were predeclared in the config.",
+  "selection_rule": "All completed causal-policy trials are reported; no best-of-N filtering.",
+  "files": {
+    "configs\\ray_agent_core.json": {
+      "bytes": 2372,
+      "sha256": "34dce3e3674e9ff92c9a14bf1c85598473e46a4bfcf9bdd7d634f6b305e477ec"
+    },
+    "scripts\\30_stage8_ultra_benchmark.py": {
+      "bytes": 15576,
+      "sha256": "30c245087a7650adc56582a82d6a7d57b9c2c7cf2c34ef1703056643b176b861"
+    },
+    "gmc\\response_operator_ultra.py": {
+      "bytes": 60438,
+      "sha256": "bcf13a0a25359d4e77168f9f212620db58e84157393b8c1c3aa8430a9f4d310f"
+    },
+    "outputs\\hpc_v2_models\\boundary_900k_100ep\\best.pt": {
+      "bytes": 27151694,
+      "sha256": "922df7942ae428510832d3c63ebe14ab33d0f9a29fc976b685c5d399a37cb5cd"
+    },
+    "outputs\\hpc_v2_models\\internal_900k_100ep\\best.pt": {
+      "bytes": 27157518,
+      "sha256": "ccc49213231dcdad55165d4e4dd484d9ba9c6d2fda75129e5095d556a706fdc8"
+    }
+  }
+}

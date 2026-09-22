@@ -1,0 +1,56 @@
+{
+  "n_state": 512,
+  "n_angle": 32,
+  "cfm_build_s": 18.037071999860927,
+  "cfm_solve_s": 21.134762899950147,
+  "cfm_residual": 2.8565954651759756e-11,
+  "cfm_vs_dense": {
+    "corr": 0.999591195299773,
+    "normalized_rel_l1": 0.03686930907618212,
+    "log10_rmse": 0.1671856961177609
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.0041968305123389685,
+    "directional_concentration": 0.6636365600897475,
+    "directional_peak_to_mean": 9.42366366738017,
+    "ray_index": 0.0027851701644883257
+  },
+  "oracle_vs_dense": {
+    "corr": 0.999616666567369,
+    "normalized_rel_l1": 0.03462933290409749,
+    "log10_rmse": 0.16367738887287775
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.004003888024047145,
+    "directional_concentration": 0.34230574666381725,
+    "directional_peak_to_mean": 4.239222891079872,
+    "ray_index": 0.0013705538796297738
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9995171542255965,
+    "normalized_rel_l1": 0.03998612391742389,
+    "log10_rmse": 0.06840050195745931
+  },
+  "wall_s": 39.171834899811074,
+  "experiment_id": "random_3_combined_refined",
+  "role": "random_reference",
+  "action": {
+    "experiment_id": "random_3_combined_refined",
+    "hypothesis": "Joint position and angular refinement should provide the least ray-prone finite-state reference in the declared budget.",
+    "n_pos": 4,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 310829,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 65.43306499999017,
+  "artifacts": {
+    "metrics": "experiments\\random_3_combined_refined\\metrics.json",
+    "fluxes": "experiments\\random_3_combined_refined\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\random_3_combined_refined\\lattice_stage8_ultra.png"
+  }
+}

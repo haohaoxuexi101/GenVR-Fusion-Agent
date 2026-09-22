@@ -1,0 +1,13 @@
+{
+  "source_summary": "summary.json",
+  "source_trajectory": "trajectory.jsonl",
+  "derived_without_new_llm_or_transport_calls": true,
+  "figures": {
+    "search_dashboard": "agent_search_dashboard.png",
+    "decision_timeline": "agent_decision_timeline.png",
+    "candidate_evidence": "candidate_evidence_chain.png",
+    "verified_design": "verified_design.png",
+    "mc_certification": "mc_certification.png",
+    "mc_population_control": "mc_population_control.png"
+  }
+}

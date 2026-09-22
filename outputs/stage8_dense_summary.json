@@ -1,0 +1,123 @@
+{
+  "schema_version": "2.0",
+  "created_utc": "2026-09-19T10:53:04.475478+00:00",
+  "cases": {
+    "lattice": {
+      "case_id": "lattice",
+      "output_directory": "outputs/lattice",
+      "mesh": [
+        150,
+        150
+      ],
+      "phase_space": [
+        4,
+        4,
+        32
+      ],
+      "cfm_samples": 10000,
+      "global_mc_histories": 10000,
+      "dense_spatial_scheme": "diamond",
+      "dense_fixup": "conservative_zero_flux",
+      "dense_fixup_fraction": 0.025138888888888888,
+      "dense_double_fixup_fraction": 0.0,
+      "correlation": 0.9996774014270824,
+      "normalized_shape_l1": 0.03007472869110149,
+      "log10_rmse": 0.07717408323001373,
+      "peak_ratio_cfm_over_dense": 1.009732070668876,
+      "integral_ratio_cfm_over_dense": 1.0169401279062096,
+      "cfm_converged": true,
+      "dense_converged": true,
+      "dense_iterations": 58,
+      "dense_residual": 9.930717684326695e-10
+    },
+    "hohlraum": {
+      "case_id": "hohlraum",
+      "output_directory": "outputs/hohlraum",
+      "mesh": [
+        150,
+        150
+      ],
+      "phase_space": [
+        4,
+        4,
+        32
+      ],
+      "cfm_samples": 10000,
+      "global_mc_histories": 10000,
+      "dense_spatial_scheme": "diamond",
+      "dense_fixup": "conservative_zero_flux",
+      "dense_fixup_fraction": 0.04228194444444444,
+      "dense_double_fixup_fraction": 0.0,
+      "correlation": 0.9991841294251855,
+      "normalized_shape_l1": 0.08450895933231112,
+      "log10_rmse": 0.10996800949374497,
+      "peak_ratio_cfm_over_dense": 0.9651103787004022,
+      "integral_ratio_cfm_over_dense": 1.0461702990993818,
+      "cfm_converged": true,
+      "dense_converged": true,
+      "dense_iterations": 208,
+      "dense_residual": 9.819816142067218e-10
+    },
+    "iter_axial": {
+      "case_id": "iter_a",
+      "output_directory": "outputs/iter_axial",
+      "mesh": [
+        150,
+        150
+      ],
+      "phase_space": [
+        4,
+        4,
+        32
+      ],
+      "cfm_samples": 20000,
+      "global_mc_histories": 20000,
+      "dense_spatial_scheme": "diamond",
+      "dense_fixup": "conservative_zero_flux",
+      "dense_fixup_fraction": 0.07521527777777778,
+      "dense_double_fixup_fraction": 0.0,
+      "correlation": 0.9997718984298979,
+      "normalized_shape_l1": 0.03759838005476305,
+      "log10_rmse": 0.12236321804170051,
+      "peak_ratio_cfm_over_dense": 0.9842931916838248,
+      "integral_ratio_cfm_over_dense": 1.0193851100298679,
+      "cfm_converged": true,
+      "dense_converged": true,
+      "dense_iterations": 142,
+      "dense_residual": 9.868541464238034e-10
+    },
+    "iter_radial": {
+      "case_id": "iter_r",
+      "output_directory": "outputs/iter_radial",
+      "mesh": [
+        150,
+        150
+      ],
+      "phase_space": [
+        4,
+        4,
+        32
+      ],
+      "cfm_samples": 10000,
+      "global_mc_histories": 10000,
+      "dense_spatial_scheme": "diamond",
+      "dense_fixup": "conservative_zero_flux",
+      "dense_fixup_fraction": 0.04635347222222222,
+      "dense_double_fixup_fraction": 0.0,
+      "correlation": 0.9998441325464494,
+      "normalized_shape_l1": 0.02070891720116574,
+      "log10_rmse": 0.10793155644591529,
+      "peak_ratio_cfm_over_dense": 1.0192496452711466,
+      "integral_ratio_cfm_over_dense": 1.02328655963412,
+      "cfm_converged": true,
+      "dense_converged": true,
+      "dense_iterations": 97,
+      "dense_residual": 8.935259958015475e-10
+    }
+  },
+  "comparison_method": "dense_diamond_difference_sn",
+  "comparison_role": "finite_grid_diagnostic_requires_convergence",
+  "reference_audits": {
+    "hohlraum": "outputs/hohlraum/reference_audit.json"
+  }
+}

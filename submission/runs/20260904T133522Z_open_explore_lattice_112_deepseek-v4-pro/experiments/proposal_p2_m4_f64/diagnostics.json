@@ -1,0 +1,56 @@
+{
+  "n_state": 512,
+  "n_angle": 64,
+  "cfm_build_s": 0.05820570099967881,
+  "cfm_solve_s": 48.15846804600005,
+  "cfm_residual": 8.391075601776048e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9986667511951249,
+    "normalized_rel_l1": 0.06020528926716492,
+    "log10_rmse": 0.20164692852306054
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.00760733855835308,
+    "directional_concentration": 0.4407040953486908,
+    "directional_peak_to_mean": 5.273174479278486,
+    "ray_index": 0.003352585257370208
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9995799939297658,
+    "normalized_rel_l1": 0.038306316240298635,
+    "log10_rmse": 0.16459207871613213
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.004206759080031383,
+    "directional_concentration": 0.41887943527107047,
+    "directional_peak_to_mean": 6.474522607707438,
+    "ray_index": 0.0017621248677649934
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9985381659831419,
+    "normalized_rel_l1": 0.06267151619749663,
+    "log10_rmse": 0.10960468556465379
+  },
+  "wall_s": 48.21667374699973,
+  "experiment_id": "proposal_p2_m4_f64",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p2_m4_f64",
+    "hypothesis": "Ray artifacts diminish as angular resolution increases; adding phi bins improves more than adding mu bins for fixed state budget.",
+    "n_pos": 2,
+    "n_mu": 4,
+    "n_phi": 64,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 107.0536766930004,
+  "artifacts": {
+    "metrics": "experiments/proposal_p2_m4_f64/metrics.json",
+    "fluxes": "experiments/proposal_p2_m4_f64/lattice_stage8_ultra.npz",
+    "figure": "experiments/proposal_p2_m4_f64/lattice_stage8_ultra.png"
+  }
+}

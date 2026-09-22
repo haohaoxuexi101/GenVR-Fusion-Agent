@@ -1,0 +1,2 @@
+G:\ssn_gmc_llmapi\scripts\30_stage8_ultra_benchmark.py:92: UserWarning: This figure was using a layout engine that is incompatible with subplots_adjust and/or tight_layout; not calling subplots_adjust.
+  fig.suptitle(f'Stage 8 Ultra HPC v2 — {case}'); fig.subplots_adjust(wspace=.28,top=.84)

@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 32,
+  "cfm_build_s": 0.026242600055411458,
+  "cfm_solve_s": 1.869401500094682,
+  "cfm_residual": 7.017835217574079e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9989425575970758,
+    "normalized_rel_l1": 0.0648052787822967,
+    "log10_rmse": 0.29369381349759943
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.006495891643547929,
+    "directional_concentration": 0.3850421146309516,
+    "directional_peak_to_mean": 4.241960248194726,
+    "ray_index": 0.0025011918548452222
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9992979431601147,
+    "normalized_rel_l1": 0.05632465989917064,
+    "log10_rmse": 0.3399444311936163
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.005335472499994559,
+    "directional_concentration": 0.4064747255133134,
+    "directional_peak_to_mean": 7.1697037134624475,
+    "ray_index": 0.0021687347199191203
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9983769258094723,
+    "normalized_rel_l1": 0.06652082478693441,
+    "log10_rmse": 0.10175947569721273
+  },
+  "wall_s": 1.8956441001500934,
+  "experiment_id": "angular_refined",
+  "role": "causal_agent",
+  "action": {
+    "experiment_id": "angular_refined",
+    "hypothesis": "If angular under-resolution is causal, 32 projected directions with n_pos=1 should suppress rays at the same 128-state budget as position refinement.",
+    "n_pos": 1,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 9.433894000016153,
+  "artifacts": {
+    "metrics": "experiments\\angular_refined\\metrics.json",
+    "fluxes": "experiments\\angular_refined\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\angular_refined\\lattice_stage8_ultra.png"
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "n_state": 128,
+  "n_angle": 32,
+  "interface_phi_offset_fraction": 0.0,
+  "dense_n_mu": 4,
+  "dense_n_phi": 32,
+  "dense_phi_offset_fraction": 0.0,
+  "cfm_build_s": 11.068437595999967,
+  "cfm_solve_s": 5.811447258000044,
+  "cfm_residual": 8.792558885193914e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9986999493085412,
+    "normalized_rel_l1": 0.06898201925579683,
+    "log10_rmse": 0.23178750991213365
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.007582523930215314,
+    "directional_concentration": 0.5256751265784774,
+    "directional_peak_to_mean": 8.462921842313467,
+    "ray_index": 0.0039859442268002695
+  },
+  "cfm_level_vs_dense_sn": {
+    "relative_l1": 0.10380301159946051,
+    "integral_ratio": 1.0833102074073533,
+    "peak_ratio": 1.0490353504494263
+  },
+  "cfm_directional_disagreement_vs_dense_sn": {
+    "residual_rms": 0.007582523930215314,
+    "directional_concentration": 0.5256751265784774,
+    "directional_peak_to_mean": 8.462921842313467,
+    "ray_index": 0.0039859442268002695
+  },
+  "genvr_cfm_vs_dense_sn": {
+    "corr": 0.9986999493085412,
+    "normalized_rel_l1": 0.06898201925579683,
+    "log10_rmse": 0.23178750991213365
+  },
+  "genvr_cfm_ray_vs_dense_sn": {
+    "residual_rms": 0.007582523930215314,
+    "directional_concentration": 0.5256751265784774,
+    "directional_peak_to_mean": 8.462921842313467,
+    "ray_index": 0.0039859442268002695
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9976253712660319,
+    "normalized_rel_l1": 0.10374445998205728,
+    "log10_rmse": 0.26269422645435575
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.011108446170571535,
+    "directional_concentration": 0.6409822350097845,
+    "directional_peak_to_mean": 9.689891240852035,
+    "ray_index": 0.007120316653898824
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9987038207696186,
+    "normalized_rel_l1": 0.06272227212885677,
+    "log10_rmse": 0.13782157890395838
+  },
+  "cfm_learning_error": {
+    "shape": {
+      "corr": 0.9987038207696186,
+      "normalized_rel_l1": 0.06272227212885677,
+      "log10_rmse": 0.13782157890395838
+    },
+    "level": {
+      "relative_l1": 0.07440206121172865,
+      "integral_ratio": 1.0319019293926293,
+      "peak_ratio": 1.0688691802186947
+    },
+    "directional_residual": {
+      "residual_rms": 0.007825902340516012,
+      "directional_concentration": 0.5005036808085899,
+      "directional_peak_to_mean": 7.522247239436546,
+      "ray_index": 0.003916892927076822
+    }
+  },
+  "projected_local_mc_level_vs_dense_sn": {
+    "relative_l1": 0.09583321937401636,
+    "integral_ratio": 1.0498189571609606,
+    "peak_ratio": 0.9814440998614908
+  },
+  "projected_directional_disagreement_vs_dense_sn": {
+    "residual_rms": 0.011108446170571535,
+    "directional_concentration": 0.6409822350097845,
+    "directional_peak_to_mean": 9.689891240852035,
+    "ray_index": 0.007120316653898824
+  },
+  "projected_local_mc_vs_dense_sn": {
+    "corr": 0.9976253712660319,
+    "normalized_rel_l1": 0.10374445998205728,
+    "log10_rmse": 0.26269422645435575
+  },
+  "projected_local_mc_ray_vs_dense_sn": {
+    "residual_rms": 0.011108446170571535,
+    "directional_concentration": 0.6409822350097845,
+    "directional_peak_to_mean": 9.689891240852035,
+    "ray_index": 0.007120316653898824
+  },
+  "genvr_cfm_vs_projected_local_mc": {
+    "corr": 0.9987038207696186,
+    "normalized_rel_l1": 0.06272227212885677,
+    "log10_rmse": 0.13782157890395838
+  },
+  "wall_s": 16.87988485400001,
+  "experiment_id": "angular_refined_repeat",
+  "role": "causal_agent",
+  "action": {
+    "experiment_id": "angular_refined_repeat",
+    "hypothesis": "A new seed estimates stochastic response-construction variability for the angularly refined candidate.",
+    "n_pos": 1,
+    "n_mu": 2,
+    "n_phi": 64,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260828,
+    "cfm_mode": "direct",
+    "interface_phi_offset_fraction": 0.0,
+    "dense_n_mu": null,
+    "dense_n_phi": null,
+    "dense_phi_offset_fraction": 0.0,
+    "mc_histories": null
+  },
+  "process_elapsed_s": 29.804993988000206,
+  "artifacts": {
+    "metrics": "experiments/angular_refined_repeat/metrics.json",
+    "fluxes": "experiments/angular_refined_repeat/lattice_stage8_ultra.npz",
+    "figure": "experiments/angular_refined_repeat/lattice_stage8_ultra.png"
+  },
+  "controlled_comparisons": [
+    {
+      "comparison_type": "interface_angular_refinement",
+      "controlled_factor": "n_phi",
+      "baseline_experiment": "coarse_repeat",
+      "intervention_experiment": "angular_refined_repeat",
+      "baseline_value": 16,
+      "intervention_value": 64,
+      "method_sensitivity": {
+        "cfm": {
+          "shape": {
+            "corr": 0.9993485845237288,
+            "normalized_rel_l1": 0.05154810628193047,
+            "log10_rmse": 0.07286962824904619
+          },
+          "level": {
+            "relative_l1": 0.062232830138582634,
+            "integral_ratio": 1.0561956948470828,
+            "peak_ratio": 1.0126276552720703
+          },
+          "directional_residual": {
+            "residual_rms": 0.005785493789863018,
+            "directional_concentration": 0.39371194632017525,
+            "directional_peak_to_mean": 6.105971055989372,
+            "ray_index": 0.0022778180204302556
+          }
+        },
+        "projected_local_mc": {
+          "shape": {
+            "corr": 0.9982786954246586,
+            "normalized_rel_l1": 0.08864057899074738,
+            "log10_rmse": 0.10202402772981793
+          },
+          "level": {
+            "relative_l1": 0.07902923894834227,
+            "integral_ratio": 1.0573045395237148,
+            "peak_ratio": 0.9816214663009655
+          },
+          "directional_residual": {
+            "residual_rms": 0.009859775063837258,
+            "directional_concentration": 0.4738528335396312,
+            "directional_peak_to_mean": 7.346522196405312,
+            "ray_index": 0.004672082352062683
+          }
+        },
+        "dense_sn": {
+          "shape": {
+            "corr": 1.0,
+            "normalized_rel_l1": 0.0,
+            "log10_rmse": 0.0
+          },
+          "level": {
+            "relative_l1": 0.0,
+            "integral_ratio": 1.0,
+            "peak_ratio": 1.0
+          },
+          "directional_residual": {
+            "residual_rms": 0.0,
+            "directional_concentration": 0.0,
+            "directional_peak_to_mean": 0.0,
+            "ray_index": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison_type": "repeatability",
+      "controlled_factor": "seed",
+      "baseline_experiment": "angular_refined",
+      "intervention_experiment": "angular_refined_repeat",
+      "baseline_value": 260827,
+      "intervention_value": 260828,
+      "method_sensitivity": {
+        "cfm": {
+          "shape": {
+            "corr": 0.9993181046516801,
+            "normalized_rel_l1": 0.04534731110955888,
+            "log10_rmse": 0.04594332614949467
+          },
+          "level": {
+            "relative_l1": 0.04532967191820564,
+            "integral_ratio": 0.9935270908918684,
+            "peak_ratio": 1.000575237655883
+          },
+          "directional_residual": {
+            "residual_rms": 0.005267274012984475,
+            "directional_concentration": 0.5039516838033785,
+            "directional_peak_to_mean": 5.8677821471592555,
+            "ray_index": 0.002654451607897305
+          }
+        },
+        "projected_local_mc": {
+          "shape": {
+            "corr": 0.9995504786822558,
+            "normalized_rel_l1": 0.03497538779917758,
+            "log10_rmse": 0.09547928634992113
+          },
+          "level": {
+            "relative_l1": 0.05186171803191884,
+            "integral_ratio": 0.9628553835793717,
+            "peak_ratio": 0.9414270428989506
+          },
+          "directional_residual": {
+            "residual_rms": 0.004763951620357167,
+            "directional_concentration": 0.47428393380579215,
+            "directional_peak_to_mean": 5.901422038966381,
+            "ray_index": 0.002259465714963475
+          }
+        },
+        "dense_sn": {
+          "shape": {
+            "corr": 1.0,
+            "normalized_rel_l1": 0.0,
+            "log10_rmse": 0.0
+          },
+          "level": {
+            "relative_l1": 0.0,
+            "integral_ratio": 1.0,
+            "peak_ratio": 1.0
+          },
+          "directional_residual": {
+            "residual_rms": 0.0,
+            "directional_concentration": 0.0,
+            "directional_peak_to_mean": 0.0,
+            "ray_index": 0.0
+          }
+        }
+      }
+    }
+  ]
+}

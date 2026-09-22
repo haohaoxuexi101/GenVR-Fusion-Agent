@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 8,
+  "cfm_build_s": 0.026802100241184235,
+  "cfm_solve_s": 0.1819865999277681,
+  "cfm_residual": 4.746752982632912e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9965918329231197,
+    "normalized_rel_l1": 0.09833995041738358,
+    "log10_rmse": 0.423282423319965
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.014494356951764103,
+    "directional_concentration": 0.43563502568615675,
+    "directional_peak_to_mean": 5.330901598054777,
+    "ray_index": 0.00631424956298608
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9971283573611104,
+    "normalized_rel_l1": 0.09703485406859477,
+    "log10_rmse": 0.4555554190287926
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.013632325819398251,
+    "directional_concentration": 0.4983770973403797,
+    "directional_peak_to_mean": 5.856287198601194,
+    "ray_index": 0.006794038971870014
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9995836501015066,
+    "normalized_rel_l1": 0.030208393124249097,
+    "log10_rmse": 0.0738215217872738
+  },
+  "wall_s": 0.20878870016895235,
+  "experiment_id": "position_refined",
+  "role": "causal_agent",
+  "action": {
+    "experiment_id": "position_refined",
+    "hypothesis": "Increasing only face-position resolution should reduce artifacts caused by midpoint compression.",
+    "n_pos": 4,
+    "n_mu": 2,
+    "n_phi": 16,
+    "cfm_samples": 64,
+    "oracle_samples": 64,
+    "internal_samples": 128,
+    "oracle_internal_samples": 128,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 5.227025399915874,
+  "artifacts": {
+    "metrics": "experiments\\position_refined\\metrics.json",
+    "fluxes": "experiments\\position_refined\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\position_refined\\lattice_stage8_ultra.png"
+  }
+}

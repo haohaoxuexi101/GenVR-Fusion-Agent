@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "description": "Live candidate geometry and GMC scalar-flux snapshots",
+  "frames": [
+    {
+      "evaluation_index": 3,
+      "screening_round": 2,
+      "signature": "d7d960548ee7",
+      "generation_round": 2,
+      "gmc_guided_generation": true,
+      "risk": 0.07107464124854711,
+      "accepted": true,
+      "runtime_s": 12.89123750699946,
+      "geometry_and_gmc_field": "gmc_screening/candidate_003_g2_d7d960548ee7.png",
+      "gmc_field": "gmc_screening/candidate_003_g2_d7d960548ee7.npz",
+      "latest": "gmc_screening/latest.png"
+    }
+  ],
+  "latest": {
+    "evaluation_index": 3,
+    "screening_round": 2,
+    "signature": "d7d960548ee7",
+    "generation_round": 2,
+    "gmc_guided_generation": true,
+    "risk": 0.07107464124854711,
+    "accepted": true,
+    "runtime_s": 12.89123750699946,
+    "geometry_and_gmc_field": "gmc_screening/candidate_003_g2_d7d960548ee7.png",
+    "gmc_field": "gmc_screening/candidate_003_g2_d7d960548ee7.npz",
+    "latest": "gmc_screening/latest.png"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "config": {
+    "case": "iter_r",
+    "nx": 150,
+    "ny": 150,
+    "n_pos": 4,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_mode": "direct",
+    "boundary_ckpt": "outputs/hpc_v2_models/boundary_900k_100ep/best.pt",
+    "internal_ckpt": "outputs/hpc_v2_models/internal_900k_100ep/best.pt",
+    "cfm_samples": 10000,
+    "oracle_samples": 10000,
+    "internal_samples": 10000,
+    "oracle_internal_samples": 10000,
+    "oracle_backend": "cuda",
+    "oracle_mc_dtype": "float64",
+    "mc_histories": 10000,
+    "device": "cuda",
+    "dtype": "float64",
+    "inference_batch_size": 100000,
+    "rk4_steps": 12,
+    "rtol": 1e-10,
+    "max_iters": 2000,
+    "solver": "auto",
+    "dense_rtol": 1e-09,
+    "dense_max_iters": 2000,
+    "skip_dense": false,
+    "check_every": 4,
+    "seed": 260827,
+    "response_cache_dir": "outputs/response_cache_hpc",
+    "rebuild_response": true,
+    "torch_compile": false,
+    "matmul_precision": "highest",
+    "outdir": "outputs/iter_radial"
+  },
+  "n_angle": 32,
+  "n_state": 512,
+  "cases": {
+    "iter_r": {
+      "n_state": 512,
+      "n_angle": 32,
+      "cfm_mode": "direct",
+      "solver": "bicgstab",
+      "boundary_path_mode": "excess_chord",
+      "internal_path_mode": "excess_chord",
+      "cfm_build_s": 30.185493546538055,
+      "cfm_boundary_build_s": 30.069067219272256,
+      "cfm_internal_build_s": 0.11642632726579905,
+      "cfm_solve_s": 7.484663853421807,
+      "cfm_iterations": 264,
+      "cfm_residual": 9.689823763322229e-11,
+      "cfm_nonzero_fraction": 1.0,
+      "cfm_min_positive_flux": 2.8850093220705168e-08,
+      "cfm_vs_dense": {
+        "corr": 0.9997517845283035,
+        "normalized_rel_l1": 0.03215221161425691,
+        "log10_rmse": 0.27679532350919417,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "oracle_build_s": 8.387278241105378,
+      "oracle_boundary_build_s": 8.364271965809166,
+      "oracle_internal_build_s": 0.023006275296211243,
+      "oracle_solve_s": 8.034246326424181,
+      "oracle_iterations": 288,
+      "oracle_solver": "bicgstab",
+      "oracle_residual": 4.3331781345970897e-11,
+      "cfm_vs_oracle": {
+        "corr": 0.9997942951002999,
+        "normalized_rel_l1": 0.026414035585944132,
+        "log10_rmse": 0.2331354767692572,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9999422031366296,
+        "normalized_rel_l1": 0.015124302785711115,
+        "log10_rmse": 0.1409950606101135,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "local_operator_metrics": {
+        "ss=0.5,sa=9.5": {
+          "prob_l1_mean_per_input": 0.32811697151137875,
+          "prob_l1_p95_per_input": 0.7935281582642094,
+          "prob_l1_max_per_input": 1.7556696757953252,
+          "prob_max_abs_element": 0.8414504173911995,
+          "attenuated_l1_mean_per_input": 0.13315739446889757,
+          "track_rel_l1": 0.011343931040304163,
+          "a_probability_conservation_max": 1.7763568394002505e-15,
+          "b_probability_conservation_max": 1.5543122344752192e-15,
+          "a_invalid_fraction": 0.0,
+          "a_chord_repair_fraction": 0.0,
+          "a_mean_survival": 0.4424408081970437,
+          "b_mean_survival": 0.44586992907027434
+        },
+        "ss=1,sa=0": {
+          "prob_l1_mean_per_input": 0.3419301594444259,
+          "prob_l1_p95_per_input": 0.6835154744518179,
+          "prob_l1_max_per_input": 1.6520226953908637,
+          "prob_max_abs_element": 0.7837719816875024,
+          "attenuated_l1_mean_per_input": 0.3419301594444405,
+          "track_rel_l1": 0.023547113621290368,
+          "a_probability_conservation_max": 1.7763568394002505e-15,
+          "b_probability_conservation_max": 1.6653345369377348e-15,
+          "a_invalid_fraction": 0.0,
+          "a_chord_repair_fraction": 0.0,
+          "a_mean_survival": 1.0000000000000004,
+          "b_mean_survival": 1.0000000000000178
+        }
+      },
+      "internal_source_operator_metrics": {
+        "attenuated_outgoing_l1": 0.16783429118238058,
+        "attenuated_outgoing_rel_l1": 0.1678342911823806,
+        "outgoing_max_abs_element": 0.002725280429475152,
+        "mean_survival_a": 1.0,
+        "mean_survival_b": 0.9999999999999999,
+        "survival_abs_error": 1.1102230246251565e-16,
+        "track_rel_error": 0.021411668562963962,
+        "a_invalid_fraction": 0.0,
+        "a_chord_repair_fraction": 0.0
+      },
+      "mc_histories": 10000,
+      "mc_runtime_s": 8.102961908094585,
+      "cfm_vs_mc": {
+        "corr": 0.9978793208562485,
+        "normalized_rel_l1": 0.144988036655731,
+        "log10_rmse": 2.770857004184345,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9557333333333333
+      },
+      "dense_vs_mc": {
+        "corr": 0.9978405318694142,
+        "normalized_rel_l1": 0.15476148366427794,
+        "log10_rmse": 2.9151624702101584,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9557333333333333
+      },
+      "oracle_vs_mc": {
+        "corr": 0.9979261002247453,
+        "normalized_rel_l1": 0.15155625407875195,
+        "log10_rmse": 2.8897171260403653,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9557333333333333
+      }
+    }
+  }
+}

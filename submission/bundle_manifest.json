@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0",
+  "archive_name": "OPENxxx_RayLab-GMC_报告与日志_非PDF版.zip",
+  "note": "Non-PDF draft bundle. Replace OPENxxx, then add the required PPT and PDF before final submission.",
+  "files": {
+    ".env.example": {
+      "bytes": 269,
+      "sha256": "13d0cb0a6e1cbea704ff826581735cd8793c8b630c2604fc2d1ba2899ff5634d"
+    },
+    "CITATION.cff": {
+      "bytes": 434,
+      "sha256": "a166470c289f7ad16b40f93d10b07e18e44acf447601261369560deb2ffa707c"
+    },
+    "LICENSE": {
+      "bytes": 1080,
+      "sha256": "7d28c6252759dae517004cf0fd08f4151322722cd66319513c8494022cba35e0"
+    },
+    "README.md": {
+      "bytes": 17621,
+      "sha256": "6f861d7e2f51b19f9bac240d5f8d2f99b652712106e7782f71a30573bd7358a2"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "bytes": 1348,
+      "sha256": "87dddc7fef8e3f92fb76c1e6e67de7b4f8179229505ebd6460d01904f51d3a33"
+    },
+    "configs/ray_agent_core.json": {
+      "bytes": 2570,
+      "sha256": "49bdc165f5689698618949e7b05300e0443a3aebec59190d338e788bdd211841"
+    },
+    "configs/ray_agent_smoke.json": {
+      "bytes": 1638,
+      "sha256": "b280b9ba4ef42ea5d2bc5e94ddbaf8969fe68fe608a9252468fa22b6f8052486"
+    },
+    "environment.yml": {
+      "bytes": 218,
+      "sha256": "5195a78f850935ee803bdc99d3e07ddb16ca34dde095b2db35d21ecb0a10b046"
+    },
+    "environment_cpu.yml": {
+      "bytes": 210,
+      "sha256": "b79550762815c9988a080c41b0ae31548a1cc29e37339dbe5977067b04735b7c"
+    },
+    "requirements.txt": {
+      "bytes": 75,
+      "sha256": "3b45893dd403f34decc0f597a8650f9efd8acb14ce087d617a3892fcabe24356"
+    },
+    "submission/API_AND_SECURITY.md": {
+      "bytes": 1281,
+      "sha256": "7b77c1bfd66412ac4dc6a0d2350b169bf6ac0bde3fbd81731b2a3a1104d40fbb"
+    },
+    "submission/EVIDENCE_LEDGER.md": {
+      "bytes": 3173,
+      "sha256": "067dcf60f3936bfbc7a51bbca4089203441c515eab989b548d07a8356dbedcf3"
+    },
+    "submission/REFERENCE_BENCHMARK_DESIGN.md": {
+      "bytes": 2377,
+      "sha256": "a5ad65b01cfb51be8f18b38e1a198b2ed115a51e1372dcca2d6e6ef9f828a08a"
+    },
+    "submission/SCIENTIFIC_FINDING_AND_ENVIRONMENT.md": {
+      "bytes": 9982,
+      "sha256": "9252453236dc83abfcc1389e6dc20f70e5161ef6e2852a0bf8d07e4f5de9ce0b"
+    },
+    "submission/SUBMISSION_MANIFEST.md": {
+      "bytes": 3063,
+      "sha256": "06fb4e2564e785c84bb2c443189667761880dd2c03ed44d366542a7d43cd230f"
+    },
+    "submission/TRACEABILITY.md": {
+      "bytes": 1905,
+      "sha256": "d0b09ee77fcc392ef0d7e0a1a131c7c29ded0714bb74a3bd823829e218446dfd"
+    },
+    "submission/runs/official_final/ablation_summary.png": {
+      "bytes": 109049,
+      "sha256": "eee7acb2b214021146060d98cc493dacc81573f776fcfee6335b3779eff2b559"
+    },
+    "submission/runs/official_final/config.json": {
+      "bytes": 2372,
+      "sha256": "34dce3e3674e9ff92c9a14bf1c85598473e46a4bfcf9bdd7d634f6b305e477ec"
+    },
+    "submission/runs/official_final/experiments/angular_refined/diagnostics.json": {
+      "bytes": 1872,
+      "sha256": "caa42cc99db69dfad145d765e62431467544ad00943fce9c2e4979760248254d"
+    },
+    "submission/runs/official_final/experiments/angular_refined/lattice_stage8_ultra.npz": {
+      "bytes": 256548,
+      "sha256": "5a55617272ee5d029250d757c6b07689ea71bbf5f61d34dd08604e141f47a55d"
+    },
+    "submission/runs/official_final/experiments/angular_refined/lattice_stage8_ultra.png": {
+      "bytes": 178758,
+      "sha256": "c4ff1f7e1001108302313a33572b81d3cbbaa63f612900f506b61eb2ba254469"
+    },
+    "submission/runs/official_final/experiments/angular_refined/metrics.json": {
+      "bytes": 4670,
+      "sha256": "176a2830af7dd562f6ff68e3b60a8ac5b8d0ff5ce269aed5c9709b0555c63eec"
+    },
+    "submission/runs/official_final/experiments/angular_refined/stderr.txt": {
+      "bytes": 289,
+      "sha256": "05245e330f794194b78cac7ade892b648362e5eef1ed0bf2134ae02ca7091cdb"
+    },
+    "submission/runs/official_final/experiments/angular_refined/stdout.txt": {
+      "bytes": 3749,
+      "sha256": "0a84fb60c4b2349bdffc989c70c3db56264a1be8eb978f9ec025d936810bccdd"
+    },
+    "submission/runs/official_final/experiments/coarse/diagnostics.json": {
+      "bytes": 1784,
+      "sha256": "25692431c9819be7c4ce996a48aa0df35b33854fe8bb2dc21f3eed54525850e6"
+    },
+    "submission/runs/official_final/experiments/coarse/lattice_stage8_ultra.npz": {
+      "bytes": 256742,
+      "sha256": "21dbc7d352878020a419695e3ec67fecf650d2a628715567929b3af9f785f6ea"
+    },
+    "submission/runs/official_final/experiments/coarse/lattice_stage8_ultra.png": {
+      "bytes": 183197,
+      "sha256": "838e796e0548f3bbb289bb6382f019711c714fdd4347c1e8e6eeb3ec478c9504"
+    },
+    "submission/runs/official_final/experiments/coarse/metrics.json": {
+      "bytes": 4663,
+      "sha256": "e92ebcd05b645e664ad6facf1da83920e204574a776733331825c982c5e4e33b"
+    },
+    "submission/runs/official_final/experiments/coarse/stderr.txt": {
+      "bytes": 289,
+      "sha256": "05245e330f794194b78cac7ade892b648362e5eef1ed0bf2134ae02ca7091cdb"
+    },
+    "submission/runs/official_final/experiments/coarse/stdout.txt": {
+      "bytes": 3750,
+      "sha256": "c4c0f20019da677515c2d6a5f7c6d02df888ec6015459a27e46b19815e00dcd1"
+    },
+    "submission/runs/official_final/experiments/combined_refined/diagnostics.json": {
+      "bytes": 1850,
+      "sha256": "5511d3080a1c06960af12aaf564251ab8d58f437845027c29b45087a930d06b3"
+    },
+    "submission/runs/official_final/experiments/combined_refined/lattice_stage8_ultra.npz": {
+      "bytes": 256599,
+      "sha256": "57f66670bc7b8aaa775f876065ca119736c701dda4372a5941a040fdfbeda831"
+    },
+    "submission/runs/official_final/experiments/combined_refined/lattice_stage8_ultra.png": {
+      "bytes": 183579,
+      "sha256": "32486deee4a98630191c3a4fedd277090b0a813a5ca768ec1fe64a0cc21ba202"
+    },
+    "submission/runs/official_final/experiments/combined_refined/metrics.json": {
+      "bytes": 4660,
+      "sha256": "a794ef32f81dd57344ff55ecc3b07bd24b565259d2c3cac32e250e8cdf44f17f"
+    },
+    "submission/runs/official_final/experiments/combined_refined/stderr.txt": {
+      "bytes": 289,
+      "sha256": "05245e330f794194b78cac7ade892b648362e5eef1ed0bf2134ae02ca7091cdb"
+    },
+    "submission/runs/official_final/experiments/combined_refined/stdout.txt": {
+      "bytes": 3738,
+      "sha256": "f00cd30154f5017f4253c7cdeffc6837a0121a50134c4761f529f294af1a8dee"
+    },
+    "submission/runs/official_final/experiments/position_refined/diagnostics.json": {
+      "bytes": 1827,
+      "sha256": "17cbb4de35e40ec8f14d0623919a090417bfde79171eee4d8c9fa3b5f438a8c2"
+    },
+    "submission/runs/official_final/experiments/position_refined/lattice_stage8_ultra.npz": {
+      "bytes": 256658,
+      "sha256": "100de0d3c042902996e30e77356cb6c090ff0773d05e0ce45b0c5e4c848e06d4"
+    },
+    "submission/runs/official_final/experiments/position_refined/lattice_stage8_ultra.png": {
+      "bytes": 187630,
+      "sha256": "ce592fb68497c00a5066897679b193707279963411d139710663b35e20c8e9ce"
+    },
+    "submission/runs/official_final/experiments/position_refined/metrics.json": {
+      "bytes": 4654,
+      "sha256": "f9451361ead1cd4442e27fe5d472731baac09b3785dfa9e6bccd9b228c6eb7ae"
+    },
+    "submission/runs/official_final/experiments/position_refined/stderr.txt": {
+      "bytes": 289,
+      "sha256": "05245e330f794194b78cac7ade892b648362e5eef1ed0bf2134ae02ca7091cdb"
+    },
+    "submission/runs/official_final/experiments/position_refined/stdout.txt": {
+      "bytes": 3732,
+      "sha256": "b52807b0a0bce6832b71392769ffd968c947c5f772afd878afdc8a8f80112255"
+    },
+    "submission/runs/official_final/experiments/random_1_angular_refined/diagnostics.json": {
+      "bytes": 1919,
+      "sha256": "70e4aa3f6ddd0bc089ca94a147ce0d70db9546f52c07dcfffd79a0d671fe1cc7"
+    },
+    "submission/runs/official_final/experiments/random_1_angular_refined/lattice_stage8_ultra.npz": {
+      "bytes": 256553,
+      "sha256": "e58f52072222f079a5315cc886200eea7fdc88d7e92a6196f3ced4899e43360a"
+    },
+    "submission/runs/official_final/experiments/random_1_angular_refined/lattice_stage8_ultra.png": {
+      "bytes": 177222,
+      "sha256": "853afac3792f36460e15bddf93ae5c30aecc7c8fd48c79805a4fa21322b373fb"
+    },
+    "submission/runs/official_final/experiments/random_1_angular_refined/metrics.json": {
+      "bytes": 4705,
+      "sha256": "dde27ae636c53a0478ee12025bb2d1463a6f6172ff2f6f5ca9e758e01716fda7"
+    },
+    "submission/runs/official_final/experiments/random_1_angular_refined/stderr.txt": {
+      "bytes": 289,
+      "sha256": "05245e330f794194b78cac7ade892b648362e5eef1ed0bf2134ae02ca7091cdb"
+    },
+    "submission/runs/official_final/experiments/random_1_angular_refined/stdout.txt": {
+      "bytes": 3320,
+      "sha256": "2e8bb41ab0117a3c8ee7697a99db8eddd63df85ab036661896e40a3ff42b7b0b"
+    },
+    "submission/runs/official_final/experiments/random_2_position_refined/diagnostics.json": {
+      "bytes": 1876,
+      "sha256": "69dca68d70cecf5181c69894405ddf87887f317bb851dcf82521f2f9ba9451c4"
+    },
+    "submission/runs/official_final/experiments/random_2_position_refined/lattice_stage8_ultra.npz": {
+      "bytes": 256637,
+      "sha256": "74f533d43a91c782b84fb3dde3db1b31baa51e46d63ec4e17ae3c5e3d56e07f3"
+    },
+    "submission/runs/official_final/experiments/random_2_position_refined/lattice_stage8_ultra.png": {
+      "bytes": 190747,
+      "sha256": "3fe67a999fb55485a1f8a5deda720d4f8ae01276801880d717d104727199646c"
+    },
+    "submission/runs/official_final/experiments/random_2_position_refined/metrics.json": {
+      "bytes": 4706,
+      "sha256": "ce3ee5e7a4c1845efef9a11ac766e0949405c5384b35277823a494db0670c7c8"
+    },
+    "submission/runs/official_final/experiments/random_2_position_refined/stderr.txt": {
+      "bytes": 289,
+      "sha256": "05245e330f794194b78cac7ade892b648362e5eef1ed0bf2134ae02ca7091cdb"
+    },
+    "submission/runs/official_final/experiments/random_2_position_refined/stdout.txt": {
+      "bytes": 3319,
+      "sha256": "eae1d5d210f0ddc27a154bd8975751fa8efb768bba4664ef574ae10061cadab8"
+    },
+    "submission/runs/official_final/experiments/random_3_combined_refined/diagnostics.json": {
+      "bytes": 1894,
+      "sha256": "7dbe05f33ecf7b94d3b70031a74816bc19ba6438ef7af0a7a5c40eca5ab3ea6a"
+    },
+    "submission/runs/official_final/experiments/random_3_combined_refined/lattice_stage8_ultra.npz": {
+      "bytes": 256594,
+      "sha256": "0944e50364147d395a852a5564dc735997e2f8400e642af4bfc748151ee7e2d0"
+    },
+    "submission/runs/official_final/experiments/random_3_combined_refined/lattice_stage8_ultra.png": {
+      "bytes": 192085,
+      "sha256": "27fbf5c58048db447a087a8c3449f876459279a7dea20a5fb9fd2792e33c0969"
+    },
+    "submission/runs/official_final/experiments/random_3_combined_refined/metrics.json": {
+      "bytes": 4694,
+      "sha256": "95a54d14165e4c43faeac346f80d5a8200b2a1e63d1d69e3e9a1933f1858df31"
+    },
+    "submission/runs/official_final/experiments/random_3_combined_refined/stderr.txt": {
+      "bytes": 289,
+      "sha256": "05245e330f794194b78cac7ade892b648362e5eef1ed0bf2134ae02ca7091cdb"
+    },
+    "submission/runs/official_final/experiments/random_3_combined_refined/stdout.txt": {
+      "bytes": 3307,
+      "sha256": "93615e431c1c3e173cfd545d1080e7afbca23a635fbf0c41901dcd2583fafb12"
+    },
+    "submission/runs/official_final/postprocess_manifest.json": {
+      "bytes": 1007,
+      "sha256": "d24bc8ef254063532dd637a0b04d1717eb06a0a8bd3d9c186cf4a5a3958c3c35"
+    },
+    "submission/runs/official_final/run_manifest.json": {
+      "bytes": 2517,
+      "sha256": "813db5f2a105a5300bf27e14a8738e9ba4de0fcf7fb1b0946abd3636db1babc9"
+    },
+    "submission/runs/official_final/summary.json": {
+      "bytes": 22736,
+      "sha256": "c1576466325b7b05693ddc982f7be1239c816e3b4d1cf2993193d4e295d50022"
+    },
+    "submission/runs/official_final/summary.md": {
+      "bytes": 2019,
+      "sha256": "0bdee21d2d11de259fc00572fe7d1a25c6af35cc35c84cd1b057cffe0f1e1c98"
+    },
+    "submission/runs/official_final/trajectory.jsonl": {
+      "bytes": 65575,
+      "sha256": "14d75d4bce94d845c98673d4d744226bf1f6c45620ab898538af96e2fc1d4a2c"
+    },
+    "submission/复赛提交说明.md": {
+      "bytes": 21822,
+      "sha256": "1824ab10489a077654aa414477cff3fd9dee8a000350fbf143be25385fc33951"
+    }
+  }
+}

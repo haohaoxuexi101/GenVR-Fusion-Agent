@@ -1,0 +1,3493 @@
+{
+  "schema_version": "1.0",
+  "architecture": "LLM observation-hypothesis-tool-evidence loop with an independent threshold-locked verifier",
+  "policy_class": "DeepSeekShieldToolAgent",
+  "deterministic_policy_fallback": false,
+  "final_claim": "verified_improvement",
+  "candidate_signature": "20d0b63a8068",
+  "final_design": {
+    "signature": "20d0b63a8068",
+    "grid_size": 7,
+    "source_cell": [
+      3,
+      3
+    ],
+    "absorber_count": 11,
+    "absorbers": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ]
+    ]
+  },
+  "termination": "verifier_accepted_finish",
+  "steps_completed": 8,
+  "response_failures": 0,
+  "verifier_decision": {
+    "accepted": true,
+    "terminal": true,
+    "requested_claim": "verified_improvement",
+    "final_claim": "verified_improvement",
+    "candidate_signature": "20d0b63a8068",
+    "checks": {
+      "non_baseline_candidate": {
+        "passed": true,
+        "observed": "20d0b63a8068",
+        "required": "signature different from baseline ded6840cea70"
+      },
+      "genvr_cfm_gate": {
+        "passed": true,
+        "observed": 0.09274446963494523,
+        "required": "risk < 1"
+      },
+      "exact_response_gate": {
+        "passed": true,
+        "observed": 0.12567771642874304,
+        "required": "risk < 1"
+      },
+      "unbiased_mc_present": {
+        "passed": true,
+        "observed": 1,
+        "required": "exactly one completed certification"
+      },
+      "mc_design_identity": {
+        "passed": true,
+        "observed": {
+          "baseline": "ded6840cea70",
+          "candidate": "20d0b63a8068"
+        },
+        "required": {
+          "baseline": "ded6840cea70",
+          "candidate": "20d0b63a8068"
+        }
+      },
+      "mc_histories": {
+        "passed": true,
+        "observed": {
+          "baseline.analog": 2500,
+          "baseline.variance_reduced": 2500,
+          "candidate.analog": 2500,
+          "candidate.variance_reduced": 2500
+        },
+        "required": "each >= 1000"
+      },
+      "mc_replicates": {
+        "passed": true,
+        "observed": 2,
+        "required": ">= 2"
+      },
+      "analog_weight_window_consistency": {
+        "passed": true,
+        "observed": {
+          "baseline_far_field_z": -0.4718136699129714,
+          "candidate_far_field_z": 0.42030637147150957
+        },
+        "required": "both absolute z-scores <= 2"
+      },
+      "mc_improvement_threshold": {
+        "passed": true,
+        "observed": 0.20204190282299292,
+        "required": "candidate/baseline < 1"
+      },
+      "mc_far_field_difference_z": {
+        "passed": true,
+        "observed": -16.74927887564977,
+        "required": "<= -1.96"
+      },
+      "mc_far_field_ci_separation": {
+        "passed": true,
+        "observed": true,
+        "required": true
+      },
+      "deep_far_field_diagnostic": {
+        "candidate_over_baseline": 0.8314611197922004,
+        "estimated_reduction_fraction": 0.1685388802077996,
+        "difference": -4.620823210208937e-05,
+        "difference_z": -1.6206101832977522,
+        "candidate_upper_below_baseline_lower": false
+      },
+      "fom_is_not_acceptance_criterion": {
+        "passed": true,
+        "observed": {
+          "baseline": 1.0293614046522495,
+          "candidate": 2.1269163280139622
+        },
+        "required": "reported for efficiency only"
+      }
+    },
+    "reasons": [],
+    "hard_stop_reason": null
+  },
+  "budget_usage": {
+    "diffusion_evaluations": {
+      "used": 25,
+      "limit": 320,
+      "remaining": 295
+    },
+    "genvr_candidates": {
+      "used": 3,
+      "limit": 4,
+      "remaining": 1
+    },
+    "exact_candidates": {
+      "used": 2,
+      "limit": 2,
+      "remaining": 0
+    },
+    "mc_root_histories": {
+      "used": 20000,
+      "limit": 20000,
+      "remaining": 0
+    }
+  },
+  "operator_memory": {
+    "counts": {
+      "adjoint_sensitivity": 18,
+      "channel_block": 0,
+      "inner_barrier": 0,
+      "hotspot_cap": 0,
+      "symmetry_repair": 0,
+      "redistribute": 0,
+      "random_explore": 6
+    },
+    "mean_improvement": {
+      "adjoint_sensitivity": 0.2910109070990899,
+      "channel_block": 0.0,
+      "inner_barrier": 0.0,
+      "hotspot_cap": 0.0,
+      "symmetry_repair": 0.0,
+      "redistribute": 0.0,
+      "random_explore": -0.308053596019928
+    }
+  },
+  "candidate_archive": [
+    {
+      "signature": "20d0b63a8068",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "unbiased-mc",
+      "diffusion": {
+        "risk": 0.09792337495250229,
+        "metrics": {
+          "far_mean": 6.842251975137737e-05,
+          "far_p90": 0.00016136959463745193,
+          "far_cvar90": 0.000205301850893432,
+          "far_max": 0.00033229430311060943,
+          "worst_sector_mean": 0.00012456366346028566,
+          "hotspot_ratio": 4.856504909758461,
+          "angular_imbalance": 1.8193016271509084
+        },
+        "runtime_s": 0.1129572999998345,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": {
+        "risk": 0.09274446963494523,
+        "metrics": {
+          "far_mean": 0.00036051546591068574,
+          "far_p90": 0.0007085309867654947,
+          "far_cvar90": 0.0008335617786959705,
+          "far_max": 0.0011865824373642067,
+          "worst_sector_mean": 0.0005809260853513944,
+          "hotspot_ratio": 3.291349607892193,
+          "angular_imbalance": 1.610389705781276
+        },
+        "runtime_s": 13.343242334000024,
+        "fidelity": "genvr-cfm-response"
+      },
+      "exact": {
+        "risk": 0.12567771642874304,
+        "metrics": {
+          "far_mean": 0.00039219223173505766,
+          "far_p90": 0.0008063397430987727,
+          "far_cvar90": 0.0011416880190561942,
+          "far_max": 0.0019598470361294738,
+          "worst_sector_mean": 0.0005946047650224752,
+          "hotspot_ratio": 4.997159243718608,
+          "angular_imbalance": 1.51635686642203
+        },
+        "runtime_s": 20.620956096000555,
+        "fidelity": "exact-local-mc-response"
+      },
+      "latest_mc": {
+        "design_comparison": {
+          "far_field": {
+            "candidate_over_baseline": 0.20204190282299292,
+            "estimated_reduction_fraction": 0.797958097177007,
+            "difference": -0.00165219899662379,
+            "difference_z": -16.74927887564977,
+            "candidate_upper_below_baseline_lower": true
+          },
+          "deep_far_field": {
+            "candidate_over_baseline": 0.8314611197922004,
+            "estimated_reduction_fraction": 0.1685388802077996,
+            "difference": -4.620823210208937e-05,
+            "difference_z": -1.6206101832977522,
+            "candidate_upper_below_baseline_lower": false
+          }
+        },
+        "artifact": {
+          "summary": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/01_20d0b63a8068/certification.json",
+          "fields": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/01_20d0b63a8068/fields.npz"
+        }
+      }
+    },
+    {
+      "signature": "fed6d69cffdf",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          5,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "unbiased-mc",
+      "diffusion": {
+        "risk": 0.09846431722599037,
+        "metrics": {
+          "far_mean": 6.842251975137741e-05,
+          "far_p90": 0.0001613695946374523,
+          "far_cvar90": 0.00020530185089343212,
+          "far_max": 0.0003322943031106093,
+          "worst_sector_mean": 0.00012687488665834035,
+          "hotspot_ratio": 4.856504909758456,
+          "angular_imbalance": 1.8534978316082433
+        },
+        "runtime_s": 0.1701392000004489,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": {
+        "risk": 0.10929048423614242,
+        "metrics": {
+          "far_mean": 0.000375123105609876,
+          "far_p90": 0.0007366553635229972,
+          "far_cvar90": 0.0009335549122437733,
+          "far_max": 0.0015187030639742354,
+          "worst_sector_mean": 0.0007730363350875585,
+          "hotspot_ratio": 4.048545774073619,
+          "angular_imbalance": 2.0593924830942054
+        },
+        "runtime_s": 15.772106861999418,
+        "fidelity": "genvr-cfm-response"
+      },
+      "exact": {
+        "risk": 0.12348181754859829,
+        "metrics": {
+          "far_mean": 0.00038635876240725344,
+          "far_p90": 0.0007934078239031972,
+          "far_cvar90": 0.0011337254277289511,
+          "far_max": 0.0019655679635496833,
+          "worst_sector_mean": 0.0005581043183185195,
+          "hotspot_ratio": 5.087416553730999,
+          "angular_imbalance": 1.4446493436116012
+        },
+        "runtime_s": 18.801122300000316,
+        "fidelity": "exact-local-mc-response"
+      },
+      "latest_mc": {
+        "design_comparison": {
+          "far_field": {
+            "candidate_over_baseline": 0.19114146168078064,
+            "estimated_reduction_fraction": 0.8088585383192194,
+            "difference": -0.0017683335515870126,
+            "difference_z": -17.440701320662974,
+            "candidate_upper_below_baseline_lower": true
+          },
+          "deep_far_field": {
+            "candidate_over_baseline": 1.0098472807448207,
+            "estimated_reduction_fraction": -0.009847280744820663,
+            "difference": 2.5980948354850913e-06,
+            "difference_z": 0.08965459027780208,
+            "candidate_upper_below_baseline_lower": false
+          }
+        },
+        "artifact": {
+          "summary": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/02_fed6d69cffdf/certification.json",
+          "fields": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/02_fed6d69cffdf/fields.npz"
+        }
+      }
+    },
+    {
+      "signature": "e36494ab5a05",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          5,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.14593953663114687,
+        "metrics": {
+          "far_mean": 0.00010010285957233642,
+          "far_p90": 0.00020517059314279678,
+          "far_cvar90": 0.0003444393566316603,
+          "far_max": 0.000573005540550962,
+          "worst_sector_mean": 0.00019526087616216623,
+          "hotspot_ratio": 5.7241675512465875,
+          "angular_imbalance": 1.9497370161568472
+        },
+        "runtime_s": 0.10748409999996511,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "142baa0b6175",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          5,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          5,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "genvr-cfm-response",
+      "diffusion": {
+        "risk": 0.14593953663114706,
+        "metrics": {
+          "far_mean": 0.00010010285957233642,
+          "far_p90": 0.00020517059314279667,
+          "far_cvar90": 0.0003444393566316599,
+          "far_max": 0.0005730055405509615,
+          "worst_sector_mean": 0.00019526087616216634,
+          "hotspot_ratio": 5.724167551246583,
+          "angular_imbalance": 1.9497370161568488
+        },
+        "runtime_s": 0.10526039999967907,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": {
+        "risk": 0.1587292911675029,
+        "metrics": {
+          "far_mean": 0.0006082188938795277,
+          "far_p90": 0.0012937247531763746,
+          "far_cvar90": 0.0015863221477757483,
+          "far_max": 0.0021700776779088934,
+          "worst_sector_mean": 0.0011871455312201938,
+          "hotspot_ratio": 3.567922173655344,
+          "angular_imbalance": 1.9515514687343882
+        },
+        "runtime_s": 15.830072991000634,
+        "fidelity": "genvr-cfm-response"
+      },
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "ac19c1a8ab27",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          1,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.1469357078853789,
+        "metrics": {
+          "far_mean": 8.421155045195047e-05,
+          "far_p90": 0.0002076915819934271,
+          "far_cvar90": 0.0003489117306974967,
+          "far_max": 0.0005804911059439371,
+          "worst_sector_mean": 0.00019773819086594757,
+          "hotspot_ratio": 6.893248050042191,
+          "angular_imbalance": 2.347253956960256
+        },
+        "runtime_s": 0.1060267989996646,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "604e4cad07a1",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          1,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.1469515075663785,
+        "metrics": {
+          "far_mean": 8.42115504519504e-05,
+          "far_p90": 0.00020769158199342708,
+          "far_cvar90": 0.00034891173069749603,
+          "far_max": 0.0005804911059439361,
+          "worst_sector_mean": 0.0001978364391994214,
+          "hotspot_ratio": 6.8932480500421836,
+          "angular_imbalance": 2.3484215457720024
+        },
+        "runtime_s": 0.10567600000013044,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "fd13c81db677",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          4,
+          2
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.6912977717538151,
+        "metrics": {
+          "far_mean": 0.00037570815584829926,
+          "far_p90": 0.001237194129710665,
+          "far_cvar90": 0.0020427819995101687,
+          "far_max": 0.0038388865923161867,
+          "worst_sector_mean": 0.0011679627763183924,
+          "hotspot_ratio": 10.217735581620499,
+          "angular_imbalance": 3.1173566393719834
+        },
+        "runtime_s": 0.10466249999990396,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "32584f4d9bef",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          4,
+          4
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.698218176679814,
+        "metrics": {
+          "far_mean": 0.0003757081558482995,
+          "far_p90": 0.0012371941297106667,
+          "far_cvar90": 0.00204278199951017,
+          "far_max": 0.003838886592316181,
+          "worst_sector_mean": 0.00121774686431286,
+          "hotspot_ratio": 10.217735581620477,
+          "angular_imbalance": 3.226735752440759
+        },
+        "runtime_s": 0.10577949900016392,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "d25c146b5a3b",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          5,
+          2
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.8206175918667139,
+        "metrics": {
+          "far_mean": 0.0003578975178648663,
+          "far_p90": 0.0008294936537080712,
+          "far_cvar90": 0.0022683157162614047,
+          "far_max": 0.005597872047283493,
+          "worst_sector_mean": 0.001448304016405575,
+          "hotspot_ratio": 15.640991534892729,
+          "angular_imbalance": 4.087053572501794
+        },
+        "runtime_s": 0.18316089900054067,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "13472bebd879",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          6,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.983718835990292,
+        "metrics": {
+          "far_mean": 0.000538314695408867,
+          "far_p90": 0.0019273120982852873,
+          "far_cvar90": 0.002981973296394491,
+          "far_max": 0.004986375231035089,
+          "worst_sector_mean": 0.001845866644761843,
+          "hotspot_ratio": 9.262937225311635,
+          "angular_imbalance": 3.4287418300446464
+        },
+        "runtime_s": 0.10646919900045759,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "283a0344e0b9",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          3,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          5,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 0.999999999999999,
+        "metrics": {
+          "far_mean": 0.0004755215891918005,
+          "far_p90": 0.001480570610619832,
+          "far_cvar90": 0.0030563384839749005,
+          "far_max": 0.006454036365032428,
+          "worst_sector_mean": 0.0016277996384404492,
+          "hotspot_ratio": 13.572541208910723,
+          "angular_imbalance": 3.4198284324773107
+        },
+        "runtime_s": 0.10763939999924332,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "ded6840cea70",
+      "is_baseline": true,
+      "removed_from_baseline": [],
+      "added_to_baseline": [],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.0,
+        "metrics": {
+          "far_mean": 0.00047552158919180105,
+          "far_p90": 0.0014805706106198334,
+          "far_cvar90": 0.003056338483974904,
+          "far_max": 0.0064540363650324355,
+          "worst_sector_mean": 0.0016277996384404532,
+          "hotspot_ratio": 13.572541208910723,
+          "angular_imbalance": 3.419828432477314
+        },
+        "runtime_s": 0.12601979800001573,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "90701b4d31d4",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          3,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          5,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.0000000000000058,
+        "metrics": {
+          "far_mean": 0.00047552158919180284,
+          "far_p90": 0.0014805706106198406,
+          "far_cvar90": 0.003056338483974918,
+          "far_max": 0.006454036365032464,
+          "worst_sector_mean": 0.0016277996384404584,
+          "hotspot_ratio": 13.572541208910732,
+          "angular_imbalance": 3.419828432477313
+        },
+        "runtime_s": 0.11127210000086052,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "a15323eedcc5",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          1,
+          3
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.0083156047728323,
+        "metrics": {
+          "far_mean": 0.00046405192396612946,
+          "far_p90": 0.0014980339062789039,
+          "far_cvar90": 0.003092388633246598,
+          "far_max": 0.006530145687628099,
+          "worst_sector_mean": 0.001647009467875954,
+          "hotspot_ratio": 14.072015113775771,
+          "angular_imbalance": 3.54568915837648
+        },
+        "runtime_s": 0.1086712999995143,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "08006873b4de",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          3,
+          5
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.0097623428910179,
+        "metrics": {
+          "far_mean": 0.0004652952324081121,
+          "far_p90": 0.0014998134587786373,
+          "far_cvar90": 0.0030973715107288787,
+          "far_max": 0.006544465611077256,
+          "worst_sector_mean": 0.001644419547146258,
+          "hotspot_ratio": 14.065189486697946,
+          "angular_imbalance": 3.5306381276421486
+        },
+        "runtime_s": 0.10490979899986996,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "6f46ac0ff9cf",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          3,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.0106124505419387,
+        "metrics": {
+          "far_mean": 0.0004652952324081076,
+          "far_p90": 0.001499813458778623,
+          "far_cvar90": 0.003097371510728847,
+          "far_max": 0.006544465611077186,
+          "worst_sector_mean": 0.0016506993674662085,
+          "hotspot_ratio": 14.065189486697934,
+          "angular_imbalance": 3.5441523765379435
+        },
+        "runtime_s": 0.10573699999986275,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "bb3bf529b524",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          4,
+          2
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          5,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.1324221138633188,
+        "metrics": {
+          "far_mean": 0.0005789202799932298,
+          "far_p90": 0.0020812520563104424,
+          "far_cvar90": 0.003513661231081698,
+          "far_max": 0.00629450266235159,
+          "worst_sector_mean": 0.0020208789100487202,
+          "hotspot_ratio": 10.872831510454603,
+          "angular_imbalance": 3.4879681592618197
+        },
+        "runtime_s": 0.1171490000006088,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "9db752213bb6",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          4,
+          4
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          5,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.1324221138633215,
+        "metrics": {
+          "far_mean": 0.0005789202799932319,
+          "far_p90": 0.002081252056310448,
+          "far_cvar90": 0.0035136612310817106,
+          "far_max": 0.006294502662351606,
+          "worst_sector_mean": 0.0020208789100487315,
+          "hotspot_ratio": 10.872831510454592,
+          "angular_imbalance": 3.4879681592618272
+        },
+        "runtime_s": 0.10787340000024415,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "6561d795b877",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          2,
+          4
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.1438491964499702,
+        "metrics": {
+          "far_mean": 0.0005689689651156603,
+          "far_p90": 0.002109438507841815,
+          "far_cvar90": 0.0035611575129682396,
+          "far_max": 0.006381207432722066,
+          "worst_sector_mean": 0.002047759648805637,
+          "hotspot_ratio": 11.215387523684866,
+          "angular_imbalance": 3.5961994295699133
+        },
+        "runtime_s": 0.12076630000046862,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "4914fc725c5d",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          2,
+          2
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          4,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.1439802766000389,
+        "metrics": {
+          "far_mean": 0.0005689689651156603,
+          "far_p90": 0.002109438507841813,
+          "far_cvar90": 0.0035611575129682396,
+          "far_max": 0.006381207432722065,
+          "worst_sector_mean": 0.002048627032928104,
+          "hotspot_ratio": 11.215387523684862,
+          "angular_imbalance": 3.597688538303427
+        },
+        "runtime_s": 0.12308020000000397,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "faedebf346d6",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          4,
+          2
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          5,
+          2
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.188152052041059,
+        "metrics": {
+          "far_mean": 0.0006668538042874518,
+          "far_p90": 0.0019416121043923597,
+          "far_cvar90": 0.0037670098424246643,
+          "far_max": 0.007130076028103029,
+          "worst_sector_mean": 0.0018201431364778106,
+          "hotspot_ratio": 10.69211269735752,
+          "angular_imbalance": 2.7755451803916205
+        },
+        "runtime_s": 0.10513770000034128,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "5633a8f2e97e",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          2,
+          4
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          0,
+          5
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.2690864397574861,
+        "metrics": {
+          "far_mean": 0.0008376779260101523,
+          "far_p90": 0.0025046362393330683,
+          "far_cvar90": 0.0041882152158078416,
+          "far_max": 0.0067367276099677695,
+          "worst_sector_mean": 0.001758979410509948,
+          "hotspot_ratio": 8.042145317180202,
+          "angular_imbalance": 2.109935896432617
+        },
+        "runtime_s": 0.1138146000002962,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "24364b856d5b",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          5,
+          1
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          1,
+          4
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.3178696028568981,
+        "metrics": {
+          "far_mean": 0.000713577409018975,
+          "far_p90": 0.0024132251078635486,
+          "far_cvar90": 0.0040457494513481814,
+          "far_max": 0.006519897713817528,
+          "worst_sector_mean": 0.0025790420062348058,
+          "hotspot_ratio": 9.136917216565294,
+          "angular_imbalance": 3.61441696874959
+        },
+        "runtime_s": 0.10568919900015317,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "e99382d2bc10",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          2,
+          4
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          0,
+          3
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.372568844732499,
+        "metrics": {
+          "far_mean": 0.0009786031858338103,
+          "far_p90": 0.003095563345621005,
+          "far_cvar90": 0.004489328211491735,
+          "far_max": 0.0066706760188207335,
+          "worst_sector_mean": 0.0019650202647818566,
+          "hotspot_ratio": 6.81652800173243,
+          "angular_imbalance": 2.0056460581903655
+        },
+        "runtime_s": 0.11021399999935966,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    },
+    {
+      "signature": "155c2fac0ab1",
+      "is_baseline": false,
+      "removed_from_baseline": [
+        [
+          4,
+          4
+        ]
+      ],
+      "added_to_baseline": [
+        [
+          6,
+          5
+        ]
+      ],
+      "absorber_count": 11,
+      "highest_fidelity": "diffusion-ensemble",
+      "diffusion": {
+        "risk": 1.9050778527823868,
+        "metrics": {
+          "far_mean": 0.0009413418657300931,
+          "far_p90": 0.0030224490358831462,
+          "far_cvar90": 0.006129395154502497,
+          "far_max": 0.01362308737365394,
+          "worst_sector_mean": 0.002729542715670253,
+          "hotspot_ratio": 14.471987138368739,
+          "angular_imbalance": 2.865949890240439
+        },
+        "runtime_s": 0.10542310000073485,
+        "fidelity": "diffusion-ensemble"
+      },
+      "genvr": null,
+      "exact": null,
+      "latest_mc": null
+    }
+  ],
+  "search_records": [
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "fd13c81db677",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          4,
+          2
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.06330991492597492,
+      "diffusion_risk": 0.6912977717538151,
+      "acquisition": 0.6715381635871301,
+      "improvement_over_parent": 0.3087022282461849
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "32584f4d9bef",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          4,
+          4
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.06330991492597492,
+      "diffusion_risk": 0.698218176679814,
+      "acquisition": 0.6792107157140279,
+      "improvement_over_parent": 0.301781823320186
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "20d0b63a8068",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          5,
+          1
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.05563487552737563,
+      "diffusion_risk": 0.09792337495250229,
+      "acquisition": 0.07141271805841978,
+      "improvement_over_parent": 0.9020766250474977
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "fed6d69cffdf",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          5,
+          5
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.05563487552737563,
+      "diffusion_risk": 0.09846431722599037,
+      "acquisition": 0.06833710360521152,
+      "improvement_over_parent": 0.9015356827740096
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "6f46ac0ff9cf",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          3,
+          1
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.054785703234078054,
+      "diffusion_risk": 1.0106124505419387,
+      "acquisition": 0.985689683677959,
+      "improvement_over_parent": -0.010612450541938712
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "08006873b4de",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          3,
+          5
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.054785703234078054,
+      "diffusion_risk": 1.0097623428910179,
+      "acquisition": 0.9883538497953926,
+      "improvement_over_parent": -0.00976234289101785
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "4914fc725c5d",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          2,
+          2
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.05146890614408435,
+      "diffusion_risk": 1.1439802766000389,
+      "acquisition": 1.1258838767195984,
+      "improvement_over_parent": -0.14398027660003887
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "6561d795b877",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          2,
+          4
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.05146890614408435,
+      "diffusion_risk": 1.1438491964499702,
+      "acquisition": 1.1282616455541619,
+      "improvement_over_parent": -0.14384919644997018
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "a15323eedcc5",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          1,
+          3
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.047151682418569804,
+      "diffusion_risk": 1.0083156047728323,
+      "acquisition": 0.9940962117171624,
+      "improvement_over_parent": -0.00831560477283233
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "604e4cad07a1",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          1,
+          1
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.042115988413279765,
+      "diffusion_risk": 0.1469515075663785,
+      "acquisition": 0.13039610742923446,
+      "improvement_over_parent": 0.8530484924336215
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "ac19c1a8ab27",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          1,
+          5
+        ],
+        "add": [
+          4,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.042115988413279765,
+      "diffusion_risk": 0.1469357078853789,
+      "acquisition": 0.12848084566875717,
+      "improvement_over_parent": 0.8530642921146211
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "bb3bf529b524",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          4,
+          2
+        ],
+        "add": [
+          5,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.03848593651105231,
+      "diffusion_risk": 1.1324221138633188,
+      "acquisition": 1.1156789555978108,
+      "improvement_over_parent": -0.1324221138633188
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "9db752213bb6",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          4,
+          4
+        ],
+        "add": [
+          5,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.03848593651105231,
+      "diffusion_risk": 1.1324221138633215,
+      "acquisition": 1.1171352675967154,
+      "improvement_over_parent": -0.13242211386332148
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "e36494ab5a05",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          5,
+          1
+        ],
+        "add": [
+          5,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.037313712511181873,
+      "diffusion_risk": 0.14593953663114687,
+      "acquisition": 0.12908908451084367,
+      "improvement_over_parent": 0.8540604633688531
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "142baa0b6175",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          5,
+          5
+        ],
+        "add": [
+          5,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.037313712511181873,
+      "diffusion_risk": 0.14593953663114706,
+      "acquisition": 0.12773958942191183,
+      "improvement_over_parent": 0.8540604633688529
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "d25c146b5a3b",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          5,
+          1
+        ],
+        "add": [
+          5,
+          2
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.03393211765578389,
+      "diffusion_risk": 0.8206175918667139,
+      "acquisition": 0.8029283501102572,
+      "improvement_over_parent": 0.1793824081332861
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "faedebf346d6",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          4,
+          2
+        ],
+        "add": [
+          5,
+          2
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.02924647727938528,
+      "diffusion_risk": 1.188152052041059,
+      "acquisition": 1.1717823824705051,
+      "improvement_over_parent": -0.1881520520410589
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "283a0344e0b9",
+      "mutation": {
+        "operator": "adjoint_sensitivity",
+        "remove": [
+          3,
+          1
+        ],
+        "add": [
+          5,
+          3
+        ],
+        "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+      },
+      "heuristic_score": 0.02818026897042239,
+      "diffusion_risk": 0.999999999999999,
+      "acquisition": 0.9843887940216218,
+      "improvement_over_parent": 9.992007221626409e-16
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "155c2fac0ab1",
+      "mutation": {
+        "operator": "random_explore",
+        "remove": [
+          4,
+          4
+        ],
+        "add": [
+          6,
+          5
+        ],
+        "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+      },
+      "heuristic_score": -0.022559969071571435,
+      "diffusion_risk": 1.9050778527823868,
+      "acquisition": 1.892739857731076,
+      "improvement_over_parent": -0.9050778527823868
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "13472bebd879",
+      "mutation": {
+        "operator": "random_explore",
+        "remove": [
+          5,
+          1
+        ],
+        "add": [
+          6,
+          3
+        ],
+        "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+      },
+      "heuristic_score": 0.013858777511544459,
+      "diffusion_risk": 0.983718835990292,
+      "acquisition": 0.9735682326365362,
+      "improvement_over_parent": 0.016281164009708027
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "5633a8f2e97e",
+      "mutation": {
+        "operator": "random_explore",
+        "remove": [
+          2,
+          4
+        ],
+        "add": [
+          0,
+          5
+        ],
+        "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+      },
+      "heuristic_score": -0.021191167975481946,
+      "diffusion_risk": 1.2690864397574861,
+      "acquisition": 1.2602327763689092,
+      "improvement_over_parent": -0.26908643975748614
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "e99382d2bc10",
+      "mutation": {
+        "operator": "random_explore",
+        "remove": [
+          2,
+          4
+        ],
+        "add": [
+          0,
+          3
+        ],
+        "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+      },
+      "heuristic_score": -0.02076661560604045,
+      "diffusion_risk": 1.372568844732499,
+      "acquisition": 1.3645963246411503,
+      "improvement_over_parent": -0.37256884473249907
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "90701b4d31d4",
+      "mutation": {
+        "operator": "random_explore",
+        "remove": [
+          3,
+          5
+        ],
+        "add": [
+          5,
+          3
+        ],
+        "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+      },
+      "heuristic_score": 0.02818026897042239,
+      "diffusion_risk": 1.0000000000000058,
+      "acquisition": 0.9926755252465187,
+      "improvement_over_parent": -5.773159728050814e-15
+    },
+    {
+      "parent_signature": "ded6840cea70",
+      "design_signature": "24364b856d5b",
+      "mutation": {
+        "operator": "random_explore",
+        "remove": [
+          5,
+          1
+        ],
+        "add": [
+          1,
+          4
+        ],
+        "rationale": "Explore a legal fixed-mass swap outside the current physics ranking."
+      },
+      "heuristic_score": -0.04612836633566013,
+      "diffusion_risk": 1.3178696028568981,
+      "acquisition": 1.311047269219685,
+      "improvement_over_parent": -0.31786960285689814
+    }
+  ],
+  "agent_memory": [
+    {
+      "step": 1,
+      "action": {
+        "tool": "run_diffusion_batch",
+        "arguments": {
+          "operator_weights": {
+            "adjoint_sensitivity": 1.0,
+            "channel_block": 0.2,
+            "inner_barrier": 0.1,
+            "hotspot_cap": 0.8,
+            "symmetry_repair": 0.1,
+            "redistribute": 0.4,
+            "random_explore": 0.2
+          },
+          "focus_sector": 6,
+          "exploration_fraction": 0.25,
+          "proposals_per_parent": 24,
+          "beam_width": 4,
+          "parent_signatures": [
+            "ded6840cea70"
+          ]
+        },
+        "hypothesis": "Low-sensitivity absorber cells are shielding poorly; legal fixed-mass swaps guided by high forward-adjoint empty cells can reduce source-distant flux, far-field CVaR90/max, and sector-6 leakage relative to baseline.",
+        "expected_observation": "Diffusion-ensemble batch yields at least one legal candidate with lower far_cvar90, far_max, and worst_sector_mean than baseline, and advances top candidates in the beam for later genvr testing.",
+        "decision_reason": "No higher-fidelity candidate exists yet and only run_diffusion_batch is executable; generate legal candidates now, focusing on sector 6 where normalized leakage is 1.0, before spending higher-fidelity budget."
+      },
+      "tool_result": {
+        "tool": "run_diffusion_batch",
+        "evaluated_candidates": 24,
+        "strategy": {
+          "operator_weights": {
+            "adjoint_sensitivity": 0.3571428571428571,
+            "channel_block": 0.07142857142857142,
+            "inner_barrier": 0.03571428571428571,
+            "hotspot_cap": 0.2857142857142857,
+            "symmetry_repair": 0.03571428571428571,
+            "redistribute": 0.14285714285714285,
+            "random_explore": 0.07142857142857142
+          },
+          "focus_sector": 6,
+          "exploration_fraction": 0.25
+        },
+        "new_beam_signatures": [
+          "20d0b63a8068",
+          "fed6d69cffdf",
+          "142baa0b6175",
+          "ac19c1a8ab27"
+        ],
+        "budget": {
+          "used": 25,
+          "limit": 320,
+          "remaining": 295
+        },
+        "best_new_candidates": [
+          {
+            "parent_signature": "ded6840cea70",
+            "design_signature": "20d0b63a8068",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                5,
+                1
+              ],
+              "add": [
+                4,
+                3
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "diffusion_risk": 0.09792337495250229,
+            "improvement_over_parent": 0.9020766250474977
+          },
+          {
+            "parent_signature": "ded6840cea70",
+            "design_signature": "fed6d69cffdf",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                5,
+                5
+              ],
+              "add": [
+                4,
+                3
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "diffusion_risk": 0.09846431722599037,
+            "improvement_over_parent": 0.9015356827740096
+          },
+          {
+            "parent_signature": "ded6840cea70",
+            "design_signature": "e36494ab5a05",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                5,
+                1
+              ],
+              "add": [
+                5,
+                3
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "diffusion_risk": 0.14593953663114687,
+            "improvement_over_parent": 0.8540604633688531
+          },
+          {
+            "parent_signature": "ded6840cea70",
+            "design_signature": "142baa0b6175",
+            "mutation": {
+              "operator": "adjoint_sensitivity",
+              "remove": [
+                5,
+                5
+              ],
+              "add": [
+                5,
+                3
+              ],
+              "rationale": "Move absorber to a high forward-times-adjoint sensitivity cell."
+            },
+            "diffusion_risk": 0.14593953663114706,
+            "improvement_over_parent": 0.8540604633688529
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "action": {
+        "tool": "promote_genvr",
+        "arguments": {
+          "design_signatures": [
+            "20d0b63a8068",
+            "fed6d69cffdf",
+            "142baa0b6175"
+          ]
+        },
+        "hypothesis": "The top diffusion-ensemble candidates (both [4,3] additions and the [5,3] addition) will retain their leakage reduction under the independent GenVR/CFM response operator, keeping relative risk below the baseline and passing the 1.0 threshold gate.",
+        "expected_observation": "GenVR/CFM evaluations for the three promoted signatures show lower far-field risk than the CFM baseline with consistency z within tolerance, confirming at least one candidate to advance toward exact-local MC.",
+        "decision_reason": "The evidence_queue lists six diffusion candidates awaiting GenVR and no higher-fidelity data exists; closing the next fidelity gate on the best-performing distinct designs (20d0b63a8068, fed6d69cffdf, 142baa0b6175) is the most informative use of the finite GenVR budget before committing to exact MC."
+      },
+      "tool_result": {
+        "tool": "promote_genvr",
+        "stage": "genvr",
+        "verification_threshold": 1.0,
+        "rank_correlation_with_previous": 1.0,
+        "budget": {
+          "used": 3,
+          "limit": 4,
+          "remaining": 1
+        },
+        "baseline_metrics": {
+          "far_mean": 0.0022322678841645628,
+          "far_cvar90": 0.013269091875371843,
+          "far_max": 0.025699718590317402,
+          "worst_sector_mean": 0.007625740149108272
+        },
+        "results": [
+          {
+            "signature": "20d0b63a8068",
+            "risk": 0.09274446963494523,
+            "accepted": true,
+            "metrics": {
+              "far_mean": 0.00036051546591068574,
+              "far_cvar90": 0.0008335617786959705,
+              "far_max": 0.0011865824373642067,
+              "worst_sector_mean": 0.0005809260853513944
+            }
+          },
+          {
+            "signature": "fed6d69cffdf",
+            "risk": 0.10929048423614242,
+            "accepted": true,
+            "metrics": {
+              "far_mean": 0.000375123105609876,
+              "far_cvar90": 0.0009335549122437733,
+              "far_max": 0.0015187030639742354,
+              "worst_sector_mean": 0.0007730363350875585
+            }
+          },
+          {
+            "signature": "142baa0b6175",
+            "risk": 0.1587292911675029,
+            "accepted": true,
+            "metrics": {
+              "far_mean": 0.0006082188938795277,
+              "far_cvar90": 0.0015863221477757483,
+              "far_max": 0.0021700776779088934,
+              "worst_sector_mean": 0.0011871455312201938
+            }
+          }
+        ]
+      }
+    },
+    {
+      "step": 3,
+      "action": {
+        "tool": "promote_exact",
+        "arguments": {
+          "design_signatures": [
+            "20d0b63a8068",
+            "fed6d69cffdf"
+          ]
+        },
+        "hypothesis": "The two lowest-risk GenVR/CFM-approved candidates will retain reduced far-field neutron flux, CVaR90, maximum, and worst-sector leakage under the independent exact-local-MC response operator, falsifying the CFM ranking if they fail.",
+        "expected_observation": "Exact-local-MC evaluations of 20d0b63a8068 and fed6d69cffdf show absolute far-field metrics below the exact baseline with relative risk under 1.0, preserving the current CFM ordering.",
+        "decision_reason": "The highest-fidelity evidence gap is exact-local falsification: three candidates already passed GenVR/CFM and await exact testing, while two exact slots remain. Spend the exact budget on the top two GenVR-approved signatures before any unbiased-MC certification."
+      },
+      "tool_result": {
+        "tool": "promote_exact",
+        "stage": "exact",
+        "verification_threshold": 1.0,
+        "rank_correlation_with_previous": -0.9999999999999999,
+        "budget": {
+          "used": 2,
+          "limit": 2,
+          "remaining": 0
+        },
+        "baseline_metrics": {
+          "far_mean": 0.0020235209817422344,
+          "far_cvar90": 0.011482871144768635,
+          "far_max": 0.024710786953882003,
+          "worst_sector_mean": 0.006364875523945422
+        },
+        "results": [
+          {
+            "signature": "20d0b63a8068",
+            "risk": 0.12567771642874304,
+            "accepted": true,
+            "metrics": {
+              "far_mean": 0.00039219223173505766,
+              "far_cvar90": 0.0011416880190561942,
+              "far_max": 0.0019598470361294738,
+              "worst_sector_mean": 0.0005946047650224752
+            }
+          },
+          {
+            "signature": "fed6d69cffdf",
+            "risk": 0.12348181754859829,
+            "accepted": true,
+            "metrics": {
+              "far_mean": 0.00038635876240725344,
+              "far_cvar90": 0.0011337254277289511,
+              "far_max": 0.0019655679635496833,
+              "worst_sector_mean": 0.0005581043183185195
+            }
+          }
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "action": {
+        "tool": "run_unbiased_mc",
+        "arguments": {
+          "design_signature": "20d0b63a8068",
+          "histories": 2500,
+          "replicates": 4,
+          "nx": 56,
+          "ny": 56,
+          "n_levels": null,
+          "flux_exponent": 1.0
+        },
+        "hypothesis": "The Exact-approved candidate 20d0b63a8068 retains a real far-field neutron-flux reduction under independent analog and GenVR-weight-window Monte Carlo, with candidate-minus-baseline far-field statistics significantly negative.",
+        "expected_observation": "Unbiased-MC far-field CVaR90, maximum, and worst-sector means for 20d0b63a8068 fall below baseline with 95% intervals separated and consistency z within tolerance across replicates.",
+        "decision_reason": "Exact budget is exhausted and the highest-fidelity open gap is unbiased-MC certification; 20d0b63a8068 has the strongest GenVR risk and passed exact testing, so certifying it now with 4 replicates x 2500 histories meets the verifier contract while preserving histories for the second awaiting candidate."
+      },
+      "tool_result": {
+        "type": "tool_call_rejected",
+        "step": 4,
+        "tool": "run_unbiased_mc",
+        "error": "MC request needs 40000 root histories but only 20000 remain"
+      }
+    },
+    {
+      "step": 5,
+      "action": {
+        "tool": "run_unbiased_mc",
+        "arguments": {
+          "design_signature": "20d0b63a8068",
+          "histories": 1250,
+          "replicates": 2,
+          "nx": 56,
+          "ny": 56,
+          "n_levels": null,
+          "flux_exponent": 1.0
+        },
+        "hypothesis": "The Exact-approved candidate 20d0b63a8068 retains a genuine source-distant flux, CVaR90, maximum, and worst-sector reduction under independent analog and GenVR-window Monte Carlo, with candidate-minus-baseline far-field statistics significantly negative.",
+        "expected_observation": "Unbiased-MC far-field CVaR90, maximum, and worst-sector means for 20d0b63a8068 fall well below baseline with 95% intervals separated and method-consistency z within tolerance across replicates.",
+        "decision_reason": "Exact budget is exhausted, so unbiased-MC certification is the highest-fidelity open gap. The prior MC request was rejected for exceeding remaining histories; sizing to 1250 histories x 2 replicates (the verifier minimums) fits the remaining 20000 root-histories budget while leaving enough to certify the second Exact-approved candidate, hedging a single-design certification."
+      },
+      "tool_result": {
+        "tool": "run_unbiased_mc",
+        "signature": "20d0b63a8068",
+        "budget": {
+          "used": 10000,
+          "limit": 20000,
+          "remaining": 10000
+        },
+        "artifact": {
+          "summary": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/01_20d0b63a8068/certification.json",
+          "fields": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/01_20d0b63a8068/fields.npz"
+        },
+        "population_control": {
+          "baseline": {
+            "transported_particles_per_root": 67.5148,
+            "split_children": 166287,
+            "split_cap_hits": 0,
+            "max_bank_size": 15
+          },
+          "candidate": {
+            "transported_particles_per_root": 52.3768,
+            "split_children": 128442,
+            "split_cap_hits": 0,
+            "max_bank_size": 15
+          }
+        },
+        "design_comparison": {
+          "far_field": {
+            "candidate_over_baseline": 0.20204190282299292,
+            "estimated_reduction_fraction": 0.797958097177007,
+            "difference": -0.00165219899662379,
+            "difference_z": -16.74927887564977,
+            "candidate_upper_below_baseline_lower": true
+          },
+          "deep_far_field": {
+            "candidate_over_baseline": 0.8314611197922004,
+            "estimated_reduction_fraction": 0.1685388802077996,
+            "difference": -4.620823210208937e-05,
+            "difference_z": -1.6206101832977522,
+            "candidate_upper_below_baseline_lower": false
+          }
+        },
+        "baseline_consistency": {
+          "far_field": {
+            "estimate_difference": -0.00015344565859930215,
+            "unpaired_consistency_z": -0.4718136699129714,
+            "fom_gain": 1.0293614046522495
+          },
+          "deep_far_field": {
+            "estimate_difference": 0.00022238566520163316,
+            "unpaired_consistency_z": 7.1732054187329,
+            "fom_gain": 3.494584155047564
+          }
+        },
+        "candidate_consistency": {
+          "far_field": {
+            "estimate_difference": 3.9624355584027865e-05,
+            "unpaired_consistency_z": 0.42030637147150957,
+            "fom_gain": 2.1269163280139622
+          },
+          "deep_far_field": {
+            "estimate_difference": -2.9198951395593357e-06,
+            "unpaired_consistency_z": -0.019425731047160052,
+            "fom_gain": 9.505404081920199
+          }
+        }
+      }
+    },
+    {
+      "step": 6,
+      "action": {
+        "tool": "run_unbiased_mc",
+        "arguments": {
+          "design_signature": "fed6d69cffdf",
+          "histories": 2500,
+          "replicates": 4,
+          "nx": 56,
+          "ny": 56,
+          "n_levels": null,
+          "flux_exponent": 1.0
+        },
+        "hypothesis": "The second Exact-approved candidate fed6d69cffdf retains reduced source-distant full-field flux and tail metrics (CVaR90, maximum, worst angular sector) under independent analog and GenVR-weight-window Monte Carlo, with candidate-minus-baseline far-field statistics significantly negative and 95% intervals separated.",
+        "expected_observation": "Unbiased-MC far-field CVaR90, maximum, and worst-sector means for fed6d69cffdf fall below baseline with 95% intervals separated and consistency z within tolerance; this provides an independent second certification beyond 20d0b63a8068.",
+        "decision_reason": "evidence_queue awaits unbiased-MC only for fed6d69cffdf, the highest-fidelity open gap; it already passed GenVR and exact gates while GenVR (1) and exact (0) budgets are nearly exhausted. Spending all 10000 remaining root histories as 2500x4 meets verifier replicate and minimum-history minimums with maximum power for this single certifiable candidate."
+      },
+      "tool_result": {
+        "type": "tool_call_rejected",
+        "step": 6,
+        "tool": "run_unbiased_mc",
+        "error": "MC request needs 40000 root histories but only 10000 remain"
+      }
+    },
+    {
+      "step": 7,
+      "action": {
+        "tool": "run_unbiased_mc",
+        "arguments": {
+          "design_signature": "fed6d69cffdf",
+          "histories": 1250,
+          "replicates": 2,
+          "nx": 56,
+          "ny": 56,
+          "n_levels": null,
+          "flux_exponent": 1.0
+        },
+        "hypothesis": "Exact-approved candidate fed6d69cffdf retains genuine source-distant full-field flux and tail reduction under independent analog and GenVR-weight-window Monte Carlo.",
+        "expected_observation": "Far-field CVaR90, maximum, and worst-sector means fall below baseline with candidate-minus-baseline z <= -1.96 and separated 95% intervals at verifier-minimum replicate and history settings.",
+        "decision_reason": "Unbiased-MC certification of fed6d69cffdf is the highest-fidelity open evidence gap; exact budget is exhausted, and 1250 histories x 2 replicates fits the remaining 10000 root histories while meeting verifier minimums."
+      },
+      "tool_result": {
+        "tool": "run_unbiased_mc",
+        "signature": "fed6d69cffdf",
+        "budget": {
+          "used": 20000,
+          "limit": 20000,
+          "remaining": 0
+        },
+        "artifact": {
+          "summary": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/02_fed6d69cffdf/certification.json",
+          "fields": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/02_fed6d69cffdf/fields.npz"
+        },
+        "population_control": {
+          "baseline": {
+            "transported_particles_per_root": 70.0572,
+            "split_children": 172643,
+            "split_cap_hits": 0,
+            "max_bank_size": 15
+          },
+          "candidate": {
+            "transported_particles_per_root": 52.794,
+            "split_children": 129485,
+            "split_cap_hits": 0,
+            "max_bank_size": 15
+          }
+        },
+        "design_comparison": {
+          "far_field": {
+            "candidate_over_baseline": 0.19114146168078064,
+            "estimated_reduction_fraction": 0.8088585383192194,
+            "difference": -0.0017683335515870126,
+            "difference_z": -17.440701320662974,
+            "candidate_upper_below_baseline_lower": true
+          },
+          "deep_far_field": {
+            "candidate_over_baseline": 1.0098472807448207,
+            "estimated_reduction_fraction": -0.009847280744820663,
+            "difference": 2.5980948354850913e-06,
+            "difference_z": 0.08965459027780208,
+            "candidate_upper_below_baseline_lower": false
+          }
+        },
+        "baseline_consistency": {
+          "far_field": {
+            "estimate_difference": 0.00036244006383248477,
+            "unpaired_consistency_z": 1.494840539002151,
+            "fom_gain": 0.8148901293031569
+          },
+          "deep_far_field": {
+            "estimate_difference": 1.1306561871280503e-05,
+            "unpaired_consistency_z": 0.07444246564323594,
+            "fom_gain": 6.938918666041595
+          }
+        },
+        "candidate_consistency": {
+          "far_field": {
+            "estimate_difference": -1.631074376493301e-05,
+            "unpaired_consistency_z": -0.14434175184855086,
+            "fom_gain": 2.1653762659510867
+          },
+          "deep_far_field": {
+            "estimate_difference": 0.00013967781944044115,
+            "unpaired_consistency_z": 1.84176218123099,
+            "fom_gain": 6.995074111817813
+          }
+        }
+      }
+    },
+    {
+      "step": 8,
+      "action": {
+        "tool": "finish",
+        "arguments": {
+          "candidate_signature": "20d0b63a8068",
+          "claim": "verified_improvement",
+          "summary": "Unbiased-MC certification: 20d0b63a8068 far-field candidate/baseline 0.202, difference_z -16.75, 95% intervals separated; GenVR and exact gates passed, tail CVaR90/max/worst-sector reduced."
+        },
+        "hypothesis": "Under the independent unbiased-MC certification, candidate 20d0b63a8068 reduces source-distant full-field neutron flux and tail metrics relative to the baseline, with the required fidelity chain complete.",
+        "expected_observation": "The verifier should confirm far-field candidate-minus-baseline statistics significantly negative (z <= -1.96), separated 95% intervals, and consistency z within tolerance, matching the recorded GenVR/exact/unbiased-MC evidence.",
+        "decision_reason": "Unbiased-MC budget is exhausted and 20d0b63a8068 already holds the full required fidelity chain with the strongest far-field reduction and separated intervals; no higher-fidelity evidence gap remains for it, so request verifier adjudication of verified_improvement."
+      },
+      "tool_result": {
+        "finish_requested": true,
+        "arguments": {
+          "candidate_signature": "20d0b63a8068",
+          "claim": "verified_improvement",
+          "summary": "Unbiased-MC certification: 20d0b63a8068 far-field candidate/baseline 0.202, difference_z -16.75, 95% intervals separated; GenVR and exact gates passed, tail CVaR90/max/worst-sector reduced."
+        },
+        "verifier_decision": {
+          "accepted": true,
+          "terminal": true,
+          "requested_claim": "verified_improvement",
+          "final_claim": "verified_improvement",
+          "candidate_signature": "20d0b63a8068",
+          "checks": {
+            "non_baseline_candidate": {
+              "passed": true,
+              "observed": "20d0b63a8068",
+              "required": "signature different from baseline ded6840cea70"
+            },
+            "genvr_cfm_gate": {
+              "passed": true,
+              "observed": 0.09274446963494523,
+              "required": "risk < 1"
+            },
+            "exact_response_gate": {
+              "passed": true,
+              "observed": 0.12567771642874304,
+              "required": "risk < 1"
+            },
+            "unbiased_mc_present": {
+              "passed": true,
+              "observed": 1,
+              "required": "exactly one completed certification"
+            },
+            "mc_design_identity": {
+              "passed": true,
+              "observed": {
+                "baseline": "ded6840cea70",
+                "candidate": "20d0b63a8068"
+              },
+              "required": {
+                "baseline": "ded6840cea70",
+                "candidate": "20d0b63a8068"
+              }
+            },
+            "mc_histories": {
+              "passed": true,
+              "observed": {
+                "baseline.analog": 2500,
+                "baseline.variance_reduced": 2500,
+                "candidate.analog": 2500,
+                "candidate.variance_reduced": 2500
+              },
+              "required": "each >= 1000"
+            },
+            "mc_replicates": {
+              "passed": true,
+              "observed": 2,
+              "required": ">= 2"
+            },
+            "analog_weight_window_consistency": {
+              "passed": true,
+              "observed": {
+                "baseline_far_field_z": -0.4718136699129714,
+                "candidate_far_field_z": 0.42030637147150957
+              },
+              "required": "both absolute z-scores <= 2"
+            },
+            "mc_improvement_threshold": {
+              "passed": true,
+              "observed": 0.20204190282299292,
+              "required": "candidate/baseline < 1"
+            },
+            "mc_far_field_difference_z": {
+              "passed": true,
+              "observed": -16.74927887564977,
+              "required": "<= -1.96"
+            },
+            "mc_far_field_ci_separation": {
+              "passed": true,
+              "observed": true,
+              "required": true
+            },
+            "deep_far_field_diagnostic": {
+              "candidate_over_baseline": 0.8314611197922004,
+              "estimated_reduction_fraction": 0.1685388802077996,
+              "difference": -4.620823210208937e-05,
+              "difference_z": -1.6206101832977522,
+              "candidate_upper_below_baseline_lower": false
+            },
+            "fom_is_not_acceptance_criterion": {
+              "passed": true,
+              "observed": {
+                "baseline": 1.0293614046522495,
+                "candidate": 2.1269163280139622
+              },
+              "required": "reported for efficiency only"
+            }
+          },
+          "reasons": [],
+          "hard_stop_reason": null
+        }
+      }
+    }
+  ],
+  "final_observation": {
+    "objective": {
+      "primary": "reduce source-distant full-field neutron flux",
+      "tail": "reduce far-field CVaR90, maximum, and worst angular sector",
+      "fom_role": "verification efficiency only; never the shielding objective"
+    },
+    "protected_constraints": {
+      "grid": [
+        7,
+        7
+      ],
+      "source_cell": [
+        3,
+        3
+      ],
+      "absorber_count": 11,
+      "geometry_actions": "only compiler-generated one-for-one material swaps",
+      "verification_threshold": 1.0
+    },
+    "budgets": {
+      "diffusion_evaluations": {
+        "used": 25,
+        "limit": 320,
+        "remaining": 295
+      },
+      "genvr_candidates": {
+        "used": 3,
+        "limit": 4,
+        "remaining": 1
+      },
+      "exact_candidates": {
+        "used": 2,
+        "limit": 2,
+        "remaining": 0
+      },
+      "mc_root_histories": {
+        "used": 20000,
+        "limit": 20000,
+        "remaining": 0
+      }
+    },
+    "currently_executable_scientific_tools": [
+      "run_diffusion_batch",
+      "promote_genvr"
+    ],
+    "beam": [
+      {
+        "signature": "20d0b63a8068",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "unbiased-mc",
+        "diffusion": {
+          "risk": 0.09792337495250229,
+          "metrics": {
+            "far_mean": 6.842251975137737e-05,
+            "far_p90": 0.00016136959463745193,
+            "far_cvar90": 0.000205301850893432,
+            "far_max": 0.00033229430311060943,
+            "worst_sector_mean": 0.00012456366346028566,
+            "hotspot_ratio": 4.856504909758461,
+            "angular_imbalance": 1.8193016271509084
+          },
+          "runtime_s": 0.1129572999998345,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.09274446963494523,
+          "metrics": {
+            "far_mean": 0.00036051546591068574,
+            "far_p90": 0.0007085309867654947,
+            "far_cvar90": 0.0008335617786959705,
+            "far_max": 0.0011865824373642067,
+            "worst_sector_mean": 0.0005809260853513944,
+            "hotspot_ratio": 3.291349607892193,
+            "angular_imbalance": 1.610389705781276
+          },
+          "runtime_s": 13.343242334000024,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": {
+          "risk": 0.12567771642874304,
+          "metrics": {
+            "far_mean": 0.00039219223173505766,
+            "far_p90": 0.0008063397430987727,
+            "far_cvar90": 0.0011416880190561942,
+            "far_max": 0.0019598470361294738,
+            "worst_sector_mean": 0.0005946047650224752,
+            "hotspot_ratio": 4.997159243718608,
+            "angular_imbalance": 1.51635686642203
+          },
+          "runtime_s": 20.620956096000555,
+          "fidelity": "exact-local-mc-response"
+        },
+        "latest_mc": {
+          "design_comparison": {
+            "far_field": {
+              "candidate_over_baseline": 0.20204190282299292,
+              "estimated_reduction_fraction": 0.797958097177007,
+              "difference": -0.00165219899662379,
+              "difference_z": -16.74927887564977,
+              "candidate_upper_below_baseline_lower": true
+            },
+            "deep_far_field": {
+              "candidate_over_baseline": 0.8314611197922004,
+              "estimated_reduction_fraction": 0.1685388802077996,
+              "difference": -4.620823210208937e-05,
+              "difference_z": -1.6206101832977522,
+              "candidate_upper_below_baseline_lower": false
+            }
+          },
+          "artifact": {
+            "summary": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/01_20d0b63a8068/certification.json",
+            "fields": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/01_20d0b63a8068/fields.npz"
+          }
+        },
+        "physics_diagnosis": {
+          "hottest_sector": 0,
+          "normalized_sector_leakage": [
+            1.0,
+            0.09053722228444284,
+            0.997393579660324,
+            0.0905741881336068,
+            0.9997562152918339,
+            0.039841070724060845,
+            0.07692397536365114,
+            0.060621710181598655
+          ],
+          "highest_sensitivity_empty_cells": [
+            {
+              "cell": [
+                3,
+                2
+              ],
+              "normalized_forward_adjoint": 1.0
+            },
+            {
+              "cell": [
+                4,
+                1
+              ],
+              "normalized_forward_adjoint": 0.7473527390089434
+            },
+            {
+              "cell": [
+                2,
+                3
+              ],
+              "normalized_forward_adjoint": 0.48886119594524313
+            },
+            {
+              "cell": [
+                5,
+                1
+              ],
+              "normalized_forward_adjoint": 0.46621886245787614
+            },
+            {
+              "cell": [
+                3,
+                4
+              ],
+              "normalized_forward_adjoint": 0.4301216168876973
+            },
+            {
+              "cell": [
+                5,
+                0
+              ],
+              "normalized_forward_adjoint": 0.2798156527779113
+            }
+          ],
+          "lowest_sensitivity_absorber_cells": [
+            {
+              "cell": [
+                5,
+                5
+              ],
+              "normalized_forward_adjoint": 0.0015357281636741796
+            },
+            {
+              "cell": [
+                1,
+                5
+              ],
+              "normalized_forward_adjoint": 0.003292479604640815
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "normalized_forward_adjoint": 0.003323800317999314
+            },
+            {
+              "cell": [
+                4,
+                3
+              ],
+              "normalized_forward_adjoint": 0.006467327492878832
+            },
+            {
+              "cell": [
+                4,
+                4
+              ],
+              "normalized_forward_adjoint": 0.008788808027019047
+            },
+            {
+              "cell": [
+                3,
+                5
+              ],
+              "normalized_forward_adjoint": 0.015544638913624668
+            }
+          ]
+        }
+      },
+      {
+        "signature": "fed6d69cffdf",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "unbiased-mc",
+        "diffusion": {
+          "risk": 0.09846431722599037,
+          "metrics": {
+            "far_mean": 6.842251975137741e-05,
+            "far_p90": 0.0001613695946374523,
+            "far_cvar90": 0.00020530185089343212,
+            "far_max": 0.0003322943031106093,
+            "worst_sector_mean": 0.00012687488665834035,
+            "hotspot_ratio": 4.856504909758456,
+            "angular_imbalance": 1.8534978316082433
+          },
+          "runtime_s": 0.1701392000004489,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.10929048423614242,
+          "metrics": {
+            "far_mean": 0.000375123105609876,
+            "far_p90": 0.0007366553635229972,
+            "far_cvar90": 0.0009335549122437733,
+            "far_max": 0.0015187030639742354,
+            "worst_sector_mean": 0.0007730363350875585,
+            "hotspot_ratio": 4.048545774073619,
+            "angular_imbalance": 2.0593924830942054
+          },
+          "runtime_s": 15.772106861999418,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": {
+          "risk": 0.12348181754859829,
+          "metrics": {
+            "far_mean": 0.00038635876240725344,
+            "far_p90": 0.0007934078239031972,
+            "far_cvar90": 0.0011337254277289511,
+            "far_max": 0.0019655679635496833,
+            "worst_sector_mean": 0.0005581043183185195,
+            "hotspot_ratio": 5.087416553730999,
+            "angular_imbalance": 1.4446493436116012
+          },
+          "runtime_s": 18.801122300000316,
+          "fidelity": "exact-local-mc-response"
+        },
+        "latest_mc": {
+          "design_comparison": {
+            "far_field": {
+              "candidate_over_baseline": 0.19114146168078064,
+              "estimated_reduction_fraction": 0.8088585383192194,
+              "difference": -0.0017683335515870126,
+              "difference_z": -17.440701320662974,
+              "candidate_upper_below_baseline_lower": true
+            },
+            "deep_far_field": {
+              "candidate_over_baseline": 1.0098472807448207,
+              "estimated_reduction_fraction": -0.009847280744820663,
+              "difference": 2.5980948354850913e-06,
+              "difference_z": 0.08965459027780208,
+              "candidate_upper_below_baseline_lower": false
+            }
+          },
+          "artifact": {
+            "summary": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/02_fed6d69cffdf/certification.json",
+            "fields": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/02_fed6d69cffdf/fields.npz"
+          }
+        },
+        "physics_diagnosis": {
+          "hottest_sector": 4,
+          "normalized_sector_leakage": [
+            0.9989267908508926,
+            0.09044347503185012,
+            0.9963636686239242,
+            0.09048802156232943,
+            1.0,
+            0.046521574094486866,
+            0.0740372019009673,
+            0.05540197598206245
+          ],
+          "highest_sensitivity_empty_cells": [
+            {
+              "cell": [
+                3,
+                4
+              ],
+              "normalized_forward_adjoint": 1.0
+            },
+            {
+              "cell": [
+                4,
+                5
+              ],
+              "normalized_forward_adjoint": 0.747352739008942
+            },
+            {
+              "cell": [
+                2,
+                3
+              ],
+              "normalized_forward_adjoint": 0.48886119594524396
+            },
+            {
+              "cell": [
+                5,
+                5
+              ],
+              "normalized_forward_adjoint": 0.4662188624578758
+            },
+            {
+              "cell": [
+                3,
+                2
+              ],
+              "normalized_forward_adjoint": 0.43012161688769723
+            },
+            {
+              "cell": [
+                5,
+                6
+              ],
+              "normalized_forward_adjoint": 0.27981565277791143
+            }
+          ],
+          "lowest_sensitivity_absorber_cells": [
+            {
+              "cell": [
+                5,
+                1
+              ],
+              "normalized_forward_adjoint": 0.0015357281636741837
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "normalized_forward_adjoint": 0.0032924796046408097
+            },
+            {
+              "cell": [
+                1,
+                5
+              ],
+              "normalized_forward_adjoint": 0.0033238003179993244
+            },
+            {
+              "cell": [
+                4,
+                3
+              ],
+              "normalized_forward_adjoint": 0.006467327492878836
+            },
+            {
+              "cell": [
+                4,
+                2
+              ],
+              "normalized_forward_adjoint": 0.008788808027019068
+            },
+            {
+              "cell": [
+                3,
+                1
+              ],
+              "normalized_forward_adjoint": 0.015544638913624665
+            }
+          ]
+        }
+      },
+      {
+        "signature": "142baa0b6175",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            5,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "genvr-cfm-response",
+        "diffusion": {
+          "risk": 0.14593953663114706,
+          "metrics": {
+            "far_mean": 0.00010010285957233642,
+            "far_p90": 0.00020517059314279667,
+            "far_cvar90": 0.0003444393566316599,
+            "far_max": 0.0005730055405509615,
+            "worst_sector_mean": 0.00019526087616216634,
+            "hotspot_ratio": 5.724167551246583,
+            "angular_imbalance": 1.9497370161568488
+          },
+          "runtime_s": 0.10526039999967907,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.1587292911675029,
+          "metrics": {
+            "far_mean": 0.0006082188938795277,
+            "far_p90": 0.0012937247531763746,
+            "far_cvar90": 0.0015863221477757483,
+            "far_max": 0.0021700776779088934,
+            "worst_sector_mean": 0.0011871455312201938,
+            "hotspot_ratio": 3.567922173655344,
+            "angular_imbalance": 1.9515514687343882
+          },
+          "runtime_s": 15.830072991000634,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": null,
+        "latest_mc": null,
+        "physics_diagnosis": {
+          "hottest_sector": 4,
+          "normalized_sector_leakage": [
+            0.995620188399606,
+            0.0903045476058005,
+            0.9956204956958556,
+            0.0903418390065819,
+            1.0,
+            0.10227669091207746,
+            0.995855797916381,
+            0.09030604312895037
+          ],
+          "highest_sensitivity_empty_cells": [
+            {
+              "cell": [
+                3,
+                4
+              ],
+              "normalized_forward_adjoint": 0.784431400342647
+            },
+            {
+              "cell": [
+                4,
+                3
+              ],
+              "normalized_forward_adjoint": 0.7818253179454888
+            },
+            {
+              "cell": [
+                5,
+                5
+              ],
+              "normalized_forward_adjoint": 0.7501846987524413
+            },
+            {
+              "cell": [
+                4,
+                5
+              ],
+              "normalized_forward_adjoint": 0.6582881023817834
+            },
+            {
+              "cell": [
+                5,
+                4
+              ],
+              "normalized_forward_adjoint": 0.6548424170188589
+            },
+            {
+              "cell": [
+                5,
+                6
+              ],
+              "normalized_forward_adjoint": 0.3355737857330632
+            }
+          ],
+          "lowest_sensitivity_absorber_cells": [
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "normalized_forward_adjoint": 0.0014761772366761665
+            },
+            {
+              "cell": [
+                5,
+                1
+              ],
+              "normalized_forward_adjoint": 0.0015630160655445947
+            },
+            {
+              "cell": [
+                1,
+                5
+              ],
+              "normalized_forward_adjoint": 0.0015634089318351295
+            },
+            {
+              "cell": [
+                3,
+                1
+              ],
+              "normalized_forward_adjoint": 0.0070267743660967115
+            },
+            {
+              "cell": [
+                1,
+                3
+              ],
+              "normalized_forward_adjoint": 0.007027095127941606
+            },
+            {
+              "cell": [
+                2,
+                2
+              ],
+              "normalized_forward_adjoint": 0.009699877632165869
+            }
+          ]
+        }
+      },
+      {
+        "signature": "ac19c1a8ab27",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            1,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.1469357078853789,
+          "metrics": {
+            "far_mean": 8.421155045195047e-05,
+            "far_p90": 0.0002076915819934271,
+            "far_cvar90": 0.0003489117306974967,
+            "far_max": 0.0005804911059439371,
+            "worst_sector_mean": 0.00019773819086594757,
+            "hotspot_ratio": 6.893248050042191,
+            "angular_imbalance": 2.347253956960256
+          },
+          "runtime_s": 0.1060267989996646,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "exact": null,
+        "latest_mc": null,
+        "physics_diagnosis": {
+          "hottest_sector": 2,
+          "normalized_sector_leakage": [
+            0.998174145236946,
+            0.0904126684815047,
+            1.0,
+            0.1023967499294766,
+            0.9982045641981219,
+            0.039549998227606326,
+            0.07315499956172741,
+            0.05534964528023798
+          ],
+          "highest_sensitivity_empty_cells": [
+            {
+              "cell": [
+                2,
+                3
+              ],
+              "normalized_forward_adjoint": 0.8291702040712416
+            },
+            {
+              "cell": [
+                3,
+                4
+              ],
+              "normalized_forward_adjoint": 0.8225190551909238
+            },
+            {
+              "cell": [
+                1,
+                5
+              ],
+              "normalized_forward_adjoint": 0.8056964368629121
+            },
+            {
+              "cell": [
+                2,
+                5
+              ],
+              "normalized_forward_adjoint": 0.7068459583965008
+            },
+            {
+              "cell": [
+                1,
+                4
+              ],
+              "normalized_forward_adjoint": 0.7057338876462345
+            },
+            {
+              "cell": [
+                1,
+                6
+              ],
+              "normalized_forward_adjoint": 0.3596720506845616
+            }
+          ],
+          "lowest_sensitivity_absorber_cells": [
+            {
+              "cell": [
+                5,
+                1
+              ],
+              "normalized_forward_adjoint": 0.0008014021203178143
+            },
+            {
+              "cell": [
+                5,
+                5
+              ],
+              "normalized_forward_adjoint": 0.000826288945890596
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "normalized_forward_adjoint": 0.0016735118050323933
+            },
+            {
+              "cell": [
+                4,
+                2
+              ],
+              "normalized_forward_adjoint": 0.004834335455836631
+            },
+            {
+              "cell": [
+                4,
+                3
+              ],
+              "normalized_forward_adjoint": 0.00549794264673146
+            },
+            {
+              "cell": [
+                4,
+                4
+              ],
+              "normalized_forward_adjoint": 0.007256614977323964
+            }
+          ]
+        }
+      }
+    ],
+    "visible_candidates": [
+      {
+        "signature": "20d0b63a8068",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "unbiased-mc",
+        "diffusion": {
+          "risk": 0.09792337495250229,
+          "metrics": {
+            "far_mean": 6.842251975137737e-05,
+            "far_p90": 0.00016136959463745193,
+            "far_cvar90": 0.000205301850893432,
+            "far_max": 0.00033229430311060943,
+            "worst_sector_mean": 0.00012456366346028566,
+            "hotspot_ratio": 4.856504909758461,
+            "angular_imbalance": 1.8193016271509084
+          },
+          "runtime_s": 0.1129572999998345,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.09274446963494523,
+          "metrics": {
+            "far_mean": 0.00036051546591068574,
+            "far_p90": 0.0007085309867654947,
+            "far_cvar90": 0.0008335617786959705,
+            "far_max": 0.0011865824373642067,
+            "worst_sector_mean": 0.0005809260853513944,
+            "hotspot_ratio": 3.291349607892193,
+            "angular_imbalance": 1.610389705781276
+          },
+          "runtime_s": 13.343242334000024,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": {
+          "risk": 0.12567771642874304,
+          "metrics": {
+            "far_mean": 0.00039219223173505766,
+            "far_p90": 0.0008063397430987727,
+            "far_cvar90": 0.0011416880190561942,
+            "far_max": 0.0019598470361294738,
+            "worst_sector_mean": 0.0005946047650224752,
+            "hotspot_ratio": 4.997159243718608,
+            "angular_imbalance": 1.51635686642203
+          },
+          "runtime_s": 20.620956096000555,
+          "fidelity": "exact-local-mc-response"
+        },
+        "latest_mc": {
+          "design_comparison": {
+            "far_field": {
+              "candidate_over_baseline": 0.20204190282299292,
+              "estimated_reduction_fraction": 0.797958097177007,
+              "difference": -0.00165219899662379,
+              "difference_z": -16.74927887564977,
+              "candidate_upper_below_baseline_lower": true
+            },
+            "deep_far_field": {
+              "candidate_over_baseline": 0.8314611197922004,
+              "estimated_reduction_fraction": 0.1685388802077996,
+              "difference": -4.620823210208937e-05,
+              "difference_z": -1.6206101832977522,
+              "candidate_upper_below_baseline_lower": false
+            }
+          },
+          "artifact": {
+            "summary": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/01_20d0b63a8068/certification.json",
+            "fields": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/01_20d0b63a8068/fields.npz"
+          }
+        }
+      },
+      {
+        "signature": "fed6d69cffdf",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "unbiased-mc",
+        "diffusion": {
+          "risk": 0.09846431722599037,
+          "metrics": {
+            "far_mean": 6.842251975137741e-05,
+            "far_p90": 0.0001613695946374523,
+            "far_cvar90": 0.00020530185089343212,
+            "far_max": 0.0003322943031106093,
+            "worst_sector_mean": 0.00012687488665834035,
+            "hotspot_ratio": 4.856504909758456,
+            "angular_imbalance": 1.8534978316082433
+          },
+          "runtime_s": 0.1701392000004489,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.10929048423614242,
+          "metrics": {
+            "far_mean": 0.000375123105609876,
+            "far_p90": 0.0007366553635229972,
+            "far_cvar90": 0.0009335549122437733,
+            "far_max": 0.0015187030639742354,
+            "worst_sector_mean": 0.0007730363350875585,
+            "hotspot_ratio": 4.048545774073619,
+            "angular_imbalance": 2.0593924830942054
+          },
+          "runtime_s": 15.772106861999418,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": {
+          "risk": 0.12348181754859829,
+          "metrics": {
+            "far_mean": 0.00038635876240725344,
+            "far_p90": 0.0007934078239031972,
+            "far_cvar90": 0.0011337254277289511,
+            "far_max": 0.0019655679635496833,
+            "worst_sector_mean": 0.0005581043183185195,
+            "hotspot_ratio": 5.087416553730999,
+            "angular_imbalance": 1.4446493436116012
+          },
+          "runtime_s": 18.801122300000316,
+          "fidelity": "exact-local-mc-response"
+        },
+        "latest_mc": {
+          "design_comparison": {
+            "far_field": {
+              "candidate_over_baseline": 0.19114146168078064,
+              "estimated_reduction_fraction": 0.8088585383192194,
+              "difference": -0.0017683335515870126,
+              "difference_z": -17.440701320662974,
+              "candidate_upper_below_baseline_lower": true
+            },
+            "deep_far_field": {
+              "candidate_over_baseline": 1.0098472807448207,
+              "estimated_reduction_fraction": -0.009847280744820663,
+              "difference": 2.5980948354850913e-06,
+              "difference_z": 0.08965459027780208,
+              "candidate_upper_below_baseline_lower": false
+            }
+          },
+          "artifact": {
+            "summary": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/02_fed6d69cffdf/certification.json",
+            "fields": "/home/ssn/GenVR/outputs/autonomous_shield_agent/autoshield-20260919T035835Z/mc/02_fed6d69cffdf/fields.npz"
+          }
+        }
+      },
+      {
+        "signature": "142baa0b6175",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            5,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            5,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "genvr-cfm-response",
+        "diffusion": {
+          "risk": 0.14593953663114706,
+          "metrics": {
+            "far_mean": 0.00010010285957233642,
+            "far_p90": 0.00020517059314279667,
+            "far_cvar90": 0.0003444393566316599,
+            "far_max": 0.0005730055405509615,
+            "worst_sector_mean": 0.00019526087616216634,
+            "hotspot_ratio": 5.724167551246583,
+            "angular_imbalance": 1.9497370161568488
+          },
+          "runtime_s": 0.10526039999967907,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": {
+          "risk": 0.1587292911675029,
+          "metrics": {
+            "far_mean": 0.0006082188938795277,
+            "far_p90": 0.0012937247531763746,
+            "far_cvar90": 0.0015863221477757483,
+            "far_max": 0.0021700776779088934,
+            "worst_sector_mean": 0.0011871455312201938,
+            "hotspot_ratio": 3.567922173655344,
+            "angular_imbalance": 1.9515514687343882
+          },
+          "runtime_s": 15.830072991000634,
+          "fidelity": "genvr-cfm-response"
+        },
+        "exact": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "ac19c1a8ab27",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            1,
+            5
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.1469357078853789,
+          "metrics": {
+            "far_mean": 8.421155045195047e-05,
+            "far_p90": 0.0002076915819934271,
+            "far_cvar90": 0.0003489117306974967,
+            "far_max": 0.0005804911059439371,
+            "worst_sector_mean": 0.00019773819086594757,
+            "hotspot_ratio": 6.893248050042191,
+            "angular_imbalance": 2.347253956960256
+          },
+          "runtime_s": 0.1060267989996646,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "exact": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "e36494ab5a05",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            5,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.14593953663114687,
+          "metrics": {
+            "far_mean": 0.00010010285957233642,
+            "far_p90": 0.00020517059314279678,
+            "far_cvar90": 0.0003444393566316603,
+            "far_max": 0.000573005540550962,
+            "worst_sector_mean": 0.00019526087616216623,
+            "hotspot_ratio": 5.7241675512465875,
+            "angular_imbalance": 1.9497370161568472
+          },
+          "runtime_s": 0.10748409999996511,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "exact": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "604e4cad07a1",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            1,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.1469515075663785,
+          "metrics": {
+            "far_mean": 8.42115504519504e-05,
+            "far_p90": 0.00020769158199342708,
+            "far_cvar90": 0.00034891173069749603,
+            "far_max": 0.0005804911059439361,
+            "worst_sector_mean": 0.0001978364391994214,
+            "hotspot_ratio": 6.8932480500421836,
+            "angular_imbalance": 2.3484215457720024
+          },
+          "runtime_s": 0.10567600000013044,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "exact": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "fd13c81db677",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            4,
+            2
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.6912977717538151,
+          "metrics": {
+            "far_mean": 0.00037570815584829926,
+            "far_p90": 0.001237194129710665,
+            "far_cvar90": 0.0020427819995101687,
+            "far_max": 0.0038388865923161867,
+            "worst_sector_mean": 0.0011679627763183924,
+            "hotspot_ratio": 10.217735581620499,
+            "angular_imbalance": 3.1173566393719834
+          },
+          "runtime_s": 0.10466249999990396,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "exact": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "32584f4d9bef",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            4,
+            4
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            4,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.698218176679814,
+          "metrics": {
+            "far_mean": 0.0003757081558482995,
+            "far_p90": 0.0012371941297106667,
+            "far_cvar90": 0.00204278199951017,
+            "far_max": 0.003838886592316181,
+            "worst_sector_mean": 0.00121774686431286,
+            "hotspot_ratio": 10.217735581620477,
+            "angular_imbalance": 3.226735752440759
+          },
+          "runtime_s": 0.10577949900016392,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "exact": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "d25c146b5a3b",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            5,
+            2
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.8206175918667139,
+          "metrics": {
+            "far_mean": 0.0003578975178648663,
+            "far_p90": 0.0008294936537080712,
+            "far_cvar90": 0.0022683157162614047,
+            "far_max": 0.005597872047283493,
+            "worst_sector_mean": 0.001448304016405575,
+            "hotspot_ratio": 15.640991534892729,
+            "angular_imbalance": 4.087053572501794
+          },
+          "runtime_s": 0.18316089900054067,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "exact": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "13472bebd879",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            5,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            6,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.983718835990292,
+          "metrics": {
+            "far_mean": 0.000538314695408867,
+            "far_p90": 0.0019273120982852873,
+            "far_cvar90": 0.002981973296394491,
+            "far_max": 0.004986375231035089,
+            "worst_sector_mean": 0.001845866644761843,
+            "hotspot_ratio": 9.262937225311635,
+            "angular_imbalance": 3.4287418300446464
+          },
+          "runtime_s": 0.10646919900045759,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "exact": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "283a0344e0b9",
+        "is_baseline": false,
+        "removed_from_baseline": [
+          [
+            3,
+            1
+          ]
+        ],
+        "added_to_baseline": [
+          [
+            5,
+            3
+          ]
+        ],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 0.999999999999999,
+          "metrics": {
+            "far_mean": 0.0004755215891918005,
+            "far_p90": 0.001480570610619832,
+            "far_cvar90": 0.0030563384839749005,
+            "far_max": 0.006454036365032428,
+            "worst_sector_mean": 0.0016277996384404492,
+            "hotspot_ratio": 13.572541208910723,
+            "angular_imbalance": 3.4198284324773107
+          },
+          "runtime_s": 0.10763939999924332,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "exact": null,
+        "latest_mc": null
+      },
+      {
+        "signature": "ded6840cea70",
+        "is_baseline": true,
+        "removed_from_baseline": [],
+        "added_to_baseline": [],
+        "absorber_count": 11,
+        "highest_fidelity": "diffusion-ensemble",
+        "diffusion": {
+          "risk": 1.0,
+          "metrics": {
+            "far_mean": 0.00047552158919180105,
+            "far_p90": 0.0014805706106198334,
+            "far_cvar90": 0.003056338483974904,
+            "far_max": 0.0064540363650324355,
+            "worst_sector_mean": 0.0016277996384404532,
+            "hotspot_ratio": 13.572541208910723,
+            "angular_imbalance": 3.419828432477314
+          },
+          "runtime_s": 0.12601979800001573,
+          "fidelity": "diffusion-ensemble"
+        },
+        "genvr": null,
+        "exact": null,
+        "latest_mc": null
+      }
+    ],
+    "evidence_counts": {
+      "candidate_designs": 24,
+      "genvr_evaluated": 3,
+      "exact_evaluated": 2,
+      "mc_certified": 2
+    },
+    "operator_memory": {
+      "counts": {
+        "adjoint_sensitivity": 18,
+        "channel_block": 0,
+        "inner_barrier": 0,
+        "hotspot_cap": 0,
+        "symmetry_repair": 0,
+        "redistribute": 0,
+        "random_explore": 6
+      },
+      "mean_improvement": {
+        "adjoint_sensitivity": 0.2910109070990899,
+        "channel_block": 0.0,
+        "inner_barrier": 0.0,
+        "hotspot_cap": 0.0,
+        "symmetry_repair": 0.0,
+        "redistribute": 0.0,
+        "random_explore": -0.308053596019928
+      }
+    }
+  }
+}

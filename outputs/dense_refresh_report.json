@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-09-19T10:52:48.690723+00:00",
+  "reports": [
+    {
+      "case": "lattice",
+      "run_dir": "/home/ssn/GenVR/outputs/lattice",
+      "mesh": [
+        150,
+        150
+      ],
+      "angular_order": [
+        4,
+        32
+      ],
+      "spatial_scheme": "diamond",
+      "runtime_s": 1.961157900001126,
+      "iterations": 58,
+      "residual": 9.930717684326695e-10,
+      "fixup_fraction": 0.025138888888888888,
+      "double_fixup_fraction": 0.0,
+      "cfm_vs_dense": {
+        "corr": 0.9996774014270824,
+        "normalized_rel_l1": 0.03007472869110149,
+        "log10_rmse": 0.07717408323001373,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      }
+    },
+    {
+      "case": "hohlraum",
+      "run_dir": "/home/ssn/GenVR/outputs/hohlraum",
+      "mesh": [
+        150,
+        150
+      ],
+      "angular_order": [
+        4,
+        32
+      ],
+      "spatial_scheme": "diamond",
+      "runtime_s": 6.177734001001227,
+      "iterations": 208,
+      "residual": 9.819816142067218e-10,
+      "fixup_fraction": 0.04228194444444444,
+      "double_fixup_fraction": 0.0,
+      "cfm_vs_dense": {
+        "corr": 0.9991841294251855,
+        "normalized_rel_l1": 0.08450895933231112,
+        "log10_rmse": 0.10996800949374497,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      }
+    },
+    {
+      "case": "iter_a",
+      "run_dir": "/home/ssn/GenVR/outputs/iter_axial",
+      "mesh": [
+        150,
+        150
+      ],
+      "angular_order": [
+        4,
+        32
+      ],
+      "spatial_scheme": "diamond",
+      "runtime_s": 4.305990703000134,
+      "iterations": 142,
+      "residual": 9.868541464238034e-10,
+      "fixup_fraction": 0.07521527777777778,
+      "double_fixup_fraction": 0.0,
+      "cfm_vs_dense": {
+        "corr": 0.9997718984298979,
+        "normalized_rel_l1": 0.03759838005476305,
+        "log10_rmse": 0.12236321804170051,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      }
+    },
+    {
+      "case": "iter_r",
+      "run_dir": "/home/ssn/GenVR/outputs/iter_radial",
+      "mesh": [
+        150,
+        150
+      ],
+      "angular_order": [
+        4,
+        32
+      ],
+      "spatial_scheme": "diamond",
+      "runtime_s": 2.9636519080013386,
+      "iterations": 97,
+      "residual": 8.935259958015475e-10,
+      "fixup_fraction": 0.04635347222222222,
+      "double_fixup_fraction": 0.0,
+      "cfm_vs_dense": {
+        "corr": 0.9998441325464494,
+        "normalized_rel_l1": 0.02070891720116574,
+        "log10_rmse": 0.10793155644591529,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      }
+    }
+  ]
+}

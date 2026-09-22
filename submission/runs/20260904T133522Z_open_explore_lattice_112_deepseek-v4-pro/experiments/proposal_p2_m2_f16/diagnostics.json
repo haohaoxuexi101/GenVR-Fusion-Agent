@@ -1,0 +1,56 @@
+{
+  "n_state": 64,
+  "n_angle": 8,
+  "cfm_build_s": 0.03460270199957449,
+  "cfm_solve_s": 2.3361075150000943,
+  "cfm_residual": 4.1491269613903665e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9981564001187891,
+    "normalized_rel_l1": 0.06910241905561244,
+    "log10_rmse": 0.25851507261147044
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.008678402022809764,
+    "directional_concentration": 0.46942736242018146,
+    "directional_peak_to_mean": 6.450464204401414,
+    "ray_index": 0.004073879371589555
+  },
+  "oracle_vs_dense": {
+    "corr": 0.999053485620919,
+    "normalized_rel_l1": 0.05672515594250821,
+    "log10_rmse": 0.23414087810278209
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.006340052806318192,
+    "directional_concentration": 0.24274049387326047,
+    "directional_peak_to_mean": 2.334757964456351,
+    "ray_index": 0.0015389875493882288
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9962285488346337,
+    "normalized_rel_l1": 0.09854808171021018,
+    "log10_rmse": 0.15168263665378773
+  },
+  "wall_s": 2.3707102169996688,
+  "experiment_id": "proposal_p2_m2_f16",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p2_m2_f16",
+    "hypothesis": "Increasing spatial bins reduces ray artifacts more than angular, but increasing phi alone is less effective. Doubling spatial from baseline is cheap and tests if n_pos=2 halves artifact level.",
+    "n_pos": 2,
+    "n_mu": 2,
+    "n_phi": 16,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 10.952287081000122,
+  "artifacts": {
+    "metrics": "experiments/proposal_p2_m2_f16/metrics.json",
+    "fluxes": "experiments/proposal_p2_m2_f16/lattice_stage8_ultra.npz",
+    "figure": "experiments/proposal_p2_m2_f16/lattice_stage8_ultra.png"
+  }
+}

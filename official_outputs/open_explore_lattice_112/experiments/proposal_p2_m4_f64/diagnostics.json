@@ -1,0 +1,56 @@
+{
+  "n_state": 512,
+  "n_angle": 64,
+  "cfm_build_s": 0.03537359996698797,
+  "cfm_solve_s": 19.592563399812207,
+  "cfm_residual": 4.498044289548592e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9986667511951279,
+    "normalized_rel_l1": 0.060205289259812916,
+    "log10_rmse": 0.20164692810663853
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.007607338558326058,
+    "directional_concentration": 0.44070409535020766,
+    "directional_peak_to_mean": 5.273174479333651,
+    "ray_index": 0.0033525852573698385
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9995799939297839,
+    "normalized_rel_l1": 0.03830631624653631,
+    "log10_rmse": 0.16459207894613068
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.004206759080004308,
+    "directional_concentration": 0.41887943526965765,
+    "directional_peak_to_mean": 6.474522607648038,
+    "ray_index": 0.001762124867747709
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.998538165983177,
+    "normalized_rel_l1": 0.06267151618228556,
+    "log10_rmse": 0.10960468451658056
+  },
+  "wall_s": 19.627936999779195,
+  "experiment_id": "proposal_p2_m4_f64",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p2_m4_f64",
+    "hypothesis": "Higher phi resolution with spatial and angular coarsening will improve accuracy most per cost, reducing ray artifacts efficiently.",
+    "n_pos": 2,
+    "n_mu": 4,
+    "n_phi": 64,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 45.60692779999226,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p2_m4_f64\\metrics.json",
+    "fluxes": "experiments\\proposal_p2_m4_f64\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p2_m4_f64\\lattice_stage8_ultra.png"
+  }
+}

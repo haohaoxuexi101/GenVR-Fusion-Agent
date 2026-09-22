@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 32,
+  "cfm_build_s": 0.04109490100017865,
+  "cfm_solve_s": 0.5760614089999763,
+  "cfm_residual": 8.496255874460968e-09,
+  "cfm_vs_dense": {
+    "corr": 0.9981797689702023,
+    "normalized_rel_l1": 0.06890275393796534,
+    "log10_rmse": 0.645838481930034
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.01019256389102988,
+    "directional_concentration": 0.25239786379374546,
+    "directional_peak_to_mean": 2.7844901400424127,
+    "ray_index": 0.0025725813526772077
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9987636193602136,
+    "normalized_rel_l1": 0.06763983403259469,
+    "log10_rmse": 0.7312551353143113
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.008595788463756688,
+    "directional_concentration": 0.30876832423338385,
+    "directional_peak_to_mean": 3.4249304686603406,
+    "ray_index": 0.0026541071994188054
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9993683735958482,
+    "normalized_rel_l1": 0.03440206171989962,
+    "log10_rmse": 0.11270219088391108
+  },
+  "wall_s": 0.6171563100001549,
+  "experiment_id": "angular_refined",
+  "role": "causal_agent",
+  "action": {
+    "experiment_id": "angular_refined",
+    "hypothesis": "If angular under-resolution dominates, 32 projected directions should suppress coherent rays.",
+    "n_pos": 1,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_samples": 64,
+    "oracle_samples": 64,
+    "internal_samples": 128,
+    "oracle_internal_samples": 128,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 8.763506649999954,
+  "artifacts": {
+    "metrics": "experiments/angular_refined/metrics.json",
+    "fluxes": "experiments/angular_refined/lattice_stage8_ultra.npz",
+    "figure": "experiments/angular_refined/lattice_stage8_ultra.png"
+  }
+}

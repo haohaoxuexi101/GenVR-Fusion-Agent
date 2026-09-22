@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 16,
+  "cfm_build_s": 4.309857800137252,
+  "cfm_solve_s": 2.1721916999667883,
+  "cfm_residual": 1.3469434390209026e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9979894510885463,
+    "normalized_rel_l1": 0.08500003063447903,
+    "log10_rmse": 0.25667486175339416
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.00944018021599085,
+    "directional_concentration": 0.38728071862707275,
+    "directional_peak_to_mean": 4.33771278549892,
+    "ray_index": 0.003655999778018011
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9978028927679404,
+    "normalized_rel_l1": 0.09720564829095654,
+    "log10_rmse": 0.22280336228394085
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.010752434373370803,
+    "directional_concentration": 0.3685178970937747,
+    "directional_peak_to_mean": 5.175083438683814,
+    "ray_index": 0.003962464503913427
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9959433827863867,
+    "normalized_rel_l1": 0.10224899971694822,
+    "log10_rmse": 0.1510730191576852
+  },
+  "wall_s": 6.48204950010404,
+  "experiment_id": "proposal_p2_m2_f32",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p2_m2_f32",
+    "hypothesis": "Increasing angular resolution by halving n_mu while doubling n_phi may maintain ray error reduction while reducing total states and cost, testing whether polar or azimuthal discretization dominates.",
+    "n_pos": 2,
+    "n_mu": 2,
+    "n_phi": 32,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 14.458289799978957,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p2_m2_f32\\metrics.json",
+    "fluxes": "experiments\\proposal_p2_m2_f32\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p2_m2_f32\\lattice_stage8_ultra.png"
+  }
+}

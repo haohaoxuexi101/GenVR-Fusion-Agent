@@ -1,0 +1,218 @@
+{
+  "schema_version": "2.0",
+  "config": {
+    "case": "lattice",
+    "nx": 150,
+    "ny": 150,
+    "n_pos": 4,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_mode": "direct",
+    "boundary_ckpt": "outputs/hpc_v2_models/boundary_900k_100ep/best.pt",
+    "internal_ckpt": "outputs/hpc_v2_models/internal_900k_100ep/best.pt",
+    "allow_legacy_checkpoints": false,
+    "cfm_samples": 10000,
+    "oracle_samples": 0,
+    "internal_samples": 10000,
+    "oracle_internal_samples": 0,
+    "oracle_backend": "auto",
+    "oracle_mc_dtype": "float64",
+    "mc_histories": 10000,
+    "device": "cpu",
+    "dtype": "float64",
+    "inference_batch_size": 100000,
+    "rk4_steps": 12,
+    "rtol": 1e-10,
+    "max_iters": 2000,
+    "solver": "auto",
+    "dense_rtol": 1e-09,
+    "dense_max_iters": 2000,
+    "dense_n_mu": null,
+    "dense_n_phi": null,
+    "skip_dense": false,
+    "check_every": 4,
+    "seed": 260827,
+    "response_cache_dir": "outputs/response_cache_hpc",
+    "rebuild_response": false,
+    "torch_compile": false,
+    "matmul_precision": "highest",
+    "outdir": "outputs/lattice"
+  },
+  "checkpoints": {
+    "boundary": {
+      "path": "/home/ssn/GenVR/outputs/hpc_v2_models/boundary_900k_100ep/best.pt",
+      "sha1": "5f816a4032cde9795ce66322d6b7c42196449558",
+      "kind": "boundary",
+      "epoch": 100,
+      "best_val_loss": 0.7213677763938904,
+      "path_mode": "excess_chord",
+      "n_train": 900000,
+      "n_val": 100000,
+      "total_epochs": 100,
+      "model_config": {
+        "c_dim": 5,
+        "y_dim": 4,
+        "hidden_dim": 256,
+        "depth": 4,
+        "expansion": 2,
+        "time_embed_dim": 64
+      }
+    },
+    "internal": {
+      "path": "/home/ssn/GenVR/outputs/hpc_v2_models/internal_900k_100ep/best.pt",
+      "sha1": "2e0c41f7562b0034a306836b62033d097d7101b9",
+      "kind": "internal",
+      "epoch": 94,
+      "best_val_loss": 0.5778295397758484,
+      "path_mode": "excess_chord",
+      "n_train": 900000,
+      "n_val": 100000,
+      "total_epochs": 100,
+      "model_config": {
+        "c_dim": 6,
+        "y_dim": 4,
+        "hidden_dim": 256,
+        "depth": 4,
+        "expansion": 2,
+        "time_embed_dim": 64
+      }
+    },
+    "legacy_path_mode_allowed": false
+  },
+  "method_taxonomy": {
+    "schema_version": "1.0",
+    "legacy_flux_key_aliases": {
+      "cfm": "genvr_cfm_response",
+      "oracle": "projected_local_mc_response",
+      "dense": "dense_sn_reference",
+      "mc": "global_history_mc"
+    },
+    "methods": {
+      "genvr_cfm_response": {
+        "display_name": "GenVR/CFM projected response",
+        "role": "learned candidate",
+        "local_kernel": "conditional-flow-matching surrogate samples",
+        "global_solver": "deterministic projected response-operator solve",
+        "global_particle_histories": false,
+        "finite_interface_projection": true,
+        "finite_sampling": true,
+        "continuum_truth": false,
+        "allowed_claim": "Learned approximation to the projected local-response transport model."
+      },
+      "projected_local_mc_response": {
+        "display_name": "Projected local-MC response",
+        "role": "same-discretization kernel reference",
+        "local_kernel": "finite random-flight Monte Carlo samples in each local state",
+        "global_solver": "deterministic projected response-operator solve",
+        "global_particle_histories": false,
+        "finite_interface_projection": true,
+        "finite_sampling": true,
+        "continuum_truth": false,
+        "allowed_claim": "Separates learned-kernel error from the shared finite interface discretization."
+      },
+      "dense_sn_reference": {
+        "display_name": "Dense finite-angle S_N response sweep",
+        "role": "deterministic shape reference",
+        "local_kernel": "positive upwind discrete-ordinates response",
+        "global_solver": "source iteration over a fixed spatial and angular mesh",
+        "global_particle_histories": false,
+        "finite_interface_projection": false,
+        "finite_sampling": false,
+        "continuum_truth": false,
+        "allowed_claim": "Deterministic finite-discretization comparison, not an exact continuum solution."
+      },
+      "global_history_mc": {
+        "display_name": "Global history MC (implicit capture)",
+        "role": "independent stochastic transport reference",
+        "local_kernel": "direct collision and boundary tracking",
+        "global_solver": "source-to-termination particle histories",
+        "global_particle_histories": true,
+        "finite_interface_projection": false,
+        "finite_sampling": true,
+        "continuum_truth": false,
+        "allowed_claim": "Statistical reference with sampling uncertainty; not an exact finite-history truth."
+      }
+    }
+  },
+  "n_angle": 32,
+  "n_state": 512,
+  "cases": {
+    "lattice": {
+      "n_state": 512,
+      "n_angle": 32,
+      "cfm_mode": "direct",
+      "solver": "bicgstab",
+      "boundary_path_mode": "excess_chord",
+      "internal_path_mode": "excess_chord",
+      "cfm_build_s": 0.06693390000145882,
+      "cfm_boundary_build_s": 0.028741800000716466,
+      "cfm_internal_build_s": 0.03819210000074236,
+      "cfm_solve_s": 247.2638459509999,
+      "cfm_iterations": 272,
+      "cfm_converged": true,
+      "cfm_residual": 6.004242300731468e-11,
+      "cfm_nonzero_fraction": 1.0,
+      "cfm_min_positive_flux": 1.8193054681009308e-06,
+      "cfm_vs_dense": {
+        "corr": 0.9996226190955649,
+        "normalized_rel_l1": 0.03127054246281531,
+        "log10_rmse": 0.13650153965844267,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "genvr_cfm_vs_dense_sn": {
+        "corr": 0.9996226190955649,
+        "normalized_rel_l1": 0.03127054246281531,
+        "log10_rmse": 0.13650153965844267,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "dense_runtime_s": 2.559208779999608,
+      "dense_iterations": 58,
+      "dense_converged": true,
+      "dense_residual": 8.476682210044442e-10,
+      "dense_angular_order": [
+        4,
+        32
+      ],
+      "dense_nonzero_fraction": 1.0,
+      "dense_min_positive_flux": 5.962885706168194e-06,
+      "mc_histories": 10000,
+      "mc_runtime_s": 9.393021664998741,
+      "mc_steps": 1543730,
+      "mc_leakage_histories": 3344,
+      "mc_absorbed_weight": 0.9667293916081092,
+      "mc_total_track_length": 2.7045420021672055,
+      "cfm_vs_mc": {
+        "corr": 0.9959508364447422,
+        "normalized_rel_l1": 0.17377885442229857,
+        "log10_rmse": 1.0693504636709081,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9991555555555556
+      },
+      "global_history_mc_histories": 10000,
+      "global_history_mc_runtime_s": 9.393021664998741,
+      "genvr_cfm_vs_global_history_mc": {
+        "corr": 0.9959508364447422,
+        "normalized_rel_l1": 0.17377885442229857,
+        "log10_rmse": 1.0693504636709081,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9991555555555556
+      },
+      "dense_vs_mc": {
+        "corr": 0.9960158653565261,
+        "normalized_rel_l1": 0.17876756731730295,
+        "log10_rmse": 1.104938671036044,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9991555555555556
+      },
+      "dense_sn_vs_global_history_mc": {
+        "corr": 0.9960158653565261,
+        "normalized_rel_l1": 0.17876756731730295,
+        "log10_rmse": 1.104938671036044,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9991555555555556
+      }
+    }
+  }
+}

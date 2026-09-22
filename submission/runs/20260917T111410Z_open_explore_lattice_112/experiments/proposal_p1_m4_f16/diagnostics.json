@@ -1,0 +1,56 @@
+{
+  "n_state": 64,
+  "n_angle": 16,
+  "cfm_build_s": 5.0116096010006,
+  "cfm_solve_s": 2.8575400939989777,
+  "cfm_residual": 5.779592631893785e-11,
+  "cfm_vs_dense": {
+    "corr": 0.999099087633328,
+    "normalized_rel_l1": 0.05960070755118226,
+    "log10_rmse": 0.32301630469435477
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.006065014668767422,
+    "directional_concentration": 0.31506669026435824,
+    "directional_peak_to_mean": 3.0385655764598036,
+    "ray_index": 0.0019108840980933347
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9993171358257156,
+    "normalized_rel_l1": 0.05756554526545672,
+    "log10_rmse": 0.3371575300426505
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.005562103912604008,
+    "directional_concentration": 0.34390879481229386,
+    "directional_peak_to_mean": 4.5052430133667585,
+    "ray_index": 0.0019128564532043886
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9985422827759234,
+    "normalized_rel_l1": 0.0656853504311651,
+    "log10_rmse": 0.0850343086423891
+  },
+  "wall_s": 7.869149694999578,
+  "experiment_id": "proposal_p1_m4_f16",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p1_m4_f16",
+    "hypothesis": "Reducing azimuthal resolution to 16 will lower ray artifacts than phi=32 by reducing interpolation error, while keeping mu=4 to control polar artifacts.",
+    "n_pos": 1,
+    "n_mu": 4,
+    "n_phi": 16,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 20.241888575999837,
+  "artifacts": {
+    "metrics": "experiments/proposal_p1_m4_f16/metrics.json",
+    "fluxes": "experiments/proposal_p1_m4_f16/lattice_stage8_ultra.npz",
+    "figure": "experiments/proposal_p1_m4_f16/lattice_stage8_ultra.png"
+  }
+}

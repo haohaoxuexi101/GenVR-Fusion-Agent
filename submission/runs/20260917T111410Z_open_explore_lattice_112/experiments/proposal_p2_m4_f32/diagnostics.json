@@ -1,0 +1,56 @@
+{
+  "n_state": 256,
+  "n_angle": 32,
+  "cfm_build_s": 0.0690268959988316,
+  "cfm_solve_s": 15.110010372998659,
+  "cfm_residual": 2.990212761778602e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9990175016992887,
+    "normalized_rel_l1": 0.05328431666657962,
+    "log10_rmse": 0.18905062166180034
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.006285583941172492,
+    "directional_concentration": 0.41497041926404754,
+    "directional_peak_to_mean": 4.481436636330837,
+    "ray_index": 0.0026083314033877136
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9996508832562919,
+    "normalized_rel_l1": 0.035461485096646414,
+    "log10_rmse": 0.17424252705591406
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.003767724387105325,
+    "directional_concentration": 0.3525926369566732,
+    "directional_peak_to_mean": 4.982889924081658,
+    "ray_index": 0.0013284718769754318
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9983825575461623,
+    "normalized_rel_l1": 0.06490435593072194,
+    "log10_rmse": 0.09503068525112456
+  },
+  "wall_s": 15.17903726899749,
+  "experiment_id": "proposal_p2_m4_f32",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p2_m4_f32",
+    "hypothesis": "Doubling position bins halves ray artifacts by smoothing angular aliasing, with angular resolution dominating over momentum and budget constraints.",
+    "n_pos": 2,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 40.412311498001145,
+  "artifacts": {
+    "metrics": "experiments/proposal_p2_m4_f32/metrics.json",
+    "fluxes": "experiments/proposal_p2_m4_f32/lattice_stage8_ultra.npz",
+    "figure": "experiments/proposal_p2_m4_f32/lattice_stage8_ultra.png"
+  }
+}

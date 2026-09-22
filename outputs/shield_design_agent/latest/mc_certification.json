@@ -1,0 +1,379 @@
+{
+  "schema_version": "1.0",
+  "objective": "source-distant full-field track-length flux",
+  "grid": [
+    28,
+    28
+  ],
+  "histories_per_replicate": 1000,
+  "replicates": 2,
+  "designs": {
+    "baseline": {
+      "design": {
+        "signature": "ded6840cea70",
+        "grid_size": 7,
+        "source_cell": [
+          3,
+          3
+        ],
+        "absorber_count": 11,
+        "absorbers": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            5
+          ]
+        ]
+      },
+      "weight_window": {
+        "n_levels": 11,
+        "split_factor": 2,
+        "flux_exponent": 0.75,
+        "lower_ratio": 0.1,
+        "upper_ratio": 1.25,
+        "max_split": 16
+      },
+      "analog": {
+        "histories": 2000,
+        "runtime_s": 1.1346117859993683,
+        "regions": {
+          "far_field": {
+            "estimate": 0.00201192051829141,
+            "sample_variance": 0.00024867147309868285,
+            "standard_error": 0.00035261272885325827,
+            "relative_error": 0.17526175892510343,
+            "ci95": [
+              0.0013207995697390239,
+              0.0027030414668437965
+            ],
+            "fom": 28.693159831781063,
+            "histories": 2000,
+            "runtime_s": 1.1346117859993683,
+            "cells": 192,
+            "finite_cell_fraction": 1.0,
+            "median_cell_relative_error": 0.8385739837308916,
+            "p90_cell_relative_error": 0.9993580252715344
+          },
+          "deep_far_field": {
+            "estimate": 0.0001225417349540895,
+            "sample_variance": 8.682927368865549e-06,
+            "standard_error": 6.588978437081711e-05,
+            "relative_error": 0.5376926024060525,
+            "ci95": [
+              0.0,
+              0.00025168571232089105
+            ],
+            "fom": 3.0484886784756187,
+            "histories": 2000,
+            "runtime_s": 1.1346117859993683,
+            "cells": 48,
+            "finite_cell_fraction": 1.0,
+            "median_cell_relative_error": 0.9503658146332741,
+            "p90_cell_relative_error": 0.999464394243713
+          }
+        },
+        "transported_particles": 2000,
+        "transported_particles_per_root": 1.0,
+        "split_events": 0,
+        "split_children": 0,
+        "split_cap_hits": 0,
+        "roulette_kills": 0,
+        "max_bank_size": 1
+      },
+      "variance_reduced": {
+        "histories": 2000,
+        "runtime_s": 3.1506044620000466,
+        "regions": {
+          "far_field": {
+            "estimate": 0.002309759890282862,
+            "sample_variance": 3.597896189602971e-05,
+            "standard_error": 0.00013412487072879086,
+            "relative_error": 0.05806875047620877,
+            "ci95": [
+              0.0020468751436544317,
+              0.002572644636911292
+            ],
+            "fom": 94.12850353896349,
+            "histories": 2000,
+            "runtime_s": 3.1506044620000466,
+            "cells": 192,
+            "finite_cell_fraction": 1.0,
+            "median_cell_relative_error": 0.20303490500138116,
+            "p90_cell_relative_error": 0.25035716770383
+          },
+          "deep_far_field": {
+            "estimate": 0.00026093804580026327,
+            "sample_variance": 1.5714816491693925e-06,
+            "standard_error": 2.8031068916198973e-05,
+            "relative_error": 0.10742423102860033,
+            "ci95": [
+              0.00020599715072451327,
+              0.00031587894087601324
+            ],
+            "fom": 27.504364137735923,
+            "histories": 2000,
+            "runtime_s": 3.1506044620000466,
+            "cells": 48,
+            "finite_cell_fraction": 1.0,
+            "median_cell_relative_error": 0.23481071293865574,
+            "p90_cell_relative_error": 0.284177100852346
+          }
+        },
+        "transported_particles": 42494,
+        "transported_particles_per_root": 21.247,
+        "split_events": 32084,
+        "split_children": 40494,
+        "split_cap_hits": 0,
+        "roulette_kills": 37952,
+        "max_bank_size": 10
+      },
+      "unbiased_consistency": {
+        "far_field": {
+          "estimate_difference": 0.0002978393719914518,
+          "unpaired_consistency_z": 0.7894800853578723,
+          "fom_gain": 3.280520656867671
+        },
+        "deep_far_field": {
+          "estimate_difference": 0.00013839631084617377,
+          "unpaired_consistency_z": 1.932787878529194,
+          "fom_gain": 9.022294992248206
+        }
+      }
+    },
+    "candidate": {
+      "design": {
+        "signature": "d7d960548ee7",
+        "grid_size": 7,
+        "source_cell": [
+          3,
+          3
+        ],
+        "absorber_count": 11,
+        "absorbers": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      },
+      "weight_window": {
+        "n_levels": 12,
+        "split_factor": 2,
+        "flux_exponent": 0.75,
+        "lower_ratio": 0.1,
+        "upper_ratio": 1.25,
+        "max_split": 16
+      },
+      "analog": {
+        "histories": 2000,
+        "runtime_s": 0.9720498899987433,
+        "regions": {
+          "far_field": {
+            "estimate": 0.0001498193230890237,
+            "sample_variance": 3.254864295422107e-06,
+            "standard_error": 4.034144454169996e-05,
+            "relative_error": 0.2692672995040085,
+            "ci95": [
+              7.075009178729178e-05,
+              0.00022888855439075561
+            ],
+            "fom": 14.188752556656915,
+            "histories": 2000,
+            "runtime_s": 0.9720498899987433,
+            "cells": 192,
+            "finite_cell_fraction": 1.0,
+            "median_cell_relative_error": 0.7193931024440535,
+            "p90_cell_relative_error": 0.9852002576367298
+          },
+          "deep_far_field": {
+            "estimate": 8.921541732201034e-06,
+            "sample_variance": 9.314154286725621e-08,
+            "standard_error": 6.824278088825814e-06,
+            "relative_error": 0.7649213884405824,
+            "ci95": [
+              0.0,
+              2.229712678629963e-05
+            ],
+            "fom": 1.7582387011034544,
+            "histories": 2000,
+            "runtime_s": 0.9720498899987433,
+            "cells": 48,
+            "finite_cell_fraction": 1.0,
+            "median_cell_relative_error": 0.9114415105943188,
+            "p90_cell_relative_error": 0.9925664128352142
+          }
+        },
+        "transported_particles": 2000,
+        "transported_particles_per_root": 1.0,
+        "split_events": 0,
+        "split_children": 0,
+        "split_cap_hits": 0,
+        "roulette_kills": 0,
+        "max_bank_size": 1
+      },
+      "variance_reduced": {
+        "histories": 2000,
+        "runtime_s": 1.7500599799986958,
+        "regions": {
+          "far_field": {
+            "estimate": 0.00021455761295496945,
+            "sample_variance": 1.0125102789070817e-06,
+            "standard_error": 2.250011420978882e-05,
+            "relative_error": 0.10486747079215064,
+            "ci95": [
+              0.00017045738910378337,
+              0.00025865783680615554
+            ],
+            "fom": 51.95956169457469,
+            "histories": 2000,
+            "runtime_s": 1.7500599799986958,
+            "cells": 192,
+            "finite_cell_fraction": 0.9947916666666666,
+            "median_cell_relative_error": 0.3498678330905431,
+            "p90_cell_relative_error": 0.5304198567795164
+          },
+          "deep_far_field": {
+            "estimate": 0.00018161119594058473,
+            "sample_variance": 1.7118306200667826e-06,
+            "standard_error": 2.9256030319122097e-05,
+            "relative_error": 0.1610915569802943,
+            "ci95": [
+              0.00012426937651510543,
+              0.00023895301536606403
+            ],
+            "fom": 22.01919858669037,
+            "histories": 2000,
+            "runtime_s": 1.7500599799986958,
+            "cells": 48,
+            "finite_cell_fraction": 1.0,
+            "median_cell_relative_error": 0.32144707723261867,
+            "p90_cell_relative_error": 0.38248025515227463
+          }
+        },
+        "transported_particles": 29102,
+        "transported_particles_per_root": 14.551,
+        "split_events": 13986,
+        "split_children": 27102,
+        "split_cap_hits": 0,
+        "roulette_kills": 27473,
+        "max_bank_size": 17
+      },
+      "unbiased_consistency": {
+        "far_field": {
+          "estimate_difference": 6.473828986594576e-05,
+          "unpaired_consistency_z": 1.4015088290887279,
+          "fom_gain": 3.662024655592214
+        },
+        "deep_far_field": {
+          "estimate_difference": 0.0001726896542083837,
+          "unpaired_consistency_z": 5.748387859665706,
+          "fom_gain": 12.523440971280705
+        }
+      }
+    }
+  },
+  "region_definition": {
+    "far_field": "outer quartile of geometric distance from the fixed source box",
+    "deep_far_field": "lowest baseline-guide-flux quartile within the fixed far-field mask; the identical cells are used for both designs"
+  },
+  "design_comparison": {
+    "far_field": {
+      "candidate_over_baseline": 0.09289173903210082,
+      "estimated_reduction_fraction": 0.9071082609678992,
+      "difference": -0.0020952022773278924,
+      "difference_z": -15.406009009692093,
+      "candidate_upper_below_baseline_lower": true
+    },
+    "deep_far_field": {
+      "candidate_over_baseline": 0.6959935466045462,
+      "estimated_reduction_fraction": 0.30400645339545385,
+      "difference": -7.932684985967854e-05,
+      "difference_z": -1.957848629678643,
+      "candidate_upper_below_baseline_lower": false
+    }
+  },
+  "interpretation": {
+    "shielding_claim_uses": "variance-reduced absolute far-field flux estimates and root-history confidence intervals",
+    "variance_reduction_claim_uses": "analog-versus-weight-window relative error and FOM for the same design",
+    "fom_is_not_the_shielding_objective": true
+  }
+}

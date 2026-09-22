@@ -1,0 +1,56 @@
+{
+  "n_state": 32,
+  "n_angle": 8,
+  "cfm_build_s": 1.2359177998732775,
+  "cfm_solve_s": 0.5581255999859422,
+  "cfm_residual": 3.8395314145485716e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9977999545196129,
+    "normalized_rel_l1": 0.0796657595653348,
+    "log10_rmse": 0.3569074950436683
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.00951248397163915,
+    "directional_concentration": 0.4039668371850671,
+    "directional_peak_to_mean": 4.40034956231014,
+    "ray_index": 0.003842728063796713
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9990564405472453,
+    "normalized_rel_l1": 0.06650232321445165,
+    "log10_rmse": 0.3749564744941479
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.006503491198698988,
+    "directional_concentration": 0.3284293411655631,
+    "directional_peak_to_mean": 3.7440562545205336,
+    "ray_index": 0.002135937329664747
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9973988266513655,
+    "normalized_rel_l1": 0.08488936428903997,
+    "log10_rmse": 0.1373460797318254
+  },
+  "wall_s": 1.7940433998592198,
+  "experiment_id": "baseline_coarse",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "baseline_coarse",
+    "hypothesis": "A single face-position node with 16 projected directions establishes the coarse ray-prone baseline.",
+    "n_pos": 1,
+    "n_mu": 2,
+    "n_phi": 16,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 8.06686759996228,
+  "artifacts": {
+    "metrics": "experiments\\baseline_coarse\\metrics.json",
+    "fluxes": "experiments\\baseline_coarse\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\baseline_coarse\\lattice_stage8_ultra.png"
+  }
+}

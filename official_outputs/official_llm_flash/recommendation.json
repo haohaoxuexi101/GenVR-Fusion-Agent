@@ -1,0 +1,19 @@
+{
+  "run_dir": "G:/ssn_gmc_llmapi/official_outputs/official_llm_flash",
+  "source": "summary.json",
+  "cheapest_mitigation": {
+    "recommended_experiment_id": "angular_refined",
+    "reason": "angular_refined keeps the same 128-state budget and lowers the CFM-versus-dense ray index to 0.00250119 versus 0.00443073 for position_refined (43.5% lower). Recommended as the cheapest conservative mitigation.",
+    "metrics_file": "G:/ssn_gmc_llmapi/official_outputs/official_llm_flash/experiments/angular_refined/metrics.json",
+    "diagnostics_file": "G:/ssn_gmc_llmapi/official_outputs/official_llm_flash/experiments/angular_refined/diagnostics.json",
+    "figure_file": "G:/ssn_gmc_llmapi/official_outputs/official_llm_flash/experiments/angular_refined/lattice_stage8_ultra.png"
+  },
+  "cleanest_reference": {
+    "recommended_experiment_id": "combined_refined",
+    "reason": "combined_refined reduces the local Exact-MC-versus-dense ray index to 0.000911311 versus 0.00213594 for coarse (57.3% lower), at the cost of a 512-state budget and a remaining 5.0% normalized L1 CFM-versus-Exact-MC residual.",
+    "metrics_file": "G:/ssn_gmc_llmapi/official_outputs/official_llm_flash/experiments/combined_refined/metrics.json",
+    "diagnostics_file": "G:/ssn_gmc_llmapi/official_outputs/official_llm_flash/experiments/combined_refined/diagnostics.json",
+    "figure_file": "G:/ssn_gmc_llmapi/official_outputs/official_llm_flash/experiments/combined_refined/lattice_stage8_ultra.png"
+  },
+  "overall_recommendation": "Adopt angular_refined as the operational mitigation: angular_refined keeps the same 128-state budget and lowers the CFM-versus-dense ray index to 0.00250119 versus 0.00443073 for position_refined (43.5% lower). Recommended as the cheapest conservative mitigation."
+}

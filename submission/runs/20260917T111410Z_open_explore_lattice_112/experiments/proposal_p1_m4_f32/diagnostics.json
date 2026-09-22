@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 32,
+  "cfm_build_s": 10.461842482000066,
+  "cfm_solve_s": 6.034992613000213,
+  "cfm_residual": 4.9792821297343594e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9989425572385743,
+    "normalized_rel_l1": 0.0648052909787955,
+    "log10_rmse": 0.29369380369216463
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.0064958928148371176,
+    "directional_concentration": 0.38504204913156587,
+    "directional_peak_to_mean": 4.241958485641902,
+    "ray_index": 0.0025011918803638992
+  },
+  "oracle_vs_dense": {
+    "corr": 0.999123380094305,
+    "normalized_rel_l1": 0.06151674214452401,
+    "log10_rmse": 0.3261706035075838
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.0059732278529675475,
+    "directional_concentration": 0.4347634786814947,
+    "directional_peak_to_mean": 7.4829634178306765,
+    "ray_index": 0.0025969413203133667
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9981098730377514,
+    "normalized_rel_l1": 0.06998224672251836,
+    "log10_rmse": 0.10196953067281879
+  },
+  "wall_s": 16.49683509500028,
+  "experiment_id": "proposal_p1_m4_f32",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p1_m4_f32",
+    "hypothesis": "Doubling mu and phi will reveal whether angular refinement or the mu dimension dominates ray-artifact suppression at equal state cost.",
+    "n_pos": 1,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 35.85942255300142,
+  "artifacts": {
+    "metrics": "experiments/proposal_p1_m4_f32/metrics.json",
+    "fluxes": "experiments/proposal_p1_m4_f32/lattice_stage8_ultra.npz",
+    "figure": "experiments/proposal_p1_m4_f32/lattice_stage8_ultra.png"
+  }
+}

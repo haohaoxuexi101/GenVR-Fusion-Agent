@@ -1,0 +1,56 @@
+{
+  "n_state": 256,
+  "n_angle": 64,
+  "cfm_build_s": 20.852575406999676,
+  "cfm_solve_s": 15.942163873000027,
+  "cfm_residual": 2.4763113536877584e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9986028658386412,
+    "normalized_rel_l1": 0.0742867928154983,
+    "log10_rmse": 0.2909565875311204
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.0076214785478800826,
+    "directional_concentration": 0.40469013320314123,
+    "directional_peak_to_mean": 4.860740642612374,
+    "ray_index": 0.003084337168746474
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9976223965680151,
+    "normalized_rel_l1": 0.10491477634692746,
+    "log10_rmse": 0.3456849434002631
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.011015557676967224,
+    "directional_concentration": 0.5668992841281961,
+    "directional_peak_to_mean": 10.940573786861929,
+    "ray_index": 0.006244711761345574
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9977351568642688,
+    "normalized_rel_l1": 0.07838690785247975,
+    "log10_rmse": 0.11939368971975121
+  },
+  "wall_s": 36.7947392799997,
+  "experiment_id": "proposal_p1_m4_f64",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p1_m4_f64",
+    "hypothesis": "Increasing n_phi from 32 to 64 at fixed n_pos=1, n_mu=4 will reduce ray artifacts most per cost, revealing angular resolution as dominant mechanism.",
+    "n_pos": 1,
+    "n_mu": 4,
+    "n_phi": 64,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 65.25791522299915,
+  "artifacts": {
+    "metrics": "experiments/proposal_p1_m4_f64/metrics.json",
+    "fluxes": "experiments/proposal_p1_m4_f64/lattice_stage8_ultra.npz",
+    "figure": "experiments/proposal_p1_m4_f64/lattice_stage8_ultra.png"
+  }
+}

@@ -1,0 +1,89 @@
+device=cuda; n_angle=8; n_state=128
+[lattice] building/loading CFM operators; states=128
+[lattice] building/loading exact-MC local response oracle
+[lattice] dense S_N reference
+{
+  "n_state": 128,
+  "n_angle": 8,
+  "cfm_mode": "direct",
+  "solver": "bicgstab",
+  "boundary_path_mode": "excess_chord",
+  "internal_path_mode": "excess_chord",
+  "cfm_build_s": 0.6882202997803688,
+  "cfm_boundary_build_s": 0.5801289998926222,
+  "cfm_internal_build_s": 0.10809129988774657,
+  "cfm_solve_s": 0.14232640014961362,
+  "cfm_iterations": 32,
+  "cfm_residual": 3.1105427450723485e-09,
+  "cfm_nonzero_fraction": 1.0,
+  "cfm_min_positive_flux": 6.794166948899332e-07,
+  "cfm_vs_dense": {
+    "corr": 0.9963381551200424,
+    "normalized_rel_l1": 0.1072609143505653,
+    "log10_rmse": 0.4470543604709242,
+    "a_nonzero_fraction": 1.0,
+    "b_nonzero_fraction": 1.0
+  },
+  "oracle_build_s": 0.23215040029026568,
+  "oracle_boundary_build_s": 0.21489570010453463,
+  "oracle_internal_build_s": 0.017254700185731053,
+  "oracle_solve_s": 0.06804249994456768,
+  "oracle_iterations": 32,
+  "oracle_solver": "bicgstab",
+  "oracle_residual": 2.3737440200888188e-09,
+  "cfm_vs_oracle": {
+    "corr": 0.9989530064842752,
+    "normalized_rel_l1": 0.04660326261190448,
+    "log10_rmse": 0.05126060218594694,
+    "a_nonzero_fraction": 1.0,
+    "b_nonzero_fraction": 1.0
+  },
+  "oracle_vs_dense": {
+    "corr": 0.995536170647595,
+    "normalized_rel_l1": 0.11042492563930206,
+    "log10_rmse": 0.43389942045444035,
+    "a_nonzero_fraction": 1.0,
+    "b_nonzero_fraction": 1.0
+  },
+  "local_operator_metrics": {
+    "ss=0.5,sa=9.5": {
+      "prob_l1_mean_per_input": 0.30976008587212167,
+      "prob_l1_p95_per_input": 0.6642915888677591,
+      "prob_l1_max_per_input": 0.6982109661575503,
+      "prob_max_abs_element": 0.3448980013065307,
+      "attenuated_l1_mean_per_input": 0.041344476702468304,
+      "track_rel_l1": 0.009591799095234893,
+      "a_probability_conservation_max": 4.440892098500626e-16,
+      "b_probability_conservation_max": 5.551115123125783e-16,
+      "a_invalid_fraction": 0.0,
+      "a_chord_repair_fraction": 0.0,
+      "a_mean_survival": 0.17319664655051975,
+      "b_mean_survival": 0.17972544225614823
+    },
+    "ss=1,sa=0": {
+      "prob_l1_mean_per_input": 0.42865649816387913,
+      "prob_l1_p95_per_input": 0.7473778721186045,
+      "prob_l1_max_per_input": 0.8457013335588851,
+      "prob_max_abs_element": 0.3134275371610822,
+      "attenuated_l1_mean_per_input": 0.4286564981638793,
+      "track_rel_l1": 0.047924119879554576,
+      "a_probability_conservation_max": 4.440892098500626e-16,
+      "b_probability_conservation_max": 6.661338147750939e-16,
+      "a_invalid_fraction": 0.0,
+      "a_chord_repair_fraction": 0.0,
+      "a_mean_survival": 1.0,
+      "b_mean_survival": 1.0
+    }
+  },
+  "internal_source_operator_metrics": {
+    "attenuated_outgoing_l1": 0.6668993333076776,
+    "attenuated_outgoing_rel_l1": 0.6668993333076776,
+    "outgoing_max_abs_element": 0.022194001401585478,
+    "mean_survival_a": 0.9999999999999999,
+    "mean_survival_b": 1.0,
+    "survival_abs_error": 1.1102230246251565e-16,
+    "track_rel_error": 0.041610835850282225,
+    "a_invalid_fraction": 0.0,
+    "a_chord_repair_fraction": 0.0
+  }
+}

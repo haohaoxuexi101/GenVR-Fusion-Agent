@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 8,
+  "cfm_build_s": 0.03662980199987942,
+  "cfm_solve_s": 5.022750377999728,
+  "cfm_residual": 6.516109282874875e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9979008095246451,
+    "normalized_rel_l1": 0.0773153358197885,
+    "log10_rmse": 0.2453868689784834
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.009368319952688544,
+    "directional_concentration": 0.47294777473157507,
+    "directional_peak_to_mean": 6.785933600112378,
+    "ray_index": 0.004430726074597461
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9984444631426858,
+    "normalized_rel_l1": 0.07656715332613384,
+    "log10_rmse": 0.23491749360775768
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.008226615698889217,
+    "directional_concentration": 0.5562571624479508,
+    "directional_peak_to_mean": 7.67215086667784,
+    "ray_index": 0.004576113905213881
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9973698813226051,
+    "normalized_rel_l1": 0.08763337139521606,
+    "log10_rmse": 0.11881034331440614
+  },
+  "wall_s": 5.059380179999607,
+  "experiment_id": "proposal_p4_m2_f16",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p4_m2_f16",
+    "hypothesis": "Increasing n_pos to 4 at fixed low angular resolution may reduce ray artifacts more cost-effectively than raising n_phi.",
+    "n_pos": 4,
+    "n_mu": 2,
+    "n_phi": 16,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 16.95985500300003,
+  "artifacts": {
+    "metrics": "experiments/proposal_p4_m2_f16/metrics.json",
+    "fluxes": "experiments/proposal_p4_m2_f16/lattice_stage8_ultra.npz",
+    "figure": "experiments/proposal_p4_m2_f16/lattice_stage8_ultra.png"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-09-03T02:52:05.842607+00:00",
+  "provider": "DeepSeek",
+  "base_url": "https://api.deepseek.com",
+  "key_source": "DEEPSEEK_API_KEY environment variable",
+  "secret_recorded": false,
+  "input_feedback": {
+    "experiment_id": "coarse",
+    "n_state": 32,
+    "ray_index": 0.003842728063796713,
+    "rel_l1": 0.0796657595653348,
+    "wall_s": 0.76036940026097
+  },
+  "models": [
+    {
+      "model": "deepseek-v4-flash",
+      "status": "PASS",
+      "latency_s": 1.8182130998466164,
+      "selected_experiment_id": "angular_refined",
+      "selected_from_allowlist": true,
+      "decision_reason": "The coarse experiment used n_mu=2 and n_phi=16, yielding 32 total angular directions. The coarse ray index (0.00384) is likely due to insufficient angular resolution. The 'angular_refined' experiment increases the total angular directions to 128 while keeping n_pos=1, which is consistent with the hypothesis and may reduce artifacts at the same state budget as the 'position_refined' option. Since we must choose one, this test isolates the angular resolution effect without confounding variables.",
+      "usage": {
+        "prompt_tokens": 502,
+        "completion_tokens": 156,
+        "total_tokens": 658,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 118
+      },
+      "response_id": "9ce8823d-25ed-4654-a846-ba23c0b4dfd6",
+      "system_fingerprint": "a26a7955944dc5c60445bff77fac9c8e"
+    },
+    {
+      "model": "deepseek-v4-pro",
+      "status": "PASS",
+      "latency_s": 4.205483700148761,
+      "selected_experiment_id": "angular_refined",
+      "selected_from_allowlist": true,
+      "decision_reason": "Selecting angular_refined because it isolates the effect of angular resolution on ray artifacts while keeping total state count moderate. The coarse experiment used n_mu=2, n_phi=16 (32 angular nodes) and showed some ray artifacts. By increasing angular directions to 32 (n_mu=4, n_phi=32) with n_pos=1, we test the hypothesis that angular under-resolution is the dominant cause, while maintaining a comparable state budget to position_refined (which uses n_pos=4, n_mu=2, n_phi=16, also 128 total states). This provides a balanced comparison and is less computationally expensive than combined_refined.",
+      "usage": {
+        "prompt_tokens": 502,
+        "completion_tokens": 195,
+        "total_tokens": 697,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 118
+      },
+      "response_id": "6f911d04-2394-4f82-9f13-74b0e5beaebe",
+      "system_fingerprint": "a307abda487cd1b463329ccb945ce396"
+    }
+  ],
+  "available_models": [
+    "deepseek-v4-flash",
+    "deepseek-v4-flash-vision-exp",
+    "deepseek-v4-pro"
+  ],
+  "cross_model_same_action": true,
+  "status": "PASS"
+}

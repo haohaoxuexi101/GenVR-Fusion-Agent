@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 8,
+  "cfm_build_s": 5.1062058000825346,
+  "cfm_solve_s": 2.1487334000412375,
+  "cfm_residual": 6.818715892172924e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9989382210224546,
+    "normalized_rel_l1": 0.06589592725508706,
+    "log10_rmse": 0.23282413412287367
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.006809380077444141,
+    "directional_concentration": 0.6074632274415103,
+    "directional_peak_to_mean": 8.666009146670499,
+    "ray_index": 0.004136447998720139
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9985469955081416,
+    "normalized_rel_l1": 0.07098104337631518,
+    "log10_rmse": 0.22886477525188798
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.007766080275644847,
+    "directional_concentration": 0.5455980469293099,
+    "directional_peak_to_mean": 7.689779689610408,
+    "ray_index": 0.004237158230688065
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9996574645235737,
+    "normalized_rel_l1": 0.03161482590570541,
+    "log10_rmse": 0.07111023284852842
+  },
+  "wall_s": 7.254939200123772,
+  "experiment_id": "random_2_position_refined",
+  "role": "random_reference",
+  "action": {
+    "experiment_id": "random_2_position_refined",
+    "hypothesis": "If face-position compression is causal, n_pos=4 should suppress rays while angular nodes remain fixed.",
+    "n_pos": 4,
+    "n_mu": 2,
+    "n_phi": 16,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 310828,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 16.237020100001246,
+  "artifacts": {
+    "metrics": "experiments\\random_2_position_refined\\metrics.json",
+    "fluxes": "experiments\\random_2_position_refined\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\random_2_position_refined\\lattice_stage8_ultra.png"
+  }
+}

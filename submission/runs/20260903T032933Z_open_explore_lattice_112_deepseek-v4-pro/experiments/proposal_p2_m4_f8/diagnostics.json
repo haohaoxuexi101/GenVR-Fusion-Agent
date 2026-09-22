@@ -1,0 +1,56 @@
+{
+  "n_state": 64,
+  "n_angle": 8,
+  "cfm_build_s": 2.2769324998371303,
+  "cfm_solve_s": 0.9147351998835802,
+  "cfm_residual": 2.8801674302705947e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9979502278151973,
+    "normalized_rel_l1": 0.0911678002993838,
+    "log10_rmse": 0.24450707035636768
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.00986070979407129,
+    "directional_concentration": 0.5131664004257976,
+    "directional_peak_to_mean": 7.5533182463039275,
+    "ray_index": 0.005060184950666972
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9976661023142767,
+    "normalized_rel_l1": 0.09801877923200916,
+    "log10_rmse": 0.23863373538937682
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.010365688081210234,
+    "directional_concentration": 0.5443174566440735,
+    "directional_peak_to_mean": 8.033500160262875,
+    "ray_index": 0.005642224972730141
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9983055980118046,
+    "normalized_rel_l1": 0.06720968906764531,
+    "log10_rmse": 0.09283998186702828
+  },
+  "wall_s": 3.1916676997207105,
+  "experiment_id": "proposal_p2_m4_f8",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p2_m4_f8",
+    "hypothesis": "Ray artifacts are primarily driven by angular discretization in phi. With n_pos=2 and n_mu=4, n_phi=8 will further reduce phi resolution, likely increasing ray index compared to phi=16 and phi=32, confirming the trend and enabling a cost-benefit analysis.",
+    "n_pos": 2,
+    "n_mu": 4,
+    "n_phi": 8,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 10.286799399880692,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p2_m4_f8\\metrics.json",
+    "fluxes": "experiments\\proposal_p2_m4_f8\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p2_m4_f8\\lattice_stage8_ultra.png"
+  }
+}

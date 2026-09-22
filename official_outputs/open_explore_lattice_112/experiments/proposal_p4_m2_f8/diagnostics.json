@@ -1,0 +1,56 @@
+{
+  "n_state": 64,
+  "n_angle": 4,
+  "cfm_build_s": 2.2404352000448853,
+  "cfm_solve_s": 0.8230006999801844,
+  "cfm_residual": 4.325382272415389e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9977935987259209,
+    "normalized_rel_l1": 0.08126639470621232,
+    "log10_rmse": 0.25127404757071975
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.009446471318231925,
+    "directional_concentration": 0.5380435010702983,
+    "directional_peak_to_mean": 7.97397580265957,
+    "ray_index": 0.005082612500821661
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9980291754669761,
+    "normalized_rel_l1": 0.08576844985293279,
+    "log10_rmse": 0.25016802427597706
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.008965225174825639,
+    "directional_concentration": 0.5564734176659764,
+    "directional_peak_to_mean": 7.5648854072757725,
+    "ray_index": 0.004988909493180273
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9976417315068976,
+    "normalized_rel_l1": 0.0801876699042678,
+    "log10_rmse": 0.10364989973056135
+  },
+  "wall_s": 3.0634359000250697,
+  "experiment_id": "proposal_p4_m2_f8",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p4_m2_f8",
+    "hypothesis": "More position angles reduce ray artifacts at lower cost than angular resolution; expect lower rel_l1 than coarse baseline within budget.",
+    "n_pos": 4,
+    "n_mu": 2,
+    "n_phi": 8,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 9.586308999918401,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p4_m2_f8\\metrics.json",
+    "fluxes": "experiments\\proposal_p4_m2_f8\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p4_m2_f8\\lattice_stage8_ultra.png"
+  }
+}

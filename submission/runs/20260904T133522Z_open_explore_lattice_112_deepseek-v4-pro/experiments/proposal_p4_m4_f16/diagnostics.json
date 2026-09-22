@@ -1,0 +1,56 @@
+{
+  "n_state": 256,
+  "n_angle": 16,
+  "cfm_build_s": 20.84414039300009,
+  "cfm_solve_s": 15.362241162999908,
+  "cfm_residual": 7.687623551716962e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9986936892370193,
+    "normalized_rel_l1": 0.06158261423709035,
+    "log10_rmse": 0.20567105463282223
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.007552518584838833,
+    "directional_concentration": 0.5032448553610885,
+    "directional_peak_to_mean": 7.255065824432175,
+    "ray_index": 0.0038007661228391517
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9990633364376132,
+    "normalized_rel_l1": 0.06206154581862326,
+    "log10_rmse": 0.18812156485014933
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.006530358037376899,
+    "directional_concentration": 0.6297124255224972,
+    "directional_peak_to_mean": 8.545642871607576,
+    "ray_index": 0.004112247599246941
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9984878214117191,
+    "normalized_rel_l1": 0.06629518872399784,
+    "log10_rmse": 0.1023465936230625
+  },
+  "wall_s": 36.206381556,
+  "experiment_id": "proposal_p4_m4_f16",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p4_m4_f16",
+    "hypothesis": "Increasing n_pos and n_mu while keeping n_phi low will reduce ray artifacts more than increasing n_phi alone, due to better spatial and angular sampling.",
+    "n_pos": 4,
+    "n_mu": 4,
+    "n_phi": 16,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 58.82643153100025,
+  "artifacts": {
+    "metrics": "experiments/proposal_p4_m4_f16/metrics.json",
+    "fluxes": "experiments/proposal_p4_m4_f16/lattice_stage8_ultra.npz",
+    "figure": "experiments/proposal_p4_m4_f16/lattice_stage8_ultra.png"
+  }
+}

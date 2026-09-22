@@ -1,0 +1,56 @@
+{
+  "n_state": 32,
+  "n_angle": 8,
+  "cfm_build_s": 0.02837419998832047,
+  "cfm_solve_s": 0.20838030008599162,
+  "cfm_residual": 4.911141024180677e-09,
+  "cfm_vs_dense": {
+    "corr": 0.9973408869365636,
+    "normalized_rel_l1": 0.09210987420648885,
+    "log10_rmse": 0.7236880029010714
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.012608902431532787,
+    "directional_concentration": 0.35082585807355365,
+    "directional_peak_to_mean": 4.256176475052357,
+    "ray_index": 0.004423529014908207
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9973369968400512,
+    "normalized_rel_l1": 0.10469016092923876,
+    "log10_rmse": 0.8350040539394524
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.013346226869467178,
+    "directional_concentration": 0.39348617287672344,
+    "directional_peak_to_mean": 5.498857358349562,
+    "ray_index": 0.005251555733211133
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9990943684954496,
+    "normalized_rel_l1": 0.04947618577495221,
+    "log10_rmse": 0.13334639779427718
+  },
+  "wall_s": 0.2367545000743121,
+  "experiment_id": "coarse",
+  "role": "causal_agent",
+  "action": {
+    "experiment_id": "coarse",
+    "hypothesis": "A single face-position node and eight projected directions create a persistent directional transport mode.",
+    "n_pos": 1,
+    "n_mu": 2,
+    "n_phi": 16,
+    "cfm_samples": 64,
+    "oracle_samples": 64,
+    "internal_samples": 128,
+    "oracle_internal_samples": 128,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 5.949196700006723,
+  "artifacts": {
+    "metrics": "experiments\\coarse\\metrics.json",
+    "fluxes": "experiments\\coarse\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\coarse\\lattice_stage8_ultra.png"
+  }
+}

@@ -1,0 +1,69 @@
+{
+    "run_name": "open_explore_lattice_112",
+    "case": "lattice",
+    "nx": 112,
+    "ny": 112,
+    "boundary_ckpt": "outputs/hpc_v2_models/boundary_900k_100ep/best.pt",
+    "internal_ckpt": "outputs/hpc_v2_models/internal_900k_100ep/best.pt",
+    "device": "auto",
+    "dtype": "float64",
+    "oracle_mc_dtype": "float64",
+    "inference_batch_size": 4096,
+    "rk4_steps": 12,
+    "rtol": 1e-10,
+    "max_iters": 2000,
+    "dense_n_mu": 4,
+    "dense_n_phi": 32,
+    "dense_rtol": 1e-9,
+    "dense_max_iters": 2000,
+    "check_every": 4,
+    "response_cache_dir": "outputs/response_cache_genvr_open",
+    "mc_histories": 0,
+    "policy": "deepseek",
+    "llm_model": "deepseek-v4-flash",
+    "llm_thinking": "disabled",
+    "llm_reasoning_effort": "low",
+    "llm_max_tokens": 2048,
+    "llm_timeout_s": 90,
+    "llm_required": true,
+    "max_causal_trials": 6,
+    "random_baseline_trials": 2,
+    "actions": [
+        {
+            "experiment_id": "baseline_coarse",
+            "hypothesis": "A single face-position node with 16 projected directions establishes the coarse ray-prone baseline.",
+            "n_pos": 1,
+            "n_mu": 2,
+            "n_phi": 16,
+            "cfm_samples": 1000,
+            "oracle_samples": 1000,
+            "internal_samples": 1000,
+            "oracle_internal_samples": 1000,
+            "seed": 260827,
+            "cfm_mode": "direct"
+        }
+    ],
+    "open_search": {
+        "n_pos_options": [
+            1,
+            2,
+            4
+        ],
+        "n_mu_options": [
+            2,
+            4
+        ],
+        "n_phi_options": [
+            8,
+            16,
+            32,
+            64
+        ],
+        "max_total_states": 512,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827
+    }
+}

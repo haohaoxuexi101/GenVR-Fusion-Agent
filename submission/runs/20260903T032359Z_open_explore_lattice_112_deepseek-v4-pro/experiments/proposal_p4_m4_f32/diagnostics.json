@@ -1,0 +1,56 @@
+{
+  "n_state": 512,
+  "n_angle": 32,
+  "cfm_build_s": 17.41845460026525,
+  "cfm_solve_s": 19.266119099920616,
+  "cfm_residual": 9.535655247944321e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9990107302232843,
+    "normalized_rel_l1": 0.050736904793077964,
+    "log10_rmse": 0.17967209731958728
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.0063114638826778265,
+    "directional_concentration": 0.4952189156301558,
+    "directional_peak_to_mean": 6.90224951250513,
+    "ray_index": 0.003125556300018606
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9997779650417659,
+    "normalized_rel_l1": 0.025951970254775934,
+    "log10_rmse": 0.1620116195253506
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.003000319549518109,
+    "directional_concentration": 0.3037381025096109,
+    "directional_peak_to_mean": 3.6572301176586484,
+    "ray_index": 0.0009113113668931211
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9988907557955017,
+    "normalized_rel_l1": 0.050392413110654836,
+    "log10_rmse": 0.07839446514841936
+  },
+  "wall_s": 36.684573700185865,
+  "experiment_id": "proposal_p4_m4_f32",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p4_m4_f32",
+    "hypothesis": "Increasing spatial resolution (n_pos=4) reduces ray artifacts more effectively than coarse spatial discretization, while n_mu=4 and n_phi=32 balance angular resolution and budget. The mechanism dominating is spatial discretization error, not angular sampling.",
+    "n_pos": 4,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 63.6392667000182,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p4_m4_f32\\metrics.json",
+    "fluxes": "experiments\\proposal_p4_m4_f32\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p4_m4_f32\\lattice_stage8_ultra.png"
+  }
+}

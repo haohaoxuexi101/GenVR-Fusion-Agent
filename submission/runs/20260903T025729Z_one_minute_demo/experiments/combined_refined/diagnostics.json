@@ -1,0 +1,56 @@
+{
+  "n_state": 512,
+  "n_angle": 32,
+  "cfm_build_s": 0.036823800299316645,
+  "cfm_solve_s": 0.43111749994568527,
+  "cfm_residual": 8.485769816030959e-09,
+  "cfm_vs_dense": {
+    "corr": 0.9974478362502095,
+    "normalized_rel_l1": 0.07309785313153933,
+    "log10_rmse": 0.3688359772969527
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.012324265741051974,
+    "directional_concentration": 0.3750399983066248,
+    "directional_peak_to_mean": 4.680812336942598,
+    "ray_index": 0.0046220926026545265
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9982863686626309,
+    "normalized_rel_l1": 0.07549486955996194,
+    "log10_rmse": 0.40539206000684225
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.010760328539778308,
+    "directional_concentration": 0.4492934788191632,
+    "directional_peak_to_mean": 5.700603874614377,
+    "ray_index": 0.004834545442874123
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9991395834213754,
+    "normalized_rel_l1": 0.04071946500868971,
+    "log10_rmse": 0.07319986084141468
+  },
+  "wall_s": 0.4679413002450019,
+  "experiment_id": "combined_refined",
+  "role": "causal_agent",
+  "action": {
+    "experiment_id": "combined_refined",
+    "hypothesis": "Joint refinement should reduce projection rays while exposing any learned-operator residual.",
+    "n_pos": 4,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_samples": 64,
+    "oracle_samples": 64,
+    "internal_samples": 128,
+    "oracle_internal_samples": 128,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 6.236293300054967,
+  "artifacts": {
+    "metrics": "experiments\\combined_refined\\metrics.json",
+    "fluxes": "experiments\\combined_refined\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\combined_refined\\lattice_stage8_ultra.png"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 32,
+  "cfm_build_s": 0.03414640299990879,
+  "cfm_solve_s": 0.34009442599995054,
+  "cfm_residual": 8.496255874460968e-09,
+  "cfm_vs_dense": {
+    "corr": 0.9981797689702023,
+    "normalized_rel_l1": 0.06890275393796534,
+    "log10_rmse": 0.645838481930034
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.01019256389102988,
+    "directional_concentration": 0.25239786379374546,
+    "directional_peak_to_mean": 2.7844901400424127,
+    "ray_index": 0.0025725813526772077
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9987636193602136,
+    "normalized_rel_l1": 0.06763983403259469,
+    "log10_rmse": 0.7312551353143113
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.008595788463756688,
+    "directional_concentration": 0.30876832423338385,
+    "directional_peak_to_mean": 3.4249304686603406,
+    "ray_index": 0.0026541071994188054
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9993683735958482,
+    "normalized_rel_l1": 0.03440206171989962,
+    "log10_rmse": 0.11270219088391108
+  },
+  "wall_s": 0.37424082899985933,
+  "experiment_id": "angular_refined",
+  "role": "causal_agent",
+  "action": {
+    "experiment_id": "angular_refined",
+    "hypothesis": "Angular under-resolution is likely the dominant cause of ray artifacts, as coarse angular sampling (n_mu=2, n_phi=16) cannot capture directionally varying flux features. Increasing to 32 projected directions (n_mu=4, n_phi=32) should mitigate this without increasing the computational cost associated with spatial refinement.",
+    "n_pos": 1,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_samples": 64,
+    "oracle_samples": 64,
+    "internal_samples": 128,
+    "oracle_internal_samples": 128,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 6.367659051000032,
+  "artifacts": {
+    "metrics": "experiments/angular_refined/metrics.json",
+    "fluxes": "experiments/angular_refined/lattice_stage8_ultra.npz",
+    "figure": "experiments/angular_refined/lattice_stage8_ultra.png"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "n_state": 256,
+  "n_angle": 32,
+  "cfm_build_s": 1.073795200092718,
+  "cfm_solve_s": 0.1616619999986142,
+  "cfm_residual": 5.346501036872482e-09,
+  "cfm_vs_dense": {
+    "corr": 0.997699582536064,
+    "normalized_rel_l1": 0.0709337929084155,
+    "log10_rmse": 0.4004096608916905
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.011668178735257233,
+    "directional_concentration": 0.34119559435859376,
+    "directional_peak_to_mean": 4.309410697523498,
+    "ray_index": 0.003981131178658397
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9981858367129651,
+    "normalized_rel_l1": 0.0788966461167014,
+    "log10_rmse": 0.44873164422675377
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.010660477509512012,
+    "directional_concentration": 0.4013408388652645,
+    "directional_peak_to_mean": 5.397182273139824,
+    "ray_index": 0.004278484986371837
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9991215301695695,
+    "normalized_rel_l1": 0.044103153872014016,
+    "log10_rmse": 0.08510498129321643
+  },
+  "wall_s": 1.2354572000913322,
+  "experiment_id": "proposal_p2_m4_f32",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p2_m4_f32",
+    "hypothesis": "Increasing angle and space resolution reduces ray artifacts more effectively than just increasing space resolution alone, but a fine phi of 32 may be costly. A balanced moderate increase in space and mu while maintaining high phi might yield the best artifact reduction per cost.",
+    "n_pos": 2,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_samples": 64,
+    "oracle_samples": 64,
+    "internal_samples": 128,
+    "oracle_internal_samples": 128,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 6.952072199899703,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p2_m4_f32\\metrics.json",
+    "fluxes": "experiments\\proposal_p2_m4_f32\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p2_m4_f32\\lattice_stage8_ultra.png"
+  }
+}

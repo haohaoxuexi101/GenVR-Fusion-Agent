@@ -1,0 +1,462 @@
+{
+  "schema_version": "2.0",
+  "created_utc": "2026-09-19T10:52:51.676068+00:00",
+  "case": "hohlraum",
+  "audited_stage8_mesh": [
+    150,
+    150
+  ],
+  "audited_dense_angular_order": [
+    4,
+    32
+  ],
+  "audited_dense_spatial_scheme": "diamond",
+  "dense_fixup": "conservative_zero_flux",
+  "global_mc": {
+    "histories": 160000,
+    "integrated_track_mean": 0.18210297801860412,
+    "integrated_track_95ci": [
+      0.1810946122903799,
+      0.18311134374682833
+    ],
+    "positive_tally_fraction": 0.9891555555555556
+  },
+  "genvr_cfm": {
+    "integrated_track": 0.18628490818572296,
+    "absorption": 0.41400085452954716,
+    "vs_aggregate_mc": {
+      "corr": 0.9992049888543018,
+      "normalized_rel_l1": 0.10228103600416043,
+      "log10_rmse": 0.8411771044320684,
+      "a_nonzero_fraction": 1.0,
+      "b_nonzero_fraction": 0.9891555555555556
+    }
+  },
+  "dense_sn_150": {
+    "integrated_track": 0.17806365593258608,
+    "absorption": 0.40896545815508983,
+    "fixup_fraction": 0.04228194444444444,
+    "double_fixup_fraction": 0.0,
+    "geometry_boundaries_cell_aligned": false,
+    "vs_aggregate_mc": {
+      "corr": 0.9995203168569714,
+      "normalized_rel_l1": 0.0388125116959881,
+      "log10_rmse": 0.8000111954065379,
+      "a_nonzero_fraction": 1.0,
+      "b_nonzero_fraction": 0.9891555555555556
+    }
+  },
+  "legacy_positive_upwind_150": {
+    "integrated_track": 0.25595880339192345,
+    "bias_vs_aggregate_mc": 0.40557176042323717
+  },
+  "dense_aligned_finest": {
+    "nx": 520,
+    "ny": 520,
+    "n_mu": 4,
+    "n_phi": 32,
+    "spatial_scheme": "diamond",
+    "runtime_s": 75.26504150399705,
+    "iterations": 205,
+    "converged": true,
+    "final_residual": 9.794955475278882e-10,
+    "peak": 3.791659296882743,
+    "integrated_track": 0.18856942174324456,
+    "min_positive": 8.011816246687461e-11,
+    "nonzero_fraction": 1.0,
+    "fixup_fraction": 0.0159791050295858,
+    "double_fixup_fraction": 0.0,
+    "geometry_boundaries_cell_aligned": true
+  },
+  "aggregate_mc_absorption": 0.4134608901967721,
+  "dense_spatial_convergence": [
+    {
+      "nx": 65,
+      "ny": 65,
+      "n_mu": 4,
+      "n_phi": 32,
+      "spatial_scheme": "diamond",
+      "runtime_s": 1.355999610001163,
+      "iterations": 195,
+      "converged": true,
+      "final_residual": 9.272180628711991e-10,
+      "peak": 2.731853610486526,
+      "integrated_track": 0.22865127868065194,
+      "min_positive": 2.138299948079086e-11,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.10264792899408284,
+      "double_fixup_fraction": 0.0008062130177514793,
+      "geometry_boundaries_cell_aligned": false
+    },
+    {
+      "nx": 130,
+      "ny": 130,
+      "n_mu": 4,
+      "n_phi": 32,
+      "spatial_scheme": "diamond",
+      "runtime_s": 4.634587108997948,
+      "iterations": 206,
+      "converged": true,
+      "final_residual": 9.834969190336155e-10,
+      "peak": 3.276460944579983,
+      "integrated_track": 0.18582946491211885,
+      "min_positive": 2.984422310004244e-11,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.047829142011834316,
+      "double_fixup_fraction": 0.0,
+      "geometry_boundaries_cell_aligned": true
+    },
+    {
+      "nx": 260,
+      "ny": 260,
+      "n_mu": 4,
+      "n_phi": 32,
+      "spatial_scheme": "diamond",
+      "runtime_s": 18.39777645399954,
+      "iterations": 206,
+      "converged": true,
+      "final_residual": 9.423793358837106e-10,
+      "peak": 3.5949641343895644,
+      "integrated_track": 0.1880522414779221,
+      "min_positive": 6.208682484460741e-11,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.026775610207100592,
+      "double_fixup_fraction": 0.0,
+      "geometry_boundaries_cell_aligned": true
+    },
+    {
+      "nx": 390,
+      "ny": 390,
+      "n_mu": 4,
+      "n_phi": 32,
+      "spatial_scheme": "diamond",
+      "runtime_s": 41.65872930999831,
+      "iterations": 205,
+      "converged": true,
+      "final_residual": 9.956860191969298e-10,
+      "peak": 3.721960271210306,
+      "integrated_track": 0.18843523566065418,
+      "min_positive": 7.550816087655865e-11,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.02058637409598948,
+      "double_fixup_fraction": 0.0,
+      "geometry_boundaries_cell_aligned": true
+    },
+    {
+      "nx": 520,
+      "ny": 520,
+      "n_mu": 4,
+      "n_phi": 32,
+      "spatial_scheme": "diamond",
+      "runtime_s": 75.26504150399705,
+      "iterations": 205,
+      "converged": true,
+      "final_residual": 9.794955475278882e-10,
+      "peak": 3.791659296882743,
+      "integrated_track": 0.18856942174324456,
+      "min_positive": 8.011816246687461e-11,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.0159791050295858,
+      "double_fixup_fraction": 0.0,
+      "geometry_boundaries_cell_aligned": true
+    }
+  ],
+  "dense_angular_convergence": [
+    {
+      "nx": 150,
+      "ny": 150,
+      "n_mu": 2,
+      "n_phi": 16,
+      "spatial_scheme": "diamond",
+      "runtime_s": 1.5787569349995465,
+      "iterations": 206,
+      "converged": true,
+      "final_residual": 9.526459705453158e-10,
+      "peak": 3.272828136479455,
+      "integrated_track": 0.17197697065307063,
+      "min_positive": 4.5385208317169194e-12,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.04630555555555556,
+      "double_fixup_fraction": 0.0,
+      "geometry_boundaries_cell_aligned": false,
+      "vs_cfm": {
+        "corr": 0.9990733680305466,
+        "normalized_rel_l1": 0.08431536199782229,
+        "log10_rmse": 0.21680092993883152,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "vs_mc": {
+        "corr": 0.9994506169078341,
+        "normalized_rel_l1": 0.041136141805427094,
+        "log10_rmse": 0.7850479420015355,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9891555555555556
+      }
+    },
+    {
+      "nx": 150,
+      "ny": 150,
+      "n_mu": 4,
+      "n_phi": 16,
+      "spatial_scheme": "diamond",
+      "runtime_s": 3.1303706689977844,
+      "iterations": 208,
+      "converged": true,
+      "final_residual": 9.798302764859191e-10,
+      "peak": 3.3548507138658525,
+      "integrated_track": 0.17734365172851926,
+      "min_positive": 3.535351461277976e-11,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.04475277777777778,
+      "double_fixup_fraction": 0.0,
+      "geometry_boundaries_cell_aligned": false,
+      "vs_cfm": {
+        "corr": 0.9991558543367441,
+        "normalized_rel_l1": 0.07876622188138158,
+        "log10_rmse": 0.10983193031246122,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "vs_mc": {
+        "corr": 0.9995108941193074,
+        "normalized_rel_l1": 0.03884708757362415,
+        "log10_rmse": 0.802326956743857,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9891555555555556
+      }
+    },
+    {
+      "nx": 150,
+      "ny": 150,
+      "n_mu": 4,
+      "n_phi": 32,
+      "spatial_scheme": "diamond",
+      "runtime_s": 6.1988972350009135,
+      "iterations": 208,
+      "converged": true,
+      "final_residual": 9.819816142067218e-10,
+      "peak": 3.36576674950477,
+      "integrated_track": 0.17806365593258608,
+      "min_positive": 3.160035853439753e-11,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.04228194444444444,
+      "double_fixup_fraction": 0.0,
+      "geometry_boundaries_cell_aligned": false,
+      "vs_cfm": {
+        "corr": 0.9991841294251856,
+        "normalized_rel_l1": 0.07796099145138873,
+        "log10_rmse": 0.10996800949374497,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "vs_mc": {
+        "corr": 0.9995203168569714,
+        "normalized_rel_l1": 0.0388125116959881,
+        "log10_rmse": 0.8000111954065379,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9891555555555556
+      }
+    },
+    {
+      "nx": 150,
+      "ny": 150,
+      "n_mu": 4,
+      "n_phi": 64,
+      "spatial_scheme": "diamond",
+      "runtime_s": 12.296883164999599,
+      "iterations": 208,
+      "converged": true,
+      "final_residual": 9.816596542914316e-10,
+      "peak": 3.3685304418666155,
+      "integrated_track": 0.178257589387607,
+      "min_positive": 3.583067162713165e-11,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.0417875,
+      "double_fixup_fraction": 0.0,
+      "geometry_boundaries_cell_aligned": false,
+      "vs_cfm": {
+        "corr": 0.9991924561093208,
+        "normalized_rel_l1": 0.07771720145719203,
+        "log10_rmse": 0.10949526263082489,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "vs_mc": {
+        "corr": 0.9995233178870525,
+        "normalized_rel_l1": 0.03880940134182947,
+        "log10_rmse": 0.8004168845427452,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9891555555555556
+      }
+    },
+    {
+      "nx": 150,
+      "ny": 150,
+      "n_mu": 6,
+      "n_phi": 48,
+      "spatial_scheme": "diamond",
+      "runtime_s": 13.869761488000222,
+      "iterations": 208,
+      "converged": true,
+      "final_residual": 9.89024785623873e-10,
+      "peak": 3.3773160672310616,
+      "integrated_track": 0.17890159847423567,
+      "min_positive": 4.2154447876941374e-11,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.041639506172839506,
+      "double_fixup_fraction": 3.0864197530864196e-06,
+      "geometry_boundaries_cell_aligned": false,
+      "vs_cfm": {
+        "corr": 0.9992079854203493,
+        "normalized_rel_l1": 0.07678194365289853,
+        "log10_rmse": 0.10436431313209732,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "vs_mc": {
+        "corr": 0.999526550496143,
+        "normalized_rel_l1": 0.03898416653599795,
+        "log10_rmse": 0.8012728329911853,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9891555555555556
+      }
+    },
+    {
+      "nx": 150,
+      "ny": 150,
+      "n_mu": 8,
+      "n_phi": 64,
+      "spatial_scheme": "diamond",
+      "runtime_s": 24.54108082699895,
+      "iterations": 208,
+      "converged": true,
+      "final_residual": 9.912018331479702e-10,
+      "peak": 3.3805081618304573,
+      "integrated_track": 0.17913419957024332,
+      "min_positive": 4.13776366776608e-11,
+      "nonzero_fraction": 1.0,
+      "fixup_fraction": 0.04291909722222222,
+      "double_fixup_fraction": 1.5277777777777777e-05,
+      "geometry_boundaries_cell_aligned": false,
+      "vs_cfm": {
+        "corr": 0.9992144590411716,
+        "normalized_rel_l1": 0.0764536521090995,
+        "log10_rmse": 0.10428810224782856,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "vs_mc": {
+        "corr": 0.9995284839589238,
+        "normalized_rel_l1": 0.039068756022906125,
+        "log10_rmse": 0.8012940850816106,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.9891555555555556
+      }
+    }
+  ],
+  "legacy_positive_upwind_spatial_convergence": [
+    {
+      "nx": 65,
+      "ny": 65,
+      "n_mu": 4,
+      "n_phi": 32,
+      "runtime_s": 0.9392180399991048,
+      "iterations": 192,
+      "converged": true,
+      "final_residual": 9.160377651618101e-11,
+      "peak": 2.6060489926527906,
+      "integrated_track": 0.3948078430137524,
+      "min_positive": 2.053156304072798e-07
+    },
+    {
+      "nx": 130,
+      "ny": 130,
+      "n_mu": 4,
+      "n_phi": 32,
+      "runtime_s": 4.287423134001074,
+      "iterations": 215,
+      "converged": true,
+      "final_residual": 9.573222270257152e-11,
+      "peak": 3.0926780845397177,
+      "integrated_track": 0.2763576336514424,
+      "min_positive": 2.4446757022689524e-08
+    },
+    {
+      "nx": 260,
+      "ny": 260,
+      "n_mu": 4,
+      "n_phi": 32,
+      "runtime_s": 18.27622008400067,
+      "iterations": 222,
+      "converged": true,
+      "final_residual": 9.816372730357788e-11,
+      "peak": 3.440465894984851,
+      "integrated_track": 0.23739680128217203,
+      "min_positive": 2.8361819267775737e-09
+    },
+    {
+      "nx": 390,
+      "ny": 390,
+      "n_mu": 4,
+      "n_phi": 32,
+      "runtime_s": 43.51189849200091,
+      "iterations": 225,
+      "converged": true,
+      "final_residual": 9.755940047110832e-11,
+      "peak": 3.5936317084195113,
+      "integrated_track": 0.2224142617142804,
+      "min_positive": 1.1010202970042158e-09
+    },
+    {
+      "nx": 520,
+      "ny": 520,
+      "n_mu": 4,
+      "n_phi": 32,
+      "runtime_s": 106.14410149799915,
+      "iterations": 227,
+      "converged": true,
+      "final_residual": 9.421895199114293e-11,
+      "peak": 3.681804212729786,
+      "integrated_track": 0.21448540139728597,
+      "min_positive": 6.398654458714549e-10
+    }
+  ],
+  "material_integrated_tracks": {
+    "GenVR/CFM": {
+      "cavity": 0.11565657811803896,
+      "central absorber": 6.219677265047629e-06,
+      "outer wall": 0.001032267840052377,
+      "frame": 0.00276947608698315,
+      "source stripe": 0.06682036646338345
+    },
+    "Dense DD 150²": {
+      "cavity": 0.10777904027296714,
+      "central absorber": 5.121808997920913e-06,
+      "outer wall": 0.0009923855904943044,
+      "frame": 0.002484813094987687,
+      "source stripe": 0.06680229516513904
+    },
+    "Global MC 160k": {
+      "cavity": 0.11143350372638325,
+      "central absorber": 5.419105642746285e-06,
+      "outer wall": 0.0010389925719557712,
+      "frame": 0.002574226697962369,
+      "source stripe": 0.06705083591665979
+    }
+  },
+  "diagnosis": {
+    "classification": "positive_upwind_diffusion_removed_by_diamond_difference",
+    "dense_spatially_converged": false,
+    "aligned_dd_sequence_converged": true,
+    "aligned_390_to_520_change_fraction": 0.0007121071710389781,
+    "angular_refinement_change_fraction": 0.0060121400521089274,
+    "legacy_upwind_150_integrated_track_bias_vs_mc": 0.40557176042323717,
+    "diamond_150_integrated_track_bias_vs_mc": -0.022181526793072948,
+    "diamond_520_integrated_track_bias_vs_mc": 0.03550981864766545,
+    "cfm_integrated_track_bias_vs_mc": 0.022964644579791527,
+    "diamond_150_vs_aligned_520_offset": -0.05571298736315322,
+    "display_note": "finite-grid DD\ntrack bias vs MC  -2.2%",
+    "interpretation": "Replacing positive upwind with diamond difference plus conservative zero-flux fixup removes the dominant artificial transverse diffusion: the 150² integrated-track bias changes from +40.6% to -2.2% versus aggregate MC. The 150² mesh does not align with every material boundary, so it remains a finite-grid diagnostic rather than continuum truth. The aligned 130/260/390/520 sequence is nearly stable at its finest two meshes."
+  }
+}

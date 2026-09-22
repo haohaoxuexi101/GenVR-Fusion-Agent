@@ -1,0 +1,56 @@
+{
+  "n_state": 32,
+  "n_angle": 4,
+  "cfm_build_s": 1.2660890000406653,
+  "cfm_solve_s": 0.5353850000537932,
+  "cfm_residual": 6.140931234403531e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9983176712237768,
+    "normalized_rel_l1": 0.08176755094934525,
+    "log10_rmse": 0.24796182353134744
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.008521694154276144,
+    "directional_concentration": 0.6157180839695598,
+    "directional_peak_to_mean": 8.91551646489462,
+    "ray_index": 0.005246961196845506
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9980488634573766,
+    "normalized_rel_l1": 0.08388325856799947,
+    "log10_rmse": 0.23833696413265892
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.008922018465348016,
+    "directional_concentration": 0.5624173979478436,
+    "directional_peak_to_mean": 8.00465752413973,
+    "ray_index": 0.005017898409723644
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9997960695056853,
+    "normalized_rel_l1": 0.029067959687504374,
+    "log10_rmse": 0.07855706717148343
+  },
+  "wall_s": 1.8014740000944585,
+  "experiment_id": "random_2_p2_m2_f8",
+  "role": "random_reference",
+  "action": {
+    "experiment_id": "random_2_p2_m2_f8",
+    "hypothesis": "Random reference configuration.",
+    "n_pos": 2,
+    "n_mu": 2,
+    "n_phi": 8,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 310828,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 7.843341999920085,
+  "artifacts": {
+    "metrics": "experiments\\random_2_p2_m2_f8\\metrics.json",
+    "fluxes": "experiments\\random_2_p2_m2_f8\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\random_2_p2_m2_f8\\lattice_stage8_ultra.png"
+  }
+}

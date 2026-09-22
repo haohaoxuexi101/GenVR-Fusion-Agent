@@ -1,0 +1,23 @@
+{
+  "case": "hohlraum",
+  "response": "right-boundary leakage",
+  "construction": "flip the material map left-right, inject the original detector as a full-height left-boundary source, solve with the cached GenVR/CFM response operator, then flip the scalar field back",
+  "grid": [
+    150,
+    150
+  ],
+  "phase_space": {
+    "n_pos": 4,
+    "n_mu": 4,
+    "n_phi": 32,
+    "n_state": 512
+  },
+  "cache_file": "outputs/response_cache_hpc/hohlraum_cfm_150x150_p4_m4_f32_s10000_rk12_5f816a4032cd_direct.npz",
+  "solver": "source",
+  "iterations": 1344,
+  "converged": true,
+  "relative_residual": 9.823551337590254e-10,
+  "runtime_s": 126.37210725899968,
+  "log_field_correlation_with_diffusion": 0.9941496941057353,
+  "linear_field_correlation_with_diffusion": 0.9995891717299943
+}

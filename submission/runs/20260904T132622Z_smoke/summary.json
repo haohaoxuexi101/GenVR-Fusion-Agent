@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0",
+  "common_reference": "position_refined:oracle",
+  "scientific_claim": "This predeclared lattice run records a baseline and refinement under a fixed dense reference; the isolated position-versus-angle mechanism was not resolved by the supplied action set.",
+  "claim_scope": "One 2-D heterogeneous lattice family, the declared action set, supplied checkpoints, and listed random seeds only.",
+  "causal_experiments": [
+    {
+      "n_state": 32,
+      "n_angle": 8,
+      "cfm_build_s": 0.5058262830002604,
+      "cfm_solve_s": 0.254064691999929,
+      "cfm_residual": 4.911164582980863e-09,
+      "cfm_vs_dense": {
+        "corr": 0.9973408867816786,
+        "normalized_rel_l1": 0.09210988681098929,
+        "log10_rmse": 0.7236880364205582
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.012608903076831332,
+        "directional_concentration": 0.3508258815290825,
+        "directional_peak_to_mean": 4.25617697455184,
+        "ray_index": 0.004423529537044113
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9973369968400506,
+        "normalized_rel_l1": 0.10469016092923883,
+        "log10_rmse": 0.8350040539394525
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.013346226869467187,
+        "directional_concentration": 0.3934861728767237,
+        "directional_peak_to_mean": 5.4988573583495715,
+        "ray_index": 0.005251555733211141
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.999094369143271,
+        "normalized_rel_l1": 0.049476159085021995,
+        "log10_rmse": 0.13334635735406833
+      },
+      "wall_s": 0.7598909750001894,
+      "experiment_id": "coarse",
+      "role": "causal_agent",
+      "action": {
+        "experiment_id": "coarse",
+        "hypothesis": "A single face-position node and eight projected directions create a persistent directional transport mode.",
+        "n_pos": 1,
+        "n_mu": 2,
+        "n_phi": 16,
+        "cfm_samples": 64,
+        "oracle_samples": 64,
+        "internal_samples": 128,
+        "oracle_internal_samples": 128,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 8.48269858399999,
+      "artifacts": {
+        "metrics": "experiments/coarse/metrics.json",
+        "fluxes": "experiments/coarse/lattice_stage8_ultra.npz",
+        "figure": "experiments/coarse/lattice_stage8_ultra.png"
+      },
+      "common_reference": "position_refined:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9990891742103961,
+        "normalized_rel_l1": 0.05485158341019598,
+        "log10_rmse": 0.3821261734616434
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.007201897702089542,
+        "directional_concentration": 0.442514020874603,
+        "directional_peak_to_mean": 6.892209752211451,
+        "ray_index": 0.0031869407100792073
+      },
+      "oracle_vs_common": {
+        "corr": 0.9995920021350383,
+        "normalized_rel_l1": 0.044402970892230505,
+        "log10_rmse": 0.49271867987157064
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.004738897133034548,
+        "directional_concentration": 0.4459336578683296,
+        "directional_peak_to_mean": 5.828715183807014,
+        "ray_index": 0.0021132337327958365
+      }
+    },
+    {
+      "n_state": 128,
+      "n_angle": 8,
+      "cfm_build_s": 1.1309484790001534,
+      "cfm_solve_s": 0.2970216949997848,
+      "cfm_residual": 4.746754603877308e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9965918328822017,
+        "normalized_rel_l1": 0.09833994961400015,
+        "log10_rmse": 0.42328244127094117
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.014494356796994557,
+        "directional_concentration": 0.43563502470806353,
+        "directional_peak_to_mean": 5.330901725444637,
+        "ray_index": 0.006314249481386212
+      },
+      "oracle_vs_dense": {
+        "corr": 0.99712835736111,
+        "normalized_rel_l1": 0.09703485406859476,
+        "log10_rmse": 0.4555554190287926
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.013632325819398255,
+        "directional_concentration": 0.4983770973403798,
+        "directional_peak_to_mean": 5.8562871986011995,
+        "ray_index": 0.006794038971870017
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.999583650140315,
+        "normalized_rel_l1": 0.03020839160405683,
+        "log10_rmse": 0.0738214851223104
+      },
+      "wall_s": 1.4279701739999382,
+      "experiment_id": "position_refined",
+      "role": "causal_agent",
+      "action": {
+        "experiment_id": "position_refined",
+        "hypothesis": "Increasing only face-position resolution should reduce artifacts caused by midpoint compression.",
+        "n_pos": 4,
+        "n_mu": 2,
+        "n_phi": 16,
+        "cfm_samples": 64,
+        "oracle_samples": 64,
+        "internal_samples": 128,
+        "oracle_internal_samples": 128,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 7.181403343000056,
+      "artifacts": {
+        "metrics": "experiments/position_refined/metrics.json",
+        "fluxes": "experiments/position_refined/lattice_stage8_ultra.npz",
+        "figure": "experiments/position_refined/lattice_stage8_ultra.png"
+      },
+      "common_reference": "position_refined:oracle",
+      "cfm_vs_common": {
+        "corr": 0.999583650140315,
+        "normalized_rel_l1": 0.03020839160405683,
+        "log10_rmse": 0.0738214851223104
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.0047479776256213295,
+        "directional_concentration": 0.3637722110361698,
+        "directional_peak_to_mean": 4.836852568875884,
+        "ray_index": 0.0017271823188225346
+      },
+      "oracle_vs_common": {
+        "corr": 0.9999999999999998,
+        "normalized_rel_l1": 0.0,
+        "log10_rmse": 0.0
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.0,
+        "directional_concentration": 0.0,
+        "directional_peak_to_mean": 0.0,
+        "ray_index": 0.0
+      }
+    }
+  ],
+  "random_reference_experiments": [
+    {
+      "n_state": 128,
+      "n_angle": 8,
+      "cfm_build_s": 0.8965268869999363,
+      "cfm_solve_s": 0.26747359699993467,
+      "cfm_residual": 3.110541896683744e-09,
+      "cfm_vs_dense": {
+        "corr": 0.9963381547247644,
+        "normalized_rel_l1": 0.10726092609156032,
+        "log10_rmse": 0.4470543691009492
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.015411228527318624,
+        "directional_concentration": 0.4589551442000624,
+        "directional_peak_to_mean": 6.085474041214731,
+        "ray_index": 0.007073062611055634
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9955361706475945,
+        "normalized_rel_l1": 0.11042492563930206,
+        "log10_rmse": 0.43389942045444035
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.016717912892327876,
+        "directional_concentration": 0.40487838025084544,
+        "directional_peak_to_mean": 7.44562810938308,
+        "ray_index": 0.006768721493020437
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9989530066589275,
+        "normalized_rel_l1": 0.04660326033663977,
+        "log10_rmse": 0.05126061190951583
+      },
+      "wall_s": 1.164000483999871,
+      "experiment_id": "random_1_position_refined",
+      "role": "random_reference",
+      "action": {
+        "experiment_id": "random_1_position_refined",
+        "hypothesis": "Increasing only face-position resolution should reduce artifacts caused by midpoint compression.",
+        "n_pos": 4,
+        "n_mu": 2,
+        "n_phi": 16,
+        "cfm_samples": 64,
+        "oracle_samples": 64,
+        "internal_samples": 128,
+        "oracle_internal_samples": 128,
+        "seed": 310827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 6.831029096999828,
+      "artifacts": {
+        "metrics": "experiments/random_1_position_refined/metrics.json",
+        "fluxes": "experiments/random_1_position_refined/lattice_stage8_ultra.npz",
+        "figure": "experiments/random_1_position_refined/lattice_stage8_ultra.png"
+      },
+      "common_reference": "position_refined:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9993146801492998,
+        "normalized_rel_l1": 0.03991860631080366,
+        "log10_rmse": 0.07081888707989233
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.006088532613473351,
+        "directional_concentration": 0.5203400278477542,
+        "directional_peak_to_mean": 8.783371618782931,
+        "ray_index": 0.0031681072296466835
+      },
+      "oracle_vs_common": {
+        "corr": 0.9985104528456775,
+        "normalized_rel_l1": 0.05178190110987502,
+        "log10_rmse": 0.08250610877003516
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.008890117138044036,
+        "directional_concentration": 0.4481735306071393,
+        "directional_peak_to_mean": 7.110665133048004,
+        "ray_index": 0.003984315185268233
+      }
+    }
+  ],
+  "ray_index_reduction": {
+    "position_percent": 45.80437868329193,
+    "angular_percent": null,
+    "combined_percent": 45.80437868329193
+  },
+  "ray_index_reduction_vs_fixed_dense": {
+    "combined_cfm_percent": -42.74233795679624,
+    "combined_oracle_percent": -29.37192932951513
+  },
+  "equal_state_budget_comparison": null,
+  "dominant_isolated_mechanism": "not resolved",
+  "random_best_ray_index": 0.0031681072296466835,
+  "limitations": [
+    "The spectral ray index is a diagnostic proxy, not a universal physical observable.",
+    "The local exact-MC response operators use finite samples and remain seed sensitive.",
+    "The dense S_N field is a fixed deterministic comparison, not an exact continuum solution.",
+    "The study does not establish novelty relative to every published ray-effect remedy.",
+    "The causal ablation uses one declared seed; the separate random-reference trials expose seed sensitivity but are not matched repeated trials."
+  ]
+}

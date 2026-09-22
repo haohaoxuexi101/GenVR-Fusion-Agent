@@ -1,0 +1,77 @@
+{
+  "created_utc": "2026-09-22T02:02:19.765073+00:00",
+  "python": "3.11.5 | packaged by conda-forge | (main, Aug 27 2023, 03:34:09) [GCC 12.3.0]",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "agent_policy": "DeepSeekShieldToolAgent",
+  "provider": "DeepSeek",
+  "model": "deepseek-v4-flash",
+  "llm_required": true,
+  "deterministic_policy_fallback": false,
+  "human_intervention": "None after launch.",
+  "discovery_mode": "gmc_only",
+  "diffusion_model_used": false,
+  "gmc_discretization": {
+    "spatial_grid": [
+      112,
+      112
+    ],
+    "n_pos": 2,
+    "n_mu": 4,
+    "n_phi": 16,
+    "n_state": 128
+  },
+  "files": {
+    "configs/gmc_material_discovery_agent.json": {
+      "bytes": 1726,
+      "sha256": "9065808d3fdb820aaa3f36f9561df49e7f449c5614401e5b29d0eb0092626079"
+    },
+    "scripts/25_run_autonomous_shield_agent.py": {
+      "bytes": 21159,
+      "sha256": "42e21946548037b4cbd70e7f446c69c0fd16a6f3fa4abab2c92a64f37b1a1035"
+    },
+    "scripts/run_gmc_material_discovery_agent.sh": {
+      "bytes": 505,
+      "sha256": "68de5c2cf276e9d0e8812824b0289495c2ba38d615f2935990323070c9a4eb1c"
+    },
+    "ray_agent/shield_agent_protocol.py": {
+      "bytes": 19427,
+      "sha256": "5af8314d00a234a6f7b5d20ce22efc7595aefc5c4716e36757fba92f229276cf"
+    },
+    "ray_agent/shield_agent_tools.py": {
+      "bytes": 75638,
+      "sha256": "a06db9cc7efdd2a6149513cb4933fffe7f2d963e648d33a48a0dbcc953824d6f"
+    },
+    "ray_agent/shield_live_reporting.py": {
+      "bytes": 6421,
+      "sha256": "4ba9cd5eef8daaf6860b960d90e5e4faa9315f4d3ea584cc3d2a50e6b0bf705c"
+    },
+    "ray_agent/shield_agent_verifier.py": {
+      "bytes": 22342,
+      "sha256": "89792a6c1e4d24a027348dea2ed6557af0b0679cfe6db7265f5f49976ca85e54"
+    },
+    "ray_agent/shield_autonomous_agent.py": {
+      "bytes": 23079,
+      "sha256": "a31f9c12466276527fc18b687381acc5a1288a54e6eb864b453cebaf2690d1a9"
+    },
+    "ray_agent/shield_agent_reporting.py": {
+      "bytes": 92425,
+      "sha256": "bceed560681e14df8497cdb5164d527eb018ed9ba6f453fa161faa8e9c2e0088"
+    },
+    "ray_agent/shield_design.py": {
+      "bytes": 56468,
+      "sha256": "d6b54751af58411a43c393fa646764171efb2be48b38ade3b8529c7284000d95"
+    },
+    "ray_agent/shield_certification.py": {
+      "bytes": 15651,
+      "sha256": "5367156e895dc74cbbebf4ff0da38e7e7cd6c5ca7349ca800efe3bb81bf53589"
+    },
+    "outputs/response_cache_genvr_open/lattice_cfm_112x112_p2_m4_f16_s1000_rk12_5f816a4032cd_direct.npz": {
+      "bytes": 529580,
+      "sha256": "aecb16582be134a727fe08c674afea5522f70275fe647f4742a0a774b675e5eb"
+    },
+    "outputs/response_cache_genvr_open/lattice_cfm_internal_112x112_p2_m4_f16_s1000_rk12_2e0c41f7562b.npz": {
+      "bytes": 2598,
+      "sha256": "fe264f5274788e422e29c7c6f44c0ace0b10fcfb5a8aa8e1eb49c6baba2d51a3"
+    }
+  }
+}

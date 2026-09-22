@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "description": "Live candidate geometry and GMC scalar-flux snapshots",
+  "frames": [
+    {
+      "evaluation_index": 1,
+      "screening_round": 1,
+      "signature": "fd13c81db677",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "risk": 0.41494230410152655,
+      "accepted": true,
+      "runtime_s": 45.6778773179999,
+      "geometry_and_gmc_field": "gmc_screening/candidate_001_g1_fd13c81db677.png",
+      "gmc_field": "gmc_screening/candidate_001_g1_fd13c81db677.npz",
+      "latest": "gmc_screening/latest.png"
+    },
+    {
+      "evaluation_index": 2,
+      "screening_round": 1,
+      "signature": "32584f4d9bef",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "risk": 0.5038296713315062,
+      "accepted": true,
+      "runtime_s": 45.323657869999806,
+      "geometry_and_gmc_field": "gmc_screening/candidate_002_g1_32584f4d9bef.png",
+      "gmc_field": "gmc_screening/candidate_002_g1_32584f4d9bef.npz",
+      "latest": "gmc_screening/latest.png"
+    },
+    {
+      "evaluation_index": 3,
+      "screening_round": 1,
+      "signature": "20d0b63a8068",
+      "generation_round": 1,
+      "gmc_guided_generation": false,
+      "risk": 0.09841933452943358,
+      "accepted": true,
+      "runtime_s": 41.679299317000186,
+      "geometry_and_gmc_field": "gmc_screening/candidate_003_g1_20d0b63a8068.png",
+      "gmc_field": "gmc_screening/candidate_003_g1_20d0b63a8068.npz",
+      "latest": "gmc_screening/latest.png"
+    }
+  ],
+  "latest": {
+    "evaluation_index": 3,
+    "screening_round": 1,
+    "signature": "20d0b63a8068",
+    "generation_round": 1,
+    "gmc_guided_generation": false,
+    "risk": 0.09841933452943358,
+    "accepted": true,
+    "runtime_s": 41.679299317000186,
+    "geometry_and_gmc_field": "gmc_screening/candidate_003_g1_20d0b63a8068.png",
+    "gmc_field": "gmc_screening/candidate_003_g1_20d0b63a8068.npz",
+    "latest": "gmc_screening/latest.png"
+  }
+}

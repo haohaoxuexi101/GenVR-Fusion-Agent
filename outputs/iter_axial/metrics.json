@@ -1,0 +1,307 @@
+{
+  "config": {
+    "case": "iter_a",
+    "nx": 150,
+    "ny": 150,
+    "n_pos": 4,
+    "n_mu": 4,
+    "n_phi": 32,
+    "cfm_mode": "direct",
+    "boundary_ckpt": "outputs/hpc_v2_models/boundary_900k_100ep/best.pt",
+    "internal_ckpt": "outputs/hpc_v2_models/internal_900k_100ep/best.pt",
+    "cfm_samples": 20000,
+    "oracle_samples": 20000,
+    "internal_samples": 20000,
+    "oracle_internal_samples": 20000,
+    "oracle_backend": "cuda",
+    "oracle_mc_dtype": "float64",
+    "mc_histories": 20000,
+    "device": "cuda",
+    "dtype": "float64",
+    "inference_batch_size": 200000,
+    "rk4_steps": 12,
+    "rtol": 1e-10,
+    "max_iters": 2000,
+    "solver": "auto",
+    "dense_rtol": 1e-09,
+    "dense_max_iters": 2000,
+    "skip_dense": false,
+    "check_every": 4,
+    "seed": 260827,
+    "response_cache_dir": "outputs/response_cache_hpc",
+    "rebuild_response": true,
+    "torch_compile": false,
+    "matmul_precision": "highest",
+    "outdir": "outputs/iter_axial",
+    "dense_spatial_scheme": "diamond"
+  },
+  "n_angle": 32,
+  "n_state": 512,
+  "cases": {
+    "iter_a": {
+      "n_state": 512,
+      "n_angle": 32,
+      "cfm_mode": "direct",
+      "solver": "bicgstab",
+      "boundary_path_mode": "excess_chord",
+      "internal_path_mode": "excess_chord",
+      "cfm_build_s": 152.306380094029,
+      "cfm_boundary_build_s": 152.306380094029,
+      "cfm_internal_build_s": 0.0,
+      "cfm_solve_s": 8.434707490727305,
+      "cfm_iterations": 300,
+      "cfm_residual": 9.65567787060113e-11,
+      "cfm_nonzero_fraction": 1.0,
+      "cfm_min_positive_flux": 8.370677237984657e-17,
+      "cfm_vs_dense": {
+        "corr": 0.9997718984298979,
+        "normalized_rel_l1": 0.03759838005476305,
+        "log10_rmse": 0.12236321804170051,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "oracle_build_s": 47.83896680083126,
+      "oracle_boundary_build_s": 47.83896680083126,
+      "oracle_internal_build_s": 0.0,
+      "oracle_solve_s": 7.720716902986169,
+      "oracle_iterations": 276,
+      "oracle_solver": "bicgstab",
+      "oracle_residual": 7.800442341422862e-11,
+      "cfm_vs_oracle": {
+        "corr": 0.9987808658219647,
+        "normalized_rel_l1": 0.16296045232248899,
+        "log10_rmse": 0.12905168636141814,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9992251262327241,
+        "normalized_rel_l1": 0.10885417016468119,
+        "log10_rmse": 0.8018911599035305,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "local_operator_metrics": {
+        "ss=5,sa=0": {
+          "prob_l1_mean_per_input": 0.3244761722785,
+          "prob_l1_p95_per_input": 0.8205371092712117,
+          "prob_l1_max_per_input": 1.7586824403804853,
+          "prob_max_abs_element": 0.8503815607408284,
+          "attenuated_l1_mean_per_input": 0.32447617227855197,
+          "track_rel_l1": 0.024151855189378943,
+          "a_probability_conservation_max": 1.9984014443252818e-15,
+          "b_probability_conservation_max": 1.7763568394002505e-15,
+          "a_invalid_fraction": 0.0,
+          "a_chord_repair_fraction": 0.0,
+          "a_mean_survival": 0.9999999999999996,
+          "b_mean_survival": 1.0000000000000608
+        },
+        "ss=5,sa=95": {
+          "prob_l1_mean_per_input": 0.3244287222025162,
+          "prob_l1_p95_per_input": 0.8192184201717583,
+          "prob_l1_max_per_input": 1.7588717225175412,
+          "prob_max_abs_element": 0.8496880465567754,
+          "attenuated_l1_mean_per_input": 0.13888395543309115,
+          "track_rel_l1": 0.012036382038063615,
+          "a_probability_conservation_max": 1.7763568394002505e-15,
+          "b_probability_conservation_max": 1.9984014443252818e-15,
+          "a_invalid_fraction": 0.0,
+          "a_chord_repair_fraction": 0.0,
+          "a_mean_survival": 0.46460630312794937,
+          "b_mean_survival": 0.46794321548650314
+        },
+        "ss=50,sa=50": {
+          "prob_l1_mean_per_input": 0.3938893598736492,
+          "prob_l1_p95_per_input": 0.8232749991879746,
+          "prob_l1_max_per_input": 1.5275861016356624,
+          "prob_max_abs_element": 0.7200966007555147,
+          "attenuated_l1_mean_per_input": 0.24958562331400244,
+          "track_rel_l1": 0.02142016928943718,
+          "a_probability_conservation_max": 2.1094237467877974e-15,
+          "b_probability_conservation_max": 1.7763568394002505e-15,
+          "a_invalid_fraction": 0.0,
+          "a_chord_repair_fraction": 0.0,
+          "a_mean_survival": 0.6615046786542287,
+          "b_mean_survival": 0.661526922730221
+        },
+        "ss=90,sa=10": {
+          "prob_l1_mean_per_input": 0.3989853335610674,
+          "prob_l1_p95_per_input": 0.711369355938664,
+          "prob_l1_max_per_input": 1.287598498322126,
+          "prob_max_abs_element": 0.5718305001829957,
+          "attenuated_l1_mean_per_input": 0.36339021556460654,
+          "track_rel_l1": 0.026817856319361406,
+          "a_probability_conservation_max": 1.6653345369377348e-15,
+          "b_probability_conservation_max": 2.220446049250313e-15,
+          "a_invalid_fraction": 0.0,
+          "a_chord_repair_fraction": 0.0,
+          "a_mean_survival": 0.9164425789295672,
+          "b_mean_survival": 0.916388383036963
+        },
+        "ss=95,sa=5": {
+          "prob_l1_mean_per_input": 0.39895892073200123,
+          "prob_l1_p95_per_input": 0.7145893588798308,
+          "prob_l1_max_per_input": 1.2536703965602516,
+          "prob_max_abs_element": 0.5496973643092726,
+          "attenuated_l1_mean_per_input": 0.38064224722918405,
+          "track_rel_l1": 0.02728079038315584,
+          "a_probability_conservation_max": 1.887379141862766e-15,
+          "b_probability_conservation_max": 1.887379141862766e-15,
+          "a_invalid_fraction": 0.0,
+          "a_chord_repair_fraction": 0.0,
+          "a_mean_survival": 0.9569110104555203,
+          "b_mean_survival": 0.9569272144727523
+        }
+      },
+      "mc_histories": 20000,
+      "mc_runtime_s": 13.62019412778318,
+      "cfm_vs_mc": {
+        "corr": 0.9975077581563426,
+        "normalized_rel_l1": 0.15320128428740024,
+        "log10_rmse": 5.549026763595826,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.6425777777777778
+      },
+      "dense_vs_mc": {
+        "corr": 0.997750362998127,
+        "normalized_rel_l1": 0.1185658261484193,
+        "log10_rmse": 5.53115515330859,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.6425777777777778
+      },
+      "oracle_vs_mc": {
+        "corr": 0.9970934601368542,
+        "normalized_rel_l1": 0.06630941454218134,
+        "log10_rmse": 5.476991714597731,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.6425777777777778
+      },
+      "genvr_cfm_vs_dense_sn": {
+        "corr": 0.9997718984298979,
+        "normalized_rel_l1": 0.03759838005476305,
+        "log10_rmse": 0.12236321804170051,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 1.0
+      },
+      "dense_runtime_s": 4.305990703000134,
+      "dense_iterations": 142,
+      "dense_converged": true,
+      "dense_residual": 9.868541464238034e-10,
+      "dense_angular_order": [
+        4,
+        32
+      ],
+      "dense_spatial_scheme": "diamond",
+      "dense_fixup_fraction": 0.07521527777777778,
+      "dense_double_fixup_fraction": 0.0,
+      "dense_nonzero_fraction": 1.0,
+      "dense_min_positive_flux": 6.885717201143384e-16,
+      "dense_sn_vs_global_history_mc": {
+        "corr": 0.997750362998127,
+        "normalized_rel_l1": 0.1185658261484193,
+        "log10_rmse": 5.53115515330859,
+        "a_nonzero_fraction": 1.0,
+        "b_nonzero_fraction": 0.6425777777777778
+      }
+    }
+  },
+  "method_taxonomy": {
+    "schema_version": "1.0",
+    "legacy_flux_key_aliases": {
+      "cfm": "genvr_cfm_response",
+      "oracle": "projected_local_mc_response",
+      "dense": "dense_sn_reference",
+      "mc": "global_history_mc"
+    },
+    "methods": {
+      "genvr_cfm_response": {
+        "display_name": "GenVR/CFM projected response",
+        "role": "learned candidate",
+        "local_kernel": "conditional-flow-matching surrogate samples",
+        "global_solver": "deterministic projected response-operator solve",
+        "global_particle_histories": false,
+        "finite_interface_projection": true,
+        "finite_sampling": true,
+        "continuum_truth": false,
+        "allowed_claim": "Learned approximation to the projected local-response transport model."
+      },
+      "projected_local_mc_response": {
+        "display_name": "Projected local-MC response",
+        "role": "same-discretization kernel reference",
+        "local_kernel": "finite random-flight Monte Carlo samples in each local state",
+        "global_solver": "deterministic projected response-operator solve",
+        "global_particle_histories": false,
+        "finite_interface_projection": true,
+        "finite_sampling": true,
+        "continuum_truth": false,
+        "allowed_claim": "Separates learned-kernel error from the shared finite interface discretization."
+      },
+      "dense_sn_reference": {
+        "display_name": "Dense finite-angle diamond-difference S_N sweep",
+        "role": "deterministic finite-grid diagnostic",
+        "local_kernel": "diamond-difference discrete ordinates with conservative zero-flux fixup",
+        "global_solver": "source iteration over a fixed spatial and angular mesh",
+        "global_particle_histories": false,
+        "finite_interface_projection": false,
+        "finite_sampling": false,
+        "continuum_truth": false,
+        "allowed_claim": "Deterministic finite-discretization comparison that requires spatial and angular convergence checks; not an exact continuum solution."
+      },
+      "global_history_mc": {
+        "display_name": "Global history MC (implicit capture)",
+        "role": "independent stochastic transport reference",
+        "local_kernel": "direct collision and boundary tracking",
+        "global_solver": "source-to-termination particle histories",
+        "global_particle_histories": true,
+        "finite_interface_projection": false,
+        "finite_sampling": true,
+        "continuum_truth": false,
+        "allowed_claim": "Statistical reference with sampling uncertainty; not an exact finite-history truth."
+      },
+      "global_cell_response_mc": {
+        "display_name": "Global cell-response MC",
+        "role": "non-neural GMC composition check",
+        "local_kernel": "direct continuous random-flight cell response",
+        "global_solver": "source-to-termination particle histories",
+        "global_particle_histories": true,
+        "finite_interface_projection": false,
+        "finite_sampling": true,
+        "continuum_truth": false,
+        "allowed_claim": "Tests cell-response composition without neural-model error; remains Monte Carlo."
+      },
+      "gmc_particle_transport": {
+        "display_name": "Particle GMC with learned cell responses",
+        "role": "accelerated stochastic candidate",
+        "local_kernel": "learned cell-exit samples with optional direct-MC fallback",
+        "global_solver": "source-to-termination particle histories",
+        "global_particle_histories": true,
+        "finite_interface_projection": false,
+        "finite_sampling": true,
+        "continuum_truth": false,
+        "allowed_claim": "Accelerated particle transport whose bias depends on the learned kernel and guards."
+      },
+      "diffusion_proxy": {
+        "display_name": "Diffusion proxy",
+        "role": "low-fidelity screening or adjoint importance",
+        "local_kernel": "diffusion approximation",
+        "global_solver": "deterministic diffusion solve",
+        "global_particle_histories": false,
+        "finite_interface_projection": false,
+        "finite_sampling": false,
+        "continuum_truth": false,
+        "allowed_claim": "Cheap ranking/importance proxy; not a transport certification reference."
+      },
+      "importance_vr_mc": {
+        "display_name": "Importance/weight-window MC",
+        "role": "variance-reduced stochastic estimator",
+        "local_kernel": "direct transport with weight-preserving splitting and roulette",
+        "global_solver": "source-to-termination weighted particle histories",
+        "global_particle_histories": true,
+        "finite_interface_projection": false,
+        "finite_sampling": true,
+        "continuum_truth": false,
+        "allowed_claim": "Variance reduction is valid only when weight conservation and unbiasedness checks pass."
+      }
+    }
+  }
+}

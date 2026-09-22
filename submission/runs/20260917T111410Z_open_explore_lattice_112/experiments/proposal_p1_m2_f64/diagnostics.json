@@ -1,0 +1,56 @@
+{
+  "n_state": 128,
+  "n_angle": 32,
+  "cfm_build_s": 0.05590268999912951,
+  "cfm_solve_s": 5.640231977999065,
+  "cfm_residual": 2.846701694778901e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9971378863852229,
+    "normalized_rel_l1": 0.09916458437146461,
+    "log10_rmse": 0.34113177559651275
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.01076190855078014,
+    "directional_concentration": 0.4083202797758848,
+    "directional_peak_to_mean": 4.155382217672855,
+    "ray_index": 0.004394305510377034
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9986846636471188,
+    "normalized_rel_l1": 0.07696464410885442,
+    "log10_rmse": 0.3520022786144129
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.007818884538320416,
+    "directional_concentration": 0.3759101955946835,
+    "directional_peak_to_mean": 6.774534475118913,
+    "ray_index": 0.0029391984161322745
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9978687361377393,
+    "normalized_rel_l1": 0.07548778605359695,
+    "log10_rmse": 0.12222933429863582
+  },
+  "wall_s": 5.696134667998194,
+  "experiment_id": "proposal_p1_m2_f64",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p1_m2_f64",
+    "hypothesis": "Holding n_pos=1 fixed, refining only n_phi reduces ray artifacts more efficiently than refining n_mu, since angular ray structure is dominated by the azimuthal direction.",
+    "n_pos": 1,
+    "n_mu": 2,
+    "n_phi": 64,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 20.980856426000173,
+  "artifacts": {
+    "metrics": "experiments/proposal_p1_m2_f64/metrics.json",
+    "fluxes": "experiments/proposal_p1_m2_f64/lattice_stage8_ultra.npz",
+    "figure": "experiments/proposal_p1_m2_f64/lattice_stage8_ultra.png"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "n_state": 64,
+  "n_angle": 16,
+  "cfm_build_s": 2.248997400281951,
+  "cfm_solve_s": 0.9724065000191331,
+  "cfm_residual": 3.2139135405730245e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9976870626626413,
+    "normalized_rel_l1": 0.09329370998663558,
+    "log10_rmse": 0.33188010044997235
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.010167796867705081,
+    "directional_concentration": 0.40007723020783015,
+    "directional_peak_to_mean": 4.896866761150964,
+    "ray_index": 0.0040679040081473
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9972622845650205,
+    "normalized_rel_l1": 0.11291046020401237,
+    "log10_rmse": 0.3563558823518898
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.012098823694684617,
+    "directional_concentration": 0.4331676934396051,
+    "directional_peak_to_mean": 7.412374323536771,
+    "ray_index": 0.005240819553158977
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9961502772066262,
+    "normalized_rel_l1": 0.09872709055378195,
+    "log10_rmse": 0.15184503810282332
+  },
+  "wall_s": 3.221403900301084,
+  "experiment_id": "proposal_p1_m2_f32",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p1_m2_f32",
+    "hypothesis": "Ray artifacts decrease with increased azimuthal resolution (n_phi) while keeping polar and positional discretizations coarse, as refining n_phi most directly addresses the angular cause of ray effects with modest computational cost.",
+    "n_pos": 1,
+    "n_mu": 2,
+    "n_phi": 32,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 9.898848399985582,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p1_m2_f32\\metrics.json",
+    "fluxes": "experiments\\proposal_p1_m2_f32\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p1_m2_f32\\lattice_stage8_ultra.png"
+  }
+}

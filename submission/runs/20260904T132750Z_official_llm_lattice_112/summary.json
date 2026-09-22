@@ -1,0 +1,588 @@
+{
+  "schema_version": "1.0",
+  "common_reference": "combined_refined:oracle",
+  "scientific_claim": "In this single-seed, predeclared lattice ablation, angular allocation reduced the CFM-versus-dense spectral ray index by 43.5% relative to position allocation at the same 128-state budget. Joint refinement reduced the local exact-MC-versus-dense ray index by 57.3% relative to the coarse case, while the refined CFM retained 5.0% normalized L1 error versus its local exact-MC response; discretization refinement therefore mitigates but does not by itself eliminate the learned-operator residual.",
+  "claim_scope": "One 2-D heterogeneous lattice family, the declared action set, supplied checkpoints, and listed random seeds only.",
+  "causal_experiments": [
+    {
+      "n_state": 32,
+      "n_angle": 8,
+      "cfm_build_s": 0.03419379999991179,
+      "cfm_solve_s": 1.5904746989999694,
+      "cfm_residual": 8.051288766663005e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9977999545196504,
+        "normalized_rel_l1": 0.07966575951835543,
+        "log10_rmse": 0.3569074907029936
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.009512483971398306,
+        "directional_concentration": 0.40396683719182164,
+        "directional_peak_to_mean": 4.4003495624786915,
+        "ray_index": 0.0038427280637636724
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9990564405472941,
+        "normalized_rel_l1": 0.06650232322580842,
+        "log10_rmse": 0.3749564755857656
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.006503491198683092,
+        "directional_concentration": 0.3284293411638859,
+        "directional_peak_to_mean": 3.7440562544654505,
+        "ray_index": 0.0021359373296486184
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9973988266516564,
+        "normalized_rel_l1": 0.0848893642915951,
+        "log10_rmse": 0.1373460785055842
+      },
+      "wall_s": 1.6246684989998812,
+      "experiment_id": "coarse",
+      "role": "causal_agent",
+      "action": {
+        "experiment_id": "coarse",
+        "hypothesis": "The observed diagonal rays arise from repeated composition of one face-position node and eight projected directions.",
+        "n_pos": 1,
+        "n_mu": 2,
+        "n_phi": 16,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 9.033908867000036,
+      "artifacts": {
+        "metrics": "experiments/coarse/metrics.json",
+        "fluxes": "experiments/coarse/lattice_stage8_ultra.npz",
+        "figure": "experiments/coarse/lattice_stage8_ultra.png"
+      },
+      "common_reference": "combined_refined:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9977105825877002,
+        "normalized_rel_l1": 0.07677232447827821,
+        "log10_rmse": 0.258894915356186
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.009784406779922135,
+        "directional_concentration": 0.41250082861538634,
+        "directional_peak_to_mean": 4.146033330990619,
+        "ray_index": 0.0040360759042278845
+      },
+      "oracle_vs_common": {
+        "corr": 0.9993567296505055,
+        "normalized_rel_l1": 0.055340061377897605,
+        "log10_rmse": 0.2843582285757506
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.0056587568909973055,
+        "directional_concentration": 0.3230415414427998,
+        "directional_peak_to_mean": 4.044331323961116,
+        "ray_index": 0.001828013548717835
+      }
+    },
+    {
+      "n_state": 512,
+      "n_angle": 32,
+      "cfm_build_s": 0.07912570300027255,
+      "cfm_solve_s": 49.964387319000025,
+      "cfm_residual": 6.449539782523072e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9990107302232619,
+        "normalized_rel_l1": 0.05073690483274155,
+        "log10_rmse": 0.17967209907029885
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.0063114638828374115,
+        "directional_concentration": 0.4952189156285876,
+        "directional_peak_to_mean": 6.9022495123563425,
+        "ray_index": 0.003125556300087738
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9997779650417707,
+        "normalized_rel_l1": 0.02595197023686385,
+        "log10_rmse": 0.16201161883537485
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.0030003195494812903,
+        "directional_concentration": 0.30373810251108946,
+        "directional_peak_to_mean": 3.6572301177173316,
+        "ray_index": 0.0009113113668863739
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9988907557954717,
+        "normalized_rel_l1": 0.050392413152039406,
+        "log10_rmse": 0.07839446807345765
+      },
+      "wall_s": 50.0435130220003,
+      "experiment_id": "combined_refined",
+      "role": "causal_agent",
+      "action": {
+        "experiment_id": "combined_refined",
+        "hypothesis": "Joint position and angular refinement should provide the least ray-prone finite-state reference in the declared budget.",
+        "n_pos": 4,
+        "n_mu": 4,
+        "n_phi": 32,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 108.3553574670002,
+      "artifacts": {
+        "metrics": "experiments/combined_refined/metrics.json",
+        "fluxes": "experiments/combined_refined/lattice_stage8_ultra.npz",
+        "figure": "experiments/combined_refined/lattice_stage8_ultra.png"
+      },
+      "common_reference": "combined_refined:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9988907557954717,
+        "normalized_rel_l1": 0.050392413152039406,
+        "log10_rmse": 0.07839446807345765
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.006734491019737241,
+        "directional_concentration": 0.4583967192449918,
+        "directional_peak_to_mean": 4.870755395616991,
+        "ray_index": 0.003087068589232411
+      },
+      "oracle_vs_common": {
+        "corr": 1.0,
+        "normalized_rel_l1": 0.0,
+        "log10_rmse": 0.0
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.0,
+        "directional_concentration": 0.0,
+        "directional_peak_to_mean": 0.0,
+        "ray_index": 0.0
+      }
+    },
+    {
+      "n_state": 128,
+      "n_angle": 8,
+      "cfm_build_s": 0.03788400000007641,
+      "cfm_solve_s": 5.148887713000022,
+      "cfm_residual": 6.516109282874875e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9979008095246451,
+        "normalized_rel_l1": 0.0773153358197885,
+        "log10_rmse": 0.2453868689784834
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.009368319952688544,
+        "directional_concentration": 0.47294777473157507,
+        "directional_peak_to_mean": 6.785933600112378,
+        "ray_index": 0.004430726074597461
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9984444631426858,
+        "normalized_rel_l1": 0.07656715332613384,
+        "log10_rmse": 0.23491749360775768
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.008226615698889217,
+        "directional_concentration": 0.5562571624479508,
+        "directional_peak_to_mean": 7.67215086667784,
+        "ray_index": 0.004576113905213881
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9973698813226051,
+        "normalized_rel_l1": 0.08763337139521606,
+        "log10_rmse": 0.11881034331440614
+      },
+      "wall_s": 5.186771713000098,
+      "experiment_id": "position_refined",
+      "role": "causal_agent",
+      "action": {
+        "experiment_id": "position_refined",
+        "hypothesis": "If face-position compression is causal, n_pos=4 should suppress rays while angular nodes remain fixed.",
+        "n_pos": 4,
+        "n_mu": 2,
+        "n_phi": 16,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 16.359439808999923,
+      "artifacts": {
+        "metrics": "experiments/position_refined/metrics.json",
+        "fluxes": "experiments/position_refined/lattice_stage8_ultra.npz",
+        "figure": "experiments/position_refined/lattice_stage8_ultra.png"
+      },
+      "common_reference": "combined_refined:oracle",
+      "cfm_vs_common": {
+        "corr": 0.997827874023042,
+        "normalized_rel_l1": 0.07697748949311728,
+        "log10_rmse": 0.14195265249220113
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.009619929066390543,
+        "directional_concentration": 0.4721784577192545,
+        "directional_peak_to_mean": 6.012232012082557,
+        "ray_index": 0.004542323269936915
+      },
+      "oracle_vs_common": {
+        "corr": 0.9988132200900852,
+        "normalized_rel_l1": 0.07034631090419942,
+        "log10_rmse": 0.1498118677498289
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.007414652552793135,
+        "directional_concentration": 0.6006980783843391,
+        "directional_peak_to_mean": 9.515118662911503,
+        "ray_index": 0.004453967540350371
+      }
+    },
+    {
+      "n_state": 128,
+      "n_angle": 32,
+      "cfm_build_s": 0.040152899999839065,
+      "cfm_solve_s": 5.313439565000181,
+      "cfm_residual": 5.420127318405185e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9989425575970851,
+        "normalized_rel_l1": 0.06480527877467003,
+        "log10_rmse": 0.2936938131307085
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.006495891643527193,
+        "directional_concentration": 0.38504211463028537,
+        "directional_peak_to_mean": 4.241960248190442,
+        "ray_index": 0.00250119185483291
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9992979431601269,
+        "normalized_rel_l1": 0.056324659886530404,
+        "log10_rmse": 0.33994443011983333
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.005335472499907436,
+        "directional_concentration": 0.4064747255121677,
+        "directional_peak_to_mean": 7.169703713430109,
+        "ray_index": 0.002168734719877594
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9983769258094568,
+        "normalized_rel_l1": 0.0665208247808964,
+        "log10_rmse": 0.10175947527857461
+      },
+      "wall_s": 5.35359246500002,
+      "experiment_id": "angular_refined",
+      "role": "causal_agent",
+      "action": {
+        "experiment_id": "angular_refined",
+        "hypothesis": "If angular under-resolution is causal, 32 projected directions with n_pos=1 should suppress rays at the same 128-state budget as position refinement.",
+        "n_pos": 1,
+        "n_mu": 4,
+        "n_phi": 32,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 17.175074500000164,
+      "artifacts": {
+        "metrics": "experiments/angular_refined/metrics.json",
+        "fluxes": "experiments/angular_refined/lattice_stage8_ultra.npz",
+        "figure": "experiments/angular_refined/lattice_stage8_ultra.png"
+      },
+      "common_reference": "combined_refined:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9988066844848005,
+        "normalized_rel_l1": 0.06197462396663746,
+        "log10_rmse": 0.2083812755810602
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.006910294791910571,
+        "directional_concentration": 0.4208561770267271,
+        "directional_peak_to_mean": 4.833778011506941,
+        "ray_index": 0.0029082402482511855
+      },
+      "oracle_vs_common": {
+        "corr": 0.999516267649496,
+        "normalized_rel_l1": 0.04540829323569077,
+        "log10_rmse": 0.2649797719039701
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.004416362328725142,
+        "directional_concentration": 0.6713610854506931,
+        "directional_peak_to_mean": 10.178595422926177,
+        "ray_index": 0.0029649738067564616
+      }
+    }
+  ],
+  "random_reference_experiments": [
+    {
+      "n_state": 128,
+      "n_angle": 32,
+      "cfm_build_s": 11.617209947999754,
+      "cfm_solve_s": 5.859517535000123,
+      "cfm_residual": 2.041871392297893e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9996212041971585,
+        "normalized_rel_l1": 0.04128441214264927,
+        "log10_rmse": 0.25013616271873534
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.003936870785732812,
+        "directional_concentration": 0.42166736812941374,
+        "directional_peak_to_mean": 6.5895661519437,
+        "ray_index": 0.0016600499428855318
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9992895910121546,
+        "normalized_rel_l1": 0.057308672979493866,
+        "log10_rmse": 0.33764565439388045
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.005492959514113579,
+        "directional_concentration": 0.5592196208714137,
+        "directional_peak_to_mean": 9.570683895741182,
+        "ray_index": 0.003071770736944621
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9997593641263189,
+        "normalized_rel_l1": 0.02715818141956044,
+        "log10_rmse": 0.10992013011273968
+      },
+      "wall_s": 17.476727482999877,
+      "experiment_id": "random_1_angular_refined",
+      "role": "random_reference",
+      "action": {
+        "experiment_id": "random_1_angular_refined",
+        "hypothesis": "If angular under-resolution is causal, 32 projected directions with n_pos=1 should suppress rays at the same 128-state budget as position refinement.",
+        "n_pos": 1,
+        "n_mu": 4,
+        "n_phi": 32,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 310827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 30.645332761999953,
+      "artifacts": {
+        "metrics": "experiments/random_1_angular_refined/metrics.json",
+        "fluxes": "experiments/random_1_angular_refined/lattice_stage8_ultra.npz",
+        "figure": "experiments/random_1_angular_refined/lattice_stage8_ultra.png"
+      },
+      "common_reference": "combined_refined:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9997072463414802,
+        "normalized_rel_l1": 0.03276837334234648,
+        "log10_rmse": 0.1723655481412869
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.0034334459498208715,
+        "directional_concentration": 0.610246073139627,
+        "directional_peak_to_mean": 8.516285865240345,
+        "ray_index": 0.0020952469082153435
+      },
+      "oracle_vs_common": {
+        "corr": 0.9993027946934624,
+        "normalized_rel_l1": 0.05180447039059058,
+        "log10_rmse": 0.2631405297236936
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.005376885435420065,
+        "directional_concentration": 0.6454801944519595,
+        "directional_peak_to_mean": 8.953131549028448,
+        "ray_index": 0.0034706730564008524
+      }
+    },
+    {
+      "n_state": 128,
+      "n_angle": 8,
+      "cfm_build_s": 13.257069152000213,
+      "cfm_solve_s": 6.013596699000118,
+      "cfm_residual": 7.613437464883576e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9989382216427208,
+        "normalized_rel_l1": 0.06589590390131382,
+        "log10_rmse": 0.2328240968729529
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.0068093779008501654,
+        "directional_concentration": 0.6074632913005333,
+        "directional_peak_to_mean": 8.666009260062324,
+        "ray_index": 0.004136447111359558
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9986270442963815,
+        "normalized_rel_l1": 0.07273618612113497,
+        "log10_rmse": 0.23644689333968127
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.00769084428045113,
+        "directional_concentration": 0.5886146540645013,
+        "directional_peak_to_mean": 8.437829624721175,
+        "ray_index": 0.0045269436456016904
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9998665980645539,
+        "normalized_rel_l1": 0.020225070114846845,
+        "log10_rmse": 0.05979468746677715
+      },
+      "wall_s": 19.27066585100033,
+      "experiment_id": "random_2_position_refined",
+      "role": "random_reference",
+      "action": {
+        "experiment_id": "random_2_position_refined",
+        "hypothesis": "If face-position compression is causal, n_pos=4 should suppress rays while angular nodes remain fixed.",
+        "n_pos": 4,
+        "n_mu": 2,
+        "n_phi": 16,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 310828,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 31.945897951999996,
+      "artifacts": {
+        "metrics": "experiments/random_2_position_refined/metrics.json",
+        "fluxes": "experiments/random_2_position_refined/lattice_stage8_ultra.npz",
+        "figure": "experiments/random_2_position_refined/lattice_stage8_ultra.png"
+      },
+      "common_reference": "combined_refined:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9990253201259094,
+        "normalized_rel_l1": 0.06271714569967479,
+        "log10_rmse": 0.13180605410607354
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.00666056930120812,
+        "directional_concentration": 0.5666663654138776,
+        "directional_peak_to_mean": 9.769190811368869,
+        "ray_index": 0.003774320597502856
+      },
+      "oracle_vs_common": {
+        "corr": 0.9987135661608489,
+        "normalized_rel_l1": 0.07048411397850439,
+        "log10_rmse": 0.1502209928850962
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.007572676054221514,
+        "directional_concentration": 0.5437028661356497,
+        "directional_peak_to_mean": 9.27834586846156,
+        "ray_index": 0.004117285674997039
+      }
+    },
+    {
+      "n_state": 512,
+      "n_angle": 32,
+      "cfm_build_s": 59.671197716999814,
+      "cfm_solve_s": 56.817487822999965,
+      "cfm_residual": 8.789205702779208e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9995912006183971,
+        "normalized_rel_l1": 0.03686874576941854,
+        "log10_rmse": 0.1671847121394383
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.004196796807647674,
+        "directional_concentration": 0.6636389259893255,
+        "directional_peak_to_mean": 9.423696734462892,
+        "ray_index": 0.002785157726022732
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9995742367953131,
+        "normalized_rel_l1": 0.039701191120982464,
+        "log10_rmse": 0.1571946444630573
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.004356821873106079,
+        "directional_concentration": 0.32603132172669175,
+        "directional_peak_to_mean": 4.321540021625387,
+        "ray_index": 0.001420460393816536
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9994042253498959,
+        "normalized_rel_l1": 0.0474638286572344,
+        "log10_rmse": 0.08194257409026877
+      },
+      "wall_s": 116.48868553999978,
+      "experiment_id": "random_3_combined_refined",
+      "role": "random_reference",
+      "action": {
+        "experiment_id": "random_3_combined_refined",
+        "hypothesis": "Joint position and angular refinement should provide the least ray-prone finite-state reference in the declared budget.",
+        "n_pos": 4,
+        "n_mu": 4,
+        "n_phi": 32,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 310829,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 177.99508256900026,
+      "artifacts": {
+        "metrics": "experiments/random_3_combined_refined/metrics.json",
+        "fluxes": "experiments/random_3_combined_refined/lattice_stage8_ultra.npz",
+        "figure": "experiments/random_3_combined_refined/lattice_stage8_ultra.png"
+      },
+      "common_reference": "combined_refined:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9995668003253589,
+        "normalized_rel_l1": 0.034960517552315516,
+        "log10_rmse": 0.06332617598796263
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.00440700378013385,
+        "directional_concentration": 0.485725313553234,
+        "directional_peak_to_mean": 7.235382587322115,
+        "ray_index": 0.002140593292935802
+      },
+      "oracle_vs_common": {
+        "corr": 0.9995438648607331,
+        "normalized_rel_l1": 0.03432796648391086,
+        "log10_rmse": 0.04103339684811269
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.004413564541135288,
+        "directional_concentration": 0.29441383188690506,
+        "directional_peak_to_mean": 3.261912413881698,
+        "ray_index": 0.00129941444883581
+      }
+    }
+  ],
+  "ray_index_reduction": {
+    "position_percent": -12.543058597553241,
+    "angular_percent": 27.943866337976065,
+    "combined_percent": 23.513118621019146
+  },
+  "ray_index_reduction_vs_fixed_dense": {
+    "combined_cfm_percent": 18.663089132919726,
+    "combined_oracle_percent": 57.334358352344864
+  },
+  "equal_state_budget_comparison": {
+    "position_n_state": 128,
+    "angular_n_state": 128,
+    "position_cfm_ray_vs_dense": 0.004430726074597461,
+    "angular_cfm_ray_vs_dense": 0.00250119185483291,
+    "angular_reduction_vs_position_percent": 43.548939548014204
+  },
+  "dominant_isolated_mechanism": "angular discretization",
+  "random_best_ray_index": 0.0020952469082153435,
+  "limitations": [
+    "The spectral ray index is a diagnostic proxy, not a universal physical observable.",
+    "The local exact-MC response operators use finite samples and remain seed sensitive.",
+    "The dense S_N field is a fixed deterministic comparison, not an exact continuum solution.",
+    "The study does not establish novelty relative to every published ray-effect remedy.",
+    "The causal ablation uses one declared seed; the separate random-reference trials expose seed sensitivity but are not matched repeated trials."
+  ]
+}

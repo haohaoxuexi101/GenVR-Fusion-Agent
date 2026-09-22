@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0",
+  "source_schema_version": "3.0",
+  "run_dir": "/home/ssn/GenVR/submission/runs/20260919T134024Z_ray_artifact_attribution_lattice_112",
+  "source": "summary.json",
+  "selection_rule": "Cheapest Pareto-nondominated candidate passing learning-fidelity, rotation, angular-convergence, repeatability, and global-MC gates.",
+  "artifact_attribution": {
+    "conclusion": "shared_interface_projection_is_rotation_sensitive",
+    "evidence": {
+      "dense_sn_rotation_shape_l1": 0.0067871958191558085,
+      "cfm_interface_rotation_shape_l1": 0.13484929139577825,
+      "projected_mc_interface_rotation_shape_l1": 0.15770257774074653,
+      "cfm_repeatability_shape_l1": 0.04534731110955888,
+      "projected_mc_repeatability_shape_l1": 0.03551686733070092
+    },
+    "controlled_rotation_measurements": 6,
+    "maximum_observed_shape_l1": 0.15770257774074653
+  },
+  "certified_candidate": null,
+  "recommended_experiment_id": null,
+  "overall_recommendation": "For the declared lattice experiment family: CFM and projected local-MC respond similarly to interface-angle rotation, indicating a shared finite interface-projection artifact rather than a learned-kernel artifact. No configuration is certified because the required robustness evidence or acceptance gates are incomplete."
+}

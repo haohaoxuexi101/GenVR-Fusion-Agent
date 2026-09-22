@@ -1,0 +1,682 @@
+{
+  "schema_version": "1.0",
+  "scientific_claim": "Open exploration over 5 LLM-proposed phase-space configurations inside a 512-state budget found n_pos=2, n_mu=4, n_phi=32 with CFM ray_index 0.00319505, a 33.6% reduction versus the coarse baseline; the best random-reference trial reached 0.0029759.",
+  "claim_scope": "One 2-D heterogeneous lattice family, the declared open-search bounds, supplied checkpoints, and listed seeds only.",
+  "open_search_bounds": {
+    "n_pos_options": [
+      1,
+      2,
+      4
+    ],
+    "n_mu_options": [
+      2,
+      4
+    ],
+    "n_phi_options": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "max_total_states": 512,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827
+  },
+  "common_reference": "baseline_coarse:oracle",
+  "causal_experiments": [
+    {
+      "n_state": 32,
+      "n_angle": 8,
+      "cfm_build_s": 1.2359177998732775,
+      "cfm_solve_s": 0.5581255999859422,
+      "cfm_residual": 3.8395314145485716e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9977999545196129,
+        "normalized_rel_l1": 0.0796657595653348,
+        "log10_rmse": 0.3569074950436683
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.00951248397163915,
+        "directional_concentration": 0.4039668371850671,
+        "directional_peak_to_mean": 4.40034956231014,
+        "ray_index": 0.003842728063796713
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9990564405472453,
+        "normalized_rel_l1": 0.06650232321445165,
+        "log10_rmse": 0.3749564744941479
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.006503491198698988,
+        "directional_concentration": 0.3284293411655631,
+        "directional_peak_to_mean": 3.7440562545205336,
+        "ray_index": 0.002135937329664747
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9973988266513655,
+        "normalized_rel_l1": 0.08488936428903997,
+        "log10_rmse": 0.1373460797318254
+      },
+      "wall_s": 1.7940433998592198,
+      "experiment_id": "baseline_coarse",
+      "role": "open_agent",
+      "action": {
+        "experiment_id": "baseline_coarse",
+        "hypothesis": "A single face-position node with 16 projected directions establishes the coarse ray-prone baseline.",
+        "n_pos": 1,
+        "n_mu": 2,
+        "n_phi": 16,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 8.06686759996228,
+      "artifacts": {
+        "metrics": "experiments\\baseline_coarse\\metrics.json",
+        "fluxes": "experiments\\baseline_coarse\\lattice_stage8_ultra.npz",
+        "figure": "experiments\\baseline_coarse\\lattice_stage8_ultra.png"
+      },
+      "common_reference": "baseline_coarse:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9973988266513655,
+        "normalized_rel_l1": 0.08488936428903997,
+        "log10_rmse": 0.1373460797318254
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.010091408455034655,
+        "directional_concentration": 0.4770854659210741,
+        "directional_peak_to_mean": 4.8491025950562365,
+        "ray_index": 0.004814464304570075
+      },
+      "oracle_vs_common": {
+        "corr": 1.0,
+        "normalized_rel_l1": 0.0,
+        "log10_rmse": 0.0
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.0,
+        "directional_concentration": 0.0,
+        "directional_peak_to_mean": 0.0,
+        "ray_index": 0.0
+      }
+    },
+    {
+      "n_state": 64,
+      "n_angle": 16,
+      "cfm_build_s": 2.248997400281951,
+      "cfm_solve_s": 0.9724065000191331,
+      "cfm_residual": 3.2139135405730245e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9976870626626413,
+        "normalized_rel_l1": 0.09329370998663558,
+        "log10_rmse": 0.33188010044997235
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.010167796867705081,
+        "directional_concentration": 0.40007723020783015,
+        "directional_peak_to_mean": 4.896866761150964,
+        "ray_index": 0.0040679040081473
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9972622845650205,
+        "normalized_rel_l1": 0.11291046020401237,
+        "log10_rmse": 0.3563558823518898
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.012098823694684617,
+        "directional_concentration": 0.4331676934396051,
+        "directional_peak_to_mean": 7.412374323536771,
+        "ray_index": 0.005240819553158977
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9961502772066262,
+        "normalized_rel_l1": 0.09872709055378195,
+        "log10_rmse": 0.15184503810282332
+      },
+      "wall_s": 3.221403900301084,
+      "experiment_id": "proposal_p1_m2_f32",
+      "role": "open_agent",
+      "action": {
+        "experiment_id": "proposal_p1_m2_f32",
+        "hypothesis": "Ray artifacts decrease with increased azimuthal resolution (n_phi) while keeping polar and positional discretizations coarse, as refining n_phi most directly addresses the angular cause of ray effects with modest computational cost.",
+        "n_pos": 1,
+        "n_mu": 2,
+        "n_phi": 32,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 9.898848399985582,
+      "artifacts": {
+        "metrics": "experiments\\proposal_p1_m2_f32\\metrics.json",
+        "fluxes": "experiments\\proposal_p1_m2_f32\\lattice_stage8_ultra.npz",
+        "figure": "experiments\\proposal_p1_m2_f32\\lattice_stage8_ultra.png"
+      },
+      "common_reference": "baseline_coarse:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9962117558728033,
+        "normalized_rel_l1": 0.11933373595057373,
+        "log10_rmse": 0.1780129404829935
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.013430050084558654,
+        "directional_concentration": 0.38875191398044545,
+        "directional_peak_to_mean": 4.580749480455047,
+        "ray_index": 0.00522095767522542
+      },
+      "oracle_vs_common": {
+        "corr": 0.9967574320346552,
+        "normalized_rel_l1": 0.1311625052036047,
+        "log10_rmse": 0.1353486997703498
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.014005185470131888,
+        "directional_concentration": 0.46291258804686314,
+        "directional_peak_to_mean": 7.7767924980428855,
+        "ray_index": 0.006483176652055076
+      }
+    },
+    {
+      "n_state": 128,
+      "n_angle": 16,
+      "cfm_build_s": 4.317146700108424,
+      "cfm_solve_s": 1.8689856000710279,
+      "cfm_residual": 8.975472595110452e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9986748425511345,
+        "normalized_rel_l1": 0.0593896842917449,
+        "log10_rmse": 0.22530245893154252
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.007499544621887873,
+        "directional_concentration": 0.4799322820748224,
+        "directional_peak_to_mean": 6.535226564056031,
+        "ray_index": 0.003599273564904608
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9995357917661835,
+        "normalized_rel_l1": 0.045374230288131145,
+        "log10_rmse": 0.23196213186107295
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.004510364872827967,
+        "directional_concentration": 0.40040680076348906,
+        "directional_peak_to_mean": 6.647655508853765,
+        "ray_index": 0.0018059807690050675
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9976419750537581,
+        "normalized_rel_l1": 0.08064305482165864,
+        "log10_rmse": 0.1205411805684007
+      },
+      "wall_s": 6.186132300179452,
+      "experiment_id": "proposal_p2_m4_f16",
+      "role": "open_agent",
+      "action": {
+        "experiment_id": "proposal_p2_m4_f16",
+        "hypothesis": "Increasing n_pos and n_mu while keeping n_phi moderate will reduce ray artifacts by better sampling spatial and angular variations, as the current baseline with coarse spatial/angular resolution may insufficiently capture heterogeneity.",
+        "n_pos": 2,
+        "n_mu": 4,
+        "n_phi": 16,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 14.01415800000541,
+      "artifacts": {
+        "metrics": "experiments\\proposal_p2_m4_f16\\metrics.json",
+        "fluxes": "experiments\\proposal_p2_m4_f16\\lattice_stage8_ultra.npz",
+        "figure": "experiments\\proposal_p2_m4_f16\\lattice_stage8_ultra.png"
+      },
+      "common_reference": "baseline_coarse:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9975937996176957,
+        "normalized_rel_l1": 0.08613900714465475,
+        "log10_rmse": 0.2521014160063002
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.009699625058566502,
+        "directional_concentration": 0.4094277336804237,
+        "directional_peak_to_mean": 4.8708740583348975,
+        "ray_index": 0.00397129550527873
+      },
+      "oracle_vs_common": {
+        "corr": 0.9990693959514435,
+        "normalized_rel_l1": 0.07108841704887273,
+        "log10_rmse": 0.23778302694191789
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.007005251435905937,
+        "directional_concentration": 0.43064735107590346,
+        "directional_peak_to_mean": 6.761011854250324,
+        "ray_index": 0.003016792974493561
+      }
+    },
+    {
+      "n_state": 256,
+      "n_angle": 32,
+      "cfm_build_s": 8.514274899847806,
+      "cfm_solve_s": 5.631517200032249,
+      "cfm_residual": 3.19826588476197e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9990175016993107,
+        "normalized_rel_l1": 0.05328431664808938,
+        "log10_rmse": 0.18905062091847802
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.0062855839410772,
+        "directional_concentration": 0.4149704192649957,
+        "directional_peak_to_mean": 4.481436636390998,
+        "ray_index": 0.00260833140335413
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9996508832562858,
+        "normalized_rel_l1": 0.03546148509029783,
+        "log10_rmse": 0.17424252684295607
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.003767724387101274,
+        "directional_concentration": 0.3525926369575971,
+        "directional_peak_to_mean": 4.982889924145732,
+        "ray_index": 0.0013284718769774847
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9983825575461814,
+        "normalized_rel_l1": 0.06490435592483668,
+        "log10_rmse": 0.09503068474655013
+      },
+      "wall_s": 14.145792099880055,
+      "experiment_id": "proposal_p2_m4_f32",
+      "role": "open_agent",
+      "action": {
+        "experiment_id": "proposal_p2_m4_f32",
+        "hypothesis": "Increasing n_phi to 32 while keeping n_pos=2 and n_mu=4 will reduce ray artifacts further, as higher angular resolution in phi better resolves the interface geometry. The mechanism dominating is phi resolution, given that previous increase from 16 to 32 at n_pos=1,n_mu=2 did not improve ray index, but with more positions and mu points the interaction may differ.",
+        "n_pos": 2,
+        "n_mu": 4,
+        "n_phi": 32,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 25.81360449991189,
+      "artifacts": {
+        "metrics": "experiments\\proposal_p2_m4_f32\\metrics.json",
+        "fluxes": "experiments\\proposal_p2_m4_f32\\lattice_stage8_ultra.npz",
+        "figure": "experiments\\proposal_p2_m4_f32\\lattice_stage8_ultra.png"
+      },
+      "common_reference": "baseline_coarse:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9979837842714937,
+        "normalized_rel_l1": 0.08452509381209422,
+        "log10_rmse": 0.24188226805188734
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.009038657051760803,
+        "directional_concentration": 0.3534866949170155,
+        "directional_peak_to_mean": 3.3433894772075416,
+        "ray_index": 0.0031950450077153016
+      },
+      "oracle_vs_common": {
+        "corr": 0.9995799637317946,
+        "normalized_rel_l1": 0.046217841780672675,
+        "log10_rmse": 0.2611365306431111
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.004400031040327413,
+        "directional_concentration": 0.3413937322736818,
+        "directional_peak_to_mean": 4.232992882394811,
+        "ray_index": 0.0015021430189774265
+      }
+    },
+    {
+      "n_state": 512,
+      "n_angle": 64,
+      "cfm_build_s": 17.168961100280285,
+      "cfm_solve_s": 19.713957299944013,
+      "cfm_residual": 4.498044289548592e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9986667511951279,
+        "normalized_rel_l1": 0.060205289259812916,
+        "log10_rmse": 0.20164692810663853
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.007607338558326058,
+        "directional_concentration": 0.44070409535020766,
+        "directional_peak_to_mean": 5.273174479333651,
+        "ray_index": 0.0033525852573698385
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9995799939297839,
+        "normalized_rel_l1": 0.03830631624653631,
+        "log10_rmse": 0.16459207894613068
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.004206759080004308,
+        "directional_concentration": 0.41887943526965765,
+        "directional_peak_to_mean": 6.474522607648038,
+        "ray_index": 0.001762124867747709
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.998538165983177,
+        "normalized_rel_l1": 0.06267151618228556,
+        "log10_rmse": 0.10960468451658056
+      },
+      "wall_s": 36.8829184002243,
+      "experiment_id": "proposal_p2_m4_f64",
+      "role": "open_agent",
+      "action": {
+        "experiment_id": "proposal_p2_m4_f64",
+        "hypothesis": "Increasing phi resolution to 64 while keeping n_pos=2 and n_mu=4 will further reduce ray artifacts as observed in ray_index, but improvement may not scale linearly with cost. The dominant mechanism is likely inadequate angular sampling (n_phi) causing ray artifacts, as n_pos and n_mu have limited effect.",
+        "n_pos": 2,
+        "n_mu": 4,
+        "n_phi": 64,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 64.32192859984934,
+      "artifacts": {
+        "metrics": "experiments\\proposal_p2_m4_f64\\metrics.json",
+        "fluxes": "experiments\\proposal_p2_m4_f64\\lattice_stage8_ultra.npz",
+        "figure": "experiments\\proposal_p2_m4_f64\\lattice_stage8_ultra.png"
+      },
+      "common_reference": "baseline_coarse:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9977789330007586,
+        "normalized_rel_l1": 0.08438698190159907,
+        "log10_rmse": 0.23903976358616266
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.00932191587826012,
+        "directional_concentration": 0.39079821401722575,
+        "directional_peak_to_mean": 3.659686670219261,
+        "ray_index": 0.003642988076442873
+      },
+      "oracle_vs_common": {
+        "corr": 0.999504034946315,
+        "normalized_rel_l1": 0.04824339158121396,
+        "log10_rmse": 0.2893847008494875
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.004589432868257915,
+        "directional_concentration": 0.3315856907898443,
+        "directional_peak_to_mean": 4.461302741280572,
+        "ray_index": 0.0015217902679549172
+      }
+    },
+    {
+      "n_state": 512,
+      "n_angle": 32,
+      "cfm_build_s": 17.41845460026525,
+      "cfm_solve_s": 19.266119099920616,
+      "cfm_residual": 9.535655247944321e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9990107302232843,
+        "normalized_rel_l1": 0.050736904793077964,
+        "log10_rmse": 0.17967209731958728
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.0063114638826778265,
+        "directional_concentration": 0.4952189156301558,
+        "directional_peak_to_mean": 6.90224951250513,
+        "ray_index": 0.003125556300018606
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9997779650417659,
+        "normalized_rel_l1": 0.025951970254775934,
+        "log10_rmse": 0.1620116195253506
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.003000319549518109,
+        "directional_concentration": 0.3037381025096109,
+        "directional_peak_to_mean": 3.6572301176586484,
+        "ray_index": 0.0009113113668931211
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9988907557955017,
+        "normalized_rel_l1": 0.050392413110654836,
+        "log10_rmse": 0.07839446514841936
+      },
+      "wall_s": 36.684573700185865,
+      "experiment_id": "proposal_p4_m4_f32",
+      "role": "open_agent",
+      "action": {
+        "experiment_id": "proposal_p4_m4_f32",
+        "hypothesis": "Increasing spatial resolution (n_pos=4) reduces ray artifacts more effectively than coarse spatial discretization, while n_mu=4 and n_phi=32 balance angular resolution and budget. The mechanism dominating is spatial discretization error, not angular sampling.",
+        "n_pos": 4,
+        "n_mu": 4,
+        "n_phi": 32,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 260827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 63.6392667000182,
+      "artifacts": {
+        "metrics": "experiments\\proposal_p4_m4_f32\\metrics.json",
+        "fluxes": "experiments\\proposal_p4_m4_f32\\lattice_stage8_ultra.npz",
+        "figure": "experiments\\proposal_p4_m4_f32\\lattice_stage8_ultra.png"
+      },
+      "common_reference": "baseline_coarse:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9978868407397286,
+        "normalized_rel_l1": 0.08384550105718101,
+        "log10_rmse": 0.25828836605643773
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.009233556020188324,
+        "directional_concentration": 0.3843288900883355,
+        "directional_peak_to_mean": 4.558324940371989,
+        "ray_index": 0.0035487223368074468
+      },
+      "oracle_vs_common": {
+        "corr": 0.9993567296503735,
+        "normalized_rel_l1": 0.05768111489421369,
+        "log10_rmse": 0.28435822654429016
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.005658756891039894,
+        "directional_concentration": 0.3230415414511879,
+        "directional_peak_to_mean": 4.044331324200804,
+        "ray_index": 0.0018280135487790592
+      }
+    }
+  ],
+  "random_reference_experiments": [
+    {
+      "n_state": 256,
+      "n_angle": 32,
+      "cfm_build_s": 8.886909399880096,
+      "cfm_solve_s": 5.402292400132865,
+      "cfm_residual": 8.910348915553447e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9989449424718635,
+        "normalized_rel_l1": 0.06492174476262262,
+        "log10_rmse": 0.2374494398966215
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.00690368013632894,
+        "directional_concentration": 0.5032036614000979,
+        "directional_peak_to_mean": 7.099311121651404,
+        "ray_index": 0.0034739571217358494
+      },
+      "oracle_vs_dense": {
+        "corr": 0.999165517543806,
+        "normalized_rel_l1": 0.05378341635862304,
+        "log10_rmse": 0.21002856781396514
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.005827380279272715,
+        "directional_concentration": 0.4606689198145346,
+        "directional_peak_to_mean": 6.36011718573639,
+        "ray_index": 0.0026844929786010827
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9997094072882717,
+        "normalized_rel_l1": 0.03394370846172889,
+        "log10_rmse": 0.10478827863613463
+      },
+      "wall_s": 14.289201800012961,
+      "experiment_id": "random_1_p2_m2_f64",
+      "role": "random_reference",
+      "action": {
+        "experiment_id": "random_1_p2_m2_f64",
+        "hypothesis": "Random reference configuration.",
+        "n_pos": 2,
+        "n_mu": 2,
+        "n_phi": 64,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 310827,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 26.714465900091454,
+      "artifacts": {
+        "metrics": "experiments\\random_1_p2_m2_f64\\metrics.json",
+        "fluxes": "experiments\\random_1_p2_m2_f64\\lattice_stage8_ultra.npz",
+        "figure": "experiments\\random_1_p2_m2_f64\\lattice_stage8_ultra.png"
+      },
+      "common_reference": "baseline_coarse:oracle",
+      "cfm_vs_common": {
+        "corr": 0.999191212855138,
+        "normalized_rel_l1": 0.05626626759735108,
+        "log10_rmse": 0.2164055366723158
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.0056218939995370835,
+        "directional_concentration": 0.5293415546209778,
+        "directional_peak_to_mean": 8.736932322443733,
+        "ray_index": 0.0029759021096293064
+      },
+      "oracle_vs_common": {
+        "corr": 0.9994704369802574,
+        "normalized_rel_l1": 0.05163566058834079,
+        "log10_rmse": 0.2884715157128859
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.004749548911418953,
+        "directional_concentration": 0.4584243208725271,
+        "directional_peak_to_mean": 6.34216786609045,
+        "ray_index": 0.0021773087341680837
+      }
+    },
+    {
+      "n_state": 32,
+      "n_angle": 4,
+      "cfm_build_s": 1.4435956999659538,
+      "cfm_solve_s": 0.5932380000595003,
+      "cfm_residual": 6.140931234403531e-11,
+      "cfm_vs_dense": {
+        "corr": 0.9983176712237768,
+        "normalized_rel_l1": 0.08176755094934525,
+        "log10_rmse": 0.24796182353134744
+      },
+      "cfm_ray_vs_dense": {
+        "residual_rms": 0.008521694154276144,
+        "directional_concentration": 0.6157180839695598,
+        "directional_peak_to_mean": 8.91551646489462,
+        "ray_index": 0.005246961196845506
+      },
+      "oracle_vs_dense": {
+        "corr": 0.9980488634573766,
+        "normalized_rel_l1": 0.08388325856799947,
+        "log10_rmse": 0.23833696413265892
+      },
+      "oracle_ray_vs_dense": {
+        "residual_rms": 0.008922018465348016,
+        "directional_concentration": 0.5624173979478436,
+        "directional_peak_to_mean": 8.00465752413973,
+        "ray_index": 0.005017898409723644
+      },
+      "cfm_vs_oracle": {
+        "corr": 0.9997960695056853,
+        "normalized_rel_l1": 0.029067959687504374,
+        "log10_rmse": 0.07855706717148343
+      },
+      "wall_s": 2.036833700025454,
+      "experiment_id": "random_2_p2_m2_f8",
+      "role": "random_reference",
+      "action": {
+        "experiment_id": "random_2_p2_m2_f8",
+        "hypothesis": "Random reference configuration.",
+        "n_pos": 2,
+        "n_mu": 2,
+        "n_phi": 8,
+        "cfm_samples": 1000,
+        "oracle_samples": 1000,
+        "internal_samples": 1000,
+        "oracle_internal_samples": 1000,
+        "seed": 310828,
+        "cfm_mode": "direct"
+      },
+      "process_elapsed_s": 9.237516900058836,
+      "artifacts": {
+        "metrics": "experiments\\random_2_p2_m2_f8\\metrics.json",
+        "fluxes": "experiments\\random_2_p2_m2_f8\\lattice_stage8_ultra.npz",
+        "figure": "experiments\\random_2_p2_m2_f8\\lattice_stage8_ultra.png"
+      },
+      "common_reference": "baseline_coarse:oracle",
+      "cfm_vs_common": {
+        "corr": 0.9984078919650217,
+        "normalized_rel_l1": 0.08007420923181123,
+        "log10_rmse": 0.31923717965320253
+      },
+      "cfm_ray_vs_common": {
+        "residual_rms": 0.007886521095360107,
+        "directional_concentration": 0.5482439889338212,
+        "directional_peak_to_mean": 8.598142373834396,
+        "ray_index": 0.004323737784130954
+      },
+      "oracle_vs_common": {
+        "corr": 0.9981320509211574,
+        "normalized_rel_l1": 0.08969087973500749,
+        "log10_rmse": 0.3702434541696272
+      },
+      "oracle_ray_vs_common": {
+        "residual_rms": 0.008577681267089826,
+        "directional_concentration": 0.493831950494483,
+        "directional_peak_to_mean": 7.54077182300253,
+        "ray_index": 0.004235933070846957
+      }
+    }
+  ],
+  "best_config": {
+    "experiment_id": "proposal_p2_m4_f32",
+    "n_pos": 2,
+    "n_mu": 4,
+    "n_phi": 32,
+    "n_state": 256,
+    "ray_index": 0.0031950450077153016,
+    "reduction_vs_baseline_percent": 33.6365417709621
+  },
+  "random_best_ray_index": 0.0029759021096293064,
+  "limitations": [
+    "The spectral ray index is a diagnostic proxy, not a universal physical observable.",
+    "The local exact-MC response operators use finite samples and remain seed sensitive.",
+    "The dense S_N field is a fixed deterministic comparison, not an exact continuum solution.",
+    "Proposals are bounded by the declared open_search options and state budget.",
+    "This exploration does not establish novelty relative to every published ray-effect remedy."
+  ]
+}

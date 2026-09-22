@@ -1,0 +1,416 @@
+{
+  "n_state": 32,
+  "n_angle": 8,
+  "interface_phi_offset_fraction": 0.0,
+  "dense_n_mu": 4,
+  "dense_n_phi": 32,
+  "dense_phi_offset_fraction": 0.0,
+  "cfm_build_s": 0.03734229999963645,
+  "cfm_solve_s": 1.55038731500008,
+  "cfm_residual": 1.8155161178204505e-11,
+  "cfm_vs_dense": {
+    "corr": 0.9978246433689221,
+    "normalized_rel_l1": 0.07657289404318361,
+    "log10_rmse": 0.26565546025897024
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.009260039885700556,
+    "directional_concentration": 0.4718582111272771,
+    "directional_peak_to_mean": 5.8629471169936185,
+    "ray_index": 0.0043694258554339
+  },
+  "cfm_level_vs_dense_sn": {
+    "relative_l1": 0.0854990723274872,
+    "integral_ratio": 1.0316094269521685,
+    "peak_ratio": 1.0393952854257205
+  },
+  "cfm_directional_disagreement_vs_dense_sn": {
+    "residual_rms": 0.009260039885700556,
+    "directional_concentration": 0.4718582111272771,
+    "directional_peak_to_mean": 5.8629471169936185,
+    "ray_index": 0.0043694258554339
+  },
+  "genvr_cfm_vs_dense_sn": {
+    "corr": 0.9978246433689221,
+    "normalized_rel_l1": 0.07657289404318361,
+    "log10_rmse": 0.26565546025897024
+  },
+  "genvr_cfm_ray_vs_dense_sn": {
+    "residual_rms": 0.009260039885700556,
+    "directional_concentration": 0.4718582111272771,
+    "directional_peak_to_mean": 5.8629471169936185,
+    "ray_index": 0.0043694258554339
+  },
+  "oracle_vs_dense": {
+    "corr": 0.999087881039835,
+    "normalized_rel_l1": 0.05852349867151421,
+    "log10_rmse": 0.2890710630084164
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.006079022495141331,
+    "directional_concentration": 0.5091385699953218,
+    "directional_peak_to_mean": 7.900485837721174,
+    "ray_index": 0.00309506482014565
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9973988254876169,
+    "normalized_rel_l1": 0.0848893831347888,
+    "log10_rmse": 0.13734615219959406
+  },
+  "cfm_learning_error": {
+    "shape": {
+      "corr": 0.9973988254876169,
+      "normalized_rel_l1": 0.0848893831347888,
+      "log10_rmse": 0.13734615219959406
+    },
+    "level": {
+      "relative_l1": 0.08531276774121958,
+      "integral_ratio": 1.0211219536035583,
+      "peak_ratio": 1.0065924171456582
+    },
+    "directional_residual": {
+      "residual_rms": 0.010091410807898533,
+      "directional_concentration": 0.4770854416648209,
+      "directional_peak_to_mean": 4.849101696443774,
+      "ray_index": 0.004814465182307419
+    }
+  },
+  "projected_local_mc_level_vs_dense_sn": {
+    "relative_l1": 0.066098003234383,
+    "integral_ratio": 1.0102705394900184,
+    "peak_ratio": 1.0325880343635807
+  },
+  "projected_directional_disagreement_vs_dense_sn": {
+    "residual_rms": 0.006079022495141331,
+    "directional_concentration": 0.5091385699953218,
+    "directional_peak_to_mean": 7.900485837721174,
+    "ray_index": 0.00309506482014565
+  },
+  "projected_local_mc_vs_dense_sn": {
+    "corr": 0.999087881039835,
+    "normalized_rel_l1": 0.05852349867151421,
+    "log10_rmse": 0.2890710630084164
+  },
+  "projected_local_mc_ray_vs_dense_sn": {
+    "residual_rms": 0.006079022495141331,
+    "directional_concentration": 0.5091385699953218,
+    "directional_peak_to_mean": 7.900485837721174,
+    "ray_index": 0.00309506482014565
+  },
+  "genvr_cfm_vs_projected_local_mc": {
+    "corr": 0.9973988254876169,
+    "normalized_rel_l1": 0.0848893831347888,
+    "log10_rmse": 0.13734615219959406
+  },
+  "cfm_vs_global_mc": {
+    "shape": {
+      "corr": 0.9975779962309792,
+      "normalized_rel_l1": 0.08333743953787788,
+      "log10_rmse": 0.2899608121110456
+    },
+    "level": {
+      "relative_l1": 0.08466357049895064,
+      "integral_ratio": 1.021789629475734,
+      "peak_ratio": 1.0052628387413118
+    },
+    "directional_residual": {
+      "residual_rms": 0.009883407863149202,
+      "directional_concentration": 0.3853890202846177,
+      "directional_peak_to_mean": 4.758401206792161,
+      "ray_index": 0.003808956873452358
+    }
+  },
+  "dense_sn_vs_global_mc": {
+    "shape": {
+      "corr": 0.9996971133443794,
+      "normalized_rel_l1": 0.03728701094283647,
+      "log10_rmse": 0.1755853161083909
+    },
+    "level": {
+      "relative_l1": 0.031612901428823115,
+      "integral_ratio": 0.9904810898195779,
+      "peak_ratio": 0.967161245425095
+    },
+    "directional_residual": {
+      "residual_rms": 0.004530384907831877,
+      "directional_concentration": 0.22709585943282393,
+      "directional_peak_to_mean": 3.01805352450449,
+      "ray_index": 0.001028831654205575
+    }
+  },
+  "projected_local_mc_vs_global_mc": {
+    "shape": {
+      "corr": 0.9990072100833549,
+      "normalized_rel_l1": 0.06253624267658991,
+      "log10_rmse": 0.31302551717656646
+    },
+    "level": {
+      "relative_l1": 0.062123023535661764,
+      "integral_ratio": 1.0006538649666865,
+      "peak_ratio": 0.9986791293261315
+    },
+    "directional_residual": {
+      "residual_rms": 0.006573499166712956,
+      "directional_concentration": 0.3255068466625639,
+      "directional_peak_to_mean": 5.931748523942573,
+      "ray_index": 0.0021397189852957257
+    }
+  },
+  "wall_s": 1.5877296149997164,
+  "experiment_id": "coarse_certification",
+  "role": "causal_agent",
+  "action": {
+    "experiment_id": "coarse_certification",
+    "hypothesis": "Global Monte Carlo tests whether the cheapest coarse candidate preserves physical flux levels.",
+    "n_pos": 1,
+    "n_mu": 2,
+    "n_phi": 16,
+    "cfm_samples": 1000,
+    "oracle_samples": 1000,
+    "internal_samples": 1000,
+    "oracle_internal_samples": 1000,
+    "seed": 260827,
+    "cfm_mode": "direct",
+    "interface_phi_offset_fraction": 0.0,
+    "dense_n_mu": null,
+    "dense_n_phi": null,
+    "dense_phi_offset_fraction": 0.0,
+    "mc_histories": 100000
+  },
+  "process_elapsed_s": 79.49140776800004,
+  "artifacts": {
+    "metrics": "experiments/coarse_certification/metrics.json",
+    "fluxes": "experiments/coarse_certification/lattice_stage8_ultra.npz",
+    "figure": "experiments/coarse_certification/lattice_stage8_ultra.png"
+  },
+  "controlled_comparisons": [
+    {
+      "comparison_type": "global_mc_sampling_refinement",
+      "controlled_factor": "mc_histories",
+      "baseline_experiment": "coarse_baseline",
+      "intervention_experiment": "coarse_certification",
+      "baseline_value": 0,
+      "intervention_value": 100000,
+      "method_sensitivity": {
+        "cfm": {
+          "shape": {
+            "corr": 1.0,
+            "normalized_rel_l1": 0.0,
+            "log10_rmse": 0.0
+          },
+          "level": {
+            "relative_l1": 0.0,
+            "integral_ratio": 1.0,
+            "peak_ratio": 1.0
+          },
+          "directional_residual": {
+            "residual_rms": 0.0,
+            "directional_concentration": 0.0,
+            "directional_peak_to_mean": 0.0,
+            "ray_index": 0.0
+          }
+        },
+        "projected_local_mc": {
+          "shape": {
+            "corr": 1.0,
+            "normalized_rel_l1": 0.0,
+            "log10_rmse": 0.0
+          },
+          "level": {
+            "relative_l1": 0.0,
+            "integral_ratio": 1.0,
+            "peak_ratio": 1.0
+          },
+          "directional_residual": {
+            "residual_rms": 0.0,
+            "directional_concentration": 0.0,
+            "directional_peak_to_mean": 0.0,
+            "ray_index": 0.0
+          }
+        },
+        "dense_sn": {
+          "shape": {
+            "corr": 1.0,
+            "normalized_rel_l1": 0.0,
+            "log10_rmse": 0.0
+          },
+          "level": {
+            "relative_l1": 0.0,
+            "integral_ratio": 1.0,
+            "peak_ratio": 1.0
+          },
+          "directional_residual": {
+            "residual_rms": 0.0,
+            "directional_concentration": 0.0,
+            "directional_peak_to_mean": 0.0,
+            "ray_index": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison_type": "interface_position_refinement",
+      "controlled_factor": "n_pos",
+      "baseline_experiment": "coarse_certification",
+      "intervention_experiment": "position_refined_certification",
+      "baseline_value": 1,
+      "intervention_value": 4,
+      "method_sensitivity": {
+        "cfm": {
+          "shape": {
+            "corr": 0.9995224069967573,
+            "normalized_rel_l1": 0.04000011614122169,
+            "log10_rmse": 0.1862215170768292
+          },
+          "level": {
+            "relative_l1": 0.09700755997089014,
+            "integral_ratio": 0.9154912416662498,
+            "peak_ratio": 0.9213718764867083
+          },
+          "directional_residual": {
+            "residual_rms": 0.00432257045900176,
+            "directional_concentration": 0.7199163304392168,
+            "directional_peak_to_mean": 10.613767029292752,
+            "ray_index": 0.003111889062909508
+          }
+        },
+        "projected_local_mc": {
+          "shape": {
+            "corr": 0.999231362860286,
+            "normalized_rel_l1": 0.05755569414435254,
+            "log10_rmse": 0.29745218238621385
+          },
+          "level": {
+            "relative_l1": 0.1283643477106685,
+            "integral_ratio": 0.8972136043192294,
+            "peak_ratio": 0.8938884371229321
+          },
+          "directional_residual": {
+            "residual_rms": 0.005478999223975666,
+            "directional_concentration": 0.7208731616837154,
+            "directional_peak_to_mean": 10.74383349829039,
+            "ray_index": 0.003949663493449961
+          }
+        },
+        "dense_sn": {
+          "shape": {
+            "corr": 1.0,
+            "normalized_rel_l1": 0.0,
+            "log10_rmse": 0.0
+          },
+          "level": {
+            "relative_l1": 0.0,
+            "integral_ratio": 1.0,
+            "peak_ratio": 1.0
+          },
+          "directional_residual": {
+            "residual_rms": 0.0,
+            "directional_concentration": 0.0,
+            "directional_peak_to_mean": 0.0,
+            "ray_index": 0.0
+          }
+        },
+        "global_mc": {
+          "shape": {
+            "corr": 1.0,
+            "normalized_rel_l1": 0.0,
+            "log10_rmse": 0.0
+          },
+          "level": {
+            "relative_l1": 0.0,
+            "integral_ratio": 1.0,
+            "peak_ratio": 1.0
+          },
+          "directional_residual": {
+            "residual_rms": 0.0,
+            "directional_concentration": 0.0,
+            "directional_peak_to_mean": 0.0,
+            "ray_index": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison_type": "interface_angular_refinement",
+      "controlled_factor": "n_phi",
+      "baseline_experiment": "coarse_certification",
+      "intervention_experiment": "angular_refined_certification",
+      "baseline_value": 16,
+      "intervention_value": 64,
+      "method_sensitivity": {
+        "cfm": {
+          "shape": {
+            "corr": 0.9991977533286737,
+            "normalized_rel_l1": 0.05642561236809339,
+            "log10_rmse": 0.07264535355753989
+          },
+          "level": {
+            "relative_l1": 0.06355469835388758,
+            "integral_ratio": 1.0569582172009486,
+            "peak_ratio": 1.008694447087652
+          },
+          "directional_residual": {
+            "residual_rms": 0.006402376765061662,
+            "directional_concentration": 0.40471264498746007,
+            "directional_peak_to_mean": 6.647711410670009,
+            "ray_index": 0.0025911228347943634
+          }
+        },
+        "projected_local_mc": {
+          "shape": {
+            "corr": 0.9983880311543946,
+            "normalized_rel_l1": 0.08358415164193982,
+            "log10_rmse": 0.11505515421319666
+          },
+          "level": {
+            "relative_l1": 0.09083524307582243,
+            "integral_ratio": 1.0792341000751062,
+            "peak_ratio": 1.0096057397636438
+          },
+          "directional_residual": {
+            "residual_rms": 0.009066024042955393,
+            "directional_concentration": 0.43229971960136226,
+            "directional_peak_to_mean": 7.256330777428302,
+            "ray_index": 0.003919239651668825
+          }
+        },
+        "dense_sn": {
+          "shape": {
+            "corr": 1.0,
+            "normalized_rel_l1": 0.0,
+            "log10_rmse": 0.0
+          },
+          "level": {
+            "relative_l1": 0.0,
+            "integral_ratio": 1.0,
+            "peak_ratio": 1.0
+          },
+          "directional_residual": {
+            "residual_rms": 0.0,
+            "directional_concentration": 0.0,
+            "directional_peak_to_mean": 0.0,
+            "ray_index": 0.0
+          }
+        },
+        "global_mc": {
+          "shape": {
+            "corr": 1.0,
+            "normalized_rel_l1": 0.0,
+            "log10_rmse": 0.0
+          },
+          "level": {
+            "relative_l1": 0.0,
+            "integral_ratio": 1.0,
+            "peak_ratio": 1.0
+          },
+          "directional_residual": {
+            "residual_rms": 0.0,
+            "directional_concentration": 0.0,
+            "directional_peak_to_mean": 0.0,
+            "ray_index": 0.0
+          }
+        }
+      }
+    }
+  ]
+}

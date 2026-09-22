@@ -1,0 +1,56 @@
+{
+  "n_state": 64,
+  "n_angle": 16,
+  "cfm_build_s": 0.4626724999397993,
+  "cfm_solve_s": 0.15101599995978177,
+  "cfm_residual": 5.102415338072141e-10,
+  "cfm_vs_dense": {
+    "corr": 0.9979831327007443,
+    "normalized_rel_l1": 0.0707433819737784,
+    "log10_rmse": 0.7015651569262877
+  },
+  "cfm_ray_vs_dense": {
+    "residual_rms": 0.01059844973555097,
+    "directional_concentration": 0.2714537913655098,
+    "directional_peak_to_mean": 3.346885178392803,
+    "ray_index": 0.0028769893633120956
+  },
+  "oracle_vs_dense": {
+    "corr": 0.9965044944622095,
+    "normalized_rel_l1": 0.11234812278067208,
+    "log10_rmse": 0.8062302274131812
+  },
+  "oracle_ray_vs_dense": {
+    "residual_rms": 0.015090040341913543,
+    "directional_concentration": 0.42491393696734603,
+    "directional_peak_to_mean": 5.992665654546839,
+    "ray_index": 0.00641196845067856
+  },
+  "cfm_vs_oracle": {
+    "corr": 0.9978093080157359,
+    "normalized_rel_l1": 0.08662026720624381,
+    "log10_rmse": 0.15283918249530273
+  },
+  "wall_s": 0.6136884998995811,
+  "experiment_id": "proposal_p1_m2_f32",
+  "role": "open_agent",
+  "action": {
+    "experiment_id": "proposal_p1_m2_f32",
+    "hypothesis": "Increasing angular resolution in azimuth (n_phi) reduces ray artifacts more efficiently than increasing spatial or polar angle resolution, given that the baseline with n_phi=16 already shows low artifact, but finer phi sampling may better resolve azimuthal variations. Budget allows n_phi=32 with coarser n_pos and n_mu, which isolates the effect of phi refinement at low cost.",
+    "n_pos": 1,
+    "n_mu": 2,
+    "n_phi": 32,
+    "cfm_samples": 64,
+    "oracle_samples": 64,
+    "internal_samples": 128,
+    "oracle_internal_samples": 128,
+    "seed": 260827,
+    "cfm_mode": "direct"
+  },
+  "process_elapsed_s": 6.266525499988347,
+  "artifacts": {
+    "metrics": "experiments\\proposal_p1_m2_f32\\metrics.json",
+    "fluxes": "experiments\\proposal_p1_m2_f32\\lattice_stage8_ultra.npz",
+    "figure": "experiments\\proposal_p1_m2_f32\\lattice_stage8_ultra.png"
+  }
+}

@@ -1,0 +1,11 @@
+SEED=$(od -An -N4 -tu4 /dev/urandom | tr -d ' ')
+SEED=$((SEED % 2147483646 + 1))
+
+RUN_DIR=$(mktemp -d \
+  "outputs/gmc_material_discovery/run_$(date +%Y%m%d_%H%M%S_%N)_s${SEED}_XXXXXX")
+
+MPLCONFIGDIR=/tmp/genvr-mpl \
+RAY_AGENT_ENV=openmc-env \
+bash scripts/run_gmc_material_discovery_agent.sh \
+  --outdir "$RUN_DIR" \
+  --seed "$SEED"

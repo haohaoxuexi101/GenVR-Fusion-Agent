@@ -1,12 +1,14 @@
 cff-version: 1.2.0
-message: "If you use GenVR-Fusion, please cite this software and the retained run manifest."
-title: "GenVR-Fusion: a generative rare-event transport exploration environment for deep-penetration fusion shielding"
+message: "If you use GenShield-Agent, please cite this software and the retained formal-run manifest."
+title: "GenShield-Agent: GMC-driven autonomous shielding material discovery and Monte Carlo certification"
 type: software
+abstract: "Developed by team 小手震 using entirely self-generated training and benchmark data."
 authors:
-  - family-names: "Contributors"
+  - family-names: "Shen"
     given-names: "Shaoning"
-    family-names: "Shen"
     affiliation: "Tsinghua University"
 version: 0.1.0
-date-released: 2026-09-03
+date-released: 2026-09-20
 license: MIT
+repository-code: "https://github.com/haohaoxuexi101/GenVR-Fusion-Agent"
+url: "https://github.com/haohaoxuexi101/GenVR-Fusion-Agent"

@@ -2,7 +2,10 @@
 
 参赛队伍：小手震  
 成员：沈绍宁（清华大学）  
-当前提交版本：2026-09-20
+公开仓库：https://github.com/haohaoxuexi101/GenVR-Fusion-Agent  
+当前代码版本：`v0.1.0`（commit `ca885735e09cb46a6afba29c1a47f19d0fd8eda1`）  
+当前提交版本：2026-09-20  
+数据来源：全部由本项目程序自主生成，不使用外部训练数据集
 
 ## 1. 项目定位
 
@@ -318,6 +321,15 @@ gmc/                                        # GMC 数值内核与响应算子
 - 尚未纳入连续几何、能群、真实核数据库、三维泄漏、热工、结构和制造约束；
 - 当前可审计运行的最终结论是 `inconclusive`，不得宣传为已认证工程设计。
 
-## 16. 许可
+## 16. 开源与数据来源
+
+- 代码仓库：https://github.com/haohaoxuexi101/GenVR-Fusion-Agent
+- 队伍名称：小手震
+- 冻结代码版本：tag `v0.1.0`，commit `ca885735e09cb46a6afba29c1a47f19d0fd8eda1`
+- 数据性质：边界响应、内部响应、benchmark 输入以及 GMC/MC 评估数据均由仓库内程序生成，不使用第三方训练数据集。
+- 数据生成入口：`scripts/01_generate_boundary_data.py`、`scripts/08_generate_internal_data.py`、`gmc/benchmarks2d.py` 和 `gmc/mc_cell.py`。
+- 正式运行证据：`outputs/gmc_material_discovery/run_20260920_020815/` 随报告与日志提交包提供；大型训练检查点和响应缓存属于可再生成的自产中间产物。
+
+## 17. 许可
 
 代码按 MIT License 发布。第三方依赖与自产模型权重说明见 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。

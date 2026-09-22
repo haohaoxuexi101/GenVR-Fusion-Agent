@@ -1,0 +1,20 @@
+SEED=$(od -An -N4 -tu4 /dev/urandom | tr -d ' ')
+SEED=$((SEED % 2147483646 + 1))
+
+RUN_DIR=$(mktemp -d \
+  "outputs/gmc_material_discovery/run_$(date +%Y%m%d_%H%M%S_%N)_s${SEED}_XXXXXX")
+
+MPLCONFIGDIR=/tmp/genvr-mpl \
+RAY_AGENT_ENV=openmc-env \
+bash scripts/run_gmc_material_discovery_agent.sh \
+  --outdir "$RUN_DIR" \
+  --seed "$SEED" \
+  --response-library \
+    outputs/response_cache_genvr_open/lattice_cfm_112x112_p2_m4_f16_s1000_rk12_5f816a4032cd_direct.npz \
+  --internal-response \
+    outputs/response_cache_genvr_open/lattice_cfm_internal_112x112_p2_m4_f16_s1000_rk12_2e0c41f7562b.npz \
+  --gmc-nx 112 \
+  --gmc-ny 112 \
+  --gmc-n-pos 2 \
+  --gmc-n-mu 4 \
+  --gmc-n-phi 16
